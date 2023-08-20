@@ -17,7 +17,10 @@ class OCIHttpHelper:
         #     'Date': datetime.datetime.now().strftime('%a, %d %b %Y %H:%M:%S %Z')
         # }
         response = requests.get(url, auth=auth)
-        response.raise_for_status()
+        # response.raise_for_status()
+        print(f"response code: {response.status_code}")
+        if response.status_code != 200:
+            print(f"restCall error body, {response.text}")
         return response.text
 
     @staticmethod
@@ -39,8 +42,10 @@ class OCIHttpHelper:
             response = requests.post(url, json.dumps(body), auth=auth)
         else:
             response = requests.put(url, json.dumps(body), auth=auth)
-            response.raise_for_status()
+            # response.raise_for_status()
         print(f"response code: {response.status_code}")
+        if response.status_code != 204:
+            print(f"restCall error body, {response.text}")
         return response
 
     @staticmethod
