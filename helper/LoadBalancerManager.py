@@ -2,9 +2,13 @@ import json
 import os
 import time
 
-from config import orb_certs
+from config import orb_certs, compartments
 from config.ConfigReader import get_compartment_id
 from loadbalancer import Cert, RouteSet, Listener, Backendset, Loadbalancer
+
+
+def list_loadbalancer():
+    print(Loadbalancer.list_load_balancers(compartments["orb-dev"]))
 
 
 def backup_loadbalancer():
