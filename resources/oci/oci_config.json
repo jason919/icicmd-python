@@ -1,0 +1,19 @@
+{
+    "compartments":
+    {
+        "orb-dev": "ocid1.compartment.oc1..aaaaaaaah2zzpsjuoihn6tg7plynb3jzbhwx67hgktddtk6dgmokkql5snxq",
+        "octa-dev": "ocid1.compartment.oc1..aaaaaaaalcs6kkofqnk5qcyfl2wlroxdl7yoxwlqxuk5pi6qwpipqcnpesiq",
+        "product-dev": "ocid1.compartment.oc1..aaaaaaaaubxyw2iuiod4dbpblgp72gefodkojm6p7kqwovuoh7ksrqzlbwxa",
+        "orb-test": "ocid1.compartment.oc1..aaaaaaaakgkq4y72ea2yecodpwuv66pxao2wkaeyrot5scn2z54wvevdpicq",
+        "octa-test": "ocid1.compartment.oc1..aaaaaaaaa4hoijyprg6uav5esgjot3yhgyytlhi35i25vqyi3ies7qudg3la",
+        "product-test": "ocid1.compartment.oc1..aaaaaaaauoehlwmw7ifrvn5onz6msn36cupdxm6i7huy7nftwg35i5xjgceq",
+        "orb-training": "ocid1.compartment.oc1..aaaaaaaao35i3nuvvr6tynydyj57y6iyatyqnfbqkj6tgbx4doard4iozt5q",
+        "octa-training": "ocid1.compartment.oc1..aaaaaaaab7hx3zu46elcic7olpm5b6uks55ionfi6ergf7uurj3smi25pt2q",
+        "orb-uat": "ocid1.compartment.oc1..aaaaaaaaayppbdfmt5g3bsg5h3p2llc6ykqbecrb7o3n4ujrgl2nlrgr2rsa",
+        "octa-uat": "ocid1.compartment.oc1..aaaaaaaavlllxvqztlsc3qqorammnbw65hzewqk7xpvawlzbh7r53u2fdeqq",
+        "orb-prod": "ocid1.compartment.oc1..aaaaaaaa6ganhhrbtousodl5eutzpxa7flbxl6gjg6vhygfbqgob4p6ktqgq",
+        "octa-prod": "ocid1.compartment.oc1..aaaaaaaa7ndga6cnr6hx2qbdzlpmmw5udigo5r23jciitmsag5wqv4f4q2lq",
+        "orb-dr": "ocid1.compartment.oc1..aaaaaaaalkoavuuzvwnyhlcmrnet4ce7djgo56r4lybegjdq57hytvjuz7ia",
+        "octa-dr": "ocid1.compartment.oc1..aaaaaaaa3ybyt4tx2zasleqqcc34bgaismmoh3yhtjnmkmk3v5t4t3xedqxq"
+    }
+}

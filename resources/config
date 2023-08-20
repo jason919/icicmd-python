@@ -1,0 +1,6 @@
+[DEFAULT]
+user=ocid1.user.oc1..aaaaaaaaj5ohqy7gt5nlz756tev5slnaplsia6d5epkf6jyjp6fdiovfde5a
+fingerprint=6a:ab:25:68:c0:d9:a5:93:19:49:21:37:33:8c:ee:d4
+key_file=./resources/private-key.pem
+tenancy=ocid1.tenancy.oc1..aaaaaaaa6uy3et7igwkwrjryv52vj2lhez6xpam5urpwn7rpjl6dg5jbkunq
+region=us-phoenix-1

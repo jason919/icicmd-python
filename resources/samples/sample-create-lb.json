@@ -1,0 +1,141 @@
+POST /20170115/loadBalancers
+Host: iaas.us-phoenix-1.oraclecloud.com
+<authorization and other headers>
+
+{
+  "compartmentId": "ocid1.compartment.oc1..<unique_ID>",
+  "displayName": "example_load_balancer",
+  "shapeName": "flexible",
+  "shapeDetails": {
+    "minimumBandwidthInMbps": 10,
+    "maximumBandwidthInMbps": 100
+  },
+  "isPrivate": true,
+  "listeners": {
+    "exampleListener": {
+      "defaultBackendSetName": "example_backend_set",
+      "port": 80,
+      "protocol": "HTTP",
+      "pathRouteSetName": "example_path_route_set",
+      "sslConfiguration": {
+        "protocols": ["TLSv1.1", "TLSv1.2"],
+        "cipherSuiteName" : "example_cipher_suite",
+        "serverOrderPreference" : "ENABLED",
+        "certificateName": "example_certificate_bundle",
+        "verifyPeerCertificate": true,
+        "verifyDepth": 3
+      },
+      "connectionConfiguration": {
+        "idleTimeout": 1200
+      }
+    }
+  },
+  "hostnames": {
+    "example_hostname_001": {
+      "name": "example_hostname_001",
+      "hostname": "app.example.com"
+    },
+    "example_hostname_002": {
+      "name": "example_hostname_002",
+      "hostname": "app.example.*"
+    }
+  },
+  "backendSets": {
+    "example_backend_set": {
+      "policy": "LEAST_CONNECTIONS",
+      "backends": [
+        {
+          "ipAddress": "10.0.0.3",
+          "port": 8080,
+          "weight": 3,
+          "backup": false,
+          "drain": false,
+          "offline": false
+        },
+        {
+          "ipAddress": "10.0.0.4",
+          "port": 8080,
+          "weight": 1,
+          "backup": false,
+          "drain": false,
+          "offline": false
+        }
+      ],
+      "healthChecker": {
+        "protocol": "HTTP",
+        "urlPath": "/healthcheck",
+        "port": 8080,
+        "returnCode": 200,
+        "retries": 3,
+        "timeoutInMillis": 3000,
+        "intervalInMillis": 10000,
+        "responseBodyRegex": "^((?!false).|\s)*$"
+      },
+      "sslConfiguration": {
+        "protocols": ["TLSv1.1", "TLSv1.2"],
+        "cipherSuiteName" : "example_cipher_suite",
+        "serverOrderPreference" : "ENABLED",
+        "certificateName": "example_certificate_bundle",
+        "verifyPeerCertificate": true,
+        "verifyDepth": 3
+      },
+      "sessionPersistenceConfiguration": {
+        "cookieName": "example_cookie",
+        "disableFallback": false
+      }
+    },
+  },
+  "certificates": {
+    "example_certificate_bundle": {
+      "passphrase": "<passphrase>",
+      "privateKey": "<private_key>",
+      "publicCertificate": "<public_certificate>",
+      "caCertificate": "<ca_certificate>",
+      "certificateName": "example_certificate_bundle"
+    }
+  },
+  "sslCipherSuites": {
+    "example_cipher_suite": {
+      "ciphers": [
+           "ECDHE-ECDSA-AES128-GCM-SHA256",
+           "ECDHE-ECDSA-AES128-SHA256",
+           "ECDHE-RSA-AES128-GCM-SHA256"
+      ],
+      "name": "example_cipher_suite"
+    }
+  },
+  "pathRouteSets": {
+    "example_path_route_set": {
+      "pathRoutes": [
+        {
+          "path": "/example/video/123",
+          "pathMatchType": {
+            "matchType": "EXACT_MATCH"
+          },
+          "backendSetName": "example_backend_set"
+        }
+      ]
+    }
+  },
+  "ruleSets": {
+      "example_rule_set": {
+        "items": [
+          {
+            "action": "ADD_REQUEST_HEADER",
+            "header": "example_header_name",
+            "value": "example_value"
+          },
+          {
+            "action": "EXTEND_HTTP_REQUEST_HEADER_VALUE",
+            "header": "example_header_name2",
+            "prefix": "example_prefix_value",
+            "suffix": "example_suffix_value"
+          }
+        ]
+      }
+    }
+  },
+  "subnetIds": [
+    "ocid1.subnet.oc1.phx.<unique_ID>"
+  ]
+}
