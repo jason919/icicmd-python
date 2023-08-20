@@ -12,7 +12,7 @@ class OCIHttpHelper:
         self.value = value
 
     @staticmethod
-    def restGet(url):
+    def restGet(url: str):
         # headers = {
         #     'Date': datetime.datetime.now().strftime('%a, %d %b %Y %H:%M:%S %Z')
         # }
@@ -24,7 +24,7 @@ class OCIHttpHelper:
         return response.text
 
     @staticmethod
-    def restCall(url, body, method):
+    def restCall(url: str, body, method: str):
         # headers = {
         #     'Date': datetime.datetime.now().strftime('%a, %d %b %Y %H:%M:%S %Z'),
         #     'content-type': 'application/json'
@@ -49,7 +49,11 @@ class OCIHttpHelper:
         return response
 
     @staticmethod
-    def retryRestCall(compartment_id, load_balancer_ocid, post_path, post_json, method):
+    def retryRestCall(compartment_id: str,
+                      load_balancer_ocid: str,
+                      post_path: str,
+                      post_json,
+                      method: str):
         url = f"{LbApiEndpoint}/{load_balancer_ocid}/{post_path}?compartmentId={compartment_id}"
         print(f"retryRestCall {url}")
         for i in range(1, 3):

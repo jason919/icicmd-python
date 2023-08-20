@@ -17,7 +17,7 @@ class LoadBalancerManager:
         return
 
     @staticmethod
-    def update_backend_sets(json_file_name):
+    def update_backend_sets(json_file_name: str):
         current_dir = os.getcwd()
         with open(f'{current_dir}/files/create/{json_file_name}', 'r') as json_file:
             json_data = json_file.read()

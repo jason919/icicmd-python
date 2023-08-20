@@ -12,7 +12,7 @@ class Cert:
 
     @staticmethod
     def __fix_certs_in_creation_json(cert_json):
-        json_str = json.dumps(cert_json)
+        json_str: str = json.dumps(cert_json)
         if "LB-ORB-CERT" in json_str:
             cert_json["publicCertificate"] = orb_certs["public"]
             cert_json["privateKey"] = orb_certs["private"]
@@ -31,7 +31,7 @@ class Cert:
             cert_json["caCertificate"] = self_prod_certs["ca"]
 
     @staticmethod
-    def create(compartment_id, load_balancer_ocid, post_json):
+    def create(compartment_id: str, load_balancer_ocid: str, post_json):
         Cert.__fix_certs_in_creation_json(post_json)
         OCIHttpHelper.retryRestCall(compartment_id,
                                     load_balancer_ocid,
