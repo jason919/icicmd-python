@@ -1,7 +1,7 @@
 import json
 
 from config import orb_certs, octa_certs, self_prod_certs, self_dev_certs
-from helper.oci_http_helper import OCIHttpHelper
+from helper import OCIHttpHelper
 
 
 def fix_certs_in_creation_json(certs_json):
@@ -31,8 +31,6 @@ def __fix_certs_in_creation_json(cert_json):
 
 def create(compartment_id: str, load_balancer_ocid: str, post_json):
     __fix_certs_in_creation_json(post_json)
-    OCIHttpHelper.retryRestCall(compartment_id,
-                                load_balancer_ocid,
-                                "certificates",
-                                post_json,
-                                "POST")
+    OCIHttpHelper.retryRestCall(
+        compartment_id, load_balancer_ocid, "certificates", post_json, "POST"
+    )
