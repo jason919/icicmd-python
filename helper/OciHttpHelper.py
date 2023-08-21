@@ -4,7 +4,7 @@ import time
 
 import requests
 
-from helper import lb_api_endpoint, auth
+from helper import LB_API_ENDPOINT, auth
 
 
 def restGet(url: str):
@@ -33,7 +33,7 @@ def restCall(url: str, body, method: str):
     #     print(f"{key}: {value}")
     # auth.validate_request(prepared_request)
     # response = requests.Session().send(prepared_request)
-    if method == 'POST':
+    if method == "POST":
         response = requests.post(url, json.dumps(body), auth=auth)
     else:
         response = requests.put(url, json.dumps(body), auth=auth)
@@ -44,18 +44,17 @@ def restCall(url: str, body, method: str):
     return response
 
 
-def retryRestCall(compartment_id: str,
-                  load_balancer_ocid: str,
-                  post_path: str,
-                  post_json,
-                  method: str):
-    url = f"{lb_api_endpoint}/{load_balancer_ocid}/{post_path}?compartmentId={compartment_id}"
+def retryRestCall(
+    compartment_id: str, load_balancer_ocid: str, post_path: str, post_json, method: str
+):
+    url = f"{LB_API_ENDPOINT}/{load_balancer_ocid}/{post_path}?compartmentId={compartment_id}"
     print(f"retryRestCall {url}")
     for i in range(1, 3):
         response = restCall(url, post_json, method)
         if response.status_code != 204:
             print(
-                f"create {post_path} failed, retry in 15s, error body, {response.text}")
+                f"create {post_path} failed, retry in 15s, error body, {response.text}"
+            )
             time.sleep(15)
         else:
             break

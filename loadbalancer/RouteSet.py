@@ -1,4 +1,4 @@
-from helper import lb_api_endpoint
+from helper import LB_API_ENDPOINT
 from helper import OciHttpHelper
 
 
@@ -9,5 +9,5 @@ def create(compartment_id: str, load_balancer_ocid: str, post_json):
 
 
 def fix_routes(compartment_id: str, load_balancer_ocid: str, route_json):
-    url = f"{lb_api_endpoint}/{load_balancer_ocid}/routingPolicies?compartmentId={compartment_id}"
+    url = f"{LB_API_ENDPOINT}/{load_balancer_ocid}/routingPolicies?compartmentId={compartment_id}"
     response = OciHttpHelper.restCall(url, route_json, "POST")

@@ -2,25 +2,25 @@ import json
 import os
 import time
 
-from helper import lb_api_endpoint
+from helper import LB_API_ENDPOINT
 from helper import OciHttpHelper
 
 
 def create(compartment_id: str, post_json):
     print("start LoadBalancer create 1")
-    url = f"{lb_api_endpoint}?compartmentId={compartment_id}"
+    url = f"{LB_API_ENDPOINT}?compartmentId={compartment_id}"
     OciHttpHelper.restCall(url, post_json, "POST")
 
 
 def update_display_name(compartment_id: str, ocid: str, new_name: str):
     print("start update_loadbalancer_display_name 1")
-    url = f"{lb_api_endpoint}/{ocid}?compartmentId={compartment_id}"
+    url = f"{LB_API_ENDPOINT}/{ocid}?compartmentId={compartment_id}"
     post_json = {"displayName": new_name}
     OciHttpHelper.restCall(url, json.dumps(post_json), "POST")
 
 
 def list_load_balancers(compartment_id: str) -> str:
-    url = f"{lb_api_endpoint}?compartmentId={compartment_id}"
+    url = f"{LB_API_ENDPOINT}?compartmentId={compartment_id}"
     return OciHttpHelper.restGet(url)
 
 
