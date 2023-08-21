@@ -16,7 +16,7 @@ def update_display_name(compartment_id: str, ocid: str, new_name: str):
     print("start update_loadbalancer_display_name 1")
     url = f"{LB_API_ENDPOINT}/{ocid}?compartmentId={compartment_id}"
     post_json = {"displayName": new_name}
-    OciHttpHelper.restCall(url, json.dumps(post_json), "POST")
+    OciHttpHelper.restCall(url, post_json, "PUT")
 
 
 def list_load_balancers(compartment_id: str) -> str:

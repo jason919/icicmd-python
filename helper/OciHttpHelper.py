@@ -33,6 +33,7 @@ def restCall(url: str, body, method: str):
     #     print(f"{key}: {value}")
     # auth.validate_request(prepared_request)
     # response = requests.Session().send(prepared_request)
+    print(f"restCall:: {url}")
     if method == "POST":
         response = requests.post(url, json.dumps(body), auth=auth)
     else:
@@ -48,7 +49,6 @@ def retryRestCall(
     compartment_id: str, load_balancer_ocid: str, post_path: str, post_json, method: str
 ):
     url = f"{LB_API_ENDPOINT}/{load_balancer_ocid}/{post_path}?compartmentId={compartment_id}"
-    print(f"retryRestCall {url}")
     for i in range(1, 3):
         response = restCall(url, post_json, method)
         if response.status_code != 204:
