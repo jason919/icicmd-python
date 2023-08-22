@@ -36,9 +36,11 @@ def restCall(url: str, body, method: str):
     print(f"restCall:: {url}")
     if method == "POST":
         response = requests.post(url, json.dumps(body), auth=auth)
-    else:
+    elif method == "PUT":
         response = requests.put(url, json.dumps(body), auth=auth)
-        # response.raise_for_status()
+    else:
+        response = requests.delete(url, json.dumps(body), auth=auth)
+    # response.raise_for_status()
     print(f"response code: {response.status_code}")
     if response.status_code != 204:
         print(f"restCall error body, {response.text}")

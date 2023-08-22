@@ -1,7 +1,10 @@
 import json
+import os
+import time
 
 from config import orb_certs, octa_certs, self_prod_certs, self_dev_certs
 from helper import OciHttpHelper
+from loadbalancer import Backendset, Listener
 
 
 def fix_certs_in_creation_json(certs_json):
@@ -29,8 +32,79 @@ def __fix_certs_in_creation_json(cert_json):
         cert_json["caCertificate"] = self_prod_certs["ca"]
 
 
-def create(compartment_id: str, load_balancer_ocid: str, post_json):
-    __fix_certs_in_creation_json(post_json)
+def update_expired_cert(
+    new_cert_folder_path: str,
+    full_json_path: str,
+    cert_name: str,
+):
+    tmp_cert_name = f"tmp-{cert_name}"
+
+    with open(f"{full_json_path}", "r") as json_file:
+        json_data = json_file.read()
+    parsed_data = json.loads(json_data)
+    compartment_id = str(parsed_data["compartmentId"])
+    load_balancer_ocid = str(parsed_data["id"])
+
+    post_json = {
+        "privateKey": "",
+        "publicCertificate": "",
+        "caCertificate": "",
+        "certificateName": tmp_cert_name,
+    }
+    with open(f"{new_cert_folder_path}/ca.crt", "r") as ca_file:
+        post_json["caCertificate"] = ca_file.read()
+    with open(f"{new_cert_folder_path}/private.pem", "r") as pri_file:
+        post_json["privateKey"] = pri_file.read()
+    with open(f"{new_cert_folder_path}/public.pem", "r") as pub_file:
+        post_json["publicCertificate"] = pub_file.read()
+
+    # create the tmp name certificate
     OciHttpHelper.retryRestCall(
         compartment_id, load_balancer_ocid, "certificates", post_json, "POST"
+    )
+    time.sleep(15)
+    # set the certificate to the tmp name one
+    if "LB-" in cert_name:
+        Listener.update_listeners_with_cert_name(
+            compartment_id, load_balancer_ocid, parsed_data, tmp_cert_name
+        )
+    else:
+        Backendset.update_backend_sets_with_cert_name(
+            compartment_id, load_balancer_ocid, parsed_data, tmp_cert_name
+        )
+    time.sleep(30)
+    # delete the good name but expired certificate
+
+    OciHttpHelper.retryRestCall(
+        compartment_id,
+        load_balancer_ocid,
+        f"certificates/{cert_name}",
+        post_json,
+        "DELETE",
+    )
+
+    time.sleep(15)
+    post_json["certificateName"] = cert_name
+    # create the good name and new certificate
+    OciHttpHelper.retryRestCall(
+        compartment_id, load_balancer_ocid, "certificates", post_json, "POST"
+    )
+    time.sleep(15)
+    # set the certificate to the good name
+    if "LB-" in cert_name:
+        Listener.update_listeners_with_cert_name(
+            compartment_id, load_balancer_ocid, parsed_data, cert_name
+        )
+    else:
+        Backendset.update_backend_sets_with_cert_name(
+            compartment_id, load_balancer_ocid, parsed_data, cert_name
+        )
+    time.sleep(30)
+    # delete the tmp certificate
+    OciHttpHelper.retryRestCall(
+        compartment_id,
+        load_balancer_ocid,
+        f"certificates/{tmp_cert_name}",
+        post_json,
+        "DELETE",
     )
