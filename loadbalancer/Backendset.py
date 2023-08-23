@@ -16,12 +16,12 @@ def update(
     )
 
 
-def update_backend_sets(json_file_name: str):
+def update_backend_sets(json_file_name: str, load_balancer_name: str):
     with open(
-        f"{os.getcwd()}/resources/files/create/{json_file_name}", "r"
+        f"{os.getcwd()}/resources/files/saved/{json_file_name}", "r"
     ) as json_file:
         json_data = json_file.read()
-    parsed_data = json.loads(json_data)
+    parsed_data = json.loads(json_data)[load_balancer_name]
     compartment_id = parsed_data["compartmentId"]
     load_balancer_ocid = parsed_data["id"]
     backend_sets = parsed_data["backendSets"]

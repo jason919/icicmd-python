@@ -67,12 +67,12 @@ def backup_all_loadbalancers():
         __backup_load_balancer_of_one_compartment(key, value)
 
 
-def create_loadbalancer(json_file_name: str):
+def create_loadbalancer(json_file_name: str, load_balancer_name: str):
     with open(
-        f"{os.getcwd()}/resources/files/create/{json_file_name}", "r"
+        f"{os.getcwd()}/resources/files/saved/{json_file_name}", "r"
     ) as json_file:
         json_data = json_file.read()
-    parsed_data = json.loads(json_data)
+    parsed_data = json.loads(json_data)[load_balancer_name]
     load_balancer_name = parsed_data["displayName"]
     compartment_id = parsed_data["compartmentId"]
     certificates = parsed_data["certificates"]
