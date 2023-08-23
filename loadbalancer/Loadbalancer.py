@@ -4,8 +4,7 @@ import time
 
 from helper import LB_API_ENDPOINT
 from helper import OciHttpHelper
-from config import orb_certs, compartments
-from config.ConfigReader import get_compartment_id
+from config import compartments
 from loadbalancer import Cert, RouteSet, Listener, Loadbalancer
 
 
@@ -27,7 +26,9 @@ def list_load_balancers(compartment_id: str) -> str:
     return OciHttpHelper.restGet(url)
 
 
-def backup(compartment_name: str, compartment_id: str):
+def __backup_load_balancer_of_one_compartment(
+    compartment_name: str, compartment_id: str
+):
     text = list_load_balancers(compartment_id)
     if len(text) > 100:
         file_path = f"{os.getcwd()}/resources/files/saved/{compartment_name}-lb.json"
@@ -60,12 +61,10 @@ def list_loadbalancer():
     print(Loadbalancer.list_load_balancers(compartments["orb-dev"]))
 
 
-def backup_loadbalancer():
-    print("start backup")
-    compartment_id = get_compartment_id("octa-dev")
-    print(compartment_id)
-    print(orb_certs["ca"])
-    return
+def backup_all_loadbalancers():
+    print("start full backup")
+    for key, value in compartments.items():
+        __backup_load_balancer_of_one_compartment(key, value)
 
 
 def create_loadbalancer(json_file_name: str):

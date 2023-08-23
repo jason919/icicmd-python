@@ -484,8 +484,8 @@
 					{
 						"backup": false,
 						"drain": false,
-						"ipAddress": "10.152.11.74",
-						"name": "10.152.11.74:8084",
+						"ipAddress": "10.152.11.200",
+						"name": "10.152.11.200:8015",
 						"offline": false,
 						"port": 8084,
 						"weight": 1
