@@ -154,7 +154,7 @@
 				"healthChecker": {
 					"intervalInMillis": 10000,
 					"isForcePlainText": null,
-					"port": 8084,
+					"port": 8015,
 					"protocol": "TCP",
 					"responseBodyRegex": ".*",
 					"retries": 3,

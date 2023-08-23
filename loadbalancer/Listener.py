@@ -21,7 +21,9 @@ def update(compartment_id: str, load_balancer_ocid: str, listener_name: str, pos
 
 
 def update_listeners(json_file_name: str):
-    with open(f"{os.getcwd()}/files/create/{json_file_name}", "r") as json_file:
+    with open(
+        f"{os.getcwd()}/resources/files/create/{json_file_name}", "r"
+    ) as json_file:
         json_data = json_file.read()
     parsed_data = json.loads(json_data)
     compartment_id = str(parsed_data["compartmentId"])

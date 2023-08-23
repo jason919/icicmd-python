@@ -5,8 +5,8 @@
         {
           "backup": false,
           "drain": false,
-          "ipAddress": "10.152.37.57",
-          "name": "10.152.37.57:8080",
+          "ipAddress": "10.152.51.92",
+          "name": "10.152.51.92:8080",
           "offline": false,
           "port": 8080,
           "weight": 1
@@ -34,8 +34,8 @@
         {
           "backup": false,
           "drain": false,
-          "ipAddress": "10.152.37.32",
-          "name": "10.152.37.32:7159",
+          "ipAddress": "10.152.51.68",
+          "name": "10.152.51.68:7159",
           "offline": false,
           "port": 7159,
           "weight": 1
@@ -76,8 +76,8 @@
         {
           "backup": false,
           "drain": false,
-          "ipAddress": "10.152.37.32",
-          "name": "10.152.37.32:7139",
+          "ipAddress": "10.152.51.68",
+          "name": "10.152.51.68:7139",
           "offline": false,
           "port": 7139,
           "weight": 1
@@ -118,8 +118,8 @@
         {
           "backup": false,
           "drain": false,
-          "ipAddress": "10.152.37.33",
-          "name": "10.152.37.33:8543",
+          "ipAddress": "10.152.51.69",
+          "name": "10.152.51.69:8543",
           "offline": false,
           "port": 8543,
           "weight": 1
@@ -160,8 +160,8 @@
         {
           "backup": false,
           "drain": false,
-          "ipAddress": "10.152.37.46",
-          "name": "10.152.37.46:8069",
+          "ipAddress": "10.152.51.82",
+          "name": "10.152.51.82:8069",
           "offline": false,
           "port": 8069,
           "weight": 1
@@ -197,8 +197,8 @@
         {
           "backup": false,
           "drain": false,
-          "ipAddress": "10.152.37.45",
-          "name": "10.152.37.45:9002",
+          "ipAddress": "10.152.51.81",
+          "name": "10.152.51.81:9002",
           "offline": false,
           "port": 9002,
           "weight": 1
@@ -226,8 +226,8 @@
         {
           "backup": false,
           "drain": false,
-          "ipAddress": "10.152.37.32",
-          "name": "10.152.37.32:7171",
+          "ipAddress": "10.152.51.68",
+          "name": "10.152.51.68:7171",
           "offline": false,
           "port": 7171,
           "weight": 1
@@ -268,8 +268,8 @@
         {
           "backup": false,
           "drain": false,
-          "ipAddress": "10.152.37.32",
-          "name": "10.152.37.32:7121",
+          "ipAddress": "10.152.51.68",
+          "name": "10.152.51.68:7121",
           "offline": false,
           "port": 7121,
           "weight": 1
@@ -310,8 +310,8 @@
         {
           "backup": false,
           "drain": false,
-          "ipAddress": "10.152.11.71",
-          "name": "10.152.11.71:8023",
+          "ipAddress": "10.152.51.199",
+          "name": "10.152.51.199:8023",
           "offline": false,
           "port": 8023,
           "weight": 1
@@ -352,8 +352,8 @@
         {
           "backup": false,
           "drain": false,
-          "ipAddress": "10.152.37.31",
-          "name": "10.152.37.31:7012",
+          "ipAddress": "10.152.51.67",
+          "name": "10.152.51.67:7012",
           "offline": false,
           "port": 7012,
           "weight": 1
@@ -390,25 +390,25 @@
     }
   },
   "cidrBlocks": null,
-  "compartmentId": "ocid1.compartment.oc1..aaaaaaaalcs6kkofqnk5qcyfl2wlroxdl7yoxwlqxuk5pi6qwpipqcnpesiq",
+  "compartmentId": "ocid1.compartment.oc1..aaaaaaaab7hx3zu46elcic7olpm5b6uks55ionfi6ergf7uurj3smi25pt2q",
   "definedTags": {},
-  "displayName": "new-octa-dev-lb-2",
+  "displayName": "new-octa-training-lb-2",
   "freeformTags": {},
   "hostnames": {
-    "ritebos-dev.octa.rite.etcchosted.com": {
-      "hostname": "ritebos-dev.octa.rite.etcchosted.com",
-      "name": "ritebos-dev.octa.rite.etcchosted.com"
+    "ritebos-training.octa.rite.etcchosted.com": {
+      "hostname": "ritebos-training.octa.rite.etcchosted.com",
+      "name": "ritebos-training.octa.rite.etcchosted.com"
     },
-    "ritelogs-dev.octa.rite.etcchosted.com": {
-      "hostname": "ritelogs-dev.octa.rite.etcchosted.com",
-      "name": "ritelogs-dev.octa.rite.etcchosted.com"
+    "ritelogs-training.octa.rite.etcchosted.com": {
+      "hostname": "ritelogs-training.octa.rite.etcchosted.com",
+      "name": "ritelogs-training.octa.rite.etcchosted.com"
     },
-    "riteodoo-dev.octa.rite.etcchosted.com": {
-      "hostname": "riteodoo-dev.octa.rite.etcchosted.com",
-      "name": "riteodoo-dev.octa.rite.etcchosted.com"
+    "riteodoo-training.octa.rite.etcchosted.com": {
+      "hostname": "riteodoo-training.octa.rite.etcchosted.com",
+      "name": "riteodoo-training.octa.rite.etcchosted.com"
     }
   },
-  "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaauhardlspeitprviv2qtku7fix7fvakutivvptrz4rxqc224eesuq",
+  "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaafaez6mhra5ild5jp5zpuypwrlg6haxspsj7htdgija3tbbcwzyhq",
   "ipAddresses": [
     {
       "ipAddress": "10.152.7.235",
@@ -427,7 +427,7 @@
       },
       "defaultBackendSetName": "images",
       "hostnameNames": [
-        "ritebos-dev.octa.rite.etcchosted.com"
+        "ritebos-training.octa.rite.etcchosted.com"
       ],
       "name": "bos",
       "pathRouteSetName": null,
@@ -459,7 +459,7 @@
       },
       "defaultBackendSetName": "odoo",
       "hostnameNames": [
-        "riteodoo-dev.octa.rite.etcchosted.com"
+        "riteodoo-training.octa.rite.etcchosted.com"
       ],
       "name": "odoo",
       "pathRouteSetName": null,
@@ -516,7 +516,7 @@
               "name": "FORWARD_TO_BACKENDSET"
             }
           ],
-          "condition": "all(http.request.url.path sw (i '/PaymentApplianceWS'))",
+          "condition": "all(http.request.url.path sw (i '/paymentws'))",
           "name": "paymentws"
         },
         {

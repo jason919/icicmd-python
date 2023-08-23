@@ -30,7 +30,7 @@ def list_load_balancers(compartment_id: str) -> str:
 def backup(compartment_name: str, compartment_id: str):
     text = list_load_balancers(compartment_id)
     if len(text) > 100:
-        file_path = f"{os.getcwd()}/files/saved/{compartment_name}-lb.json"
+        file_path = f"{os.getcwd()}/resources/files/saved/{compartment_name}-lb.json"
         with open(file_path, "w") as file:
             file.write(text)
     else:
@@ -69,7 +69,9 @@ def backup_loadbalancer():
 
 
 def create_loadbalancer(json_file_name: str):
-    with open(f"{os.getcwd()}/files/create/{json_file_name}", "r") as json_file:
+    with open(
+        f"{os.getcwd()}/resources/files/create/{json_file_name}", "r"
+    ) as json_file:
         json_data = json_file.read()
     parsed_data = json.loads(json_data)
     load_balancer_name = parsed_data["displayName"]

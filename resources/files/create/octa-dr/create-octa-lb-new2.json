@@ -517,7 +517,7 @@
 								"name": "FORWARD_TO_BACKENDSET"
 							}
 						],
-						"condition": "all(http.request.url.path sw (i '/PaymentApplianceWS'))",
+						"condition": "all(http.request.url.path sw (i '/paymentws'))",
 						"name": "paymentws"
 					},
 					{
