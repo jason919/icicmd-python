@@ -1,0 +1,336 @@
+
+octa-dev-lb.json
+camunda: 10.152.37.38:8021
+crystal-report: 10.152.37.57:8080
+mendix_adapter: 10.152.37.36:8017
+online_gateway: 10.152.37.44:8095
+oracle-report: 10.152.37.45:9002
+ritesearch: 10.152.37.38:8189
+weblogic-report-ui: 10.152.37.31:7012
+ritefulfillment: 10.152.37.43:8013
+ivr: 10.152.37.59:8487
+RiteLedger: 10.152.37.38:8081
+riteonline: 10.152.37.44:8011
+supervisor_override_sso: 10.152.37.58:8099
+TM: 10.152.37.36:8015
+ritereports: 10.152.37.39:8007
+ritemanager: 10.152.37.42:8005
+ritenotification: 10.152.37.40:8009
+SSO: 10.152.37.58:8443
+CRM: 10.152.37.37:8001
+icrsws: 10.152.37.32:7139
+images: 10.152.37.33:8543
+sos-admin: 10.152.37.58:8002
+paymentws: 10.152.37.32:7121
+odoo: 10.152.37.46:8069
+oracle-report: 10.152.37.45:9002
+CrystalReport: 10.152.37.57:8080
+payment: 10.152.37.32:7171
+hostws: 10.152.37.32:7159
+weblogic-report: 10.152.37.31:7012
+ritehelp: 10.152.11.71:8023
+
+
+octa-test-lb.json
+iva: 10.152.37.94:8087
+http_api: 10.152.37.97:9003
+https_api: 10.152.37.97:9003
+camunda: 10.152.37.74:8021
+crystal-report: 10.152.37.92:8080
+mendix_adapter: 10.152.37.72:8017
+online_gateway: 10.152.37.80:8095
+oracle-report: 10.152.37.81:9002
+ritesearch: 10.152.37.74:8189
+weblogic-report-ui: 10.152.37.67:7012
+ritefulfillment: 10.152.37.79:8013
+ivr: 10.152.37.93:8487
+RiteLedger: 10.152.37.74:8081
+riteonline: 10.152.37.80:8011
+supervisor_override_sso: 10.152.37.77:8099
+TM: 10.152.37.72:8015
+ritereports: 10.152.37.75:8007
+ritemanager: 10.152.37.78:8005
+ritenotification: 10.152.37.76:8009
+SSO: 10.152.37.77:8099
+CRM: 10.152.37.73:8001
+icrsws: 10.152.37.68:7139
+images: 10.152.37.69:8543
+paymentws: 10.152.37.68:7121
+odoo: 10.152.37.82:8069
+oracle-report: 10.152.37.81:9002
+sso-admin: 10.152.37.77:8002
+CrystalReport: 10.152.37.92:8080
+payment: 10.152.37.68:7171
+hostws: 10.152.37.68:7159
+weblogic-report: 10.152.37.67:7012
+ritehelp: 10.152.37.199:8023
+
+
+octa-training-lb.json
+ritefulfillment: 10.152.51.79:8013
+ivr: 10.152.51.90:8487
+RiteLedger: 10.152.51.74:8081
+riteonline: 10.152.51.80:8011
+supervisor_override_sso: 10.152.51.77:8099
+TM: 10.152.51.72:8015
+ritereports: 10.152.51.75:8007
+ritemanager: 10.152.51.78:8005
+ritenotification: 10.152.51.76:8009
+SSO: 10.152.51.77:8099
+CRM: 10.152.51.73:8001
+icrsws: 10.152.51.68:7139
+images: 10.152.51.69:8543
+sos-admin: 10.152.51.77:8002
+paymentws: 10.152.51.68:7121
+odoo: 10.152.51.82:8069
+oracle-report: 10.152.51.81:9002
+CrystalReport: 10.152.51.92:8080
+payment: 10.152.51.68:7171
+hostws: 10.152.51.68:7159
+weblogic-report: 10.152.51.67:7012
+ritehelp: 10.152.51.199:8023
+camunda: 10.152.51.74:8021
+crystal-report: 10.152.51.92:8080
+mendix_adapter: 10.152.51.72:8017
+online_gateway: 10.152.51.80:8095
+oracle-report: 10.152.51.81:9002
+ritesearch: 10.152.51.74:8189
+weblogic-report-ui: 10.152.51.67:7012
+
+
+octa-uat-lb.json
+uat_iva: 10.152.11.222:8087
+camunda: 10.152.11.202:8021
+crystal-report: 10.152.11.220:8080
+mendix_adapter: 10.152.11.200:8017
+online_gateway: 10.152.11.208:8095
+oracle-report: 10.152.11.209:9002
+ritesearch: 10.152.11.202:8189
+weblogic-report-ui: 10.152.11.195:7012
+icrsws: 10.152.11.196:7139
+images: 10.152.11.197:8543
+paymentws: 10.152.11.196:7121
+odoo: 10.152.11.210:8069
+oracle-report: 10.152.11.209:9002
+kapsch-host: 10.152.11.224:9003
+CrystalReport: 10.152.11.220:8080
+payment: 10.152.11.196:7171
+hostws: 110.152.11.196:7159
+weblogic-report: 10.152.11.195:7012
+ritehelp: 10.152.11.199:8023
+ritefulfillment: 10.152.11.207:8013
+ivr: 10.152.11.79:8487
+RiteLedger: 10.152.11.202:8081
+riteonline: 10.152.11.208:8011
+SSOAdmin: 10.152.11.205:8002
+supervisor_override_sso: 10.152.11.205:8099
+TM: 10.152.11.200:8015
+ritereports: 10.152.11.203:8007
+ritemanager: 10.152.11.206:8005
+ritenotification: 10.152.11.204:8009
+SSO: 10.152.11.205:8099
+CRM: 10.152.11.201:8001
+
+
+orb-dev-lb.json
+camunda: 10.152.49.213:8080
+supervisor_override_sso: 10.152.49.218:8099
+Adapter: 10.152.49.208:8082
+ritenotification: 10.152.49.216:8003
+SSO: 10.152.49.218:8443
+ritefulfillment: 10.152.49.220:8001
+RiteLedger: 10.152.49.213:8081
+riteonline: 10.152.49.225:8000
+Search: 10.152.49.213:8189
+online-gateway: 10.152.49.225:8095
+TM: 10.152.49.208:8015
+ritereports: 10.152.49.215:8000
+ritemanager: 10.152.49.219:8005
+CRM: 10.152.49.212:8000
+images: 10.152.50.133:8543
+weblogic_report_ui: 10.152.49.201:7012
+ivr: 10.152.49.213:8487
+crystal-server-aps: 10.152.49.207:6400
+oracle-report: 10.152.49.217:9002
+CrystalReport: 10.152.49.207:8080
+ritehelp: 10.152.49.205:8023
+images: 10.152.50.133:8543
+ivr: 10.152.49.213:8487
+weblogic_report_ui: 10.152.49.201:7012
+crystal-server-aps: 10.152.49.207:6400
+oracle-report: 10.152.49.217:9002
+CrystalReport: 10.152.49.207:8080
+ritehelp: 10.152.49.205:8023
+
+
+orb-prod-lb.json
+bs_lb_image_review: 10.152.11.30:7039
+ritefulfillment: 10.152.11.42:8013
+ritecrm: 10.152.11.35:8001
+riteonline: 10.152.11.43:8011
+TM: 10.152.11.34:8015
+ritereports: 10.152.11.37:8007
+riteledger: 10.152.11.36:8081
+ritemanager: 10.152.11.41:8005
+ritenotification: 10.152.11.38:8009
+ritesearch: 10.152.11.36:8189
+sso: 10.152.11.39:8443
+camunda: 10.152.11.36:8021
+fleet: 10.152.11.32:8085
+icrsws: 10.152.11.30:7139
+images: 10.152.11.31:8543
+ritepayws: 10.152.11.30:7121
+ritepay: 10.152.11.30:7171
+odoo: 10.152.11.45:8069
+oracle-report: 10.152.11.44:9002
+CrystalReport: 10.152.11.56:8080
+logs: 10.152.11.11:5601
+hostws: 10.152.11.30:7159
+weblogic-report: 10.152.11.29:7012
+ritehelp: 10.152.11.33:8023
+Online: 10.152.11.43:8011
+ivr: 10.152.11.36:8487
+camunda: 10.152.11.36:8021
+weblogic_report_ui: 10.152.11.29:7012
+oracle_report_server: 10.152.11.44:9013
+online-gateway: 10.152.11.43:8095
+Adapter: 10.152.11.34:8017
+crystal_report_server: 10.152.11.56:8080
+ritesearch: 10.152.11.36:8189
+bancpass: 10.152.11.33:8080
+
+
+orb-test-lb.json
+supervisor_override_sso: 10.152.50.22:8099
+Adapter: 10.152.50.13:8082
+legacy-sso: 10.152.50.22:8099
+ritenotification: 10.152.50.20:8003
+SSO: 10.152.50.22:8443
+ritefulfillment: 10.152.50.24:8001
+RiteLedger: 10.152.50.18:8081
+Search: 10.152.50.18:8189
+online-gateway: 10.152.50.29:8059
+ritereports: 10.152.50.19:8000
+TM: 10.152.50.13:8015
+Online: 10.152.50.29:8000
+ritemanager: 10.152.50.23:8005
+CRM: 10.152.50.17:8000
+images: 10.152.50.8:8543
+weblogic_report_ui: 10.152.50.6:7012
+ivr: 10.152.50.18:8487
+crystal-server-aps: 10.152.50.12:6400
+odoo: 10.152.50.11:8069
+oracle-report: 10.152.50.21:9002
+CrystalReport: 10.152.50.12:8080
+ritehelp: 10.152.50.10:8023
+
+
+orb-training-lb.json
+camunda: 10.152.50.143:8021
+fleet: 10.152.50.134:8085
+supervisor_override_sso: []
+Adapter: 10.152.50.138:8017
+ritenotification: 10.152.50.145:8009
+sso: 10.152.50.147:8443
+ritesearch: 10.152.50.143:8189
+ritefulfillment: 10.152.50.149:8013
+riteonline: 10.152.50.154:8011
+online-gateway: 10.152.50.154:8095
+ritereports: 10.152.50.144:8007
+TM: 10.152.50.138:8015
+ritemanager: 10.152.50.148:8005
+riteledger: 10.152.50.143:8081
+CRM: 10.152.50.142:8001
+images: 10.152.50.133:8543
+weblogic_report_ui: 10.152.50.131:7012
+ivr: 10.152.50.143:8487
+paymentws: 10.152.50.132:7121
+odoo: 10.152.50.136:8069
+oracle-report: 10.152.50.146:9002
+CrystalReport: 10.152.50.137:8080
+payment: 10.152.50.132:7171
+ritehelp: 10.152.50.135:8023
+camunda: 10.152.50.143:8021
+weblogic_report_ui: 10.152.50.131:7012
+oracle_report_server: 10.152.50.146:9013
+online-gateway: 10.152.50.154:8095
+Adapter: 10.152.50.138:8017
+crystal_report_server: 10.152.50.137:8080
+ritesearch: 10.152.50.143:8189
+
+
+orb-uat-lb.json
+bs_lb_image_review: 10.152.11.68:7039
+bs_lb_2022-1202-0855: 10.152.11.83:8099
+ritefulfillment: 10.152.11.85:8013
+ivr: 10.152.11.79:8487
+RiteLedger: 10.152.11.79:8081
+riteonline: 10.152.11.90:8011
+supervisor_override_sso: 10.152.11.83:8099
+TM: 10.152.11.74:8015
+ritereports: 10.152.11.80:8007
+ritemanager: 10.152.11.84:8005
+ritenotification: 10.152.11.81:8009
+SSO: 10.152.11.83:8443
+CRM: 10.152.11.78:8001
+opensearch-dashboard: 10.152.11.114:5601
+icrsws: 10.152.11.68:7139
+images: 10.152.11.69:8543
+crystal-server-aps: 10.152.11.73:6400
+paymentws: 10.152.11.68:7121
+odoo: 10.152.11.72:8069
+oracle-report: 10.152.11.82:9002
+CrystalReport: 10.152.11.73:8080
+payment: 10.152.11.68:7171
+hostws: 10.152.11.68:7159
+weblogic-report: 10.152.11.67:7012
+ritehelp: 10.152.11.71:8023
+ivr: 10.152.11.79:8487
+camunda: 10.152.11.79:8021
+crystal-report: 10.152.11.73:8080
+online_gateway: 10.152.11.90:8095
+mendix_adapter: 10.152.11.74:8017
+oracle-report: 10.152.11.82:9002
+ritesearch: 10.152.11.79:8189
+weblogic-report-ui: 10.152.11.67:7012
+bancpass: 10.152.11.71:8080
+
+
+product-dev-lb.json
+ritefulfillment: 10.152.48.245:8001
+riteview: 10.152.49.106:443
+riteonline: 10.152.48.250:8000
+ritereports: 10.152.48.251:8000
+TM: 10.152.48.234:8084
+Adapter: 10.152.48.234:8082
+ritemanager: 10.152.48.244:8005
+riteledger: 10.152.48.239:8081
+logs: 10.152.50.121:5601
+ritenotification: 10.152.48.241:8003
+SSO: 10.152.48.243:8443
+ritehelp: 10.152.48.231:8023
+CRM: 10.152.48.238:8000
+ritehelp: 10.152.48.231:8023
+
+
+product-test-lb.json
+riteview: 10.152.50.66:443
+ritepayws: 10.152.49.36:7121
+ritepay: 10.152.49.36:7171
+CrystalReport: 10.152.49.41:8080
+Adapter: 10.152.49.42:8082
+ritenotification: 10.152.49.49:8003
+ritesearch: 10.152.49.47:8189
+SSO: 10.152.49.51:8443
+ritefulfillment: 10.152.49.53:8001
+riteonline: 10.152.49.58:8000
+ritereports: 10.152.49.48:8000
+TM: 10.152.49.42:8084
+ritessoadmin: 10.152.49.51:8002
+ritemanager: 10.152.49.52:8005
+riteledger: 10.152.49.47:8081
+CRM: 10.152.49.46:8000
+bos-pay: 10.152.49.36:7171
+bos-hostws: 10.152.49.36:7159
+bos-payws: 10.152.49.36:7121
+ritehelp: 10.152.49.39:8023

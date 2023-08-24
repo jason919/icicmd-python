@@ -26,14 +26,14 @@ def list_load_balancers(compartment_id: str) -> str:
     return OciHttpHelper.restGet(url)
 
 
-def __backup_load_balancer_of_one_compartment(
-    compartment_name: str, compartment_id: str
-):
+def __backup_load_balancer_of_compartment(compartment_name: str, compartment_id: str):
     text = list_load_balancers(compartment_id)
+    print(f"backup load balancers:: {compartment_name}")
     if len(text) > 100:
         file_path = f"{os.getcwd()}/resources/files/saved/{compartment_name}-lb.json"
+        pretty_json = json.dumps(json.loads(text), indent=4)
         with open(file_path, "w") as file:
-            file.write(text)
+            file.write(pretty_json)
     else:
         print(f"the compartment {compartment_name} has no data")
 
@@ -64,7 +64,7 @@ def list_loadbalancer():
 def backup_all_loadbalancers():
     print("start full backup")
     for key, value in compartments.items():
-        __backup_load_balancer_of_one_compartment(key, value)
+        __backup_load_balancer_of_compartment(key, value)
 
 
 def create_loadbalancer(json_file_name: str, load_balancer_name: str):

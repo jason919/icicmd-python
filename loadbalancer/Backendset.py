@@ -40,3 +40,25 @@ def update_backend_sets_with_cert_name(
         value["sslConfiguration"]["certificateName"] = cert_name
         update(compartment_id, load_balancer_ocid, key, value)
         time.sleep(20)
+
+
+def print_all_ip_port():
+    directory_path = f"{os.getcwd()}/resources/files/saved"
+    print(directory_path)
+    file_list = sorted(os.listdir(directory_path))
+    for filename in file_list:
+        if os.path.isfile(os.path.join(directory_path, filename)):
+            if ".json" in filename and "Deleted" not in filename:
+                print(f"\n\n{filename}")
+                with open(os.path.join(directory_path, filename), "r") as json_file:
+                    json_data = json_file.read()
+                    if len(json_data) > 500:
+                        parsed_data = json.loads(json_data)
+                        for _lb in parsed_data:
+                            _backend_sets = _lb["backendSets"]
+                            # print(f"LB name: {_lb['displayName']}")
+                            for key, value in _backend_sets.items():
+                                if len(value["backends"]) > 0:
+                                    print(f"{key}: {value['backends'][0]['name']}")
+                                else:
+                                    print(f"{key}: {value['backends']}")
