@@ -2,7 +2,7 @@ import json
 import os
 import time
 
-from helper import LB_API_ENDPOINT
+from helper import LB_API_ENDPOINT, JsonHelper
 from helper import OciHttpHelper
 from config import compartments
 from loadbalancer import Cert, RouteSet, Listener, Loadbalancer
@@ -71,8 +71,10 @@ def create_loadbalancer(json_file_name: str, load_balancer_name: str):
     with open(
         f"{os.getcwd()}/resources/files/saved/{json_file_name}", "r"
     ) as json_file:
-        json_data = json_file.read()
-    parsed_data = json.loads(json_data)[load_balancer_name]
+        json_text = json_file.read()
+    parsed_data = JsonHelper.get_lb_data_from_compartment_json(
+        json_text, load_balancer_name
+    )
     load_balancer_name = parsed_data["displayName"]
     compartment_id = parsed_data["compartmentId"]
     certificates = parsed_data["certificates"]

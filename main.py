@@ -1,5 +1,5 @@
 from config import compartments
-from loadbalancer import Backendset, Loadbalancer
+from loadbalancer import Backendset, Listener, Loadbalancer
 
 # Loadbalancer.update_backend_sets('octa-training/create-octa-lb-new.json')
 # Loadbalancer.list_loadbalancer()
@@ -9,4 +9,5 @@ from loadbalancer import Backendset, Loadbalancer
 #     "new-octa-uat-lb-public",
 # )
 # Loadbalancer.backup_all_loadbalancers()
-Backendset.print_all_ip_port()
+# Backendset.print_all_ip_port()
+Listener.update_listeners("octa-dev-lb.json", "new-octa-dev-lb")

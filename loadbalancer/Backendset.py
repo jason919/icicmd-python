@@ -1,7 +1,7 @@
 import json
 import os
 import time
-from helper import OciHttpHelper
+from helper import JsonHelper, OciHttpHelper
 
 
 def update(
@@ -20,8 +20,10 @@ def update_backend_sets(json_file_name: str, load_balancer_name: str):
     with open(
         f"{os.getcwd()}/resources/files/saved/{json_file_name}", "r"
     ) as json_file:
-        json_data = json_file.read()
-    parsed_data = json.loads(json_data)[load_balancer_name]
+        json_text = json_file.read()
+    parsed_data = JsonHelper.get_lb_data_from_compartment_json(
+        json_text, load_balancer_name
+    )
     compartment_id = parsed_data["compartmentId"]
     load_balancer_ocid = parsed_data["id"]
     backend_sets = parsed_data["backendSets"]
@@ -46,10 +48,12 @@ def print_all_ip_port():
     directory_path = f"{os.getcwd()}/resources/files/saved"
     print(directory_path)
     file_list = sorted(os.listdir(directory_path))
+    ip_port = ""
     for filename in file_list:
         if os.path.isfile(os.path.join(directory_path, filename)):
             if ".json" in filename and "Deleted" not in filename:
                 print(f"\n\n{filename}")
+                ip_port += f"\n\n{filename}"
                 with open(os.path.join(directory_path, filename), "r") as json_file:
                     json_data = json_file.read()
                     if len(json_data) > 500:
@@ -60,5 +64,13 @@ def print_all_ip_port():
                             for key, value in _backend_sets.items():
                                 if len(value["backends"]) > 0:
                                     print(f"{key}: {value['backends'][0]['name']}")
+                                    ip_port += (
+                                        f"\n{key}: {value['backends'][0]['name']}"
+                                    )
                                 else:
                                     print(f"{key}: {value['backends']}")
+
+    with open(
+        os.path.join(f"{os.getcwd()}/resources/files", "ip_port.txt"), "w"
+    ) as ip_port_file:
+        ip_port_file.write(ip_port)

@@ -1,4 +1,5 @@
 
+
 octa-dev-lb.json
 camunda: 10.152.37.38:8021
 crystal-report: 10.152.37.57:8080
@@ -29,7 +30,6 @@ payment: 10.152.37.32:7171
 hostws: 10.152.37.32:7159
 weblogic-report: 10.152.37.31:7012
 ritehelp: 10.152.11.71:8023
-
 
 octa-test-lb.json
 iva: 10.152.37.94:8087
@@ -65,7 +65,6 @@ hostws: 10.152.37.68:7159
 weblogic-report: 10.152.37.67:7012
 ritehelp: 10.152.37.199:8023
 
-
 octa-training-lb.json
 ritefulfillment: 10.152.51.79:8013
 ivr: 10.152.51.90:8487
@@ -96,7 +95,6 @@ online_gateway: 10.152.51.80:8095
 oracle-report: 10.152.51.81:9002
 ritesearch: 10.152.51.74:8189
 weblogic-report-ui: 10.152.51.67:7012
-
 
 octa-uat-lb.json
 uat_iva: 10.152.11.222:8087
@@ -131,7 +129,6 @@ ritenotification: 10.152.11.204:8009
 SSO: 10.152.11.205:8099
 CRM: 10.152.11.201:8001
 
-
 orb-dev-lb.json
 camunda: 10.152.49.213:8080
 supervisor_override_sso: 10.152.49.218:8099
@@ -161,7 +158,6 @@ crystal-server-aps: 10.152.49.207:6400
 oracle-report: 10.152.49.217:9002
 CrystalReport: 10.152.49.207:8080
 ritehelp: 10.152.49.205:8023
-
 
 orb-prod-lb.json
 bs_lb_image_review: 10.152.11.30:7039
@@ -199,7 +195,6 @@ crystal_report_server: 10.152.11.56:8080
 ritesearch: 10.152.11.36:8189
 bancpass: 10.152.11.33:8080
 
-
 orb-test-lb.json
 supervisor_override_sso: 10.152.50.22:8099
 Adapter: 10.152.50.13:8082
@@ -224,11 +219,9 @@ oracle-report: 10.152.50.21:9002
 CrystalReport: 10.152.50.12:8080
 ritehelp: 10.152.50.10:8023
 
-
 orb-training-lb.json
 camunda: 10.152.50.143:8021
 fleet: 10.152.50.134:8085
-supervisor_override_sso: []
 Adapter: 10.152.50.138:8017
 ritenotification: 10.152.50.145:8009
 sso: 10.152.50.147:8443
@@ -257,7 +250,6 @@ online-gateway: 10.152.50.154:8095
 Adapter: 10.152.50.138:8017
 crystal_report_server: 10.152.50.137:8080
 ritesearch: 10.152.50.143:8189
-
 
 orb-uat-lb.json
 bs_lb_image_review: 10.152.11.68:7039
@@ -295,7 +287,6 @@ ritesearch: 10.152.11.79:8189
 weblogic-report-ui: 10.152.11.67:7012
 bancpass: 10.152.11.71:8080
 
-
 product-dev-lb.json
 ritefulfillment: 10.152.48.245:8001
 riteview: 10.152.49.106:443
@@ -311,7 +302,6 @@ SSO: 10.152.48.243:8443
 ritehelp: 10.152.48.231:8023
 CRM: 10.152.48.238:8000
 ritehelp: 10.152.48.231:8023
-
 
 product-test-lb.json
 riteview: 10.152.50.66:443
