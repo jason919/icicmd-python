@@ -16,7 +16,9 @@ def update(
     )
 
 
-def update_backend_sets(json_file_name: str, load_balancer_name: str):
+def update_backend_sets(
+    json_file_name: str, load_balancer_name: str, backend_set_name: str = ""
+):
     with open(
         f"{os.getcwd()}/resources/files/saved/{json_file_name}", "r"
     ) as json_file:
@@ -29,8 +31,9 @@ def update_backend_sets(json_file_name: str, load_balancer_name: str):
     backend_sets = parsed_data["backendSets"]
     for key, value in backend_sets.items():
         print(key)
-        update(compartment_id, load_balancer_ocid, key, value)
-        time.sleep(20)
+        if backend_set_name == "" or backend_set_name == key:
+            update(compartment_id, load_balancer_ocid, key, value)
+            time.sleep(20)
 
 
 def update_backend_sets_with_cert_name(

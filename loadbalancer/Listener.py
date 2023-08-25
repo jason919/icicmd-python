@@ -20,7 +20,9 @@ def update(compartment_id: str, load_balancer_ocid: str, listener_name: str, pos
     )
 
 
-def update_listeners(json_file_name: str, load_balancer_name: str):
+def update_listeners(
+    json_file_name: str, load_balancer_name: str, listener_name: str = ""
+):
     with open(
         f"{os.getcwd()}/resources/files/saved/{json_file_name}", "r"
     ) as json_file:
@@ -34,8 +36,9 @@ def update_listeners(json_file_name: str, load_balancer_name: str):
     listeners = parsed_data["listeners"]
     for key, value in listeners.items():
         print(key)
-        update(compartment_id, load_balancer_ocid, str(key), value)
-        time.sleep(20)
+        if listener_name == "" or listener_name == key:
+            update(compartment_id, load_balancer_ocid, str(key), value)
+            time.sleep(20)
 
 
 def update_listeners_with_cert_name(
