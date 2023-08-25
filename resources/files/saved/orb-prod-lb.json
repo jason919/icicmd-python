@@ -202,36 +202,6 @@
                 "ruleSetNames": [],
                 "routingPolicyName": null
             },
-            "riteSearch": {
-                "name": "riteSearch",
-                "defaultBackendSetName": "ritesearch",
-                "port": 443,
-                "protocol": "HTTP",
-                "hostnameNames": [
-                    "ritesearch-prod.orb.rite.etcchosted.com"
-                ],
-                "serverName": null,
-                "pathRouteSetName": null,
-                "sslConfiguration": {
-                    "verifyDepth": 1,
-                    "verifyPeerCertificate": false,
-                    "trustedCertificateAuthorityIds": [],
-                    "certificateIds": [],
-                    "certificateName": "OrbWild",
-                    "serverOrderPreference": "DISABLED",
-                    "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
-                },
-                "connectionConfiguration": {
-                    "idleTimeout": 60,
-                    "backendTcpProxyProtocolVersion": null,
-                    "backendTcpProxyProtocolOptions": null
-                },
-                "ruleSetNames": [],
-                "routingPolicyName": null
-            },
             "ritecrm": {
                 "name": "ritecrm",
                 "defaultBackendSetName": "ritecrm",
@@ -505,10 +475,6 @@
             "ritetm-prod.orb.rite.etcchosted.com": {
                 "name": "ritetm-prod.orb.rite.etcchosted.com",
                 "hostname": "ritetm-prod.orb.rite.etcchosted.com"
-            },
-            "ritesearch-prod.orb.rite.etcchosted.com": {
-                "name": "ritesearch-prod.orb.rite.etcchosted.com",
-                "hostname": "ritesearch-prod.orb.rite.etcchosted.com"
             },
             "riteonline-prod.orb.rite.etcchosted.com": {
                 "name": "riteonline-prod.orb.rite.etcchosted.com",
@@ -928,56 +894,6 @@
                     "isHttpOnly": true
                 }
             },
-            "ritesearch": {
-                "name": "ritesearch",
-                "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.11.36:8189",
-                        "ipAddress": "10.152.11.36",
-                        "port": 8189,
-                        "weight": 1,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
-                "healthChecker": {
-                    "protocol": "TCP",
-                    "urlPath": null,
-                    "port": 8189,
-                    "returnCode": 200,
-                    "retries": 3,
-                    "timeoutInMillis": 3000,
-                    "intervalInMillis": 10000,
-                    "responseBodyRegex": ".*",
-                    "isForcePlainText": null
-                },
-                "sslConfiguration": {
-                    "verifyDepth": 1,
-                    "verifyPeerCertificate": false,
-                    "trustedCertificateAuthorityIds": [],
-                    "certificateIds": [],
-                    "certificateName": "OrbWild",
-                    "serverOrderPreference": null,
-                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
-                },
-                "sessionPersistenceConfiguration": null,
-                "lbCookieSessionPersistenceConfiguration": {
-                    "cookieName": "X-Oracle-BMC-LBS-Route",
-                    "disableFallback": null,
-                    "domain": null,
-                    "path": "/",
-                    "maxAgeInSeconds": null,
-                    "isSecure": true,
-                    "isHttpOnly": true
-                }
-            },
             "sso": {
                 "name": "sso",
                 "policy": "IP_HASH",
@@ -1088,36 +1004,6 @@
         ],
         "networkSecurityGroupIds": [],
         "listeners": {
-            "camunda": {
-                "name": "camunda",
-                "defaultBackendSetName": "camunda",
-                "port": 443,
-                "protocol": "HTTP",
-                "hostnameNames": [
-                    "ritecamunda-prod.orb.rite.etcchosted.com"
-                ],
-                "serverName": null,
-                "pathRouteSetName": null,
-                "sslConfiguration": {
-                    "verifyDepth": 1,
-                    "verifyPeerCertificate": false,
-                    "trustedCertificateAuthorityIds": [],
-                    "certificateIds": [],
-                    "certificateName": "OrbWild",
-                    "serverOrderPreference": "DISABLED",
-                    "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
-                },
-                "connectionConfiguration": {
-                    "idleTimeout": 60,
-                    "backendTcpProxyProtocolVersion": null,
-                    "backendTcpProxyProtocolOptions": null
-                },
-                "ruleSetNames": [],
-                "routingPolicyName": null
-            },
             "fleet": {
                 "name": "fleet",
                 "defaultBackendSetName": "fleet",
@@ -1246,10 +1132,6 @@
                 "name": "ritebos-prod.orb.rite.etcchosted.com",
                 "hostname": "ritebos-prod.orb.rite.etcchosted.com"
             },
-            "ritecamunda-prod.orb.rite.etcchosted.com": {
-                "name": "ritecamunda-prod.orb.rite.etcchosted.com",
-                "hostname": "ritecamunda-prod.orb.rite.etcchosted.com"
-            },
             "ritefleet-prod.orb.rite.etcchosted.com": {
                 "name": "ritefleet-prod.orb.rite.etcchosted.com",
                 "hostname": "ritefleet-prod.orb.rite.etcchosted.com"
@@ -1283,48 +1165,6 @@
             }
         },
         "backendSets": {
-            "camunda": {
-                "name": "camunda",
-                "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.11.36:8021",
-                        "ipAddress": "10.152.11.36",
-                        "port": 8021,
-                        "weight": 1,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
-                "healthChecker": {
-                    "protocol": "TCP",
-                    "urlPath": null,
-                    "port": 8021,
-                    "returnCode": 200,
-                    "retries": 3,
-                    "timeoutInMillis": 3000,
-                    "intervalInMillis": 10000,
-                    "responseBodyRegex": ".*",
-                    "isForcePlainText": null
-                },
-                "sslConfiguration": {
-                    "verifyDepth": 1,
-                    "verifyPeerCertificate": false,
-                    "trustedCertificateAuthorityIds": [],
-                    "certificateIds": [],
-                    "certificateName": "EtccHostedLocal",
-                    "serverOrderPreference": null,
-                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
-                },
-                "sessionPersistenceConfiguration": null,
-                "lbCookieSessionPersistenceConfiguration": null
-            },
             "fleet": {
                 "name": "fleet",
                 "policy": "IP_HASH",
@@ -1839,26 +1679,6 @@
                             {
                                 "name": "FORWARD_TO_BACKENDSET",
                                 "backendSetName": "weblogic-report"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "crystal_report",
-                        "condition": "all(http.request.url.path sw (i '/BOE'))",
-                        "actions": [
-                            {
-                                "name": "FORWARD_TO_BACKENDSET",
-                                "backendSetName": "CrystalReport"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "oracle_report",
-                        "condition": "all(http.request.url.path sw (i '/reports/rwservlet'))",
-                        "actions": [
-                            {
-                                "name": "FORWARD_TO_BACKENDSET",
-                                "backendSetName": "oracle-report"
                             }
                         ]
                     },
@@ -2704,7 +2524,9 @@
                 "defaultBackendSetName": "bancpass",
                 "port": 443,
                 "protocol": "HTTP",
-                "hostnameNames": null,
+                "hostnameNames": [
+                    "ritebancpass.orb.rite.etcchosted.com"
+                ],
                 "serverName": null,
                 "pathRouteSetName": null,
                 "sslConfiguration": {
@@ -2713,7 +2535,7 @@
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "LB_ORB",
-                    "serverOrderPreference": "DISABLED",
+                    "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
                         "TLSv1.2"
@@ -2728,7 +2550,12 @@
                 "routingPolicyName": null
             }
         },
-        "hostnames": {},
+        "hostnames": {
+            "ritebancpass.orb.rite.etcchosted.com": {
+                "name": "ritebancpass.orb.rite.etcchosted.com",
+                "hostname": "ritebancpass.orb.rite.etcchosted.com"
+            }
+        },
         "cidrBlocks": null,
         "sslCipherSuites": {},
         "certificates": {

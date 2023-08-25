@@ -18,21 +18,15 @@
             "maximumBandwidthInMbps": 100
         },
         "isPrivate": false,
-        "subnetIds": [
-            "ocid1.subnet.oc1.iad.aaaaaaaaay7lt7g2g65rpyn74dgmrtkug7iylyyovi7jev2gp6rbexyhrefq"
-        ],
-        "networkSecurityGroupIds": [
-            "ocid1.networksecuritygroup.oc1.iad.aaaaaaaap7qf7vemvvxap57pogpdaetwwaucmbqarm33c3fkyl4e3ew2phna"
-        ],
+        "subnetIds": ["ocid1.subnet.oc1.iad.aaaaaaaaay7lt7g2g65rpyn74dgmrtkug7iylyyovi7jev2gp6rbexyhrefq"],
+        "networkSecurityGroupIds": ["ocid1.networksecuritygroup.oc1.iad.aaaaaaaap7qf7vemvvxap57pogpdaetwwaucmbqarm33c3fkyl4e3ew2phna"],
         "listeners": {
             "iva": {
                 "name": "iva",
                 "defaultBackendSetName": "uat_iva",
                 "port": 443,
                 "protocol": "HTTP",
-                "hostnameNames": [
-                    "iva-uat.octa.rite.etcchosted.com"
-                ],
+                "hostnameNames": ["iva-uat.octa.rite.etcchosted.com"],
                 "serverName": null,
                 "pathRouteSetName": null,
                 "sslConfiguration": {
@@ -43,9 +37,7 @@
                     "certificateName": "LB-OCTA-CERT",
                     "serverOrderPreference": "DISABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
+                    "protocols": ["TLSv1.2"]
                 },
                 "connectionConfiguration": {
                     "idleTimeout": 57,
@@ -141,9 +133,7 @@
             "maximumBandwidthInMbps": 500
         },
         "isPrivate": true,
-        "subnetIds": [
-            "ocid1.subnet.oc1.iad.aaaaaaaagmsolj4slbflhkwqhfk4u7gmtoxoum6q4p6b5wmaeezblmnduwqq"
-        ],
+        "subnetIds": ["ocid1.subnet.oc1.iad.aaaaaaaagmsolj4slbflhkwqhfk4u7gmtoxoum6q4p6b5wmaeezblmnduwqq"],
         "networkSecurityGroupIds": [],
         "listeners": {
             "camunda": {
@@ -151,9 +141,7 @@
                 "defaultBackendSetName": "camunda",
                 "port": 443,
                 "protocol": "HTTP",
-                "hostnameNames": [
-                    "ritecamunda-uat.octa.rite.etcchosted.com"
-                ],
+                "hostnameNames": ["ritecamunda-uat.octa.rite.etcchosted.com"],
                 "serverName": null,
                 "pathRouteSetName": null,
                 "sslConfiguration": {
@@ -164,9 +152,7 @@
                     "certificateName": "LB-OCTA-CERT2",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
+                    "protocols": ["TLSv1.2"]
                 },
                 "connectionConfiguration": {
                     "idleTimeout": 60,
@@ -181,9 +167,7 @@
                 "defaultBackendSetName": "online_gateway",
                 "port": 443,
                 "protocol": "HTTP",
-                "hostnameNames": [
-                    "riteonlinegateway-uat.octa.rite.etcchosted.com"
-                ],
+                "hostnameNames": ["riteonlinegateway-uat.octa.rite.etcchosted.com"],
                 "serverName": null,
                 "pathRouteSetName": null,
                 "sslConfiguration": {
@@ -194,9 +178,7 @@
                     "certificateName": "LB-OCTA-CERT2",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
+                    "protocols": ["TLSv1.2"]
                 },
                 "connectionConfiguration": {
                     "idleTimeout": 60,
@@ -211,9 +193,7 @@
                 "defaultBackendSetName": "mendix_adapter",
                 "port": 443,
                 "protocol": "HTTP",
-                "hostnameNames": [
-                    "riteadapter-uat.octa.rite.etcchosted.com"
-                ],
+                "hostnameNames": ["riteadapter-uat.octa.rite.etcchosted.com"],
                 "serverName": null,
                 "pathRouteSetName": null,
                 "sslConfiguration": {
@@ -224,9 +204,7 @@
                     "certificateName": "LB-OCTA-CERT2",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
+                    "protocols": ["TLSv1.2"]
                 },
                 "connectionConfiguration": {
                     "idleTimeout": 120,
@@ -241,9 +219,7 @@
                 "defaultBackendSetName": "weblogic-report-ui",
                 "port": 443,
                 "protocol": "HTTP",
-                "hostnameNames": [
-                    "ritereportserver-uat.octa.rite.etcchosted.com"
-                ],
+                "hostnameNames": ["ritereportserver-uat.octa.rite.etcchosted.com"],
                 "serverName": null,
                 "pathRouteSetName": null,
                 "sslConfiguration": {
@@ -254,9 +230,7 @@
                     "certificateName": "LB-OCTA-CERT2",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
+                    "protocols": ["TLSv1.2"]
                 },
                 "connectionConfiguration": {
                     "idleTimeout": 120,
@@ -271,9 +245,7 @@
                 "defaultBackendSetName": "ritesearch",
                 "port": 443,
                 "protocol": "HTTP",
-                "hostnameNames": [
-                    "ritesearch-uat.octa.rite.etcchosted.com"
-                ],
+                "hostnameNames": ["ritesearch-uat.octa.rite.etcchosted.com"],
                 "serverName": null,
                 "pathRouteSetName": null,
                 "sslConfiguration": {
@@ -284,9 +256,7 @@
                     "certificateName": "LB-OCTA-CERT2",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
+                    "protocols": ["TLSv1.2"]
                 },
                 "connectionConfiguration": {
                     "idleTimeout": 60,
@@ -367,11 +337,7 @@
                     "certificateName": "InternalSelfCert-Dev-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
+                    "protocols": ["TLSv1.2", "TLSv1", "TLSv1.1"]
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
@@ -438,11 +404,7 @@
                     "certificateName": "InternalSelfCert-Dev-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
+                    "protocols": ["TLSv1.2", "TLSv1", "TLSv1.1"]
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
@@ -480,11 +442,7 @@
                     "certificateName": "InternalSelfCert-Dev-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
+                    "protocols": ["TLSv1.2", "TLSv1", "TLSv1.1"]
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
@@ -551,11 +509,7 @@
                     "certificateName": "InternalSelfCert-Dev-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
+                    "protocols": ["TLSv1.2", "TLSv1", "TLSv1.1"]
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
@@ -653,9 +607,7 @@
             "maximumBandwidthInMbps": 1500
         },
         "isPrivate": true,
-        "subnetIds": [
-            "ocid1.subnet.oc1.iad.aaaaaaaaay7lt7g2g65rpyn74dgmrtkug7iylyyovi7jev2gp6rbexyhrefq"
-        ],
+        "subnetIds": ["ocid1.subnet.oc1.iad.aaaaaaaaay7lt7g2g65rpyn74dgmrtkug7iylyyovi7jev2gp6rbexyhrefq"],
         "networkSecurityGroupIds": [],
         "listeners": {
             "odoo": {
@@ -663,9 +615,7 @@
                 "defaultBackendSetName": "odoo",
                 "port": 443,
                 "protocol": "HTTP",
-                "hostnameNames": [
-                    "riteodoo-uat.octa.rite.etcchosted.com"
-                ],
+                "hostnameNames": ["riteodoo-uat.octa.rite.etcchosted.com"],
                 "serverName": null,
                 "pathRouteSetName": null,
                 "sslConfiguration": {
@@ -676,9 +626,7 @@
                     "certificateName": "LB-OCTA-CERT2",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
+                    "protocols": ["TLSv1.2"]
                 },
                 "connectionConfiguration": {
                     "idleTimeout": 60,
@@ -693,9 +641,7 @@
                 "defaultBackendSetName": "images",
                 "port": 443,
                 "protocol": "HTTP",
-                "hostnameNames": [
-                    "ritebos-uat.octa.rite.etcchosted.com"
-                ],
+                "hostnameNames": ["ritebos-uat.octa.rite.etcchosted.com"],
                 "serverName": null,
                 "pathRouteSetName": null,
                 "sslConfiguration": {
@@ -706,18 +652,14 @@
                     "certificateName": "LB-OCTA-CERT2",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
+                    "protocols": ["TLSv1.2"]
                 },
                 "connectionConfiguration": {
                     "idleTimeout": 120,
                     "backendTcpProxyProtocolVersion": null,
                     "backendTcpProxyProtocolOptions": null
                 },
-                "ruleSetNames": [
-                    "X_Frame_Options"
-                ],
+                "ruleSetNames": ["X_Frame_Options"],
                 "routingPolicyName": "bos"
             },
             "kapsch": {
@@ -725,9 +667,7 @@
                 "defaultBackendSetName": "kapsch-host",
                 "port": 443,
                 "protocol": "HTTP",
-                "hostnameNames": [
-                    "kapsch-uat.octa.rite.etcchosted.com"
-                ],
+                "hostnameNames": ["kapsch-uat.octa.rite.etcchosted.com"],
                 "serverName": null,
                 "pathRouteSetName": null,
                 "sslConfiguration": {
@@ -738,9 +678,7 @@
                     "certificateName": "LB-OCTA-CERT2",
                     "serverOrderPreference": "DISABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
+                    "protocols": ["TLSv1.2"]
                 },
                 "connectionConfiguration": {
                     "idleTimeout": 60,
@@ -817,11 +755,7 @@
                     "certificateName": "InternalSelfCert-Dev-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
+                    "protocols": ["TLSv1.2", "TLSv1", "TLSv1.1"]
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
@@ -859,11 +793,7 @@
                     "certificateName": "InternalSelfCert-Dev-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
+                    "protocols": ["TLSv1.2", "TLSv1", "TLSv1.1"]
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
@@ -901,11 +831,7 @@
                     "certificateName": "InternalSelfCert-Dev-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
+                    "protocols": ["TLSv1.2", "TLSv1", "TLSv1.1"]
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
@@ -1076,11 +1002,7 @@
                     "certificateName": "InternalSelfCert-Dev-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
+                    "protocols": ["TLSv1.2", "TLSv1", "TLSv1.1"]
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
@@ -1118,11 +1040,7 @@
                     "certificateName": "InternalSelfCert-Dev-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
+                    "protocols": ["TLSv1.2", "TLSv1", "TLSv1.1"]
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
@@ -1189,11 +1107,7 @@
                     "certificateName": "InternalSelfCert-Dev-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
+                    "protocols": ["TLSv1.2", "TLSv1", "TLSv1.1"]
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
@@ -1332,9 +1246,7 @@
             "maximumBandwidthInMbps": 1500
         },
         "isPrivate": true,
-        "subnetIds": [
-            "ocid1.subnet.oc1.iad.aaaaaaaaay7lt7g2g65rpyn74dgmrtkug7iylyyovi7jev2gp6rbexyhrefq"
-        ],
+        "subnetIds": ["ocid1.subnet.oc1.iad.aaaaaaaaay7lt7g2g65rpyn74dgmrtkug7iylyyovi7jev2gp6rbexyhrefq"],
         "networkSecurityGroupIds": [],
         "listeners": {
             "ritefulfillment": {
@@ -1342,9 +1254,7 @@
                 "defaultBackendSetName": "ritefulfillment",
                 "port": 443,
                 "protocol": "HTTP",
-                "hostnameNames": [
-                    "ritefulfillment-uat.octa.rite.etcchosted.com"
-                ],
+                "hostnameNames": ["ritefulfillment-uat.octa.rite.etcchosted.com"],
                 "serverName": null,
                 "pathRouteSetName": null,
                 "sslConfiguration": {
@@ -1355,9 +1265,7 @@
                     "certificateName": "LB-OCTA-CERT2",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
+                    "protocols": ["TLSv1.2"]
                 },
                 "connectionConfiguration": {
                     "idleTimeout": 60,
@@ -1372,9 +1280,7 @@
                 "defaultBackendSetName": "SSO",
                 "port": 443,
                 "protocol": "HTTP",
-                "hostnameNames": [
-                    "ritesso-uat.octa.rite.etcchosted.com"
-                ],
+                "hostnameNames": ["ritesso-uat.octa.rite.etcchosted.com"],
                 "serverName": null,
                 "pathRouteSetName": null,
                 "sslConfiguration": {
@@ -1385,9 +1291,7 @@
                     "certificateName": "LB-OCTA-CERT2",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
+                    "protocols": ["TLSv1.2"]
                 },
                 "connectionConfiguration": {
                     "idleTimeout": 60,
@@ -1402,9 +1306,7 @@
                 "defaultBackendSetName": "CRM",
                 "port": 443,
                 "protocol": "HTTP",
-                "hostnameNames": [
-                    "ritecrm-uat.octa.rite.etcchosted.com"
-                ],
+                "hostnameNames": ["ritecrm-uat.octa.rite.etcchosted.com"],
                 "serverName": null,
                 "pathRouteSetName": null,
                 "sslConfiguration": {
@@ -1415,9 +1317,7 @@
                     "certificateName": "LB-OCTA-CERT2",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
+                    "protocols": ["TLSv1.2"]
                 },
                 "connectionConfiguration": {
                     "idleTimeout": 60,
@@ -1432,9 +1332,7 @@
                 "defaultBackendSetName": "ivr",
                 "port": 443,
                 "protocol": "HTTP",
-                "hostnameNames": [
-                    "riteivr-uat.octa.rite.etcchosted.com"
-                ],
+                "hostnameNames": ["riteivr-uat.octa.rite.etcchosted.com"],
                 "serverName": null,
                 "pathRouteSetName": null,
                 "sslConfiguration": {
@@ -1445,9 +1343,7 @@
                     "certificateName": "LB-OCTA-CERT2",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
+                    "protocols": ["TLSv1.2"]
                 },
                 "connectionConfiguration": {
                     "idleTimeout": 60,
@@ -1462,9 +1358,7 @@
                 "defaultBackendSetName": "RiteLedger",
                 "port": 443,
                 "protocol": "HTTP",
-                "hostnameNames": [
-                    "riteledger-uat.octa.rite.etcchosted.com"
-                ],
+                "hostnameNames": ["riteledger-uat.octa.rite.etcchosted.com"],
                 "serverName": null,
                 "pathRouteSetName": null,
                 "sslConfiguration": {
@@ -1475,9 +1369,7 @@
                     "certificateName": "LB-OCTA-CERT2",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
+                    "protocols": ["TLSv1.2"]
                 },
                 "connectionConfiguration": {
                     "idleTimeout": 60,
@@ -1492,9 +1384,7 @@
                 "defaultBackendSetName": "SSOAdmin",
                 "port": 443,
                 "protocol": "HTTP",
-                "hostnameNames": [
-                    "ritessoadmin-uat.octa.rite.etcchosted.com"
-                ],
+                "hostnameNames": ["ritessoadmin-uat.octa.rite.etcchosted.com"],
                 "serverName": null,
                 "pathRouteSetName": null,
                 "sslConfiguration": {
@@ -1505,9 +1395,7 @@
                     "certificateName": "LB-OCTA-CERT2",
                     "serverOrderPreference": "DISABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
+                    "protocols": ["TLSv1.2"]
                 },
                 "connectionConfiguration": {
                     "idleTimeout": 60,
@@ -1522,9 +1410,7 @@
                 "defaultBackendSetName": "riteonline",
                 "port": 443,
                 "protocol": "HTTP",
-                "hostnameNames": [
-                    "riteonline-uat.octa.rite.etcchosted.com"
-                ],
+                "hostnameNames": ["riteonline-uat.octa.rite.etcchosted.com"],
                 "serverName": null,
                 "pathRouteSetName": null,
                 "sslConfiguration": {
@@ -1535,9 +1421,7 @@
                     "certificateName": "LB-OCTA-CERT2",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
+                    "protocols": ["TLSv1.2"]
                 },
                 "connectionConfiguration": {
                     "idleTimeout": 60,
@@ -1552,9 +1436,7 @@
                 "defaultBackendSetName": "TM",
                 "port": 443,
                 "protocol": "HTTP",
-                "hostnameNames": [
-                    "ritetm-uat.octa.rite.etcchosted.com"
-                ],
+                "hostnameNames": ["ritetm-uat.octa.rite.etcchosted.com"],
                 "serverName": null,
                 "pathRouteSetName": null,
                 "sslConfiguration": {
@@ -1565,9 +1447,7 @@
                     "certificateName": "LB-OCTA-CERT2",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
+                    "protocols": ["TLSv1.2"]
                 },
                 "connectionConfiguration": {
                     "idleTimeout": 60,
@@ -1582,9 +1462,7 @@
                 "defaultBackendSetName": "ritereports",
                 "port": 443,
                 "protocol": "HTTP",
-                "hostnameNames": [
-                    "ritereports-uat.octa.rite.etcchosted.com"
-                ],
+                "hostnameNames": ["ritereports-uat.octa.rite.etcchosted.com"],
                 "serverName": null,
                 "pathRouteSetName": null,
                 "sslConfiguration": {
@@ -1595,9 +1473,7 @@
                     "certificateName": "LB-OCTA-CERT2",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
+                    "protocols": ["TLSv1.2"]
                 },
                 "connectionConfiguration": {
                     "idleTimeout": 120,
@@ -1612,9 +1488,7 @@
                 "defaultBackendSetName": "ritemanager",
                 "port": 443,
                 "protocol": "HTTP",
-                "hostnameNames": [
-                    "ritemanager-uat.octa.rite.etcchosted.com"
-                ],
+                "hostnameNames": ["ritemanager-uat.octa.rite.etcchosted.com"],
                 "serverName": null,
                 "pathRouteSetName": null,
                 "sslConfiguration": {
@@ -1625,9 +1499,7 @@
                     "certificateName": "LB-OCTA-CERT2",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
+                    "protocols": ["TLSv1.2"]
                 },
                 "connectionConfiguration": {
                     "idleTimeout": 60,
@@ -1642,9 +1514,7 @@
                 "defaultBackendSetName": "ritenotification",
                 "port": 443,
                 "protocol": "HTTP",
-                "hostnameNames": [
-                    "ritenotification-uat.octa.rite.etcchosted.com"
-                ],
+                "hostnameNames": ["ritenotification-uat.octa.rite.etcchosted.com"],
                 "serverName": null,
                 "pathRouteSetName": null,
                 "sslConfiguration": {
@@ -1655,9 +1525,7 @@
                     "certificateName": "LB-OCTA-CERT2",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
+                    "protocols": ["TLSv1.2"]
                 },
                 "connectionConfiguration": {
                     "idleTimeout": 60,
@@ -1762,11 +1630,7 @@
                     "certificateName": "InternalSelfCert-Dev-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
+                    "protocols": ["TLSv1.2", "TLSv1", "TLSv1.1"]
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": {
@@ -1812,11 +1676,7 @@
                     "certificateName": "InternalSelfCert-Dev-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
+                    "protocols": ["TLSv1.2", "TLSv1", "TLSv1.1"]
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
@@ -1854,11 +1714,7 @@
                     "certificateName": "InternalSelfCert-Dev-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
+                    "protocols": ["TLSv1.2", "TLSv1", "TLSv1.1"]
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": {
@@ -1904,11 +1760,7 @@
                     "certificateName": "InternalSelfCert-Dev-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
+                    "protocols": ["TLSv1.2", "TLSv1", "TLSv1.1"]
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": {
@@ -1954,11 +1806,7 @@
                     "certificateName": "InternalSelfCert-Dev-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
+                    "protocols": ["TLSv1.2", "TLSv1", "TLSv1.1"]
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
@@ -1996,11 +1844,7 @@
                     "certificateName": "InternalSelfCert-Dev-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
+                    "protocols": ["TLSv1.2", "TLSv1", "TLSv1.1"]
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
@@ -2038,11 +1882,7 @@
                     "certificateName": "InternalSelfCert-Dev-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
+                    "protocols": ["TLSv1.2", "TLSv1", "TLSv1.1"]
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
@@ -2080,11 +1920,7 @@
                     "certificateName": "InternalSelfCert-Dev-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
+                    "protocols": ["TLSv1.2", "TLSv1", "TLSv1.1"]
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": {
@@ -2130,11 +1966,7 @@
                     "certificateName": "InternalSelfCert-Dev-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
+                    "protocols": ["TLSv1.2", "TLSv1", "TLSv1.1"]
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": {
@@ -2180,11 +2012,7 @@
                     "certificateName": "InternalSelfCert-Dev-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
+                    "protocols": ["TLSv1.2", "TLSv1", "TLSv1.1"]
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": {
@@ -2202,9 +2030,9 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.205:8099",
+                        "name": "10.152.11.205:8443",
                         "ipAddress": "10.152.11.205",
-                        "port": 8099,
+                        "port": 8443,
                         "weight": 1,
                         "drain": false,
                         "backup": false,
@@ -2214,7 +2042,7 @@
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 8099,
+                    "port": 8443,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -2230,11 +2058,7 @@
                     "certificateName": "InternalSelfCert-Dev-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
+                    "protocols": ["TLSv1.2", "TLSv1", "TLSv1.1"]
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": {
@@ -2280,11 +2104,7 @@
                     "certificateName": "InternalSelfCert-Dev-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
+                    "protocols": ["TLSv1.2", "TLSv1", "TLSv1.1"]
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": {
