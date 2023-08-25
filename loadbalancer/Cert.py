@@ -1,5 +1,4 @@
 import json
-import os
 import time
 
 from config import orb_certs, octa_certs, self_prod_certs, self_dev_certs

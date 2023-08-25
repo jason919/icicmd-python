@@ -2,10 +2,10 @@ import json
 import os
 import time
 
+from config import compartments
 from helper import LB_API_ENDPOINT, JsonHelper
 from helper import OciHttpHelper
-from config import compartments
-from loadbalancer import Cert, RouteSet, Listener, Loadbalancer
+from loadbalancer import Cert, RouteSet, Listener
 
 
 def create(compartment_id: str, post_json):
@@ -58,7 +58,7 @@ def get_ocid_from_new_load_balancer(
 
 
 def list_loadbalancer():
-    print(Loadbalancer.list_load_balancers(compartments["orb-dev"]))
+    print(list_load_balancers(compartments["orb-dev"]))
 
 
 def backup_all_loadbalancers():
@@ -85,14 +85,12 @@ def create_loadbalancer(json_file_name: str, load_balancer_name: str):
     if len(json.dumps(routing_policies)) > 10:
         listeners_backup = parsed_data["listeners"]
         parsed_data["listeners"] = []
-    Loadbalancer.create(compartment_id, parsed_data)
+    create(compartment_id, parsed_data)
 
     if len(json.dumps(routing_policies)) > 10:
         print("wait for the load balancer is created, then fix the routes")
         time.sleep(30)
-        ocid = Loadbalancer.get_ocid_from_new_load_balancer(
-            compartment_id, load_balancer_name
-        )
+        ocid = get_ocid_from_new_load_balancer(compartment_id, load_balancer_name)
         print(f"new ocid: {ocid}")
         for value in routing_policies.values():
             RouteSet.create(compartment_id, ocid, value)
