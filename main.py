@@ -9,6 +9,7 @@ from loadbalancer import Backendset, Listener, Loadbalancer
 #     "new-octa-uat-lb-public",
 # )
 # Loadbalancer.backup_all_loadbalancers()
-Backendset.print_all_ip_port()
+# Backendset.print_all_ip_port()
 # Listener.update_listeners("octa-test-lb.json", "new-octa-test-lb")
 # Backendset.update_backend_sets("octa-test-lb.json", "new-octa-test-lb", "SSO")
+Backendset.update_backend_sets("octa-training-lb.json", "new-octa-training-lb", "SSO")
