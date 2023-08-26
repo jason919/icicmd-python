@@ -35,11 +35,11 @@ def restCall(url: str, body, method: str):
     # response = requests.Session().send(prepared_request)
     print(f"restCall:: {url}")
     if method == "POST":
-        response = requests.post(url, json.dumps(body), auth=auth)
+        response = requests.post(url, data=json.dumps(body), auth=auth)
     elif method == "PUT":
-        response = requests.put(url, json.dumps(body), auth=auth)
+        response = requests.put(url, data=json.dumps(body), auth=auth)
     else:
-        response = requests.delete(url, json.dumps(body), auth=auth)
+        response = requests.delete(url, data=json.dumps(body), auth=auth)
     # response.raise_for_status()
     print(f"response code: {response.status_code}")
     if response.status_code != 204:
