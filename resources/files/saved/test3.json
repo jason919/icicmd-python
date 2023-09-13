@@ -1,0 +1,464 @@
+{
+    "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaarvx7j4erln5nbiiowe6ueny4t2mvbvm4zfxzjnrrw44v7lsrtx5a",
+    "compartmentId": "ocid1.compartment.oc1..aaaaaaaa7ndga6cnr6hx2qbdzlpmmw5udigo5r23jciitmsag5wqv4f4q2lq",
+    "displayName": "lb_test2",
+    "lifecycleState": "ACTIVE",
+    "timeCreated": "2023-09-13T19:33:46.919Z",
+    "ipAddresses":
+    [
+        {
+            "ipAddress": "10.152.11.175",
+            "isPublic": false,
+            "reservedIp": null
+        }
+    ],
+    "shapeName": "flexible",
+    "shapeDetails":
+    {
+        "minimumBandwidthInMbps": 10,
+        "maximumBandwidthInMbps": 10
+    },
+    "isPrivate": true,
+    "subnetIds":
+    [
+        "ocid1.subnet.oc1.iad.aaaaaaaay2y5w75bgn33kzpapdocfmxbs6hfwtqyazghjqrghink5neeagsa"
+    ],
+    "networkSecurityGroupIds":
+    [],
+    "listeners":
+    {
+        "listener_lb_2023-0913-1432":
+        {
+            "name": "listener_lb_2023-0913-1432",
+            "defaultBackendSetName": "bs_lb_2023-0913-1432",
+            "port": 80,
+            "protocol": "HTTP",
+            "hostnameNames": null,
+            "serverName": null,
+            "pathRouteSetName": null,
+            "sslConfiguration": null,
+            "connectionConfiguration":
+            {
+                "idleTimeout": 60,
+                "backendTcpProxyProtocolVersion": null,
+                "backendTcpProxyProtocolOptions": null
+            },
+            "ruleSetNames":
+            [],
+            "routingPolicyName": null
+        }
+    },
+    "hostnames":
+    {
+        "ritesearch-prod.octa.rite.etcchosted.com":
+        {
+            "name": "ritesearch-prod.octa.rite.etcchosted.com",
+            "hostname": "ritesearch-prod.octa.rite.etcchosted.com"
+        },
+        "riteadapter-prod.octa.rite.etcchosted.com":
+        {
+            "name": "riteadapter-prod.octa.rite.etcchosted.com",
+            "hostname": "riteadapter-prod.octa.rite.etcchosted.com"
+        },
+        "ritereportserver-prod.octa.rite.etcchosted.com":
+        {
+            "name": "ritereportserver-prod.octa.rite.etcchosted.com",
+            "hostname": "ritereportserver-prod.octa.rite.etcchosted.com"
+        },
+        "ritecamunda-prod.octa.rite.etcchosted.com":
+        {
+            "name": "ritecamunda-prod.octa.rite.etcchosted.com",
+            "hostname": "ritecamunda-prod.octa.rite.etcchosted.com"
+        },
+        "riteonlinegateway-prod.octa.rite.etcchosted.com":
+        {
+            "name": "riteonlinegateway-prod.octa.rite.etcchosted.com",
+            "hostname": "riteonlinegateway-prod.octa.rite.etcchosted.com"
+        }
+    },
+    "cidrBlocks": null,
+    "sslCipherSuites":
+    {},
+    "certificates":
+    {
+        "LB-OCTA-CERT":
+        {
+            "certificateName": "LB-OCTA-CERT",
+            "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIGszCCBZugAwIBAgIIY5n1rNUu6iAwDQYJKoZIhvcNAQELBQAwgbQxCzAJBgNV\nBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQHEwpTY290dHNkYWxlMRow\nGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UECxMkaHR0cDovL2NlcnRz\nLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQDEypHbyBEYWRkeSBTZWN1\ncmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwHhcNMjMwMjE0MTYzMDI3WhcN\nMjQwMzE3MTYzMDI3WjAlMSMwIQYDVQQDDBoqLm9jdGEucml0ZS5ldGNjaG9zdGVk\nLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAM+ftul06q4PosIJ\nAIIDcqkjtB7cWwiwEgWaQMjdcJLO7rqeFsiBJvV7rK+fU6lXaL/9UX0oi6XjE+ll\nNSYogqcBM+OZyl8W/QxkNAcKCLEIxm2WPo2PgYCOlY5pK5CqsvssKFbKZZuztWbA\nksyMV+kaUkOZR7YpMqc1dAfQaQFQ9Rc4qetRNr98bNzxhgFu277cKi0KuuS5SCEc\nt5BSNY7NEcbgTEMcafWMsVieJAUoFzFcxTHxrcvx2OjZZVrq51vijbdvCDOnv9B3\neGM5/SknPI1ILEYqASOzfi3XWyfmsNePzfE2AQolaiRry09VOSeiKYFTlI5JimTn\n0NYiY40CAwEAAaOCA1UwggNRMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYB\nBQUHAwEGCCsGAQUFBwMCMA4GA1UdDwEB/wQEAwIFoDA4BgNVHR8EMTAvMC2gK6Ap\nhidodHRwOi8vY3JsLmdvZGFkZHkuY29tL2dkaWcyczEtNTIwMS5jcmwwXQYDVR0g\nBFYwVDBIBgtghkgBhv1tAQcXATA5MDcGCCsGAQUFBwIBFitodHRwOi8vY2VydGlm\naWNhdGVzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMAgGBmeBDAECATB2BggrBgEF\nBQcBAQRqMGgwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmdvZGFkZHkuY29tLzBA\nBggrBgEFBQcwAoY0aHR0cDovL2NlcnRpZmljYXRlcy5nb2RhZGR5LmNvbS9yZXBv\nc2l0b3J5L2dkaWcyLmNydDAfBgNVHSMEGDAWgBRAwr0njsw0gzCiM9f7bLPwtCyA\nzjA/BgNVHREEODA2ghoqLm9jdGEucml0ZS5ldGNjaG9zdGVkLmNvbYIYb2N0YS5y\naXRlLmV0Y2Nob3N0ZWQuY29tMB0GA1UdDgQWBBQKnRe6aegyKoosjM9GRRD/Klc3\n1zCCAX4GCisGAQQB1nkCBAIEggFuBIIBagFoAHYA7s3QZNXbGs7FXLedtM0TojKH\nRny87N7DUUhZRnEftZsAAAGGUMNjdgAABAMARzBFAiAfVHpgap6pJtg1OKLTQpyE\nVGA5XuG9Q8J8B+4d8jEMsAIhAM8PHccqd8FAQQnzjdAi+2NnJjP3Pc8miyxFAbJD\nXvm9AHYASLDja9qmRzQP5WoC+p0w6xxSActW3SyB2bu/qznYhHMAAAGGUMNkXgAA\nBAMARzBFAiANFslH1aV9v2t5pmZIkiJCzsaLMt5EZ4PrjXtJJt7XZAIhAI/HCMqv\nEVWz6ajfdXh3VNMq8+3K0zESy76P2uPBGg9FAHYA2ra/az+1tiKfm8K7XGvocJFx\nbLtRhIU0vaQ9MEjX+6sAAAGGUMNkywAABAMARzBFAiEAm2ATsPbuEgd8Ne01rtIb\nRcE3YKrP4WKQ7sGuVYjlT44CICBW3ZaLGoweeYW64zuCmEYzz72hmk1n6e7ywLiG\nYU/EMA0GCSqGSIb3DQEBCwUAA4IBAQA7ux1luDw+nn17SzvtzUzpxHwrqS0+ebdx\ncOqvt4Si2fLHM7cACD7SuRjm8L6XzzDGu/BiryUpwIWGIa8HxlTI1XyC8NzvISoM\nFSQNMGd7x7FfRilFqL9dBrCbX86lFK3KgOX+Rk8yxaCLwxjF7bb7YB3SH/djJgAF\ngjcOeheUiBIHM/yf+Xu3UzT5ob5D1kzm8lBXusUBcl9Cn6uRNC/Ls0HUkINaTWb0\nkfb8Nxy5VqhgOVfFItTJ/URKj210uv/nRk+bQwaBQZewspIocPnzghWmNtlRwSJq\nlfIDVmPNixnQCv6DvWIt/NGfEAlnhyOL6SyGHg1ionPtA3EdCyuc\n-----END CERTIFICATE-----\n",
+            "caCertificate": "-----BEGIN CERTIFICATE-----\nMIIE0DCCA7igAwIBAgIBBzANBgkqhkiG9w0BAQsFADCBgzELMAkGA1UEBhMCVVMx\nEDAOBgNVBAgTB0FyaXpvbmExEzARBgNVBAcTClNjb3R0c2RhbGUxGjAYBgNVBAoT\nEUdvRGFkZHkuY29tLCBJbmMuMTEwLwYDVQQDEyhHbyBEYWRkeSBSb290IENlcnRp\nZmljYXRlIEF1dGhvcml0eSAtIEcyMB4XDTExMDUwMzA3MDAwMFoXDTMxMDUwMzA3\nMDAwMFowgbQxCzAJBgNVBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQH\nEwpTY290dHNkYWxlMRowGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UE\nCxMkaHR0cDovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQD\nEypHbyBEYWRkeSBTZWN1cmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwggEi\nMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC54MsQ1K92vdSTYuswZLiBCGzD\nBNliF44v/z5lz4/OYuY8UhzaFkVLVat4a2ODYpDOD2lsmcgaFItMzEUz6ojcnqOv\nK/6AYZ15V8TPLvQ/MDxdR/yaFrzDN5ZBUY4RS1T4KL7QjL7wMDge87Am+GZHY23e\ncSZHjzhHU9FGHbTj3ADqRay9vHHZqm8A29vNMDp5T19MR/gd71vCxJ1gO7GyQ5HY\npDNO6rPWJ0+tJYqlxvTV0KaudAVkV4i1RFXULSo6Pvi4vekyCgKUZMQWOlDxSq7n\neTOvDCAHf+jfBDnCaQJsY1L6d8EbyHSHyLmTGFBUNUtpTrw700kuH9zB0lL7AgMB\nAAGjggEaMIIBFjAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBBjAdBgNV\nHQ4EFgQUQMK9J47MNIMwojPX+2yz8LQsgM4wHwYDVR0jBBgwFoAUOpqFBxBnKLbv\n9r0FQW4gwZTaD94wNAYIKwYBBQUHAQEEKDAmMCQGCCsGAQUFBzABhhhodHRwOi8v\nb2NzcC5nb2RhZGR5LmNvbS8wNQYDVR0fBC4wLDAqoCigJoYkaHR0cDovL2NybC5n\nb2RhZGR5LmNvbS9nZHJvb3QtZzIuY3JsMEYGA1UdIAQ/MD0wOwYEVR0gADAzMDEG\nCCsGAQUFBwIBFiVodHRwczovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkv\nMA0GCSqGSIb3DQEBCwUAA4IBAQAIfmyTEMg4uJapkEv/oV9PBO9sPpyIBslQj6Zz\n91cxG7685C/b+LrTW+C05+Z5Yg4MotdqY3MxtfWoSKQ7CC2iXZDXtHwlTxFWMMS2\nRJ17LJ3lXubvDGGqv+QqG+6EnriDfcFDzkSnE3ANkR/0yBOtg2DZ2HKocyQetawi\nDsoXiWJYRBuriSUBAA/NxBti21G00w9RKpv0vHP8ds42pM3Z2Czqrpv1KrKQ0U11\nGIo/ikGQI31bS/6kA1ibRrLDYGCD+H1QQc7CoZDDu+8CL9IVVO5EFdkKrqeKM+2x\nLXY2JtwE65/3YR8V3Idv7kaWKK2hJn0KCacuBKONvPi8BDAB\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIEfTCCA2WgAwIBAgIDG+cVMA0GCSqGSIb3DQEBCwUAMGMxCzAJBgNVBAYTAlVT\nMSEwHwYDVQQKExhUaGUgR28gRGFkZHkgR3JvdXAsIEluYy4xMTAvBgNVBAsTKEdv\nIERhZGR5IENsYXNzIDIgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMTQwMTAx\nMDcwMDAwWhcNMzEwNTMwMDcwMDAwWjCBgzELMAkGA1UEBhMCVVMxEDAOBgNVBAgT\nB0FyaXpvbmExEzARBgNVBAcTClNjb3R0c2RhbGUxGjAYBgNVBAoTEUdvRGFkZHku\nY29tLCBJbmMuMTEwLwYDVQQDEyhHbyBEYWRkeSBSb290IENlcnRpZmljYXRlIEF1\ndGhvcml0eSAtIEcyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv3Fi\nCPH6WTT3G8kYo/eASVjpIoMTpsUgQwE7hPHmhUmfJ+r2hBtOoLTbcJjHMgGxBT4H\nTu70+k8vWTAi56sZVmvigAf88xZ1gDlRe+X5NbZ0TqmNghPktj+pA4P6or6KFWp/\n3gvDthkUBcrqw6gElDtGfDIN8wBmIsiNaW02jBEYt9OyHGC0OPoCjM7T3UYH3go+\n6118yHz7sCtTpJJiaVElBWEaRIGMLKlDliPfrDqBmg4pxRyp6V0etp6eMAo5zvGI\ngPtLXcwy7IViQyU0AlYnAZG0O3AqP26x6JyIAX2f1PnbU21gnb8s51iruF9G/M7E\nGwM8CetJMVxpRrPgRwIDAQABo4IBFzCCARMwDwYDVR0TAQH/BAUwAwEB/zAOBgNV\nHQ8BAf8EBAMCAQYwHQYDVR0OBBYEFDqahQcQZyi27/a9BUFuIMGU2g/eMB8GA1Ud\nIwQYMBaAFNLEsNKR1EwRcbNhyz2h/t2oatTjMDQGCCsGAQUFBwEBBCgwJjAkBggr\nBgEFBQcwAYYYaHR0cDovL29jc3AuZ29kYWRkeS5jb20vMDIGA1UdHwQrMCkwJ6Al\noCOGIWh0dHA6Ly9jcmwuZ29kYWRkeS5jb20vZ2Ryb290LmNybDBGBgNVHSAEPzA9\nMDsGBFUdIAAwMzAxBggrBgEFBQcCARYlaHR0cHM6Ly9jZXJ0cy5nb2RhZGR5LmNv\nbS9yZXBvc2l0b3J5LzANBgkqhkiG9w0BAQsFAAOCAQEAWQtTvZKGEacke+1bMc8d\nH2xwxbhuvk679r6XUOEwf7ooXGKUwuN+M/f7QnaF25UcjCJYdQkMiGVnOQoWCcWg\nOJekxSOTP7QYpgEGRJHjp2kntFolfzq3Ms3dhP8qOCkzpN1nsoX+oYggHFCJyNwq\n9kIDN0zmiN/VryTyscPfzLXs4Jlet0lUIDyUGAzHHFIYSaRt4bNYC8nY7NmuHDKO\nKHAN4v6mF56ED71XcLNa6R+ghlO773z/aQvgSMO3kwvIClTErF0UZzdsyqUvMQg3\nqm5vjLyb4lddJIGvl5echK1srDdMZvNhkREg5L4wn3qkKQmw4TRfZHcYQFHfjDCm\nrw==\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIEADCCAuigAwIBAgIBADANBgkqhkiG9w0BAQUFADBjMQswCQYDVQQGEwJVUzEh\nMB8GA1UEChMYVGhlIEdvIERhZGR5IEdyb3VwLCBJbmMuMTEwLwYDVQQLEyhHbyBE\nYWRkeSBDbGFzcyAyIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTA0MDYyOTE3\nMDYyMFoXDTM0MDYyOTE3MDYyMFowYzELMAkGA1UEBhMCVVMxITAfBgNVBAoTGFRo\nZSBHbyBEYWRkeSBHcm91cCwgSW5jLjExMC8GA1UECxMoR28gRGFkZHkgQ2xhc3Mg\nMiBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTCCASAwDQYJKoZIhvcNAQEBBQADggEN\nADCCAQgCggEBAN6d1+pXGEmhW+vXX0iG6r7d/+TvZxz0ZWizV3GgXne77ZtJ6XCA\nPVYYYwhv2vLM0D9/AlQiVBDYsoHUwHU9S3/Hd8M+eKsaA7Ugay9qK7HFiH7Eux6w\nwdhFJ2+qN1j3hybX2C32qRe3H3I2TqYXP2WYktsqbl2i/ojgC95/5Y0V4evLOtXi\nEqITLdiOr18SPaAIBQi2XKVlOARFmR6jYGB0xUGlcmIbYsUfb18aQr4CUWWoriMY\navx4A6lNf4DD+qta/KFApMoZFv6yyO9ecw3ud72a9nmYvLEHZ6IVDd2gWMZEewo+\nYihfukEHU1jPEX44dMX4/7VpkI+EdOqXG68CAQOjgcAwgb0wHQYDVR0OBBYEFNLE\nsNKR1EwRcbNhyz2h/t2oatTjMIGNBgNVHSMEgYUwgYKAFNLEsNKR1EwRcbNhyz2h\n/t2oatTjoWekZTBjMQswCQYDVQQGEwJVUzEhMB8GA1UEChMYVGhlIEdvIERhZGR5\nIEdyb3VwLCBJbmMuMTEwLwYDVQQLEyhHbyBEYWRkeSBDbGFzcyAyIENlcnRpZmlj\nYXRpb24gQXV0aG9yaXR5ggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQAD\nggEBADJL87LKPpH8EsahB4yOd6AzBhRckB4Y9wimPQoZ+YeAEW5p5JYXMP80kWNy\nOO7MHAGjHZQopDH2esRU1/blMVgDoszOYtuURXO1v0XJJLXVggKtI3lpjbi2Tc7P\nTMozI+gciKqdi0FuFskg5YmezTvacPd+mSYgFFQlq25zheabIZ0KbIIOqPjCDPoQ\nHmyW74cNxA9hi63ugyuV+I6ShHI56yDqg+2DzZduCLzrTia2cyvk0/ZM/iZx4mER\ndEr/VxqHD3VILs9RaRegAhJhldXRQLIQTO7ErBBDpqWeCtWVYpoNz4iCxTIM5Cuf\nReYNnyicsbkqWletNw+vHX/bvZ8=\n-----END CERTIFICATE-----\n",
+            "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDPn7bpdOquD6LC\nCQCCA3KpI7Qe3FsIsBIFmkDI3XCSzu66nhbIgSb1e6yvn1OpV2i//VF9KIul4xPp\nZTUmKIKnATPjmcpfFv0MZDQHCgixCMZtlj6Nj4GAjpWOaSuQqrL7LChWymWbs7Vm\nwJLMjFfpGlJDmUe2KTKnNXQH0GkBUPUXOKnrUTa/fGzc8YYBbtu+3CotCrrkuUgh\nHLeQUjWOzRHG4ExDHGn1jLFYniQFKBcxXMUx8a3L8djo2WVa6udb4o23bwgzp7/Q\nd3hjOf0pJzyNSCxGKgEjs34t11sn5rDXj83xNgEKJWoka8tPVTknoimBU5SOSYpk\n59DWImONAgMBAAECggEAL0ejk444UuLkoWMDZpf6aGHlBpIPeO7/a58w2YzzsbrF\nymFttsMSaBx9upCBsLJi/DVndSTiiCgpxKBzdfkLp5QyiMXgu760aTn4TxIN4KKq\n7RGltP7U8r2FeSSh8xOsJl5r4Te947MMwBViWIotCrwft50UI3tGOaWGgrEG+HFa\nDaQQKdmcr1gGcESjnQ+9kyIJLlNwXMnU5zMFdwoQi1SNCB9U7SM4cE4zhNgsw6MR\nUtuyYIOZpwXGP2s1C0ze3wjeDuWwDPdIAjn86lxBBGyVHduxz63R+H15qboO9KXH\n90yb7ZSBp4F8yA7RHZbfuYeVSfFB7VVvD0C5ew6SAQKBgQDu1BH0+FtL8wunRfTF\nNYzZuPxOUdpc2ykO+Dqbg1NY6n/e1M0o/xjtmRxyrqR8YPTfbH0tS+6Afpjhj9WV\n7md/bJxE/UB1PFEnbOuQqaLQC1Zgr8RX0N8IFifxAkuV5HdQfRwYpN3c59xMkCC7\nvJERX4cTDPnZheBd9aaQfBqM7QKBgQDejUl2nUyrucPm3No9/QWS0YdFuM1yr7Wo\nXaYhF8ashO0Qa8pR6lUKib9KnoWZt0cZeiKKLAihAm43AFcZnx4pom5WCuBwwC8O\nhE9VXVpTddIRRiNLlVeR0T4eGOM9+mqzOIvxOsWGhtH/BPb8+Mu/wWS7K9mhQg7N\nQTfoQTD9IQKBgAicduVJSylq4wGuAQxXSPPUuqwsQV5VvJ5AjwRqcMfk9KVZMOiI\ngiKXAbKU33Non4uqwryuXzQc3HBNmlrklLDAfsXyB6/yc86jG79Ejo1Hy16DF+Y+\nrrwA6IHFHmqSKUcqq6er0iAT8BqGm9eJDgX9VsZ2ElAohpV8tPvCrcZlAoGBAIzH\n0W3wKV0EIRF8Ka5GzWzHkIuhUI0462/69ak/chUV7SSTGyPgWTVWV6SrTJYlYxuR\nsCG5oye+8ttmIrL5fcoWjzdsn/eTCvFi7xBwAkCDaoQ02wToDsIWG/ZMBgvhyfdf\nUN8jL2pfBJ4OlPMHq1O80ay5G20v7U8X73bDLmshAoGBAOGdUzSp1qlCWCBMjkA+\nbDuy51p+Xxw7tUZerI9Ld+kyJOPzRMfiFZBTrunXQ2sOmKErmKsf+swYiSOKmmoC\nAztcFUKmC67pujI86dAFp53zf7Hl8OtUbUuRPox8ZUUoJEb4l02Hxzc+R9sUtxvJ\ntNMVx0TmRcFT8DRWtB0K3p6U\n-----END PRIVATE KEY-----"
+        },
+        "InternalSelfCert-Prod-CERT":
+        {
+            "certificateName": "InternalSelfCert-Prod-CERT",
+            "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIFpzCCA4+gAwIBAgIEZQCRszANBgkqhkiG9w0BAQsFADB2MQswCQYDVQQGEwJ1\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMSAwHgYDVQQDDBcqLm9jdGEuZXRjY2hv\nc3RlZC5sb2NhbDAeFw0yMzA5MTIxNjI4MzVaFw0zMzA5MTIxNjI4MzVaMHYxCzAJ\nBgNVBAYTAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsG\nA1UECgwEZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xIDAeBgNVBAMMFyoub2N0\nYS5ldGNjaG9zdGVkLmxvY2FsMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKC\nAgEAjwUCZeGsQ+xFL2rqRO6X+T7ADpfAJXbA2WA2eeCI1KD33o0DegWlU5V7Ufrf\ndbfQqCme58Xlpqt7NELGSgGJ5UPAVI4Z539fCLX7K6AFy7TRBRgjLt+eJQss38Cc\nvH9+5kuWl0e3GNTVh0t7S07Com1pExrUfSrXnu5ma8W5RdkhC7yh4XOIh7aUzR+2\nsJ5ksibdzJFI7gFqs367UCQ5fWR/nr49tn2GQOghPOuPQAkLKB1X4FsjvSMUDup3\nIPt9hHFooTyf7o/M1hqvK1GqFQkr/4AFw7v4sU9xbHiDWOkRESRVaEo6JO/6/R39\nl+697aCXF0RZOfNF2pvUqisfNg/l4GDoTXOjjUcPcUzsUnoVj8Wtv5qSmgUm5bin\n+4DJ/0LH6jVhcGZnthkfre4OKMvBGhy1PTZoE3VYnvjm2jf0bU/Bi/BbDW7rr8Mw\nF9mV5pTCV3gYesyXfkeAfWRZKCdTBUUAUBLBTHLHIbZuwjdxroZ4uPlHjPlIPwGy\n+1gLzzalifWlvrWaIIJ2ZlMHFWQo+3/1CJOVFKOFVsbd0V7t7hkYyoIK6d28vQM+\nudbXEEERXBAYF/eB60CvPENsuhgK6uX3+SG2CFjJe//8nGnVmXvYo0C3G4ACHQK0\nYWLHYIuIjfVN6XY00utl1j2LcpnXmBaa+I3H/NYNMS4TKfMCAwEAAaM9MDswOQYD\nVR0RBDIwMIIXKi5vY3RhLmV0Y2Nob3N0ZWQubG9jYWyCFW9jdGEuZXRjY2hvc3Rl\nZC5sb2NhbDANBgkqhkiG9w0BAQsFAAOCAgEASj95eTXHtNXsS65AoDmCoqmg8Y9L\nXCS9mqLswWspd5A/yf56xlvECECieC8/XlYgNj0dTPDw2btJFiNXF6iOPV5km+f/\n+LLpunqC6+5qa5NWtyYc3wrRRP91WPzcdVqmEINpLquOxiRZis1fb5KcqxCqNiLA\nZiHwkqRJaPi3/XP0131H08odSoCtsTLK5tY7xg9aHtUXq6A1wVGlWi1/y3lNwB4K\nqykmDhbS2IuqK68uy78Lj0KUxQ/tcg1MufJL4tcpWLJob3lzDbzqIWfxcYRjuPi9\nmh90RuYGjLlmK0Z8B6yc49eWcLijxmE7N00IZLyF93Rs2URWAQQsS9n8AceK3xGS\nzUJ+xHmwHtFl037+R6Nybe/Jt5evqRjT+nFQIGGVw/56fK0LryWQsS9WxME6lw6P\ndvI0WKMwZTEHBDxYki0nBHBrccAiFPA7C3OITNL1U7FrVVtlph/BXa3patN7N8dO\nShy210pZworMcfjcGInS2uE56FrWzfBNpwNZLBXSbeZg6ZldqY/ToJdO2Xlt+vDS\nzKZU2SADbdbLszdpQzCBgPDG9fOYVkgWxTlFkYlu3CshSdqt1v8YzON5cvipqiDv\nsNMuifcn4XWuzSNSvDdzsSJCrzAlGbwiH/oivz7mIr/9q/1pLbvPs3AiW+sgQgQm\nPPv3cM8p9h1KrIk=\n-----END CERTIFICATE-----\n",
+            "caCertificate": "-----BEGIN CERTIFICATE-----\nMIIFpzCCA4+gAwIBAgIEZQCRszANBgkqhkiG9w0BAQsFADB2MQswCQYDVQQGEwJ1\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMSAwHgYDVQQDDBcqLm9jdGEuZXRjY2hv\nc3RlZC5sb2NhbDAeFw0yMzA5MTIxNjI4MzVaFw0zMzA5MTIxNjI4MzVaMHYxCzAJ\nBgNVBAYTAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsG\nA1UECgwEZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xIDAeBgNVBAMMFyoub2N0\nYS5ldGNjaG9zdGVkLmxvY2FsMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKC\nAgEAjwUCZeGsQ+xFL2rqRO6X+T7ADpfAJXbA2WA2eeCI1KD33o0DegWlU5V7Ufrf\ndbfQqCme58Xlpqt7NELGSgGJ5UPAVI4Z539fCLX7K6AFy7TRBRgjLt+eJQss38Cc\nvH9+5kuWl0e3GNTVh0t7S07Com1pExrUfSrXnu5ma8W5RdkhC7yh4XOIh7aUzR+2\nsJ5ksibdzJFI7gFqs367UCQ5fWR/nr49tn2GQOghPOuPQAkLKB1X4FsjvSMUDup3\nIPt9hHFooTyf7o/M1hqvK1GqFQkr/4AFw7v4sU9xbHiDWOkRESRVaEo6JO/6/R39\nl+697aCXF0RZOfNF2pvUqisfNg/l4GDoTXOjjUcPcUzsUnoVj8Wtv5qSmgUm5bin\n+4DJ/0LH6jVhcGZnthkfre4OKMvBGhy1PTZoE3VYnvjm2jf0bU/Bi/BbDW7rr8Mw\nF9mV5pTCV3gYesyXfkeAfWRZKCdTBUUAUBLBTHLHIbZuwjdxroZ4uPlHjPlIPwGy\n+1gLzzalifWlvrWaIIJ2ZlMHFWQo+3/1CJOVFKOFVsbd0V7t7hkYyoIK6d28vQM+\nudbXEEERXBAYF/eB60CvPENsuhgK6uX3+SG2CFjJe//8nGnVmXvYo0C3G4ACHQK0\nYWLHYIuIjfVN6XY00utl1j2LcpnXmBaa+I3H/NYNMS4TKfMCAwEAAaM9MDswOQYD\nVR0RBDIwMIIXKi5vY3RhLmV0Y2Nob3N0ZWQubG9jYWyCFW9jdGEuZXRjY2hvc3Rl\nZC5sb2NhbDANBgkqhkiG9w0BAQsFAAOCAgEASj95eTXHtNXsS65AoDmCoqmg8Y9L\nXCS9mqLswWspd5A/yf56xlvECECieC8/XlYgNj0dTPDw2btJFiNXF6iOPV5km+f/\n+LLpunqC6+5qa5NWtyYc3wrRRP91WPzcdVqmEINpLquOxiRZis1fb5KcqxCqNiLA\nZiHwkqRJaPi3/XP0131H08odSoCtsTLK5tY7xg9aHtUXq6A1wVGlWi1/y3lNwB4K\nqykmDhbS2IuqK68uy78Lj0KUxQ/tcg1MufJL4tcpWLJob3lzDbzqIWfxcYRjuPi9\nmh90RuYGjLlmK0Z8B6yc49eWcLijxmE7N00IZLyF93Rs2URWAQQsS9n8AceK3xGS\nzUJ+xHmwHtFl037+R6Nybe/Jt5evqRjT+nFQIGGVw/56fK0LryWQsS9WxME6lw6P\ndvI0WKMwZTEHBDxYki0nBHBrccAiFPA7C3OITNL1U7FrVVtlph/BXa3patN7N8dO\nShy210pZworMcfjcGInS2uE56FrWzfBNpwNZLBXSbeZg6ZldqY/ToJdO2Xlt+vDS\nzKZU2SADbdbLszdpQzCBgPDG9fOYVkgWxTlFkYlu3CshSdqt1v8YzON5cvipqiDv\nsNMuifcn4XWuzSNSvDdzsSJCrzAlGbwiH/oivz7mIr/9q/1pLbvPs3AiW+sgQgQm\nPPv3cM8p9h1KrIk=\n-----END CERTIFICATE-----\n",
+            "privateKey": "-----BEGIN PRIVATE KEY-----\n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\nea8K0xLPI2OQMQ1SDfEWwWQZ5s2/FTU=\n-----END PRIVATE KEY-----\n"
+        }
+    },
+    "backendSets":
+    {
+        "camunda":
+        {
+            "name": "camunda",
+            "policy": "IP_HASH",
+            "backends":
+            [
+                {
+                    "name": "10.152.11.143:8021",
+                    "ipAddress": "10.152.11.143",
+                    "port": 8021,
+                    "weight": 1,
+                    "drain": false,
+                    "backup": false,
+                    "offline": false
+                }
+            ],
+            "healthChecker":
+            {
+                "protocol": "TCP",
+                "urlPath": null,
+                "port": 8021,
+                "returnCode": 200,
+                "retries": 3,
+                "timeoutInMillis": 3000,
+                "intervalInMillis": 10000,
+                "responseBodyRegex": ".*",
+                "isForcePlainText": null
+            },
+            "sslConfiguration":
+            {
+                "verifyDepth": 1,
+                "verifyPeerCertificate": false,
+                "trustedCertificateAuthorityIds":
+                [],
+                "certificateIds":
+                [],
+                "certificateName": "InternalSelfCert-Prod-CERT",
+                "serverOrderPreference": null,
+                "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
+                "protocols":
+                [
+                    "TLSv1.2",
+                    "TLSv1",
+                    "TLSv1.1"
+                ]
+            },
+            "sessionPersistenceConfiguration": null,
+            "lbCookieSessionPersistenceConfiguration": null
+        },
+        "crystal-report":
+        {
+            "name": "crystal-report",
+            "policy": "IP_HASH",
+            "backends":
+            [
+                {
+                    "name": "10.152.11.163:8080",
+                    "ipAddress": "10.152.11.163",
+                    "port": 8080,
+                    "weight": 1,
+                    "drain": false,
+                    "backup": false,
+                    "offline": false
+                }
+            ],
+            "healthChecker":
+            {
+                "protocol": "TCP",
+                "urlPath": null,
+                "port": 8080,
+                "returnCode": 200,
+                "retries": 3,
+                "timeoutInMillis": 3000,
+                "intervalInMillis": 10000,
+                "responseBodyRegex": ".*",
+                "isForcePlainText": null
+            },
+            "sslConfiguration": null,
+            "sessionPersistenceConfiguration": null,
+            "lbCookieSessionPersistenceConfiguration": null
+        },
+        "mendix_adapter":
+        {
+            "name": "mendix_adapter",
+            "policy": "IP_HASH",
+            "backends":
+            [
+                {
+                    "name": "10.152.11.141:8017",
+                    "ipAddress": "10.152.11.141",
+                    "port": 8017,
+                    "weight": 1,
+                    "drain": false,
+                    "backup": false,
+                    "offline": false
+                }
+            ],
+            "healthChecker":
+            {
+                "protocol": "TCP",
+                "urlPath": null,
+                "port": 8017,
+                "returnCode": 200,
+                "retries": 3,
+                "timeoutInMillis": 3000,
+                "intervalInMillis": 10000,
+                "responseBodyRegex": ".*",
+                "isForcePlainText": null
+            },
+            "sslConfiguration":
+            {
+                "verifyDepth": 1,
+                "verifyPeerCertificate": false,
+                "trustedCertificateAuthorityIds":
+                [],
+                "certificateIds":
+                [],
+                "certificateName": "InternalSelfCert-Prod-CERT",
+                "serverOrderPreference": null,
+                "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
+                "protocols":
+                [
+                    "TLSv1.2",
+                    "TLSv1",
+                    "TLSv1.1"
+                ]
+            },
+            "sessionPersistenceConfiguration": null,
+            "lbCookieSessionPersistenceConfiguration": null
+        },
+        "online_gateway":
+        {
+            "name": "online_gateway",
+            "policy": "IP_HASH",
+            "backends":
+            [
+                {
+                    "name": "10.152.11.149:8095",
+                    "ipAddress": "10.152.11.149",
+                    "port": 8095,
+                    "weight": 1,
+                    "drain": false,
+                    "backup": false,
+                    "offline": false
+                }
+            ],
+            "healthChecker":
+            {
+                "protocol": "TCP",
+                "urlPath": null,
+                "port": 8095,
+                "returnCode": 200,
+                "retries": 3,
+                "timeoutInMillis": 3000,
+                "intervalInMillis": 10000,
+                "responseBodyRegex": ".*",
+                "isForcePlainText": null
+            },
+            "sslConfiguration":
+            {
+                "verifyDepth": 1,
+                "verifyPeerCertificate": false,
+                "trustedCertificateAuthorityIds":
+                [],
+                "certificateIds":
+                [],
+                "certificateName": "InternalSelfCert-Prod-CERT",
+                "serverOrderPreference": null,
+                "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
+                "protocols":
+                [
+                    "TLSv1.2",
+                    "TLSv1",
+                    "TLSv1.1"
+                ]
+            },
+            "sessionPersistenceConfiguration": null,
+            "lbCookieSessionPersistenceConfiguration": null
+        },
+        "oracle-report":
+        {
+            "name": "oracle-report",
+            "policy": "IP_HASH",
+            "backends":
+            [
+                {
+                    "name": "10.152.11.150:9002",
+                    "ipAddress": "10.152.11.150",
+                    "port": 9002,
+                    "weight": 1,
+                    "drain": false,
+                    "backup": false,
+                    "offline": false
+                }
+            ],
+            "healthChecker":
+            {
+                "protocol": "TCP",
+                "urlPath": null,
+                "port": 9002,
+                "returnCode": 200,
+                "retries": 3,
+                "timeoutInMillis": 3000,
+                "intervalInMillis": 10000,
+                "responseBodyRegex": ".*",
+                "isForcePlainText": null
+            },
+            "sslConfiguration": null,
+            "sessionPersistenceConfiguration": null,
+            "lbCookieSessionPersistenceConfiguration": null
+        },
+        "ritesearch":
+        {
+            "name": "ritesearch",
+            "policy": "IP_HASH",
+            "backends":
+            [
+                {
+                    "name": "10.152.11.143:8189",
+                    "ipAddress": "10.152.11.143",
+                    "port": 8189,
+                    "weight": 1,
+                    "drain": false,
+                    "backup": false,
+                    "offline": false
+                }
+            ],
+            "healthChecker":
+            {
+                "protocol": "TCP",
+                "urlPath": null,
+                "port": 8189,
+                "returnCode": 200,
+                "retries": 3,
+                "timeoutInMillis": 3000,
+                "intervalInMillis": 10000,
+                "responseBodyRegex": ".*",
+                "isForcePlainText": null
+            },
+            "sslConfiguration":
+            {
+                "verifyDepth": 1,
+                "verifyPeerCertificate": false,
+                "trustedCertificateAuthorityIds":
+                [],
+                "certificateIds":
+                [],
+                "certificateName": "InternalSelfCert-Prod-CERT",
+                "serverOrderPreference": null,
+                "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
+                "protocols":
+                [
+                    "TLSv1.2",
+                    "TLSv1",
+                    "TLSv1.1"
+                ]
+            },
+            "sessionPersistenceConfiguration": null,
+            "lbCookieSessionPersistenceConfiguration": null
+        },
+        "weblogic-report-ui":
+        {
+            "name": "weblogic-report-ui",
+            "policy": "IP_HASH",
+            "backends":
+            [
+                {
+                    "name": "10.152.11.135:7012",
+                    "ipAddress": "10.152.11.135",
+                    "port": 7012,
+                    "weight": 1,
+                    "drain": false,
+                    "backup": false,
+                    "offline": false
+                }
+            ],
+            "healthChecker":
+            {
+                "protocol": "TCP",
+                "urlPath": null,
+                "port": 7012,
+                "returnCode": 200,
+                "retries": 3,
+                "timeoutInMillis": 3000,
+                "intervalInMillis": 10000,
+                "responseBodyRegex": ".*",
+                "isForcePlainText": null
+            },
+            "sslConfiguration": null,
+            "sessionPersistenceConfiguration": null,
+            "lbCookieSessionPersistenceConfiguration": null
+        },
+        "bs_lb_2023-0913-1432":
+        {
+            "name": "bs_lb_2023-0913-1432",
+            "policy": "IP_HASH",
+            "backends":
+            [],
+            "healthChecker":
+            {
+                "protocol": "HTTP",
+                "urlPath": "/",
+                "port": 80,
+                "returnCode": 200,
+                "retries": 3,
+                "timeoutInMillis": 3000,
+                "intervalInMillis": 10000,
+                "responseBodyRegex": "",
+                "isForcePlainText": null
+            },
+            "sslConfiguration": null,
+            "sessionPersistenceConfiguration": null,
+            "lbCookieSessionPersistenceConfiguration": null
+        }
+    },
+    "pathRouteSets":
+    {},
+    "freeformTags":
+    {},
+    "definedTags":
+    {},
+    "systemTags":
+    {},
+    "ruleSets":
+    {},
+    "routingPolicies": {
+        "internal_routes": {
+            "name": "internal_routes",
+            "conditionLanguageVersion": "V1",
+            "rules": [
+                {
+                    "name": "report_ui",
+                    "condition": "all(http.request.url.path sw (i '/report_ui'))",
+                    "actions": [
+                        {
+                            "name": "FORWARD_TO_BACKENDSET",
+                            "backendSetName": "weblogic-report-ui"
+                        }
+                    ]
+                },
+                {
+                    "name": "oracle_report",
+                    "condition": "all(http.request.url.path sw (i '/reports/rwservlet'))",
+                    "actions": [
+                        {
+                            "name": "FORWARD_TO_BACKENDSET",
+                            "backendSetName": "oracle-report"
+                        }
+                    ]
+                },
+                {
+                    "name": "crystal_report",
+                    "condition": "all(http.request.url.path sw (i '/BOE'))",
+                    "actions": [
+                        {
+                            "name": "FORWARD_TO_BACKENDSET",
+                            "backendSetName": "crystal-report"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

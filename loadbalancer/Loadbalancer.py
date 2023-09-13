@@ -43,9 +43,10 @@ def get_ocid_from_new_load_balancer(
 ) -> str:
     for i in range(0, 5):
         all_load_balancers_json = json.loads(list_load_balancers(compartment_id))
+        # print(all_load_balancers_json)
         ocid: str = ""
         state: str = ""
-        for value in all_load_balancers_json.values():
+        for value in all_load_balancers_json:
             if value["displayName"] == load_balancer_display_name:
                 ocid = value["id"]
                 state = value["lifecycleState"]
@@ -82,11 +83,10 @@ def create_loadbalancer(
     Cert.fix_certs_in_creation_json(certificates)
     routing_policies = parsed_data["routingPolicies"]
 
-    listeners_backup = None
     if len(json.dumps(routing_policies)) > 10:
         listeners_backup = parsed_data["listeners"]
-        parsed_data["listeners"] = []
-        parsed_data["routingPolicies"] = []
+        parsed_data["listeners"] = {}
+        parsed_data["routingPolicies"] = {}
 
         # parsed_data["backendSets"] = []
         # parsed_data["certificates"] = []
@@ -107,5 +107,6 @@ def create_loadbalancer(
         for value in routing_policies.values():
             RouteSet.create(compartment_id, ocid, value)
         time.sleep(30)
-        for value in json.loads(listeners_backup).values():
+        print(json.dumps(listeners_backup))
+        for value in listeners_backup.values():
             Listener.create(compartment_id, ocid, value)

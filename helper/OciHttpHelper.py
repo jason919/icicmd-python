@@ -34,7 +34,7 @@ def restCall(url: str, body, method: str):
     # auth.validate_request(prepared_request)
     # response = requests.Session().send(prepared_request)
     print(f"restCall:: {url}")
-    print(json.dumps(body))
+    # print(json.dumps(body))
     if method == "POST":
         response = requests.post(url, data=json.dumps(body), auth=auth)
     elif method == "PUT":
@@ -45,6 +45,8 @@ def restCall(url: str, body, method: str):
     print(f"response code: {response.status_code}")
     if response.status_code != 204:
         print(f"restCall error body, {response.text}")
+    if response.status_code == 500:
+        raise Exception("response code: 500, stop it now")
     return response
 
 
