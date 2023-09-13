@@ -646,6 +646,48 @@
                     "isHttpOnly": true
                 }
             },
+            "supervisor_override_sso": {
+                "name": "supervisor_override_sso",
+                "policy": "IP_HASH",
+                "backends": [
+                    {
+                        "name": "10.152.11.39:8099",
+                        "ipAddress": "10.152.11.39",
+                        "port": 8099,
+                        "weight": 1,
+                        "drain": false,
+                        "backup": false,
+                        "offline": false
+                    }
+                ],
+                "healthChecker": {
+                    "protocol": "TCP",
+                    "urlPath": null,
+                    "port": 8099,
+                    "returnCode": 200,
+                    "retries": 3,
+                    "timeoutInMillis": 3000,
+                    "intervalInMillis": 10000,
+                    "responseBodyRegex": ".*",
+                    "isForcePlainText": null
+                },
+                "sslConfiguration": {
+                    "verifyDepth": 1,
+                    "verifyPeerCertificate": false,
+                    "trustedCertificateAuthorityIds": [],
+                    "certificateIds": [],
+                    "certificateName": "OrbEtccHostedLocal2",
+                    "serverOrderPreference": null,
+                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
+                    "protocols": [
+                        "TLSv1",
+                        "TLSv1.1",
+                        "TLSv1.2"
+                    ]
+                },
+                "sessionPersistenceConfiguration": null,
+                "lbCookieSessionPersistenceConfiguration": null
+            },
             "TM": {
                 "name": "TM",
                 "policy": "IP_HASH",
@@ -978,7 +1020,34 @@
                 ]
             }
         },
-        "routingPolicies": {}
+        "routingPolicies": {
+            "sso": {
+                "name": "sso",
+                "conditionLanguageVersion": "V1",
+                "rules": [
+                    {
+                        "name": "supervisor_override_sso",
+                        "condition": "all(http.request.url.path sw (i '/supervisor_override_sso'))",
+                        "actions": [
+                            {
+                                "name": "FORWARD_TO_BACKENDSET",
+                                "backendSetName": "supervisor_override_sso"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "sso",
+                        "condition": "all(http.request.url.path not sw (i '/supervisor_override_sso'))",
+                        "actions": [
+                            {
+                                "name": "FORWARD_TO_BACKENDSET",
+                                "backendSetName": "sso"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
     },
     {
         "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaacdsooedxo57xbnmpg3fs5d3p6hvf5qxhm5totlhpkxbijcjpwlvq",
@@ -1756,7 +1825,7 @@
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "OrbWild",
-                    "serverOrderPreference": "DISABLED",
+                    "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
                         "TLSv1.2"
@@ -1768,7 +1837,7 @@
                     "backendTcpProxyProtocolOptions": null
                 },
                 "ruleSetNames": [],
-                "routingPolicyName": null
+                "routingPolicyName": "online"
             }
         },
         "hostnames": {},
@@ -1787,6 +1856,48 @@
             }
         },
         "backendSets": {
+            "Apple_Pay_Verification": {
+                "name": "Apple_Pay_Verification",
+                "policy": "ROUND_ROBIN",
+                "backends": [
+                    {
+                        "name": "10.152.11.31:8543",
+                        "ipAddress": "10.152.11.31",
+                        "port": 8543,
+                        "weight": 1,
+                        "drain": false,
+                        "backup": false,
+                        "offline": false
+                    }
+                ],
+                "healthChecker": {
+                    "protocol": "TCP",
+                    "urlPath": null,
+                    "port": 8543,
+                    "returnCode": 200,
+                    "retries": 3,
+                    "timeoutInMillis": 3000,
+                    "intervalInMillis": 10000,
+                    "responseBodyRegex": ".*",
+                    "isForcePlainText": null
+                },
+                "sslConfiguration": {
+                    "verifyDepth": 1,
+                    "verifyPeerCertificate": false,
+                    "trustedCertificateAuthorityIds": [],
+                    "certificateIds": [],
+                    "certificateName": "EtccHostedLocal",
+                    "serverOrderPreference": null,
+                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
+                    "protocols": [
+                        "TLSv1",
+                        "TLSv1.1",
+                        "TLSv1.2"
+                    ]
+                },
+                "sessionPersistenceConfiguration": null,
+                "lbCookieSessionPersistenceConfiguration": null
+            },
             "Online": {
                 "name": "Online",
                 "policy": "IP_HASH",
@@ -1844,8 +1955,49 @@
                 "free-tier-retained": "false"
             }
         },
-        "ruleSets": {},
-        "routingPolicies": {}
+        "ruleSets": {
+            "maintenance": {
+                "name": "maintenance",
+                "items": [
+                    {
+                        "action": "REDIRECT",
+                        "responseCode": 302,
+                        "conditions": [
+                            {
+                                "attributeName": "PATH",
+                                "attributeValue": "/",
+                                "operator": "PREFIX_MATCH"
+                            }
+                        ],
+                        "redirectUri": {
+                            "protocol": "https",
+                            "host": "riverlink.com",
+                            "port": null,
+                            "path": "/maintenance/",
+                            "query": ""
+                        }
+                    }
+                ]
+            }
+        },
+        "routingPolicies": {
+            "online": {
+                "name": "online",
+                "conditionLanguageVersion": "V1",
+                "rules": [
+                    {
+                        "name": "apple_pay_verify",
+                        "condition": "all(http.request.url.path eq (i '/.well-known/apple-developer-merchantid-domain-association.txt'))",
+                        "actions": [
+                            {
+                                "name": "FORWARD_TO_BACKENDSET",
+                                "backendSetName": "Apple_Pay_Verification"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
     },
     {
         "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaawz27hnzcuxjkokuvqzt2i7nbhzvglae55ilzewtn5dj2ppu675tq",

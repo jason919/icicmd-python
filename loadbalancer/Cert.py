@@ -24,11 +24,16 @@ def __fix_certs_in_creation_json(cert_json):
     elif "InternalSelfCert-Dev-CERT" in json_str:
         cert_json["publicCertificate"] = self_dev_certs["public"]
         cert_json["privateKey"] = self_dev_certs["private"]
-        cert_json["caCertificate"] = self_dev_certs["ca"]
+        cert_json["caCertificate"] = self_dev_certs["public"]
     elif "InternalSelfCert-Prod-CERT" in json_str:
-        cert_json["publicCertificate"] = self_prod_certs["public"]
-        cert_json["privateKey"] = self_prod_certs["private"]
-        cert_json["caCertificate"] = self_prod_certs["ca"]
+        if "LB-ORB-CERT" in json_str:
+            cert_json["publicCertificate"] = self_prod_certs["orb-public"]
+            cert_json["privateKey"] = self_prod_certs["orb-private"]
+            cert_json["caCertificate"] = self_prod_certs["orb-public"]
+        elif "LB-OCTA-CERT" in json_str:
+            cert_json["publicCertificate"] = self_prod_certs["octa-public"]
+            cert_json["privateKey"] = self_prod_certs["octa-private"]
+            cert_json["caCertificate"] = self_prod_certs["octa-public"]
 
 
 def update_expired_cert(
