@@ -7,11 +7,16 @@ from loadbalancer import Backendset, Listener
 
 
 def fix_certs_in_creation_json(certs_json):
+    json_str: str = json.dumps(certs_json)
+    if "LB-ORB-CERT" in json_str:
+        client = "ORB"
+    elif "LB-OCTA-CERT" in json_str:
+        client = "OCTA"
     for value in certs_json.values():
-        __fix_certs_in_creation_json(value)
+        __fix_certs_in_creation_json(value, client)
 
 
-def __fix_certs_in_creation_json(cert_json):
+def __fix_certs_in_creation_json(cert_json, client: str):
     json_str: str = json.dumps(cert_json)
     if "LB-ORB-CERT" in json_str:
         cert_json["publicCertificate"] = orb_certs["public"]
@@ -26,11 +31,12 @@ def __fix_certs_in_creation_json(cert_json):
         cert_json["privateKey"] = self_dev_certs["private"]
         cert_json["caCertificate"] = self_dev_certs["public"]
     elif "InternalSelfCert-Prod-CERT" in json_str:
-        if "LB-ORB-CERT" in json_str:
+        if "ORB" == client:
             cert_json["publicCertificate"] = self_prod_certs["orb-public"]
             cert_json["privateKey"] = self_prod_certs["orb-private"]
             cert_json["caCertificate"] = self_prod_certs["orb-public"]
-        elif "LB-OCTA-CERT" in json_str:
+        elif "OCTA" == client:
+            print("replacing octa internal certs")
             cert_json["publicCertificate"] = self_prod_certs["octa-public"]
             cert_json["privateKey"] = self_prod_certs["octa-private"]
             cert_json["caCertificate"] = self_prod_certs["octa-public"]

@@ -18,21 +18,21 @@ self_prod_certs = {}
 with open(f"{current_dir}/resources/oci/ssl/orb/ca.crt", "r") as orb_ca_file:
     orb_certs["ca"] = orb_ca_file.read()
 with open(f"{current_dir}/resources/oci/ssl/orb/public.pem", "r") as orb_pub_file:
-    orb_certs["pubic"] = orb_pub_file.read()
+    orb_certs["public"] = orb_pub_file.read()
 with open(f"{current_dir}/resources/oci/ssl/orb/private.pem", "r") as orb_pri_file:
     orb_certs["private"] = orb_pri_file.read()
 
 with open(f"{current_dir}/resources/oci/ssl/octa/ca.crt", "r") as octa_ca_file:
     octa_certs["ca"] = octa_ca_file.read()
 with open(f"{current_dir}/resources/oci/ssl/octa/public.pem", "r") as octa_pub_file:
-    octa_certs["pubic"] = octa_pub_file.read()
+    octa_certs["public"] = octa_pub_file.read()
 with open(f"{current_dir}/resources/oci/ssl/octa/private.pem", "r") as octa_pri_file:
     octa_certs["private"] = octa_pri_file.read()
 
 with open(
     f"{current_dir}/resources/oci/ssl/self/dev1-public.pem", "r"
 ) as self_dev_pub_file:
-    self_dev_certs["pubic"] = self_dev_pub_file.read()
+    self_dev_certs["public"] = self_dev_pub_file.read()
 with open(
     f"{current_dir}/resources/oci/ssl/self/dev1-private.pem", "r"
 ) as self_dev_pri_file:
@@ -41,7 +41,7 @@ with open(
 with open(
     f"{current_dir}/resources/oci/ssl/self/orb-prod-public.pem", "r"
 ) as self_orb_prod_pub_file:
-    self_prod_certs["orb-pubic"] = self_orb_prod_pub_file.read()
+    self_prod_certs["orb-public"] = self_orb_prod_pub_file.read()
 with open(
     f"{current_dir}/resources/oci/ssl/self/orb-prod-private.pem", "r"
 ) as self_orb_prod_pri_file:
@@ -50,7 +50,7 @@ with open(
 with open(
     f"{current_dir}/resources/oci/ssl/self/octa-prod-public.pem", "r"
 ) as self_octa_prod_pub_file:
-    self_prod_certs["octa-pubic"] = self_octa_prod_pub_file.read()
+    self_prod_certs["octa-public"] = self_octa_prod_pub_file.read()
 with open(
     f"{current_dir}/resources/oci/ssl/self/octa-prod-private.pem", "r"
 ) as self_octa_prod_pri_file:

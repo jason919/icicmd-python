@@ -58,7 +58,7 @@ def get_ocid_from_new_load_balancer(
 
 
 def list_loadbalancer():
-    print(list_load_balancers(compartments["orb-dev"]))
+    print(list_load_balancers(compartments["octa-prod"]))
 
 
 def backup_all_loadbalancers():
@@ -67,7 +67,9 @@ def backup_all_loadbalancers():
         __backup_load_balancer_of_compartment(key, value)
 
 
-def create_loadbalancer(json_file_name: str, load_balancer_name: str):
+def create_loadbalancer(
+    json_file_name: str, load_balancer_name: str, compartment_id: str
+):
     with open(
         f"{os.getcwd()}/resources/files/saved/{json_file_name}", "r"
     ) as json_file:
@@ -75,8 +77,7 @@ def create_loadbalancer(json_file_name: str, load_balancer_name: str):
     parsed_data = JsonHelper.get_lb_data_from_compartment_json(
         json_text, load_balancer_name
     )
-    load_balancer_name = parsed_data["displayName"]
-    compartment_id = parsed_data["compartmentId"]
+    # load_balancer_name = parsed_data["displayName"]
     certificates = parsed_data["certificates"]
     Cert.fix_certs_in_creation_json(certificates)
     routing_policies = parsed_data["routingPolicies"]
@@ -85,6 +86,17 @@ def create_loadbalancer(json_file_name: str, load_balancer_name: str):
     if len(json.dumps(routing_policies)) > 10:
         listeners_backup = parsed_data["listeners"]
         parsed_data["listeners"] = []
+        parsed_data["routingPolicies"] = []
+
+        # parsed_data["backendSets"] = []
+        # parsed_data["certificates"] = []
+        # parsed_data["hostnames"] = []
+        # del parsed_data["id"]
+        # del parsed_data["lifecycleState"]
+        # del parsed_data["timeCreated"]
+        # del parsed_data["ipAddresses"]
+        # del parsed_data["routingPolicies"]
+
     create(compartment_id, parsed_data)
 
     if len(json.dumps(routing_policies)) > 10:

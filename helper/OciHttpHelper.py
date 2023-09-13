@@ -34,6 +34,7 @@ def restCall(url: str, body, method: str):
     # auth.validate_request(prepared_request)
     # response = requests.Session().send(prepared_request)
     print(f"restCall:: {url}")
+    print(json.dumps(body))
     if method == "POST":
         response = requests.post(url, data=json.dumps(body), auth=auth)
     elif method == "PUT":
