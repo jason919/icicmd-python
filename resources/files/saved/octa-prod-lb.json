@@ -950,6 +950,36 @@
                 },
                 "ruleSetNames": [],
                 "routingPolicyName": null
+            },
+            "ritelogs": {
+                "name": "ritelogs",
+                "defaultBackendSetName": "open-search-dashboard",
+                "port": 443,
+                "protocol": "HTTP",
+                "hostnameNames": [
+                    "ritelogs-prod.octa.rite.etcchosted.com"
+                ],
+                "serverName": null,
+                "pathRouteSetName": null,
+                "sslConfiguration": {
+                    "verifyDepth": 1,
+                    "verifyPeerCertificate": false,
+                    "trustedCertificateAuthorityIds": [],
+                    "certificateIds": [],
+                    "certificateName": "LB-OCTA-CERT",
+                    "serverOrderPreference": "DISABLED",
+                    "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
+                    "protocols": [
+                        "TLSv1.2"
+                    ]
+                },
+                "connectionConfiguration": {
+                    "idleTimeout": 1,
+                    "backendTcpProxyProtocolVersion": null,
+                    "backendTcpProxyProtocolOptions": null
+                },
+                "ruleSetNames": [],
+                "routingPolicyName": null
             }
         },
         "hostnames": {
@@ -982,6 +1012,11 @@
                 "certificateName": "InternalSelfCert-Prod-CERT",
                 "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIFpzCCA4+gAwIBAgIEZQCRszANBgkqhkiG9w0BAQsFADB2MQswCQYDVQQGEwJ1\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMSAwHgYDVQQDDBcqLm9jdGEuZXRjY2hv\nc3RlZC5sb2NhbDAeFw0yMzA5MTIxNjI4MzVaFw0zMzA5MTIxNjI4MzVaMHYxCzAJ\nBgNVBAYTAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsG\nA1UECgwEZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xIDAeBgNVBAMMFyoub2N0\nYS5ldGNjaG9zdGVkLmxvY2FsMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKC\nAgEAjwUCZeGsQ+xFL2rqRO6X+T7ADpfAJXbA2WA2eeCI1KD33o0DegWlU5V7Ufrf\ndbfQqCme58Xlpqt7NELGSgGJ5UPAVI4Z539fCLX7K6AFy7TRBRgjLt+eJQss38Cc\nvH9+5kuWl0e3GNTVh0t7S07Com1pExrUfSrXnu5ma8W5RdkhC7yh4XOIh7aUzR+2\nsJ5ksibdzJFI7gFqs367UCQ5fWR/nr49tn2GQOghPOuPQAkLKB1X4FsjvSMUDup3\nIPt9hHFooTyf7o/M1hqvK1GqFQkr/4AFw7v4sU9xbHiDWOkRESRVaEo6JO/6/R39\nl+697aCXF0RZOfNF2pvUqisfNg/l4GDoTXOjjUcPcUzsUnoVj8Wtv5qSmgUm5bin\n+4DJ/0LH6jVhcGZnthkfre4OKMvBGhy1PTZoE3VYnvjm2jf0bU/Bi/BbDW7rr8Mw\nF9mV5pTCV3gYesyXfkeAfWRZKCdTBUUAUBLBTHLHIbZuwjdxroZ4uPlHjPlIPwGy\n+1gLzzalifWlvrWaIIJ2ZlMHFWQo+3/1CJOVFKOFVsbd0V7t7hkYyoIK6d28vQM+\nudbXEEERXBAYF/eB60CvPENsuhgK6uX3+SG2CFjJe//8nGnVmXvYo0C3G4ACHQK0\nYWLHYIuIjfVN6XY00utl1j2LcpnXmBaa+I3H/NYNMS4TKfMCAwEAAaM9MDswOQYD\nVR0RBDIwMIIXKi5vY3RhLmV0Y2Nob3N0ZWQubG9jYWyCFW9jdGEuZXRjY2hvc3Rl\nZC5sb2NhbDANBgkqhkiG9w0BAQsFAAOCAgEASj95eTXHtNXsS65AoDmCoqmg8Y9L\nXCS9mqLswWspd5A/yf56xlvECECieC8/XlYgNj0dTPDw2btJFiNXF6iOPV5km+f/\n+LLpunqC6+5qa5NWtyYc3wrRRP91WPzcdVqmEINpLquOxiRZis1fb5KcqxCqNiLA\nZiHwkqRJaPi3/XP0131H08odSoCtsTLK5tY7xg9aHtUXq6A1wVGlWi1/y3lNwB4K\nqykmDhbS2IuqK68uy78Lj0KUxQ/tcg1MufJL4tcpWLJob3lzDbzqIWfxcYRjuPi9\nmh90RuYGjLlmK0Z8B6yc49eWcLijxmE7N00IZLyF93Rs2URWAQQsS9n8AceK3xGS\nzUJ+xHmwHtFl037+R6Nybe/Jt5evqRjT+nFQIGGVw/56fK0LryWQsS9WxME6lw6P\ndvI0WKMwZTEHBDxYki0nBHBrccAiFPA7C3OITNL1U7FrVVtlph/BXa3patN7N8dO\nShy210pZworMcfjcGInS2uE56FrWzfBNpwNZLBXSbeZg6ZldqY/ToJdO2Xlt+vDS\nzKZU2SADbdbLszdpQzCBgPDG9fOYVkgWxTlFkYlu3CshSdqt1v8YzON5cvipqiDv\nsNMuifcn4XWuzSNSvDdzsSJCrzAlGbwiH/oivz7mIr/9q/1pLbvPs3AiW+sgQgQm\nPPv3cM8p9h1KrIk=\n-----END CERTIFICATE-----\n",
                 "caCertificate": "-----BEGIN CERTIFICATE-----\nMIIFpzCCA4+gAwIBAgIEZQCRszANBgkqhkiG9w0BAQsFADB2MQswCQYDVQQGEwJ1\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMSAwHgYDVQQDDBcqLm9jdGEuZXRjY2hv\nc3RlZC5sb2NhbDAeFw0yMzA5MTIxNjI4MzVaFw0zMzA5MTIxNjI4MzVaMHYxCzAJ\nBgNVBAYTAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsG\nA1UECgwEZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xIDAeBgNVBAMMFyoub2N0\nYS5ldGNjaG9zdGVkLmxvY2FsMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKC\nAgEAjwUCZeGsQ+xFL2rqRO6X+T7ADpfAJXbA2WA2eeCI1KD33o0DegWlU5V7Ufrf\ndbfQqCme58Xlpqt7NELGSgGJ5UPAVI4Z539fCLX7K6AFy7TRBRgjLt+eJQss38Cc\nvH9+5kuWl0e3GNTVh0t7S07Com1pExrUfSrXnu5ma8W5RdkhC7yh4XOIh7aUzR+2\nsJ5ksibdzJFI7gFqs367UCQ5fWR/nr49tn2GQOghPOuPQAkLKB1X4FsjvSMUDup3\nIPt9hHFooTyf7o/M1hqvK1GqFQkr/4AFw7v4sU9xbHiDWOkRESRVaEo6JO/6/R39\nl+697aCXF0RZOfNF2pvUqisfNg/l4GDoTXOjjUcPcUzsUnoVj8Wtv5qSmgUm5bin\n+4DJ/0LH6jVhcGZnthkfre4OKMvBGhy1PTZoE3VYnvjm2jf0bU/Bi/BbDW7rr8Mw\nF9mV5pTCV3gYesyXfkeAfWRZKCdTBUUAUBLBTHLHIbZuwjdxroZ4uPlHjPlIPwGy\n+1gLzzalifWlvrWaIIJ2ZlMHFWQo+3/1CJOVFKOFVsbd0V7t7hkYyoIK6d28vQM+\nudbXEEERXBAYF/eB60CvPENsuhgK6uX3+SG2CFjJe//8nGnVmXvYo0C3G4ACHQK0\nYWLHYIuIjfVN6XY00utl1j2LcpnXmBaa+I3H/NYNMS4TKfMCAwEAAaM9MDswOQYD\nVR0RBDIwMIIXKi5vY3RhLmV0Y2Nob3N0ZWQubG9jYWyCFW9jdGEuZXRjY2hvc3Rl\nZC5sb2NhbDANBgkqhkiG9w0BAQsFAAOCAgEASj95eTXHtNXsS65AoDmCoqmg8Y9L\nXCS9mqLswWspd5A/yf56xlvECECieC8/XlYgNj0dTPDw2btJFiNXF6iOPV5km+f/\n+LLpunqC6+5qa5NWtyYc3wrRRP91WPzcdVqmEINpLquOxiRZis1fb5KcqxCqNiLA\nZiHwkqRJaPi3/XP0131H08odSoCtsTLK5tY7xg9aHtUXq6A1wVGlWi1/y3lNwB4K\nqykmDhbS2IuqK68uy78Lj0KUxQ/tcg1MufJL4tcpWLJob3lzDbzqIWfxcYRjuPi9\nmh90RuYGjLlmK0Z8B6yc49eWcLijxmE7N00IZLyF93Rs2URWAQQsS9n8AceK3xGS\nzUJ+xHmwHtFl037+R6Nybe/Jt5evqRjT+nFQIGGVw/56fK0LryWQsS9WxME6lw6P\ndvI0WKMwZTEHBDxYki0nBHBrccAiFPA7C3OITNL1U7FrVVtlph/BXa3patN7N8dO\nShy210pZworMcfjcGInS2uE56FrWzfBNpwNZLBXSbeZg6ZldqY/ToJdO2Xlt+vDS\nzKZU2SADbdbLszdpQzCBgPDG9fOYVkgWxTlFkYlu3CshSdqt1v8YzON5cvipqiDv\nsNMuifcn4XWuzSNSvDdzsSJCrzAlGbwiH/oivz7mIr/9q/1pLbvPs3AiW+sgQgQm\nPPv3cM8p9h1KrIk=\n-----END CERTIFICATE-----\n"
+            },
+            "open-search": {
+                "certificateName": "open-search",
+                "publicCertificate": "-----BEGIN CERTIFICATE-----\r\nMIIHHDCCBgSgAwIBAgIQBQ7p+Y1HdhutJLjONvlV5zANBgkqhkiG9w0BAQsFADBZ\r\nMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMTMwMQYDVQQDEypE\r\naWdpQ2VydCBHbG9iYWwgRzIgVExTIFJTQSBTSEEyNTYgMjAyMCBDQTEwHhcNMjMw\r\nODA0MDAwMDAwWhcNMjQwODA3MjM1OTU5WjCBjjELMAkGA1UEBhMCVVMxEzARBgNV\r\nBAgTCkNhbGlmb3JuaWExFTATBgNVBAcTDFJlZHdvb2QgQ2l0eTEbMBkGA1UEChMS\r\nT3JhY2xlIENvcnBvcmF0aW9uMTYwNAYDVQQDDC0qLm9wZW5zZWFyY2gudXMtYXNo\r\nYnVybi0xLm9jaS5vcmFjbGVjbG91ZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IB\r\nDwAwggEKAoIBAQDgIHhgTkL4LQDko0Uqs1amWwPtYaqrop0aLk8FswgRMyv/As03\r\nOVsaFEUOAaE2IMIIsb6Ajb4pTPoZVQ+JCZeuwmeWNAUa6Yx0Nn17XSh+ndyCYCpu\r\nZLG82pxAiO2lPooe/V/MnwnI8qy5iC+sZuTz9kBX8Ox0mA+4De3DxJOkvs7hHvcq\r\nvftWA/sQBM4nA2Uz5XxErGBsPA4qrajzF+JfKOwW5Zm+BlDMm9AMAeWf2eScKWVE\r\n9yu1oH2sqxwzvNRoz1GRvuDCtUsMBYQXtNryM4ylbcjLALkfQnAjPezJlpB0aDtn\r\nHLl0Izbdgev+4F1vjzkuN1h4n/bkqs7xULy7AgMBAAGjggOoMIIDpDAfBgNVHSME\r\nGDAWgBR0hYDAZsffN97PvSk3qgMdvu3NFzAdBgNVHQ4EFgQUoYwS/BTBRTZLZavZ\r\nSrLXdCBsXlswOAYDVR0RBDEwL4ItKi5vcGVuc2VhcmNoLnVzLWFzaGJ1cm4tMS5v\r\nY2kub3JhY2xlY2xvdWQuY29tMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggr\r\nBgEFBQcDAQYIKwYBBQUHAwIwgZ8GA1UdHwSBlzCBlDBIoEagRIZCaHR0cDovL2Ny\r\nbDMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0R2xvYmFsRzJUTFNSU0FTSEEyNTYyMDIw\r\nQ0ExLTEuY3JsMEigRqBEhkJodHRwOi8vY3JsNC5kaWdpY2VydC5jb20vRGlnaUNl\r\ncnRHbG9iYWxHMlRMU1JTQVNIQTI1NjIwMjBDQTEtMS5jcmwwPgYDVR0gBDcwNTAz\r\nBgZngQwBAgIwKTAnBggrBgEFBQcCARYbaHR0cDovL3d3dy5kaWdpY2VydC5jb20v\r\nQ1BTMIGHBggrBgEFBQcBAQR7MHkwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRp\r\nZ2ljZXJ0LmNvbTBRBggrBgEFBQcwAoZFaHR0cDovL2NhY2VydHMuZGlnaWNlcnQu\r\nY29tL0RpZ2lDZXJ0R2xvYmFsRzJUTFNSU0FTSEEyNTYyMDIwQ0ExLTEuY3J0MAkG\r\nA1UdEwQCMAAwggGABgorBgEEAdZ5AgQCBIIBcASCAWwBagB3AO7N0GTV2xrOxVy3\r\nnbTNE6Iyh0Z8vOzew1FIWUZxH7WbAAABib3ZBVkAAAQDAEgwRgIhAP6BDtnADvuc\r\n4nR4/SpD7YJ92ThYPfhF58rW9NnpZlQrAiEAmF7KkRfTQl6Ry7vKj0OoZQhWiXzx\r\nc0CDnufp9mp6w9EAdgBIsONr2qZHNA/lagL6nTDrHFIBy1bdLIHZu7+rOdiEcwAA\r\nAYm92QVbAAAEAwBHMEUCIQCBtoPcUBx7TEcU6rTH8N9l3ZsaLhL89RgFStlui7Du\r\nHAIgHBNi3Sxs6Nn5fTcZ2pwQw3wMBcdRTxTQdd3vj166OY8AdwDatr9rP7W2Ip+b\r\nwrtca+hwkXFsu1GEhTS9pD0wSNf7qwAAAYm92QUFAAAEAwBIMEYCIQCNvkrbvV+W\r\nfV5ZZ6LMXbMcsGEjR+LFFqzyceaU/1fLPAIhAPYNAAzAp20EETwK77Ed2RG9iT8U\r\n5ScQODfPkMs49bYdMA0GCSqGSIb3DQEBCwUAA4IBAQDGMca96lgiQCzAZdrR46Ym\r\nyP778Kk48cFks/4kRrfjq0tQmCxt+20jK5/E5W3ODGu76/ge0W/dvZF1QCLGctPG\r\n0+wDd/IP9lptR4byY3Tc0yHobfZPLDsJQShYCa7EzSPuNID2TUCcuRRZigJXwWrv\r\npemdDAqYo2os1v+vCkQUIr/zoIcMd8JL/yhSECONdpF2rl64oSwlI5RZXekCmF1K\r\nmmfHHr9Aewh50ysVXuNhMnyD8af3wCWJMnPFN1u57VbFkbDZZ1ZvVSQll4qiTYN7\r\njPey2goni2lfVACRGgSo+QQoLabnumc6LHHobe6cGw+ou03dWDC6JGaNiP56+E9d\r\n-----END CERTIFICATE-----\r\n",
+                "caCertificate": "-----BEGIN CERTIFICATE-----\r\nMIIDjjCCAnagAwIBAgIQAzrx5qcRqaC7KGSxHQn65TANBgkqhkiG9w0BAQsFADBh\r\nMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3\r\nd3cuZGlnaWNlcnQuY29tMSAwHgYDVQQDExdEaWdpQ2VydCBHbG9iYWwgUm9vdCBH\r\nMjAeFw0xMzA4MDExMjAwMDBaFw0zODAxMTUxMjAwMDBaMGExCzAJBgNVBAYTAlVT\r\nMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5j\r\nb20xIDAeBgNVBAMTF0RpZ2lDZXJ0IEdsb2JhbCBSb290IEcyMIIBIjANBgkqhkiG\r\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuzfNNNx7a8myaJCtSnX/RrohCgiN9RlUyfuI\r\n2/Ou8jqJkTx65qsGGmvPrC3oXgkkRLpimn7Wo6h+4FR1IAWsULecYxpsMNzaHxmx\r\n1x7e/dfgy5SDN67sH0NO3Xss0r0upS/kqbitOtSZpLYl6ZtrAGCSYP9PIUkY92eQ\r\nq2EGnI/yuum06ZIya7XzV+hdG82MHauVBJVJ8zUtluNJbd134/tJS7SsVQepj5Wz\r\ntCO7TG1F8PapspUwtP1MVYwnSlcUfIKdzXOS0xZKBgyMUNGPHgm+F6HmIcr9g+UQ\r\nvIOlCsRnKPZzFBQ9RnbDhxSJITRNrw9FDKZJobq7nMWxM4MphQIDAQABo0IwQDAP\r\nBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBhjAdBgNVHQ4EFgQUTiJUIBiV\r\n5uNu5g/6+rkS7QYXjzkwDQYJKoZIhvcNAQELBQADggEBAGBnKJRvDkhj6zHd6mcY\r\n1Yl9PMWLSn/pvtsrF9+wX3N3KjITOYFnQoQj8kVnNeyIv/iPsGEMNKSuIEyExtv4\r\nNeF22d+mQrvHRAiGfzZ0JFrabA0UWTW98kndth/Jsw1HKj2ZL7tcu7XUIOGZX1NG\r\nFdtom/DzMNU+MeKNhJ7jitralj41E6Vf8PlwUHBHQRFXGU7Aj64GxJUTFy8bJZ91\r\n8rGOmaFvE7FBcf6IKshPECBV1/MUReXgRPTqh5Uykw7+U0b6LJ3/iyK5S9kJRaTe\r\npLiaWN0bfVKfjllDiIGknibVb63dDcY3fe0Dkhvld1927jyNxF1WW6LZZm6zNTfl\r\nMrY=\r\n-----END CERTIFICATE-----\r\n"
             }
         },
         "backendSets": {
@@ -1357,6 +1392,48 @@
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
             },
+            "open-search-dashboard": {
+                "name": "open-search-dashboard",
+                "policy": "ROUND_ROBIN",
+                "backends": [
+                    {
+                        "name": "10.152.11.185:5601",
+                        "ipAddress": "10.152.11.185",
+                        "port": 5601,
+                        "weight": 1,
+                        "drain": false,
+                        "backup": false,
+                        "offline": false
+                    }
+                ],
+                "healthChecker": {
+                    "protocol": "TCP",
+                    "urlPath": null,
+                    "port": 5601,
+                    "returnCode": 200,
+                    "retries": 3,
+                    "timeoutInMillis": 3000,
+                    "intervalInMillis": 10000,
+                    "responseBodyRegex": ".*",
+                    "isForcePlainText": null
+                },
+                "sslConfiguration": {
+                    "verifyDepth": 1,
+                    "verifyPeerCertificate": false,
+                    "trustedCertificateAuthorityIds": [],
+                    "certificateIds": [],
+                    "certificateName": "open-search",
+                    "serverOrderPreference": null,
+                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
+                    "protocols": [
+                        "TLSv1",
+                        "TLSv1.1",
+                        "TLSv1.2"
+                    ]
+                },
+                "sessionPersistenceConfiguration": null,
+                "lbCookieSessionPersistenceConfiguration": null
+            },
             "ritehelp": {
                 "name": "ritehelp",
                 "policy": "IP_HASH",
@@ -1436,7 +1513,7 @@
                     },
                     {
                         "name": "nas_files",
-                        "condition": "any(http.request.url.path sw (i '/bos_u_orb_images'), http.request.url.path sw (i '/bos_u_orb_files'))",
+                        "condition": "any(http.request.url.path sw (i '/bos_p_octa_images'), http.request.url.path sw (i '/bos_p_octa_files'))",
                         "actions": [
                             {
                                 "name": "FORWARD_TO_BACKENDSET",

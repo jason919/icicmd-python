@@ -2389,7 +2389,7 @@
                     },
                     {
                         "name": "nas_files",
-                        "condition": "any(http.request.url.path sw (i '/bos_u_orb_images'), http.request.url.path sw (i '/bos_u_orb_files'))",
+                        "condition": "any(http.request.url.path sw (i '/bos_t_octa_images'), http.request.url.path sw (i '/bos_t_octa_files'))",
                         "actions": [
                             {
                                 "name": "FORWARD_TO_BACKENDSET",
