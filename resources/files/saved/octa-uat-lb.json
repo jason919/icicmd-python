@@ -2,7 +2,7 @@
     {
         "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaajgko2vqbqp5kq6ifhysov3lva2kfel6bhymo2qilnn535dq3kpda",
         "compartmentId": "ocid1.compartment.oc1..aaaaaaaavlllxvqztlsc3qqorammnbw65hzewqk7xpvawlzbh7r53u2fdeqq",
-        "displayName": "new-octa-uat-lb-public",
+        "displayName": "octa-uat-iva-public",
         "lifecycleState": "ACTIVE",
         "timeCreated": "2023-06-07T17:29:18.352Z",
         "ipAddresses": [
@@ -1487,36 +1487,6 @@
                 "ruleSetNames": [],
                 "routingPolicyName": null
             },
-            "SSOAdmin": {
-                "name": "SSOAdmin",
-                "defaultBackendSetName": "SSOAdmin",
-                "port": 443,
-                "protocol": "HTTP",
-                "hostnameNames": [
-                    "ritessoadmin-uat.octa.rite.etcchosted.com"
-                ],
-                "serverName": null,
-                "pathRouteSetName": null,
-                "sslConfiguration": {
-                    "verifyDepth": 1,
-                    "verifyPeerCertificate": false,
-                    "trustedCertificateAuthorityIds": [],
-                    "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT2",
-                    "serverOrderPreference": "DISABLED",
-                    "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
-                },
-                "connectionConfiguration": {
-                    "idleTimeout": 60,
-                    "backendTcpProxyProtocolVersion": null,
-                    "backendTcpProxyProtocolOptions": null
-                },
-                "ruleSetNames": [],
-                "routingPolicyName": null
-            },
             "riteOnline": {
                 "name": "riteOnline",
                 "defaultBackendSetName": "riteonline",
@@ -1696,10 +1666,6 @@
             "ritetm-uat.octa.rite.etcchosted.com": {
                 "name": "ritetm-uat.octa.rite.etcchosted.com",
                 "hostname": "ritetm-uat.octa.rite.etcchosted.com"
-            },
-            "ritessoadmin-uat.octa.rite.etcchosted.com": {
-                "name": "ritessoadmin-uat.octa.rite.etcchosted.com",
-                "hostname": "ritessoadmin-uat.octa.rite.etcchosted.com"
             },
             "riteledger-uat.octa.rite.etcchosted.com": {
                 "name": "riteledger-uat.octa.rite.etcchosted.com",
@@ -1920,48 +1886,6 @@
                     "isSecure": true,
                     "isHttpOnly": true
                 }
-            },
-            "SSOAdmin": {
-                "name": "SSOAdmin",
-                "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.11.205:8002",
-                        "ipAddress": "10.152.11.205",
-                        "port": 8002,
-                        "weight": 1,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
-                "healthChecker": {
-                    "protocol": "TCP",
-                    "urlPath": null,
-                    "port": 8002,
-                    "returnCode": 200,
-                    "retries": 3,
-                    "timeoutInMillis": 3000,
-                    "intervalInMillis": 10000,
-                    "responseBodyRegex": ".*",
-                    "isForcePlainText": null
-                },
-                "sslConfiguration": {
-                    "verifyDepth": 1,
-                    "verifyPeerCertificate": false,
-                    "trustedCertificateAuthorityIds": [],
-                    "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
-                    "serverOrderPreference": null,
-                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
-                },
-                "sessionPersistenceConfiguration": null,
-                "lbCookieSessionPersistenceConfiguration": null
             },
             "supervisor_override_sso": {
                 "name": "supervisor_override_sso",
