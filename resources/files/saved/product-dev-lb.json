@@ -582,9 +582,9 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.48.234:8084",
+                        "name": "10.152.48.234:8015",
                         "ipAddress": "10.152.48.234",
-                        "port": 8084,
+                        "port": 8015,
                         "weight": 1,
                         "drain": false,
                         "backup": false,
@@ -594,7 +594,7 @@
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 8084,
+                    "port": 8015,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,

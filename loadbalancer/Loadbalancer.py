@@ -8,12 +8,6 @@ from helper import OciHttpHelper
 from loadbalancer import Cert, RouteSet, Listener
 
 
-def create(compartment_id: str, post_json):
-    print("start LoadBalancer create 1")
-    url = f"{LB_API_ENDPOINT}?compartmentId={compartment_id}"
-    OciHttpHelper.restCall(url, post_json, "POST")
-
-
 def update_display_name(compartment_id: str, ocid: str, new_name: str):
     print("start update_loadbalancer_display_name 1")
     url = f"{LB_API_ENDPOINT}/{ocid}?compartmentId={compartment_id}"
@@ -65,10 +59,17 @@ def list_loadbalancer():
 def backup_all_loadbalancers():
     print("start full backup")
     for key, value in compartments.items():
-        __backup_load_balancer_of_compartment(key, value)
+        if value != "":
+            __backup_load_balancer_of_compartment(key, value)
 
 
-def create_loadbalancer(
+def create_all_loadbalancer(compartment_id: str, post_json):
+    print("start LoadBalancer create 1")
+    url = f"{LB_API_ENDPOINT}?compartmentId={compartment_id}"
+    OciHttpHelper.restCall(url, post_json, "POST")
+
+
+def create_single_loadbalancer(
     json_file_name: str, load_balancer_name: str, compartment_id: str
 ):
     with open(
