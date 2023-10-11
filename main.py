@@ -3,10 +3,10 @@ from config import compartments
 from config.ConfigReader import get_compartment_id
 from loadbalancer import Backendset, Listener, Loadbalancer
 
-# Loadbalancer.create_loadbalancer(
+# Loadbalancer.create_single_loadbalancer(
 #     "test.json", "lb_test", get_compartment_id("octa-prod")
 # )
-# Loadbalancer.create_loadbalancer(
+# Loadbalancer.create_single_loadbalancer(
 #     "octa-prod-lb.json", "new-octa-prod-lb", get_compartment_id("octa-prod")
 # )
 # with open(
@@ -14,7 +14,7 @@ from loadbalancer import Backendset, Listener, Loadbalancer
 #     "r",
 # ) as json_file:
 #     post_json = json.loads(json_file.read())
-# Loadbalancer.create(get_compartment_id("octa-prod"), post_json)
+# Loadbalancer.create_all_loadbalancer(get_compartment_id("octa-prod"), post_json)
 
 # Loadbalancer.update_backend_sets('octa-training/create-octa-lb-new.json')
 # Loadbalancer.list_loadbalancer()
