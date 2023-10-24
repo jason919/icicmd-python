@@ -94,8 +94,8 @@
                 "policy": "ROUND_ROBIN",
                 "backends": [
                     {
-                        "name": "10.152.37.94:8087",
-                        "ipAddress": "10.152.37.94",
+                        "name": "10.152.51.94:8087",
+                        "ipAddress": "10.152.51.94",
                         "port": 8087,
                         "weight": 1,
                         "drain": false,
@@ -103,8 +103,8 @@
                         "offline": false
                     },
                     {
-                        "name": "10.152.37.93:8087",
-                        "ipAddress": "10.152.37.93",
+                        "name": "10.152.51.93:8087",
+                        "ipAddress": "10.152.51.93",
                         "port": 8087,
                         "weight": 1,
                         "drain": false,
@@ -230,8 +230,8 @@
                 "policy": "LEAST_CONNECTIONS",
                 "backends": [
                     {
-                        "name": "10.152.37.97:9003",
-                        "ipAddress": "10.152.37.97",
+                        "name": "10.152.51.97:9003",
+                        "ipAddress": "10.152.51.97",
                         "port": 9003,
                         "weight": 1,
                         "drain": false,
@@ -239,8 +239,8 @@
                         "offline": false
                     },
                     {
-                        "name": "10.152.37.98:9003",
-                        "ipAddress": "10.152.37.98",
+                        "name": "10.152.51.98:9003",
+                        "ipAddress": "10.152.51.98",
                         "port": 9003,
                         "weight": 1,
                         "drain": false,
@@ -268,8 +268,8 @@
                 "policy": "LEAST_CONNECTIONS",
                 "backends": [
                     {
-                        "name": "10.152.37.97:9003",
-                        "ipAddress": "10.152.37.97",
+                        "name": "10.152.51.97:9003",
+                        "ipAddress": "10.152.51.97",
                         "port": 9003,
                         "weight": 1,
                         "drain": false,
@@ -277,8 +277,8 @@
                         "offline": false
                     },
                     {
-                        "name": "10.152.37.98:9003",
-                        "ipAddress": "10.152.37.98",
+                        "name": "10.152.51.98:9003",
+                        "ipAddress": "10.152.51.98",
                         "port": 9003,
                         "weight": 1,
                         "drain": false,
@@ -317,7 +317,7 @@
         "timeCreated": "2023-08-18T20:29:17.895Z",
         "ipAddresses": [
             {
-                "ipAddress": "10.152.37.87",
+                "ipAddress": "10.152.51.87",
                 "isPublic": false,
                 "reservedIp": null
             }
@@ -526,8 +526,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.74:8021",
-                        "ipAddress": "10.152.37.74",
+                        "name": "10.152.51.74:8021",
+                        "ipAddress": "10.152.51.74",
                         "port": 8021,
                         "weight": 1,
                         "drain": false,
@@ -568,8 +568,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.92:8080",
-                        "ipAddress": "10.152.37.92",
+                        "name": "10.152.51.92:8080",
+                        "ipAddress": "10.152.51.92",
                         "port": 8080,
                         "weight": 1,
                         "drain": false,
@@ -597,8 +597,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.72:8017",
-                        "ipAddress": "10.152.37.72",
+                        "name": "10.152.51.72:8017",
+                        "ipAddress": "10.152.51.72",
                         "port": 8017,
                         "weight": 1,
                         "drain": false,
@@ -639,8 +639,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.80:8095",
-                        "ipAddress": "10.152.37.80",
+                        "name": "10.152.51.80:8095",
+                        "ipAddress": "10.152.51.80",
                         "port": 8095,
                         "weight": 1,
                         "drain": false,
@@ -681,8 +681,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.81:9002",
-                        "ipAddress": "10.152.37.81",
+                        "name": "10.152.51.81:9002",
+                        "ipAddress": "10.152.51.81",
                         "port": 9002,
                         "weight": 1,
                         "drain": false,
@@ -710,8 +710,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.74:8189",
-                        "ipAddress": "10.152.37.74",
+                        "name": "10.152.51.74:8189",
+                        "ipAddress": "10.152.51.74",
                         "port": 8189,
                         "weight": 1,
                         "drain": false,
@@ -752,8 +752,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.67:7012",
-                        "ipAddress": "10.152.37.67",
+                        "name": "10.152.51.67:7012",
+                        "ipAddress": "10.152.51.67",
                         "port": 7012,
                         "weight": 1,
                         "drain": false,
@@ -1208,8 +1208,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.79:8013",
-                        "ipAddress": "10.152.37.79",
+                        "name": "10.152.51.79:8013",
+                        "ipAddress": "10.152.51.79",
                         "port": 8013,
                         "weight": 1,
                         "drain": false,
@@ -1258,8 +1258,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.93:8487",
-                        "ipAddress": "10.152.37.93",
+                        "name": "10.152.51.93:8487",
+                        "ipAddress": "10.152.51.93",
                         "port": 8487,
                         "weight": 1,
                         "drain": false,
@@ -1300,8 +1300,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.74:8081",
-                        "ipAddress": "10.152.37.74",
+                        "name": "10.152.51.74:8081",
+                        "ipAddress": "10.152.51.74",
                         "port": 8081,
                         "weight": 1,
                         "drain": false,
@@ -1350,8 +1350,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.80:8011",
-                        "ipAddress": "10.152.37.80",
+                        "name": "10.152.51.80:8011",
+                        "ipAddress": "10.152.51.80",
                         "port": 8011,
                         "weight": 1,
                         "drain": false,
@@ -1400,8 +1400,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.77:8099",
-                        "ipAddress": "10.152.37.77",
+                        "name": "10.152.51.77:8099",
+                        "ipAddress": "10.152.51.77",
                         "port": 8099,
                         "weight": 1,
                         "drain": false,
@@ -1442,8 +1442,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.72:8015",
-                        "ipAddress": "10.152.37.72",
+                        "name": "10.152.51.72:8015",
+                        "ipAddress": "10.152.51.72",
                         "port": 8015,
                         "weight": 1,
                         "drain": false,
@@ -1484,8 +1484,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.75:8007",
-                        "ipAddress": "10.152.37.75",
+                        "name": "10.152.51.75:8007",
+                        "ipAddress": "10.152.51.75",
                         "port": 8007,
                         "weight": 1,
                         "drain": false,
@@ -1534,8 +1534,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.78:8005",
-                        "ipAddress": "10.152.37.78",
+                        "name": "10.152.51.78:8005",
+                        "ipAddress": "10.152.51.78",
                         "port": 8005,
                         "weight": 1,
                         "drain": false,
@@ -1584,8 +1584,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.76:8009",
-                        "ipAddress": "10.152.37.76",
+                        "name": "10.152.51.76:8009",
+                        "ipAddress": "10.152.51.76",
                         "port": 8009,
                         "weight": 1,
                         "drain": false,
@@ -1634,8 +1634,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.77:8443",
-                        "ipAddress": "10.152.37.77",
+                        "name": "10.152.51.77:8443",
+                        "ipAddress": "10.152.51.77",
                         "port": 8443,
                         "weight": 1,
                         "drain": false,
@@ -1684,8 +1684,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.73:8001",
-                        "ipAddress": "10.152.37.73",
+                        "name": "10.152.51.73:8001",
+                        "ipAddress": "10.152.51.73",
                         "port": 8001,
                         "weight": 1,
                         "drain": false,
@@ -1943,8 +1943,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.68:7139",
-                        "ipAddress": "10.152.37.68",
+                        "name": "10.152.51.68:7139",
+                        "ipAddress": "10.152.51.68",
                         "port": 7139,
                         "weight": 1,
                         "drain": false,
@@ -1985,8 +1985,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.69:8543",
-                        "ipAddress": "10.152.37.69",
+                        "name": "10.152.51.69:8543",
+                        "ipAddress": "10.152.51.69",
                         "port": 8543,
                         "weight": 1,
                         "drain": false,
@@ -2027,8 +2027,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.68:7121",
-                        "ipAddress": "10.152.37.68",
+                        "name": "10.152.51.68:7121",
+                        "ipAddress": "10.152.51.68",
                         "port": 7121,
                         "weight": 1,
                         "drain": false,
@@ -2069,8 +2069,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.82:8069",
-                        "ipAddress": "10.152.37.82",
+                        "name": "10.152.51.82:8069",
+                        "ipAddress": "10.152.51.82",
                         "port": 8069,
                         "weight": 1,
                         "drain": false,
@@ -2106,8 +2106,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.81:9002",
-                        "ipAddress": "10.152.37.81",
+                        "name": "10.152.51.81:9002",
+                        "ipAddress": "10.152.51.81",
                         "port": 9002,
                         "weight": 1,
                         "drain": false,
@@ -2135,8 +2135,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.77:8002",
-                        "ipAddress": "10.152.37.77",
+                        "name": "10.152.51.77:8002",
+                        "ipAddress": "10.152.51.77",
                         "port": 8002,
                         "weight": 1,
                         "drain": false,
@@ -2177,8 +2177,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.92:8080",
-                        "ipAddress": "10.152.37.92",
+                        "name": "10.152.51.92:8080",
+                        "ipAddress": "10.152.51.92",
                         "port": 8080,
                         "weight": 1,
                         "drain": false,
@@ -2206,8 +2206,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.68:7171",
-                        "ipAddress": "10.152.37.68",
+                        "name": "10.152.51.68:7171",
+                        "ipAddress": "10.152.51.68",
                         "port": 7171,
                         "weight": 1,
                         "drain": false,
@@ -2248,8 +2248,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.68:7159",
-                        "ipAddress": "10.152.37.68",
+                        "name": "10.152.51.68:7159",
+                        "ipAddress": "10.152.51.68",
                         "port": 7159,
                         "weight": 1,
                         "drain": false,
@@ -2290,8 +2290,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.67:7012",
-                        "ipAddress": "10.152.37.67",
+                        "name": "10.152.51.67:7012",
+                        "ipAddress": "10.152.51.67",
                         "port": 7012,
                         "weight": 1,
                         "drain": false,
@@ -2319,8 +2319,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.37.199:8023",
-                        "ipAddress": "10.152.37.199",
+                        "name": "10.152.51.199:8023",
+                        "ipAddress": "10.152.51.199",
                         "port": 8023,
                         "weight": 1,
                         "drain": false,
@@ -2409,7 +2409,7 @@
                     },
                     {
                         "name": "payment",
-                        "condition": "all(http.request.url.path sw (i '/payment'))",
+                        "condition": "all(http.request.url.path sw (i '/payment'), http.request.url.path not sw (i '/paymentws'))",
                         "actions": [
                             {
                                 "name": "FORWARD_TO_BACKENDSET",

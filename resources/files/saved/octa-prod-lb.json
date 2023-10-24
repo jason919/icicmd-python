@@ -1533,7 +1533,7 @@
                     },
                     {
                         "name": "payment",
-                        "condition": "all(http.request.url.path sw (i '/payment'))",
+                        "condition": "all(http.request.url.path sw (i '/payment'), http.request.url.path not sw (i '/paymentws'))",
                         "actions": [
                             {
                                 "name": "FORWARD_TO_BACKENDSET",
