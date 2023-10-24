@@ -2,7 +2,7 @@
     {
         "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaakfi3vla2znooieznfany35wplpmqyql5gfiytlb5qpunzifevznq",
         "compartmentId": "ocid1.compartment.oc1..aaaaaaaalcs6kkofqnk5qcyfl2wlroxdl7yoxwlqxuk5pi6qwpipqcnpesiq",
-        "displayName": "new-octa-dev-1b-internal",
+        "displayName": "new-octa-dev1b-internal",
         "lifecycleState": "ACTIVE",
         "timeCreated": "2023-08-18T21:48:36.040Z",
         "ipAddresses": [
@@ -29,7 +29,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritecamunda-dev-1b.octa.rite.etcchosted.com"
+                    "ritecamunda-dev1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -59,7 +59,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "riteonlinegateway-dev-1b.octa.rite.etcchosted.com"
+                    "riteonlinegateway-dev1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -89,7 +89,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "riteadapter-dev-1b.octa.rite.etcchosted.com"
+                    "riteadapter-dev1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -119,7 +119,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritereportserver-dev-1b.octa.rite.etcchosted.com"
+                    "ritereportserver-dev1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -149,7 +149,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritesearch-dev-1b.octa.rite.etcchosted.com"
+                    "ritesearch-dev1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -175,25 +175,25 @@
             }
         },
         "hostnames": {
-            "riteadapter-dev-1b.octa.rite.etcchosted.com": {
-                "name": "riteadapter-dev-1b.octa.rite.etcchosted.com",
-                "hostname": "riteadapter-dev-1b.octa.rite.etcchosted.com"
+            "riteadapter-dev1b.octa.rite.etcchosted.com": {
+                "name": "riteadapter-dev1b.octa.rite.etcchosted.com",
+                "hostname": "riteadapter-dev1b.octa.rite.etcchosted.com"
             },
-            "riteonlinegateway-dev-1b.octa.rite.etcchosted.com": {
-                "name": "riteonlinegateway-dev-1b.octa.rite.etcchosted.com",
-                "hostname": "riteonlinegateway-dev-1b.octa.rite.etcchosted.com"
+            "riteonlinegateway-dev1b.octa.rite.etcchosted.com": {
+                "name": "riteonlinegateway-dev1b.octa.rite.etcchosted.com",
+                "hostname": "riteonlinegateway-dev1b.octa.rite.etcchosted.com"
             },
-            "ritereportserver-dev-1b.octa.rite.etcchosted.com": {
-                "name": "ritereportserver-dev-1b.octa.rite.etcchosted.com",
-                "hostname": "ritereportserver-dev-1b.octa.rite.etcchosted.com"
+            "ritereportserver-dev1b.octa.rite.etcchosted.com": {
+                "name": "ritereportserver-dev1b.octa.rite.etcchosted.com",
+                "hostname": "ritereportserver-dev1b.octa.rite.etcchosted.com"
             },
-            "ritecamunda-dev-1b.octa.rite.etcchosted.com": {
-                "name": "ritecamunda-dev-1b.octa.rite.etcchosted.com",
-                "hostname": "ritecamunda-dev-1b.octa.rite.etcchosted.com"
+            "ritecamunda-dev1b.octa.rite.etcchosted.com": {
+                "name": "ritecamunda-dev1b.octa.rite.etcchosted.com",
+                "hostname": "ritecamunda-dev1b.octa.rite.etcchosted.com"
             },
-            "ritesearch-dev-1b.octa.rite.etcchosted.com": {
-                "name": "ritesearch-dev-1b.octa.rite.etcchosted.com",
-                "hostname": "ritesearch-dev-1b.octa.rite.etcchosted.com"
+            "ritesearch-dev1b.octa.rite.etcchosted.com": {
+                "name": "ritesearch-dev1b.octa.rite.etcchosted.com",
+                "hostname": "ritesearch-dev1b.octa.rite.etcchosted.com"
             }
         },
         "cidrBlocks": null,
@@ -514,7 +514,7 @@
     {
         "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaasum4lcimnvnipkeg5bivtso3emn5tq5uq33p4cgsa3f5iljvsrpa",
         "compartmentId": "ocid1.compartment.oc1..aaaaaaaalcs6kkofqnk5qcyfl2wlroxdl7yoxwlqxuk5pi6qwpipqcnpesiq",
-        "displayName": "new-octa-dev-1b",
+        "displayName": "new-octa-dev1b",
         "lifecycleState": "ACTIVE",
         "timeCreated": "2023-08-18T21:50:07.857Z",
         "ipAddresses": [
@@ -541,7 +541,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritefulfillment-dev-1b.octa.rite.etcchosted.com"
+                    "ritefulfillment-dev1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -571,7 +571,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritesso-dev-1b.octa.rite.etcchosted.com"
+                    "ritesso-dev1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -601,7 +601,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritecrm-dev-1b.octa.rite.etcchosted.com"
+                    "ritecrm-dev1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -631,7 +631,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "riteivr-dev-1b.octa.rite.etcchosted.com"
+                    "riteivr-dev1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -661,7 +661,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "riteledger-dev-1b.octa.rite.etcchosted.com"
+                    "riteledger-dev1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -691,7 +691,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "riteonline-dev-1b.octa.rite.etcchosted.com"
+                    "riteonline-dev1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -721,7 +721,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritetm-dev-1b.octa.rite.etcchosted.com"
+                    "ritetm-dev1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -751,7 +751,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritereports-dev-1b.octa.rite.etcchosted.com"
+                    "ritereports-dev1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -781,7 +781,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritemanager-dev-1b.octa.rite.etcchosted.com"
+                    "ritemanager-dev1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -811,7 +811,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritenotification-dev-1b.octa.rite.etcchosted.com"
+                    "ritenotification-dev1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -837,45 +837,45 @@
             }
         },
         "hostnames": {
-            "ritemanager-dev-1b.octa.rite.etcchosted.com": {
-                "name": "ritemanager-dev-1b.octa.rite.etcchosted.com",
-                "hostname": "ritemanager-dev-1b.octa.rite.etcchosted.com"
+            "ritemanager-dev1b.octa.rite.etcchosted.com": {
+                "name": "ritemanager-dev1b.octa.rite.etcchosted.com",
+                "hostname": "ritemanager-dev1b.octa.rite.etcchosted.com"
             },
-            "ritereports-dev-1b.octa.rite.etcchosted.com": {
-                "name": "ritereports-dev-1b.octa.rite.etcchosted.com",
-                "hostname": "ritereports-dev-1b.octa.rite.etcchosted.com"
+            "ritereports-dev1b.octa.rite.etcchosted.com": {
+                "name": "ritereports-dev1b.octa.rite.etcchosted.com",
+                "hostname": "ritereports-dev1b.octa.rite.etcchosted.com"
             },
-            "riteonline-dev-1b.octa.rite.etcchosted.com": {
-                "name": "riteonline-dev-1b.octa.rite.etcchosted.com",
-                "hostname": "riteonline-dev-1b.octa.rite.etcchosted.com"
+            "riteonline-dev1b.octa.rite.etcchosted.com": {
+                "name": "riteonline-dev1b.octa.rite.etcchosted.com",
+                "hostname": "riteonline-dev1b.octa.rite.etcchosted.com"
             },
-            "riteivr-dev-1b.octa.rite.etcchosted.com": {
-                "name": "riteivr-dev-1b.octa.rite.etcchosted.com",
-                "hostname": "riteivr-dev-1b.octa.rite.etcchosted.com"
+            "riteivr-dev1b.octa.rite.etcchosted.com": {
+                "name": "riteivr-dev1b.octa.rite.etcchosted.com",
+                "hostname": "riteivr-dev1b.octa.rite.etcchosted.com"
             },
-            "ritetm-dev-1b.octa.rite.etcchosted.com": {
-                "name": "ritetm-dev-1b.octa.rite.etcchosted.com",
-                "hostname": "ritetm-dev-1b.octa.rite.etcchosted.com"
+            "ritetm-dev1b.octa.rite.etcchosted.com": {
+                "name": "ritetm-dev1b.octa.rite.etcchosted.com",
+                "hostname": "ritetm-dev1b.octa.rite.etcchosted.com"
             },
-            "ritecrm-dev-1b.octa.rite.etcchosted.com": {
-                "name": "ritecrm-dev-1b.octa.rite.etcchosted.com",
-                "hostname": "ritecrm-dev-1b.octa.rite.etcchosted.com"
+            "ritecrm-dev1b.octa.rite.etcchosted.com": {
+                "name": "ritecrm-dev1b.octa.rite.etcchosted.com",
+                "hostname": "ritecrm-dev1b.octa.rite.etcchosted.com"
             },
-            "ritenotification-dev-1b.octa.rite.etcchosted.com": {
-                "name": "ritenotification-dev-1b.octa.rite.etcchosted.com",
-                "hostname": "ritenotification-dev-1b.octa.rite.etcchosted.com"
+            "ritenotification-dev1b.octa.rite.etcchosted.com": {
+                "name": "ritenotification-dev1b.octa.rite.etcchosted.com",
+                "hostname": "ritenotification-dev1b.octa.rite.etcchosted.com"
             },
-            "riteledger-dev-1b.octa.rite.etcchosted.com": {
-                "name": "riteledger-dev-1b.octa.rite.etcchosted.com",
-                "hostname": "riteledger-dev-1b.octa.rite.etcchosted.com"
+            "riteledger-dev1b.octa.rite.etcchosted.com": {
+                "name": "riteledger-dev1b.octa.rite.etcchosted.com",
+                "hostname": "riteledger-dev1b.octa.rite.etcchosted.com"
             },
-            "ritesso-dev-1b.octa.rite.etcchosted.com": {
-                "name": "ritesso-dev-1b.octa.rite.etcchosted.com",
-                "hostname": "ritesso-dev-1b.octa.rite.etcchosted.com"
+            "ritesso-dev1b.octa.rite.etcchosted.com": {
+                "name": "ritesso-dev1b.octa.rite.etcchosted.com",
+                "hostname": "ritesso-dev1b.octa.rite.etcchosted.com"
             },
-            "ritefulfillment-dev-1b.octa.rite.etcchosted.com": {
-                "name": "ritefulfillment-dev-1b.octa.rite.etcchosted.com",
-                "hostname": "ritefulfillment-dev-1b.octa.rite.etcchosted.com"
+            "ritefulfillment-dev1b.octa.rite.etcchosted.com": {
+                "name": "ritefulfillment-dev1b.octa.rite.etcchosted.com",
+                "hostname": "ritefulfillment-dev1b.octa.rite.etcchosted.com"
             }
         },
         "cidrBlocks": null,
@@ -1481,7 +1481,7 @@
     {
         "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaauhardlspeitprviv2qtku7fix7fvakutivvptrz4rxqc224eesuq",
         "compartmentId": "ocid1.compartment.oc1..aaaaaaaalcs6kkofqnk5qcyfl2wlroxdl7yoxwlqxuk5pi6qwpipqcnpesiq",
-        "displayName": "new-octa-dev-1b-2",
+        "displayName": "new-octa-dev1b-2",
         "lifecycleState": "ACTIVE",
         "timeCreated": "2023-08-18T21:53:32.619Z",
         "ipAddresses": [
@@ -1508,7 +1508,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "riteodoo-dev-1b.octa.rite.etcchosted.com"
+                    "riteodoo-dev1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1538,7 +1538,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritebos-dev-1b.octa.rite.etcchosted.com"
+                    "ritebos-dev1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1570,7 +1570,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritessoadmin-dev-1b.octa.rite.etcchosted.com"
+                    "ritessoadmin-dev1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1596,21 +1596,21 @@
             }
         },
         "hostnames": {
-            "ritessoadmin-dev-1b.octa.rite.etcchosted.com": {
-                "name": "ritessoadmin-dev-1b.octa.rite.etcchosted.com",
-                "hostname": "ritessoadmin-dev-1b.octa.rite.etcchosted.com"
+            "ritessoadmin-dev1b.octa.rite.etcchosted.com": {
+                "name": "ritessoadmin-dev1b.octa.rite.etcchosted.com",
+                "hostname": "ritessoadmin-dev1b.octa.rite.etcchosted.com"
             },
-            "riteodoo-dev-1b.octa.rite.etcchosted.com": {
-                "name": "riteodoo-dev-1b.octa.rite.etcchosted.com",
-                "hostname": "riteodoo-dev-1b.octa.rite.etcchosted.com"
+            "riteodoo-dev1b.octa.rite.etcchosted.com": {
+                "name": "riteodoo-dev1b.octa.rite.etcchosted.com",
+                "hostname": "riteodoo-dev1b.octa.rite.etcchosted.com"
             },
-            "ritelogs-dev-1b.octa.rite.etcchosted.com": {
-                "name": "ritelogs-dev-1b.octa.rite.etcchosted.com",
-                "hostname": "ritelogs-dev-1b.octa.rite.etcchosted.com"
+            "ritelogs-dev1b.octa.rite.etcchosted.com": {
+                "name": "ritelogs-dev1b.octa.rite.etcchosted.com",
+                "hostname": "ritelogs-dev1b.octa.rite.etcchosted.com"
             },
-            "ritebos-dev-1b.octa.rite.etcchosted.com": {
-                "name": "ritebos-dev-1b.octa.rite.etcchosted.com",
-                "hostname": "ritebos-dev-1b.octa.rite.etcchosted.com"
+            "ritebos-dev1b.octa.rite.etcchosted.com": {
+                "name": "ritebos-dev1b.octa.rite.etcchosted.com",
+                "hostname": "ritebos-dev1b.octa.rite.etcchosted.com"
             }
         },
         "cidrBlocks": null,

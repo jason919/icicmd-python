@@ -2,7 +2,7 @@
     {
         "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaawqxq5s6mlx3o7brzvcucb6wvtbnurkgfcr5zt24pb33o4wmwbnbq",
         "compartmentId": "ocid1.compartment.oc1..aaaaaaaaa4hoijyprg6uav5esgjot3yhgyytlhi35i25vqyi3ies7qudg3la",
-        "displayName": "OCTA_IVA_LB",
+        "displayName": "new-octa-iva-lb",
         "lifecycleState": "ACTIVE",
         "timeCreated": "2023-03-22T16:58:16.133Z",
         "ipAddresses": [
@@ -59,7 +59,7 @@
                 "port": 80,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "iva-test-1b.octa.rite.etcchosted.com"
+                    "iva-test1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -74,9 +74,9 @@
             }
         },
         "hostnames": {
-            "iva-test-1b.octa.rite.etcchosted.com": {
-                "name": "iva-test-1b.octa.rite.etcchosted.com",
-                "hostname": "iva-test-1b.octa.rite.etcchosted.com"
+            "iva-test1b.octa.rite.etcchosted.com": {
+                "name": "iva-test1b.octa.rite.etcchosted.com",
+                "hostname": "iva-test1b.octa.rite.etcchosted.com"
             }
         },
         "cidrBlocks": null,
@@ -138,7 +138,7 @@
     {
         "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaasfolqbon227fh23ebgzfmza4mqzar527o4ftfh6jgrqngll2c3pq",
         "compartmentId": "ocid1.compartment.oc1..aaaaaaaaa4hoijyprg6uav5esgjot3yhgyytlhi35i25vqyi3ies7qudg3la",
-        "displayName": "OCTA_API_LB",
+        "displayName": "new-octa-api-lb",
         "lifecycleState": "ACTIVE",
         "timeCreated": "2023-04-19T14:15:53.091Z",
         "ipAddresses": [
@@ -165,7 +165,7 @@
                 "port": 80,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "kapsch-test-1b.octa.rite.etcchosted.com"
+                    "kapsch-test1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -184,7 +184,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "kapsch-test-1b.octa.rite.etcchosted.com"
+                    "kapsch-test1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -210,9 +210,9 @@
             }
         },
         "hostnames": {
-            "kapsch-test-1b.octa.rite.etcchosted.com": {
-                "name": "kapsch-test-1b.octa.rite.etcchosted.com",
-                "hostname": "kapsch-test-1b.octa.rite.etcchosted.com"
+            "kapsch-test1b.octa.rite.etcchosted.com": {
+                "name": "kapsch-test1b.octa.rite.etcchosted.com",
+                "hostname": "kapsch-test1b.octa.rite.etcchosted.com"
             }
         },
         "cidrBlocks": null,
@@ -312,7 +312,7 @@
     {
         "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaaivqtwteh2nlwjxigrh22nfwd3fh4sqkmtuzm6w3b4p7nxoa32pvq",
         "compartmentId": "ocid1.compartment.oc1..aaaaaaaaa4hoijyprg6uav5esgjot3yhgyytlhi35i25vqyi3ies7qudg3la",
-        "displayName": "new-octa-test-1b-internal",
+        "displayName": "new-octa-test1b-internal",
         "lifecycleState": "ACTIVE",
         "timeCreated": "2023-08-18T20:29:17.895Z",
         "ipAddresses": [
@@ -339,7 +339,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritecamunda-test-1b.octa.rite.etcchosted.com"
+                    "ritecamunda-test1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -369,7 +369,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "riteonlinegateway-test-1b.octa.rite.etcchosted.com"
+                    "riteonlinegateway-test1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -399,7 +399,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "riteadapter-test-1b.octa.rite.etcchosted.com"
+                    "riteadapter-test1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -429,7 +429,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritereportserver-test-1b.octa.rite.etcchosted.com"
+                    "ritereportserver-test1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -459,7 +459,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritesearch-test-1b.octa.rite.etcchosted.com"
+                    "ritesearch-test1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -485,25 +485,25 @@
             }
         },
         "hostnames": {
-            "ritecamunda-test-1b.octa.rite.etcchosted.com": {
-                "name": "ritecamunda-test-1b.octa.rite.etcchosted.com",
-                "hostname": "ritecamunda-test-1b.octa.rite.etcchosted.com"
+            "ritecamunda-test1b.octa.rite.etcchosted.com": {
+                "name": "ritecamunda-test1b.octa.rite.etcchosted.com",
+                "hostname": "ritecamunda-test1b.octa.rite.etcchosted.com"
             },
-            "ritereportserver-test-1b.octa.rite.etcchosted.com": {
-                "name": "ritereportserver-test-1b.octa.rite.etcchosted.com",
-                "hostname": "ritereportserver-test-1b.octa.rite.etcchosted.com"
+            "ritereportserver-test1b.octa.rite.etcchosted.com": {
+                "name": "ritereportserver-test1b.octa.rite.etcchosted.com",
+                "hostname": "ritereportserver-test1b.octa.rite.etcchosted.com"
             },
-            "riteadapter-test-1b.octa.rite.etcchosted.com": {
-                "name": "riteadapter-test-1b.octa.rite.etcchosted.com",
-                "hostname": "riteadapter-test-1b.octa.rite.etcchosted.com"
+            "riteadapter-test1b.octa.rite.etcchosted.com": {
+                "name": "riteadapter-test1b.octa.rite.etcchosted.com",
+                "hostname": "riteadapter-test1b.octa.rite.etcchosted.com"
             },
-            "riteonlinegateway-test-1b.octa.rite.etcchosted.com": {
-                "name": "riteonlinegateway-test-1b.octa.rite.etcchosted.com",
-                "hostname": "riteonlinegateway-test-1b.octa.rite.etcchosted.com"
+            "riteonlinegateway-test1b.octa.rite.etcchosted.com": {
+                "name": "riteonlinegateway-test1b.octa.rite.etcchosted.com",
+                "hostname": "riteonlinegateway-test1b.octa.rite.etcchosted.com"
             },
-            "ritesearch-test-1b.octa.rite.etcchosted.com": {
-                "name": "ritesearch-test-1b.octa.rite.etcchosted.com",
-                "hostname": "ritesearch-test-1b.octa.rite.etcchosted.com"
+            "ritesearch-test1b.octa.rite.etcchosted.com": {
+                "name": "ritesearch-test1b.octa.rite.etcchosted.com",
+                "hostname": "ritesearch-test1b.octa.rite.etcchosted.com"
             }
         },
         "cidrBlocks": null,
@@ -824,7 +824,7 @@
     {
         "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaamq7rrndmq7j6zgv7kgafh5nliajwzzuwn4kivmtrbkswxw3ycisa",
         "compartmentId": "ocid1.compartment.oc1..aaaaaaaaa4hoijyprg6uav5esgjot3yhgyytlhi35i25vqyi3ies7qudg3la",
-        "displayName": "new-octa-test-1b",
+        "displayName": "new-octa-test1b",
         "lifecycleState": "ACTIVE",
         "timeCreated": "2023-08-18T20:45:04.191Z",
         "ipAddresses": [
@@ -851,7 +851,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritefulfillment-test-1b.octa.rite.etcchosted.com"
+                    "ritefulfillment-test1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -881,7 +881,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritesso-test-1b.octa.rite.etcchosted.com"
+                    "ritesso-test1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -911,7 +911,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritecrm-test-1b.octa.rite.etcchosted.com"
+                    "ritecrm-test1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -941,7 +941,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "riteivr-test-1b.octa.rite.etcchosted.com"
+                    "riteivr-test1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -971,7 +971,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "riteledger-test-1b.octa.rite.etcchosted.com"
+                    "riteledger-test1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1001,7 +1001,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "riteonline-test-1b.octa.rite.etcchosted.com"
+                    "riteonline-test1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1031,7 +1031,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritetm-test-1b.octa.rite.etcchosted.com"
+                    "ritetm-test1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1061,7 +1061,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritereports-test-1b.octa.rite.etcchosted.com"
+                    "ritereports-test1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1091,7 +1091,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritemanager-test-1b.octa.rite.etcchosted.com"
+                    "ritemanager-test1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1121,7 +1121,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritenotification-test-1b.octa.rite.etcchosted.com"
+                    "ritenotification-test1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1147,45 +1147,45 @@
             }
         },
         "hostnames": {
-            "ritemanager-test-1b.octa.rite.etcchosted.com": {
-                "name": "ritemanager-test-1b.octa.rite.etcchosted.com",
-                "hostname": "ritemanager-test-1b.octa.rite.etcchosted.com"
+            "ritemanager-test1b.octa.rite.etcchosted.com": {
+                "name": "ritemanager-test1b.octa.rite.etcchosted.com",
+                "hostname": "ritemanager-test1b.octa.rite.etcchosted.com"
             },
-            "ritenotification-test-1b.octa.rite.etcchosted.com": {
-                "name": "ritenotification-test-1b.octa.rite.etcchosted.com",
-                "hostname": "ritenotification-test-1b.octa.rite.etcchosted.com"
+            "ritenotification-test1b.octa.rite.etcchosted.com": {
+                "name": "ritenotification-test1b.octa.rite.etcchosted.com",
+                "hostname": "ritenotification-test1b.octa.rite.etcchosted.com"
             },
-            "riteonline-test-1b.octa.rite.etcchosted.com": {
-                "name": "riteonline-test-1b.octa.rite.etcchosted.com",
-                "hostname": "riteonline-test-1b.octa.rite.etcchosted.com"
+            "riteonline-test1b.octa.rite.etcchosted.com": {
+                "name": "riteonline-test1b.octa.rite.etcchosted.com",
+                "hostname": "riteonline-test1b.octa.rite.etcchosted.com"
             },
-            "ritesso-test-1b.octa.rite.etcchosted.com": {
-                "name": "ritesso-test-1b.octa.rite.etcchosted.com",
-                "hostname": "ritesso-test-1b.octa.rite.etcchosted.com"
+            "ritesso-test1b.octa.rite.etcchosted.com": {
+                "name": "ritesso-test1b.octa.rite.etcchosted.com",
+                "hostname": "ritesso-test1b.octa.rite.etcchosted.com"
             },
-            "ritetm-test-1b.octa.rite.etcchosted.com": {
-                "name": "ritetm-test-1b.octa.rite.etcchosted.com",
-                "hostname": "ritetm-test-1b.octa.rite.etcchosted.com"
+            "ritetm-test1b.octa.rite.etcchosted.com": {
+                "name": "ritetm-test1b.octa.rite.etcchosted.com",
+                "hostname": "ritetm-test1b.octa.rite.etcchosted.com"
             },
-            "riteledger-test-1b.octa.rite.etcchosted.com": {
-                "name": "riteledger-test-1b.octa.rite.etcchosted.com",
-                "hostname": "riteledger-test-1b.octa.rite.etcchosted.com"
+            "riteledger-test1b.octa.rite.etcchosted.com": {
+                "name": "riteledger-test1b.octa.rite.etcchosted.com",
+                "hostname": "riteledger-test1b.octa.rite.etcchosted.com"
             },
-            "riteivr-test-1b.octa.rite.etcchosted.com": {
-                "name": "riteivr-test-1b.octa.rite.etcchosted.com",
-                "hostname": "riteivr-test-1b.octa.rite.etcchosted.com"
+            "riteivr-test1b.octa.rite.etcchosted.com": {
+                "name": "riteivr-test1b.octa.rite.etcchosted.com",
+                "hostname": "riteivr-test1b.octa.rite.etcchosted.com"
             },
-            "ritecrm-test-1b.octa.rite.etcchosted.com": {
-                "name": "ritecrm-test-1b.octa.rite.etcchosted.com",
-                "hostname": "ritecrm-test-1b.octa.rite.etcchosted.com"
+            "ritecrm-test1b.octa.rite.etcchosted.com": {
+                "name": "ritecrm-test1b.octa.rite.etcchosted.com",
+                "hostname": "ritecrm-test1b.octa.rite.etcchosted.com"
             },
-            "ritefulfillment-test-1b.octa.rite.etcchosted.com": {
-                "name": "ritefulfillment-test-1b.octa.rite.etcchosted.com",
-                "hostname": "ritefulfillment-test-1b.octa.rite.etcchosted.com"
+            "ritefulfillment-test1b.octa.rite.etcchosted.com": {
+                "name": "ritefulfillment-test1b.octa.rite.etcchosted.com",
+                "hostname": "ritefulfillment-test1b.octa.rite.etcchosted.com"
             },
-            "ritereports-test-1b.octa.rite.etcchosted.com": {
-                "name": "ritereports-test-1b.octa.rite.etcchosted.com",
-                "hostname": "ritereports-test-1b.octa.rite.etcchosted.com"
+            "ritereports-test1b.octa.rite.etcchosted.com": {
+                "name": "ritereports-test1b.octa.rite.etcchosted.com",
+                "hostname": "ritereports-test1b.octa.rite.etcchosted.com"
             }
         },
         "cidrBlocks": null,
@@ -1791,7 +1791,7 @@
     {
         "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaayx2l2haf7fopslon7efs5mjfqoqlec2hnrwakcxh2ryvf5rstv5q",
         "compartmentId": "ocid1.compartment.oc1..aaaaaaaaa4hoijyprg6uav5esgjot3yhgyytlhi35i25vqyi3ies7qudg3la",
-        "displayName": "new-octa-test-1b-2",
+        "displayName": "new-octa-test1b-2",
         "lifecycleState": "ACTIVE",
         "timeCreated": "2023-08-18T20:47:17.623Z",
         "ipAddresses": [
@@ -1818,7 +1818,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "riteodoo-test-1b.octa.rite.etcchosted.com"
+                    "riteodoo-test1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1848,7 +1848,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritebos-test-1b.octa.rite.etcchosted.com"
+                    "ritebos-test1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1880,7 +1880,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritessoadmin-test-1b.octa.rite.etcchosted.com"
+                    "ritessoadmin-test1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1906,21 +1906,21 @@
             }
         },
         "hostnames": {
-            "ritebos-test-1b.octa.rite.etcchosted.com": {
-                "name": "ritebos-test-1b.octa.rite.etcchosted.com",
-                "hostname": "ritebos-test-1b.octa.rite.etcchosted.com"
+            "ritebos-test1b.octa.rite.etcchosted.com": {
+                "name": "ritebos-test1b.octa.rite.etcchosted.com",
+                "hostname": "ritebos-test1b.octa.rite.etcchosted.com"
             },
-            "riteodoo-test-1b.octa.rite.etcchosted.com": {
-                "name": "riteodoo-test-1b.octa.rite.etcchosted.com",
-                "hostname": "riteodoo-test-1b.octa.rite.etcchosted.com"
+            "riteodoo-test1b.octa.rite.etcchosted.com": {
+                "name": "riteodoo-test1b.octa.rite.etcchosted.com",
+                "hostname": "riteodoo-test1b.octa.rite.etcchosted.com"
             },
-            "ritessoadmin-test-1b.octa.rite.etcchosted.com": {
-                "name": "ritessoadmin-test-1b.octa.rite.etcchosted.com",
-                "hostname": "ritessoadmin-test-1b.octa.rite.etcchosted.com"
+            "ritessoadmin-test1b.octa.rite.etcchosted.com": {
+                "name": "ritessoadmin-test1b.octa.rite.etcchosted.com",
+                "hostname": "ritessoadmin-test1b.octa.rite.etcchosted.com"
             },
-            "ritelogs-test-1b.octa.rite.etcchosted.com": {
-                "name": "ritelogs-test-1b.octa.rite.etcchosted.com",
-                "hostname": "ritelogs-test-1b.octa.rite.etcchosted.com"
+            "ritelogs-test1b.octa.rite.etcchosted.com": {
+                "name": "ritelogs-test1b.octa.rite.etcchosted.com",
+                "hostname": "ritelogs-test1b.octa.rite.etcchosted.com"
             }
         },
         "cidrBlocks": null,

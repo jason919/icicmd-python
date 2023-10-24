@@ -9,12 +9,12 @@ from loadbalancer import Backendset, Listener, Loadbalancer
 # Loadbalancer.create_single_loadbalancer(
 #     "octa-prod-lb.json", "new-octa-prod-lb", get_compartment_id("octa-prod")
 # )
-# with open(
-#     "C:/drive-d/projects/etcc/company/CICD/icicmd-python/resources/files/saved/test3.json",
-#     "r",
-# ) as json_file:
-#     post_json = json.loads(json_file.read())
-# Loadbalancer.create_all_loadbalancer(get_compartment_id("octa-prod"), post_json)
+with open(
+    "/Users/jason/Documents/projects/etcc/company/CICD/ocicmd/ocicmd-python/resources/files/saved/octa-dev-1b.json",
+    "r",
+) as json_file:
+    post_json = json.loads(json_file.read())
+Loadbalancer.create_all_loadbalancer(get_compartment_id("octa-dev1b"), post_json)
 
 # Loadbalancer.update_backend_sets('octa-training/create-octa-lb-new.json')
 # Loadbalancer.list_loadbalancer()

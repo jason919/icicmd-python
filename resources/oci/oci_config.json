@@ -1,6 +1,5 @@
 {
-    "compartments":
-    {
+    "compartments": {
         "orb-dev": "ocid1.compartment.oc1..aaaaaaaah2zzpsjuoihn6tg7plynb3jzbhwx67hgktddtk6dgmokkql5snxq",
         "octa-dev": "ocid1.compartment.oc1..aaaaaaaalcs6kkofqnk5qcyfl2wlroxdl7yoxwlqxuk5pi6qwpipqcnpesiq",
         "product-dev": "ocid1.compartment.oc1..aaaaaaaaubxyw2iuiod4dbpblgp72gefodkojm6p7kqwovuoh7ksrqzlbwxa",
@@ -15,12 +14,9 @@
         "octa-prod": "ocid1.compartment.oc1..aaaaaaaa7ndga6cnr6hx2qbdzlpmmw5udigo5r23jciitmsag5wqv4f4q2lq",
         "orb-dr": "ocid1.compartment.oc1..aaaaaaaalkoavuuzvwnyhlcmrnet4ce7djgo56r4lybegjdq57hytvjuz7ia",
         "octa-dr": "ocid1.compartment.oc1..aaaaaaaa3ybyt4tx2zasleqqcc34bgaismmoh3yhtjnmkmk3v5t4t3xedqxq",
-        "octa-dev-1b":"ocid1.compartment.oc1..aaaaaaaack75czhrxbadi66pajfhyymj5hnc2mjlmcwokugi42n74b6ocf7a",
-        "octa-test-1b":"ocid1.compartment.oc1..aaaaaaaaiqazmnzv3yukhi3shxdeygkj2b65dpk4b7i774sbs4hhykcyz52a",
-        "octa-uat-1b":"ocid1.compartment.oc1..aaaaaaaanlxqodgmsk3v5uy36iwsk6vnfdxas7r3vp37xwfw4facnsg6jbwa",
-        "octa-dev-2b":"",
-        "octa-test-2b":"",
-        "octa-training-2b":"",
-        "octa-uat-2b":""
+        "octa-dev1b": "ocid1.compartment.oc1..aaaaaaaack75czhrxbadi66pajfhyymj5hnc2mjlmcwokugi42n74b6ocf7a",
+        "octa-test1b": "ocid1.compartment.oc1..aaaaaaaaiqazmnzv3yukhi3shxdeygkj2b65dpk4b7i774sbs4hhykcyz52a",
+        "octa-dev2b": "",
+        "octa-test2b": ""
     }
 }
