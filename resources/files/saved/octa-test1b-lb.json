@@ -1,21 +1,21 @@
 [
     {
-        "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaauowpuwp3kmnoy76b3bestfndwrwp2idc6axhoj4kmdqlsln3lwuq",
-        "compartmentId": "ocid1.compartment.oc1..aaaaaaaab7hx3zu46elcic7olpm5b6uks55ionfi6ergf7uurj3smi25pt2q",
-        "displayName": "new-octa-training-lb",
+        "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaarbtjd7fwlodg36ycu3poahvhbupumylgdomjrzkvac7refrsep6a",
+        "compartmentId": "ocid1.compartment.oc1..aaaaaaaaiqazmnzv3yukhi3shxdeygkj2b65dpk4b7i774sbs4hhykcyz52a",
+        "displayName": "octa-test-1b-lb-1",
         "lifecycleState": "ACTIVE",
-        "timeCreated": "2023-08-18T17:01:40.956Z",
+        "timeCreated": "2023-09-28T21:57:44.196Z",
         "ipAddresses": [
             {
-                "ipAddress": "10.152.6.246",
+                "ipAddress": "10.152.7.120",
                 "isPublic": false,
                 "reservedIp": null
             }
         ],
         "shapeName": "flexible",
         "shapeDetails": {
-            "minimumBandwidthInMbps": 500,
-            "maximumBandwidthInMbps": 1500
+            "minimumBandwidthInMbps": 4000,
+            "maximumBandwidthInMbps": 4000
         },
         "isPrivate": true,
         "isDeleteProtectionEnabled": null,
@@ -30,7 +30,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritefulfillment-training.octa.rite.etcchosted.com"
+                    "ritefulfillment-test-1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -39,7 +39,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT",
+                    "certificateName": "octa-test-1b-cert-public",
                     "serverOrderPreference": "DISABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -60,7 +60,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritesso-training.octa.rite.etcchosted.com"
+                    "ritesso-test-1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -69,15 +69,15 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT",
-                    "serverOrderPreference": "ENABLED",
+                    "certificateName": "octa-test-1b-cert-public",
+                    "serverOrderPreference": "DISABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
                         "TLSv1.2"
                     ]
                 },
                 "connectionConfiguration": {
-                    "idleTimeout": 60,
+                    "idleTimeout": 49,
                     "backendTcpProxyProtocolVersion": null,
                     "backendTcpProxyProtocolOptions": null
                 },
@@ -90,7 +90,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritecrm-training.octa.rite.etcchosted.com"
+                    "ritecrm-test-1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -99,7 +99,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT",
+                    "certificateName": "octa-test-1b-cert-public",
                     "serverOrderPreference": "DISABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -107,7 +107,7 @@
                     ]
                 },
                 "connectionConfiguration": {
-                    "idleTimeout": 60,
+                    "idleTimeout": 120,
                     "backendTcpProxyProtocolVersion": null,
                     "backendTcpProxyProtocolOptions": null
                 },
@@ -120,7 +120,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "riteivr-training.octa.rite.etcchosted.com"
+                    "riteivr-test-1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -129,7 +129,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT",
+                    "certificateName": "octa-test-1b-cert-public",
                     "serverOrderPreference": "DISABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -150,7 +150,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "riteledger-training.octa.rite.etcchosted.com"
+                    "riteledger-test-1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -159,7 +159,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT",
+                    "certificateName": "octa-test-1b-cert-public",
                     "serverOrderPreference": "DISABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -167,7 +167,7 @@
                     ]
                 },
                 "connectionConfiguration": {
-                    "idleTimeout": 60,
+                    "idleTimeout": 46,
                     "backendTcpProxyProtocolVersion": null,
                     "backendTcpProxyProtocolOptions": null
                 },
@@ -180,7 +180,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "riteonline-training.octa.rite.etcchosted.com"
+                    "riteonline-test-1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -189,7 +189,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT",
+                    "certificateName": "octa-test-1b-cert-public",
                     "serverOrderPreference": "DISABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -210,7 +210,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritereports-training.octa.rite.etcchosted.com"
+                    "ritereports-test-1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -219,8 +219,8 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT",
-                    "serverOrderPreference": "ENABLED",
+                    "certificateName": "octa-test-1b-cert-public",
+                    "serverOrderPreference": "DISABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
                         "TLSv1.2"
@@ -240,7 +240,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritetm-training.octa.rite.etcchosted.com"
+                    "ritetm-test-1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -249,7 +249,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT",
+                    "certificateName": "octa-test-1b-cert-public",
                     "serverOrderPreference": "DISABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -257,7 +257,7 @@
                     ]
                 },
                 "connectionConfiguration": {
-                    "idleTimeout": 60,
+                    "idleTimeout": 49,
                     "backendTcpProxyProtocolVersion": null,
                     "backendTcpProxyProtocolOptions": null
                 },
@@ -270,7 +270,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritemanager-training.octa.rite.etcchosted.com"
+                    "ritemanager-test-1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -279,7 +279,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT",
+                    "certificateName": "octa-test-1b-cert-public",
                     "serverOrderPreference": "DISABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -300,7 +300,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritenotification-training.octa.rite.etcchosted.com"
+                    "ritenotification-test-1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -309,7 +309,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT",
+                    "certificateName": "octa-test-1b-cert-public",
                     "serverOrderPreference": "DISABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -326,57 +326,57 @@
             }
         },
         "hostnames": {
-            "riteivr-training.octa.rite.etcchosted.com": {
-                "name": "riteivr-training.octa.rite.etcchosted.com",
-                "hostname": "riteivr-training.octa.rite.etcchosted.com"
+            "riteonline-test-1b.octa.rite.etcchosted.com": {
+                "name": "riteonline-test-1b.octa.rite.etcchosted.com",
+                "hostname": "riteonline-test1b.octa.rite.etcchosted.com"
             },
-            "ritecrm-training.octa.rite.etcchosted.com": {
-                "name": "ritecrm-training.octa.rite.etcchosted.com",
-                "hostname": "ritecrm-training.octa.rite.etcchosted.com"
+            "ritecrm-test-1b.octa.rite.etcchosted.com": {
+                "name": "ritecrm-test-1b.octa.rite.etcchosted.com",
+                "hostname": "ritecrm-test1b.octa.rite.etcchosted.com"
             },
-            "riteonline-training.octa.rite.etcchosted.com": {
-                "name": "riteonline-training.octa.rite.etcchosted.com",
-                "hostname": "riteonline-training.octa.rite.etcchosted.com"
+            "ritereports-test-1b.octa.rite.etcchosted.com": {
+                "name": "ritereports-test-1b.octa.rite.etcchosted.com",
+                "hostname": "ritereports-test1b.octa.rite.etcchosted.com"
             },
-            "ritereports-training.octa.rite.etcchosted.com": {
-                "name": "ritereports-training.octa.rite.etcchosted.com",
-                "hostname": "ritereports-training.octa.rite.etcchosted.com"
+            "ritefulfillment-test-1b.octa.rite.etcchosted.com": {
+                "name": "ritefulfillment-test-1b.octa.rite.etcchosted.com",
+                "hostname": "ritefulfillment-test1b.octa.rite.etcchosted.com"
             },
-            "riteledger-training.octa.rite.etcchosted.com": {
-                "name": "riteledger-training.octa.rite.etcchosted.com",
-                "hostname": "riteledger-training.octa.rite.etcchosted.com"
+            "ritetm-test-1b.octa.rite.etcchosted.com": {
+                "name": "ritetm-test-1b.octa.rite.etcchosted.com",
+                "hostname": "ritetm-test1b.octa.rite.etcchosted.com"
             },
-            "ritesso-training.octa.rite.etcchosted.com": {
-                "name": "ritesso-training.octa.rite.etcchosted.com",
-                "hostname": "ritesso-training.octa.rite.etcchosted.com"
+            "ritesso-test-1b.octa.rite.etcchosted.com": {
+                "name": "ritesso-test-1b.octa.rite.etcchosted.com",
+                "hostname": "ritesso-test1b.octa.rite.etcchosted.com"
             },
-            "ritetm-training.octa.rite.etcchosted.com": {
-                "name": "ritetm-training.octa.rite.etcchosted.com",
-                "hostname": "ritetm-training.octa.rite.etcchosted.com"
+            "riteivr-test-1b.octa.rite.etcchosted.com": {
+                "name": "riteivr-test-1b.octa.rite.etcchosted.com",
+                "hostname": "riteivr-test1b.octa.rite.etcchosted.com"
             },
-            "ritemanager-training.octa.rite.etcchosted.com": {
-                "name": "ritemanager-training.octa.rite.etcchosted.com",
-                "hostname": "ritemanager-training.octa.rite.etcchosted.com"
+            "ritenotification-test-1b.octa.rite.etcchosted.com": {
+                "name": "ritenotification-test-1b.octa.rite.etcchosted.com",
+                "hostname": "ritenotification-test1b.octa.rite.etcchosted.com"
             },
-            "ritenotification-training.octa.rite.etcchosted.com": {
-                "name": "ritenotification-training.octa.rite.etcchosted.com",
-                "hostname": "ritenotification-training.octa.rite.etcchosted.com"
+            "riteledger-test-1b.octa.rite.etcchosted.com": {
+                "name": "riteledger-test-1b.octa.rite.etcchosted.com",
+                "hostname": "riteledger-test1b.octa.rite.etcchosted.com"
             },
-            "ritefulfillment-training.octa.rite.etcchosted.com": {
-                "name": "ritefulfillment-training.octa.rite.etcchosted.com",
-                "hostname": "ritefulfillment-training.octa.rite.etcchosted.com"
+            "ritemanager-test-1b.octa.rite.etcchosted.com": {
+                "name": "ritemanager-test-1b.octa.rite.etcchosted.com",
+                "hostname": "ritemanager-test1b.octa.rite.etcchosted.com"
             }
         },
         "cidrBlocks": null,
         "sslCipherSuites": {},
         "certificates": {
-            "LB-OCTA-CERT": {
-                "certificateName": "LB-OCTA-CERT",
+            "octa-test-1b-cert-public": {
+                "certificateName": "octa-test-1b-cert-public",
                 "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIGszCCBZugAwIBAgIIY5n1rNUu6iAwDQYJKoZIhvcNAQELBQAwgbQxCzAJBgNV\nBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQHEwpTY290dHNkYWxlMRow\nGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UECxMkaHR0cDovL2NlcnRz\nLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQDEypHbyBEYWRkeSBTZWN1\ncmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwHhcNMjMwMjE0MTYzMDI3WhcN\nMjQwMzE3MTYzMDI3WjAlMSMwIQYDVQQDDBoqLm9jdGEucml0ZS5ldGNjaG9zdGVk\nLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAM+ftul06q4PosIJ\nAIIDcqkjtB7cWwiwEgWaQMjdcJLO7rqeFsiBJvV7rK+fU6lXaL/9UX0oi6XjE+ll\nNSYogqcBM+OZyl8W/QxkNAcKCLEIxm2WPo2PgYCOlY5pK5CqsvssKFbKZZuztWbA\nksyMV+kaUkOZR7YpMqc1dAfQaQFQ9Rc4qetRNr98bNzxhgFu277cKi0KuuS5SCEc\nt5BSNY7NEcbgTEMcafWMsVieJAUoFzFcxTHxrcvx2OjZZVrq51vijbdvCDOnv9B3\neGM5/SknPI1ILEYqASOzfi3XWyfmsNePzfE2AQolaiRry09VOSeiKYFTlI5JimTn\n0NYiY40CAwEAAaOCA1UwggNRMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYB\nBQUHAwEGCCsGAQUFBwMCMA4GA1UdDwEB/wQEAwIFoDA4BgNVHR8EMTAvMC2gK6Ap\nhidodHRwOi8vY3JsLmdvZGFkZHkuY29tL2dkaWcyczEtNTIwMS5jcmwwXQYDVR0g\nBFYwVDBIBgtghkgBhv1tAQcXATA5MDcGCCsGAQUFBwIBFitodHRwOi8vY2VydGlm\naWNhdGVzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMAgGBmeBDAECATB2BggrBgEF\nBQcBAQRqMGgwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmdvZGFkZHkuY29tLzBA\nBggrBgEFBQcwAoY0aHR0cDovL2NlcnRpZmljYXRlcy5nb2RhZGR5LmNvbS9yZXBv\nc2l0b3J5L2dkaWcyLmNydDAfBgNVHSMEGDAWgBRAwr0njsw0gzCiM9f7bLPwtCyA\nzjA/BgNVHREEODA2ghoqLm9jdGEucml0ZS5ldGNjaG9zdGVkLmNvbYIYb2N0YS5y\naXRlLmV0Y2Nob3N0ZWQuY29tMB0GA1UdDgQWBBQKnRe6aegyKoosjM9GRRD/Klc3\n1zCCAX4GCisGAQQB1nkCBAIEggFuBIIBagFoAHYA7s3QZNXbGs7FXLedtM0TojKH\nRny87N7DUUhZRnEftZsAAAGGUMNjdgAABAMARzBFAiAfVHpgap6pJtg1OKLTQpyE\nVGA5XuG9Q8J8B+4d8jEMsAIhAM8PHccqd8FAQQnzjdAi+2NnJjP3Pc8miyxFAbJD\nXvm9AHYASLDja9qmRzQP5WoC+p0w6xxSActW3SyB2bu/qznYhHMAAAGGUMNkXgAA\nBAMARzBFAiANFslH1aV9v2t5pmZIkiJCzsaLMt5EZ4PrjXtJJt7XZAIhAI/HCMqv\nEVWz6ajfdXh3VNMq8+3K0zESy76P2uPBGg9FAHYA2ra/az+1tiKfm8K7XGvocJFx\nbLtRhIU0vaQ9MEjX+6sAAAGGUMNkywAABAMARzBFAiEAm2ATsPbuEgd8Ne01rtIb\nRcE3YKrP4WKQ7sGuVYjlT44CICBW3ZaLGoweeYW64zuCmEYzz72hmk1n6e7ywLiG\nYU/EMA0GCSqGSIb3DQEBCwUAA4IBAQA7ux1luDw+nn17SzvtzUzpxHwrqS0+ebdx\ncOqvt4Si2fLHM7cACD7SuRjm8L6XzzDGu/BiryUpwIWGIa8HxlTI1XyC8NzvISoM\nFSQNMGd7x7FfRilFqL9dBrCbX86lFK3KgOX+Rk8yxaCLwxjF7bb7YB3SH/djJgAF\ngjcOeheUiBIHM/yf+Xu3UzT5ob5D1kzm8lBXusUBcl9Cn6uRNC/Ls0HUkINaTWb0\nkfb8Nxy5VqhgOVfFItTJ/URKj210uv/nRk+bQwaBQZewspIocPnzghWmNtlRwSJq\nlfIDVmPNixnQCv6DvWIt/NGfEAlnhyOL6SyGHg1ionPtA3EdCyuc\n-----END CERTIFICATE-----\n",
                 "caCertificate": "-----BEGIN CERTIFICATE-----\nMIIE0DCCA7igAwIBAgIBBzANBgkqhkiG9w0BAQsFADCBgzELMAkGA1UEBhMCVVMx\nEDAOBgNVBAgTB0FyaXpvbmExEzARBgNVBAcTClNjb3R0c2RhbGUxGjAYBgNVBAoT\nEUdvRGFkZHkuY29tLCBJbmMuMTEwLwYDVQQDEyhHbyBEYWRkeSBSb290IENlcnRp\nZmljYXRlIEF1dGhvcml0eSAtIEcyMB4XDTExMDUwMzA3MDAwMFoXDTMxMDUwMzA3\nMDAwMFowgbQxCzAJBgNVBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQH\nEwpTY290dHNkYWxlMRowGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UE\nCxMkaHR0cDovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQD\nEypHbyBEYWRkeSBTZWN1cmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwggEi\nMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC54MsQ1K92vdSTYuswZLiBCGzD\nBNliF44v/z5lz4/OYuY8UhzaFkVLVat4a2ODYpDOD2lsmcgaFItMzEUz6ojcnqOv\nK/6AYZ15V8TPLvQ/MDxdR/yaFrzDN5ZBUY4RS1T4KL7QjL7wMDge87Am+GZHY23e\ncSZHjzhHU9FGHbTj3ADqRay9vHHZqm8A29vNMDp5T19MR/gd71vCxJ1gO7GyQ5HY\npDNO6rPWJ0+tJYqlxvTV0KaudAVkV4i1RFXULSo6Pvi4vekyCgKUZMQWOlDxSq7n\neTOvDCAHf+jfBDnCaQJsY1L6d8EbyHSHyLmTGFBUNUtpTrw700kuH9zB0lL7AgMB\nAAGjggEaMIIBFjAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBBjAdBgNV\nHQ4EFgQUQMK9J47MNIMwojPX+2yz8LQsgM4wHwYDVR0jBBgwFoAUOpqFBxBnKLbv\n9r0FQW4gwZTaD94wNAYIKwYBBQUHAQEEKDAmMCQGCCsGAQUFBzABhhhodHRwOi8v\nb2NzcC5nb2RhZGR5LmNvbS8wNQYDVR0fBC4wLDAqoCigJoYkaHR0cDovL2NybC5n\nb2RhZGR5LmNvbS9nZHJvb3QtZzIuY3JsMEYGA1UdIAQ/MD0wOwYEVR0gADAzMDEG\nCCsGAQUFBwIBFiVodHRwczovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkv\nMA0GCSqGSIb3DQEBCwUAA4IBAQAIfmyTEMg4uJapkEv/oV9PBO9sPpyIBslQj6Zz\n91cxG7685C/b+LrTW+C05+Z5Yg4MotdqY3MxtfWoSKQ7CC2iXZDXtHwlTxFWMMS2\nRJ17LJ3lXubvDGGqv+QqG+6EnriDfcFDzkSnE3ANkR/0yBOtg2DZ2HKocyQetawi\nDsoXiWJYRBuriSUBAA/NxBti21G00w9RKpv0vHP8ds42pM3Z2Czqrpv1KrKQ0U11\nGIo/ikGQI31bS/6kA1ibRrLDYGCD+H1QQc7CoZDDu+8CL9IVVO5EFdkKrqeKM+2x\nLXY2JtwE65/3YR8V3Idv7kaWKK2hJn0KCacuBKONvPi8BDAB\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIEfTCCA2WgAwIBAgIDG+cVMA0GCSqGSIb3DQEBCwUAMGMxCzAJBgNVBAYTAlVT\nMSEwHwYDVQQKExhUaGUgR28gRGFkZHkgR3JvdXAsIEluYy4xMTAvBgNVBAsTKEdv\nIERhZGR5IENsYXNzIDIgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMTQwMTAx\nMDcwMDAwWhcNMzEwNTMwMDcwMDAwWjCBgzELMAkGA1UEBhMCVVMxEDAOBgNVBAgT\nB0FyaXpvbmExEzARBgNVBAcTClNjb3R0c2RhbGUxGjAYBgNVBAoTEUdvRGFkZHku\nY29tLCBJbmMuMTEwLwYDVQQDEyhHbyBEYWRkeSBSb290IENlcnRpZmljYXRlIEF1\ndGhvcml0eSAtIEcyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv3Fi\nCPH6WTT3G8kYo/eASVjpIoMTpsUgQwE7hPHmhUmfJ+r2hBtOoLTbcJjHMgGxBT4H\nTu70+k8vWTAi56sZVmvigAf88xZ1gDlRe+X5NbZ0TqmNghPktj+pA4P6or6KFWp/\n3gvDthkUBcrqw6gElDtGfDIN8wBmIsiNaW02jBEYt9OyHGC0OPoCjM7T3UYH3go+\n6118yHz7sCtTpJJiaVElBWEaRIGMLKlDliPfrDqBmg4pxRyp6V0etp6eMAo5zvGI\ngPtLXcwy7IViQyU0AlYnAZG0O3AqP26x6JyIAX2f1PnbU21gnb8s51iruF9G/M7E\nGwM8CetJMVxpRrPgRwIDAQABo4IBFzCCARMwDwYDVR0TAQH/BAUwAwEB/zAOBgNV\nHQ8BAf8EBAMCAQYwHQYDVR0OBBYEFDqahQcQZyi27/a9BUFuIMGU2g/eMB8GA1Ud\nIwQYMBaAFNLEsNKR1EwRcbNhyz2h/t2oatTjMDQGCCsGAQUFBwEBBCgwJjAkBggr\nBgEFBQcwAYYYaHR0cDovL29jc3AuZ29kYWRkeS5jb20vMDIGA1UdHwQrMCkwJ6Al\noCOGIWh0dHA6Ly9jcmwuZ29kYWRkeS5jb20vZ2Ryb290LmNybDBGBgNVHSAEPzA9\nMDsGBFUdIAAwMzAxBggrBgEFBQcCARYlaHR0cHM6Ly9jZXJ0cy5nb2RhZGR5LmNv\nbS9yZXBvc2l0b3J5LzANBgkqhkiG9w0BAQsFAAOCAQEAWQtTvZKGEacke+1bMc8d\nH2xwxbhuvk679r6XUOEwf7ooXGKUwuN+M/f7QnaF25UcjCJYdQkMiGVnOQoWCcWg\nOJekxSOTP7QYpgEGRJHjp2kntFolfzq3Ms3dhP8qOCkzpN1nsoX+oYggHFCJyNwq\n9kIDN0zmiN/VryTyscPfzLXs4Jlet0lUIDyUGAzHHFIYSaRt4bNYC8nY7NmuHDKO\nKHAN4v6mF56ED71XcLNa6R+ghlO773z/aQvgSMO3kwvIClTErF0UZzdsyqUvMQg3\nqm5vjLyb4lddJIGvl5echK1srDdMZvNhkREg5L4wn3qkKQmw4TRfZHcYQFHfjDCm\nrw==\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIEADCCAuigAwIBAgIBADANBgkqhkiG9w0BAQUFADBjMQswCQYDVQQGEwJVUzEh\nMB8GA1UEChMYVGhlIEdvIERhZGR5IEdyb3VwLCBJbmMuMTEwLwYDVQQLEyhHbyBE\nYWRkeSBDbGFzcyAyIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTA0MDYyOTE3\nMDYyMFoXDTM0MDYyOTE3MDYyMFowYzELMAkGA1UEBhMCVVMxITAfBgNVBAoTGFRo\nZSBHbyBEYWRkeSBHcm91cCwgSW5jLjExMC8GA1UECxMoR28gRGFkZHkgQ2xhc3Mg\nMiBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTCCASAwDQYJKoZIhvcNAQEBBQADggEN\nADCCAQgCggEBAN6d1+pXGEmhW+vXX0iG6r7d/+TvZxz0ZWizV3GgXne77ZtJ6XCA\nPVYYYwhv2vLM0D9/AlQiVBDYsoHUwHU9S3/Hd8M+eKsaA7Ugay9qK7HFiH7Eux6w\nwdhFJ2+qN1j3hybX2C32qRe3H3I2TqYXP2WYktsqbl2i/ojgC95/5Y0V4evLOtXi\nEqITLdiOr18SPaAIBQi2XKVlOARFmR6jYGB0xUGlcmIbYsUfb18aQr4CUWWoriMY\navx4A6lNf4DD+qta/KFApMoZFv6yyO9ecw3ud72a9nmYvLEHZ6IVDd2gWMZEewo+\nYihfukEHU1jPEX44dMX4/7VpkI+EdOqXG68CAQOjgcAwgb0wHQYDVR0OBBYEFNLE\nsNKR1EwRcbNhyz2h/t2oatTjMIGNBgNVHSMEgYUwgYKAFNLEsNKR1EwRcbNhyz2h\n/t2oatTjoWekZTBjMQswCQYDVQQGEwJVUzEhMB8GA1UEChMYVGhlIEdvIERhZGR5\nIEdyb3VwLCBJbmMuMTEwLwYDVQQLEyhHbyBEYWRkeSBDbGFzcyAyIENlcnRpZmlj\nYXRpb24gQXV0aG9yaXR5ggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQAD\nggEBADJL87LKPpH8EsahB4yOd6AzBhRckB4Y9wimPQoZ+YeAEW5p5JYXMP80kWNy\nOO7MHAGjHZQopDH2esRU1/blMVgDoszOYtuURXO1v0XJJLXVggKtI3lpjbi2Tc7P\nTMozI+gciKqdi0FuFskg5YmezTvacPd+mSYgFFQlq25zheabIZ0KbIIOqPjCDPoQ\nHmyW74cNxA9hi63ugyuV+I6ShHI56yDqg+2DzZduCLzrTia2cyvk0/ZM/iZx4mER\ndEr/VxqHD3VILs9RaRegAhJhldXRQLIQTO7ErBBDpqWeCtWVYpoNz4iCxTIM5Cuf\nReYNnyicsbkqWletNw+vHX/bvZ8=\n-----END CERTIFICATE-----\n"
             },
-            "InternalSelfCert-Dev-CERT": {
-                "certificateName": "InternalSelfCert-Dev-CERT",
+            "octa-test-1b-cert-internal": {
+                "certificateName": "octa-test-1b-cert-internal",
                 "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIFjzCCA3egAwIBAgIEY5tNuDANBgkqhkiG9w0BAQsFADBwMQswCQYDVQQGEwJ1\r\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\r\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMRowGAYDVQQDDBEqLmV0Y2Nob3N0ZWQu\r\ndGVzdDAeFw0yMjEyMTUxNjM5MjBaFw0yMzEyMTUxNjM5MjBaMHAxCzAJBgNVBAYT\r\nAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsGA1UECgwE\r\nZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xGjAYBgNVBAMMESouZXRjY2hvc3Rl\r\nZC50ZXN0MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAtXWcmOT9zT7v\r\n1nliTOO95DKmzrX4mvXIMGL2Yj9eQDzuzdaIEnik35gqmn63kulq0MM4rYRY7eO3\r\n0DWubBj1JGzSAUdoEViqHUlnocv5D9vGLpKBoW6fIJ3K3BP7h9vvs87p+x0iogAM\r\nTnNkNV1XQ0f1r1z+cUlnMEGIVyJaxX5W+ey7MNaqga+hTX8pzR8QnVl0hpLts0t0\r\nbTMSl9XwT6rZ/LIjTpxWKesZs7GPXwQpMawFIWRI23AIiaotFz262aNKkZrZ66Et\r\n5MDDzzdcO9BZsTQDcYaw+gYUl95s3fkLXrJxso0DeIiH0HmDakLdtI94GVc51kh3\r\ny2YT66ebHOc5+v+z006si140PRtghrdPHHcZJrBn/Sx8CayO+EiGse61iQ84KgMG\r\nK+X0QYTtZpuZShfi1OUewFOVmbDCS8r27MmblwYDmUbnkfoDsq5de/Y++LTpNn8z\r\nm/zxDxn+dsCoVqzxMQrhJcle+EoUo8Xe82hP8al2Xim7gFTxUnG/jaFiI681IoOV\r\nNhsWqrDFRS8T41mh6dNKWxYi652fSbsbOFwqwyYuZ+yJ7oEsSZuWATfQkaDKw1mB\r\nPr85vA6fYodZ53d4v5loejLUhVCXi5wrKFQyILy2fHa8J+u7oaTtPvwChw+wKq71\r\n8IeZjJiDSIxt4GUinfugs0MaWT4lKBkCAwEAAaMxMC8wLQYDVR0RBCYwJIIRKi5l\r\ndGNjaG9zdGVkLnRlc3SCD2V0Y2Nob3N0ZWQudGVzdDANBgkqhkiG9w0BAQsFAAOC\r\nAgEAXWgLw9riE48sl1CiBHtJFmqPrgY7YBGR090qeoqoDowmGMOnU0vKduwQvio7\r\nvh45nBryT33MYfUgmUhcwTsB8o8kjxutPJmpOvHgs+2SoNN33P091kUfJMOuIZ2m\r\nvpZ4/KY3Zdzr1y9LB29OG8CHWYfHpzMNPyi+AE8exFst/WNUlPcxVp8V7AxKFWF+\r\ni1+LJjnHjhhFwdGIWhOUNkbQsJ3sUVstSz2YMa4gjMiSNqJ/rjRaRofDXi3DwysU\r\nSuIrG8c9r7tR5cm1AwL6jpo+M0hC5bYbyAH6fqz/f58yLvR+kNMGolsSp/zEllbj\r\n8rs3gxHAKCD5sHJZ9uhoNr0seSUFSqQJ0nfu9n8GgW/LdhlFcx2HcNNiu/wNmeDV\r\nXhOSc6TZ64lh6kjbsKpW7hzymVsCz/R0C1FfazmTNs5W2ORokbFjgyitHwLdXFbm\r\nkjbgPqWpCcbAuybrppNgWeW/JvJ13yiIfk3MH4YVpaDfY38FNUGcRDAYMf/0zsIX\r\na+L7EWAh8ha20mUElYTAHcC1r18qGn8ZZlmcYyNa26ncJd1kJQqxtvyfuzxpAJNU\r\ns4yJfYIzXszczxhqy2/dnheBDnbdIlziAiSmhET5Jfd5rzfIOcHBdX+U9Ex5Gng4\r\n6mnl56J/ddi/GOUTJ8CIicwcWs/EaUwUH6sMWr+Cbomhv5A=\n-----END CERTIFICATE-----\n",
                 "caCertificate": "-----BEGIN CERTIFICATE-----\nMIIFjzCCA3egAwIBAgIEY5tNuDANBgkqhkiG9w0BAQsFADBwMQswCQYDVQQGEwJ1\r\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\r\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMRowGAYDVQQDDBEqLmV0Y2Nob3N0ZWQu\r\ndGVzdDAeFw0yMjEyMTUxNjM5MjBaFw0yMzEyMTUxNjM5MjBaMHAxCzAJBgNVBAYT\r\nAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsGA1UECgwE\r\nZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xGjAYBgNVBAMMESouZXRjY2hvc3Rl\r\nZC50ZXN0MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAtXWcmOT9zT7v\r\n1nliTOO95DKmzrX4mvXIMGL2Yj9eQDzuzdaIEnik35gqmn63kulq0MM4rYRY7eO3\r\n0DWubBj1JGzSAUdoEViqHUlnocv5D9vGLpKBoW6fIJ3K3BP7h9vvs87p+x0iogAM\r\nTnNkNV1XQ0f1r1z+cUlnMEGIVyJaxX5W+ey7MNaqga+hTX8pzR8QnVl0hpLts0t0\r\nbTMSl9XwT6rZ/LIjTpxWKesZs7GPXwQpMawFIWRI23AIiaotFz262aNKkZrZ66Et\r\n5MDDzzdcO9BZsTQDcYaw+gYUl95s3fkLXrJxso0DeIiH0HmDakLdtI94GVc51kh3\r\ny2YT66ebHOc5+v+z006si140PRtghrdPHHcZJrBn/Sx8CayO+EiGse61iQ84KgMG\r\nK+X0QYTtZpuZShfi1OUewFOVmbDCS8r27MmblwYDmUbnkfoDsq5de/Y++LTpNn8z\r\nm/zxDxn+dsCoVqzxMQrhJcle+EoUo8Xe82hP8al2Xim7gFTxUnG/jaFiI681IoOV\r\nNhsWqrDFRS8T41mh6dNKWxYi652fSbsbOFwqwyYuZ+yJ7oEsSZuWATfQkaDKw1mB\r\nPr85vA6fYodZ53d4v5loejLUhVCXi5wrKFQyILy2fHa8J+u7oaTtPvwChw+wKq71\r\n8IeZjJiDSIxt4GUinfugs0MaWT4lKBkCAwEAAaMxMC8wLQYDVR0RBCYwJIIRKi5l\r\ndGNjaG9zdGVkLnRlc3SCD2V0Y2Nob3N0ZWQudGVzdDANBgkqhkiG9w0BAQsFAAOC\r\nAgEAXWgLw9riE48sl1CiBHtJFmqPrgY7YBGR090qeoqoDowmGMOnU0vKduwQvio7\r\nvh45nBryT33MYfUgmUhcwTsB8o8kjxutPJmpOvHgs+2SoNN33P091kUfJMOuIZ2m\r\nvpZ4/KY3Zdzr1y9LB29OG8CHWYfHpzMNPyi+AE8exFst/WNUlPcxVp8V7AxKFWF+\r\ni1+LJjnHjhhFwdGIWhOUNkbQsJ3sUVstSz2YMa4gjMiSNqJ/rjRaRofDXi3DwysU\r\nSuIrG8c9r7tR5cm1AwL6jpo+M0hC5bYbyAH6fqz/f58yLvR+kNMGolsSp/zEllbj\r\n8rs3gxHAKCD5sHJZ9uhoNr0seSUFSqQJ0nfu9n8GgW/LdhlFcx2HcNNiu/wNmeDV\r\nXhOSc6TZ64lh6kjbsKpW7hzymVsCz/R0C1FfazmTNs5W2ORokbFjgyitHwLdXFbm\r\nkjbgPqWpCcbAuybrppNgWeW/JvJ13yiIfk3MH4YVpaDfY38FNUGcRDAYMf/0zsIX\r\na+L7EWAh8ha20mUElYTAHcC1r18qGn8ZZlmcYyNa26ncJd1kJQqxtvyfuzxpAJNU\r\ns4yJfYIzXszczxhqy2/dnheBDnbdIlziAiSmhET5Jfd5rzfIOcHBdX+U9Ex5Gng4\r\n6mnl56J/ddi/GOUTJ8CIicwcWs/EaUwUH6sMWr+Cbomhv5A=\n-----END CERTIFICATE-----\n"
             }
@@ -385,23 +385,12 @@
             "ritefulfillment": {
                 "name": "ritefulfillment",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.79:8013",
-                        "ipAddress": "10.152.51.79",
-                        "port": 8013,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 8013,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -414,13 +403,13 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "octa-test-1b-cert-internal",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
-                        "TLSv1.2",
                         "TLSv1",
-                        "TLSv1.1"
+                        "TLSv1.1",
+                        "TLSv1.2"
                     ]
                 },
                 "sessionPersistenceConfiguration": null,
@@ -437,23 +426,12 @@
             "ivr": {
                 "name": "ivr",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.90:8487",
-                        "ipAddress": "10.152.51.90",
-                        "port": 8487,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 8487,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -466,38 +444,27 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "octa-test-1b-cert-internal",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
-                        "TLSv1.2",
                         "TLSv1",
-                        "TLSv1.1"
+                        "TLSv1.1",
+                        "TLSv1.2"
                     ]
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
             },
-            "RiteLedger": {
-                "name": "RiteLedger",
+            "riteonline": {
+                "name": "riteonline",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.74:8081",
-                        "ipAddress": "10.152.51.74",
-                        "port": 8081,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 8081,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -510,13 +477,13 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "octa-test-1b-cert-internal",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
-                        "TLSv1.2",
                         "TLSv1",
-                        "TLSv1.1"
+                        "TLSv1.1",
+                        "TLSv1.2"
                     ]
                 },
                 "sessionPersistenceConfiguration": null,
@@ -530,26 +497,15 @@
                     "isHttpOnly": true
                 }
             },
-            "riteonline": {
-                "name": "riteonline",
+            "RiteLedger": {
+                "name": "RiteLedger",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.80:8011",
-                        "ipAddress": "10.152.51.80",
-                        "port": 8011,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 8011,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -562,13 +518,13 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "octa-test-1b-cert-internal",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
-                        "TLSv1.2",
                         "TLSv1",
-                        "TLSv1.1"
+                        "TLSv1.1",
+                        "TLSv1.2"
                     ]
                 },
                 "sessionPersistenceConfiguration": null,
@@ -585,23 +541,12 @@
             "supervisor_override_sso": {
                 "name": "supervisor_override_sso",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.77:8099",
-                        "ipAddress": "10.152.51.77",
-                        "port": 8099,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 8099,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -614,13 +559,13 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "octa-test-1b-cert-internal",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
-                        "TLSv1.2",
                         "TLSv1",
-                        "TLSv1.1"
+                        "TLSv1.1",
+                        "TLSv1.2"
                     ]
                 },
                 "sessionPersistenceConfiguration": null,
@@ -629,23 +574,12 @@
             "TM": {
                 "name": "TM",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.72:8015",
-                        "ipAddress": "10.152.51.72",
-                        "port": 8015,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 8015,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -658,13 +592,13 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "octa-test-1b-cert-internal",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
-                        "TLSv1.2",
                         "TLSv1",
-                        "TLSv1.1"
+                        "TLSv1.1",
+                        "TLSv1.2"
                     ]
                 },
                 "sessionPersistenceConfiguration": null,
@@ -673,23 +607,12 @@
             "ritereports": {
                 "name": "ritereports",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.75:8007",
-                        "ipAddress": "10.152.51.75",
-                        "port": 8007,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 8007,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -702,13 +625,13 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "octa-test-1b-cert-internal",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
-                        "TLSv1.2",
                         "TLSv1",
-                        "TLSv1.1"
+                        "TLSv1.1",
+                        "TLSv1.2"
                     ]
                 },
                 "sessionPersistenceConfiguration": null,
@@ -725,23 +648,12 @@
             "ritemanager": {
                 "name": "ritemanager",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.78:8005",
-                        "ipAddress": "10.152.51.78",
-                        "port": 8005,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 8005,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -754,13 +666,13 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "octa-test-1b-cert-internal",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
-                        "TLSv1.2",
                         "TLSv1",
-                        "TLSv1.1"
+                        "TLSv1.1",
+                        "TLSv1.2"
                     ]
                 },
                 "sessionPersistenceConfiguration": null,
@@ -777,23 +689,12 @@
             "ritenotification": {
                 "name": "ritenotification",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.76:8009",
-                        "ipAddress": "10.152.51.76",
-                        "port": 8009,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 8009,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -806,13 +707,13 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "octa-test-1b-cert-internal",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
-                        "TLSv1.2",
                         "TLSv1",
-                        "TLSv1.1"
+                        "TLSv1.1",
+                        "TLSv1.2"
                     ]
                 },
                 "sessionPersistenceConfiguration": null,
@@ -829,23 +730,12 @@
             "SSO": {
                 "name": "SSO",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.77:8443",
-                        "ipAddress": "10.152.51.77",
-                        "port": 8443,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 8443,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -858,13 +748,13 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "octa-test-1b-cert-internal",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
-                        "TLSv1.2",
                         "TLSv1",
-                        "TLSv1.1"
+                        "TLSv1.1",
+                        "TLSv1.2"
                     ]
                 },
                 "sessionPersistenceConfiguration": null,
@@ -881,23 +771,12 @@
             "CRM": {
                 "name": "CRM",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.73:8001",
-                        "ipAddress": "10.152.51.73",
-                        "port": 8001,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 8001,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -910,13 +789,13 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "octa-test-1b-cert-internal",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
-                        "TLSv1.2",
                         "TLSv1",
-                        "TLSv1.1"
+                        "TLSv1.1",
+                        "TLSv1.2"
                     ]
                 },
                 "sessionPersistenceConfiguration": null,
@@ -936,6 +815,29 @@
         "definedTags": {},
         "systemTags": {},
         "ruleSets": {
+            "iva": {
+                "name": "iva",
+                "items": [
+                    {
+                        "action": "REDIRECT",
+                        "responseCode": 302,
+                        "conditions": [
+                            {
+                                "attributeName": "PATH",
+                                "attributeValue": "/iva2/redirectToPage",
+                                "operator": "FORCE_LONGEST_PREFIX_MATCH"
+                            }
+                        ],
+                        "redirectUri": {
+                            "protocol": "{protocol}",
+                            "host": "{host}",
+                            "port": null,
+                            "path": "/iva/redirectToPage",
+                            "query": "?{query}"
+                        }
+                    }
+                ]
+            },
             "SSOHomePage": {
                 "name": "SSOHomePage",
                 "items": [
@@ -990,22 +892,22 @@
         }
     },
     {
-        "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaafaez6mhra5ild5jp5zpuypwrlg6haxspsj7htdgija3tbbcwzyhq",
-        "compartmentId": "ocid1.compartment.oc1..aaaaaaaab7hx3zu46elcic7olpm5b6uks55ionfi6ergf7uurj3smi25pt2q",
-        "displayName": "new-octa-training-lb-2",
+        "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaacuk7hr6t64f2pmmidyff6kitix2etbkj4vchoq5fcu2t46gahmja",
+        "compartmentId": "ocid1.compartment.oc1..aaaaaaaaiqazmnzv3yukhi3shxdeygkj2b65dpk4b7i774sbs4hhykcyz52a",
+        "displayName": "octa-test-1b-lb-2",
         "lifecycleState": "ACTIVE",
-        "timeCreated": "2023-08-18T18:06:26.490Z",
+        "timeCreated": "2023-09-29T19:32:36.896Z",
         "ipAddresses": [
             {
-                "ipAddress": "10.152.6.92",
+                "ipAddress": "10.152.6.74",
                 "isPublic": false,
                 "reservedIp": null
             }
         ],
         "shapeName": "flexible",
         "shapeDetails": {
-            "minimumBandwidthInMbps": 500,
-            "maximumBandwidthInMbps": 1500
+            "minimumBandwidthInMbps": 1500,
+            "maximumBandwidthInMbps": 2000
         },
         "isPrivate": true,
         "isDeleteProtectionEnabled": null,
@@ -1020,7 +922,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "riteodoo-training.octa.rite.etcchosted.com"
+                    "riteodoo-test-1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1029,7 +931,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT",
+                    "certificateName": "octa-test-1b-public",
                     "serverOrderPreference": "DISABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -1050,7 +952,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritebos-training.octa.rite.etcchosted.com"
+                    "ritebos-test-1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1059,7 +961,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT",
+                    "certificateName": "octa-test-1b-public",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -1071,18 +973,16 @@
                     "backendTcpProxyProtocolVersion": null,
                     "backendTcpProxyProtocolOptions": null
                 },
-                "ruleSetNames": [
-                    "X_Frame_Options"
-                ],
+                "ruleSetNames": [],
                 "routingPolicyName": "bos"
             },
-            "sso-admin": {
-                "name": "sso-admin",
-                "defaultBackendSetName": "sos-admin",
+            "kapsch": {
+                "name": "kapsch",
+                "defaultBackendSetName": "kapsch-host",
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritessoadmin-training.octa.rite.etcchosted.com"
+                    "kapsch-test-1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1091,7 +991,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT",
+                    "certificateName": "octa-test-1b-public",
                     "serverOrderPreference": "DISABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -1108,102 +1008,47 @@
             }
         },
         "hostnames": {
-            "ritelogs-training.octa.rite.etcchosted.com": {
-                "name": "ritelogs-training.octa.rite.etcchosted.com",
-                "hostname": "ritelogs-training.octa.rite.etcchosted.com"
+            "ritebos-test-1b.octa.rite.etcchosted.com": {
+                "name": "ritebos-test-1b.octa.rite.etcchosted.com",
+                "hostname": "ritebos-test1b.octa.rite.etcchosted.com"
             },
-            "riteodoo-training.octa.rite.etcchosted.com": {
-                "name": "riteodoo-training.octa.rite.etcchosted.com",
-                "hostname": "riteodoo-training.octa.rite.etcchosted.com"
+            "riteodoo-test-1b.octa.rite.etcchosted.com": {
+                "name": "riteodoo-test-1b.octa.rite.etcchosted.com",
+                "hostname": "riteodoo-test1b.octa.rite.etcchosted.com"
             },
-            "ritessoadmin-training.octa.rite.etcchosted.com": {
-                "name": "ritessoadmin-training.octa.rite.etcchosted.com",
-                "hostname": "ritessoadmin-training.octa.rite.etcchosted.com"
+            "ritelogs-test-1b.octa.rite.etcchosted.com": {
+                "name": "ritelogs-test-1b.octa.rite.etcchosted.com",
+                "hostname": "ritelogs-test1b.octa.rite.etcchosted.com"
             },
-            "ritebos-training.octa.rite.etcchosted.com": {
-                "name": "ritebos-training.octa.rite.etcchosted.com",
-                "hostname": "ritebos-training.octa.rite.etcchosted.com"
+            "kapsch-test-1b.octa.rite.etcchosted.com": {
+                "name": "kapsch-test-1b.octa.rite.etcchosted.com",
+                "hostname": "kapsch-test1b.octa.rite.etcchosted.com"
             }
         },
         "cidrBlocks": null,
         "sslCipherSuites": {},
         "certificates": {
-            "LB-OCTA-CERT": {
-                "certificateName": "LB-OCTA-CERT",
+            "octa-test-1b-public": {
+                "certificateName": "octa-test-1b-public",
                 "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIGszCCBZugAwIBAgIIY5n1rNUu6iAwDQYJKoZIhvcNAQELBQAwgbQxCzAJBgNV\nBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQHEwpTY290dHNkYWxlMRow\nGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UECxMkaHR0cDovL2NlcnRz\nLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQDEypHbyBEYWRkeSBTZWN1\ncmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwHhcNMjMwMjE0MTYzMDI3WhcN\nMjQwMzE3MTYzMDI3WjAlMSMwIQYDVQQDDBoqLm9jdGEucml0ZS5ldGNjaG9zdGVk\nLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAM+ftul06q4PosIJ\nAIIDcqkjtB7cWwiwEgWaQMjdcJLO7rqeFsiBJvV7rK+fU6lXaL/9UX0oi6XjE+ll\nNSYogqcBM+OZyl8W/QxkNAcKCLEIxm2WPo2PgYCOlY5pK5CqsvssKFbKZZuztWbA\nksyMV+kaUkOZR7YpMqc1dAfQaQFQ9Rc4qetRNr98bNzxhgFu277cKi0KuuS5SCEc\nt5BSNY7NEcbgTEMcafWMsVieJAUoFzFcxTHxrcvx2OjZZVrq51vijbdvCDOnv9B3\neGM5/SknPI1ILEYqASOzfi3XWyfmsNePzfE2AQolaiRry09VOSeiKYFTlI5JimTn\n0NYiY40CAwEAAaOCA1UwggNRMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYB\nBQUHAwEGCCsGAQUFBwMCMA4GA1UdDwEB/wQEAwIFoDA4BgNVHR8EMTAvMC2gK6Ap\nhidodHRwOi8vY3JsLmdvZGFkZHkuY29tL2dkaWcyczEtNTIwMS5jcmwwXQYDVR0g\nBFYwVDBIBgtghkgBhv1tAQcXATA5MDcGCCsGAQUFBwIBFitodHRwOi8vY2VydGlm\naWNhdGVzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMAgGBmeBDAECATB2BggrBgEF\nBQcBAQRqMGgwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmdvZGFkZHkuY29tLzBA\nBggrBgEFBQcwAoY0aHR0cDovL2NlcnRpZmljYXRlcy5nb2RhZGR5LmNvbS9yZXBv\nc2l0b3J5L2dkaWcyLmNydDAfBgNVHSMEGDAWgBRAwr0njsw0gzCiM9f7bLPwtCyA\nzjA/BgNVHREEODA2ghoqLm9jdGEucml0ZS5ldGNjaG9zdGVkLmNvbYIYb2N0YS5y\naXRlLmV0Y2Nob3N0ZWQuY29tMB0GA1UdDgQWBBQKnRe6aegyKoosjM9GRRD/Klc3\n1zCCAX4GCisGAQQB1nkCBAIEggFuBIIBagFoAHYA7s3QZNXbGs7FXLedtM0TojKH\nRny87N7DUUhZRnEftZsAAAGGUMNjdgAABAMARzBFAiAfVHpgap6pJtg1OKLTQpyE\nVGA5XuG9Q8J8B+4d8jEMsAIhAM8PHccqd8FAQQnzjdAi+2NnJjP3Pc8miyxFAbJD\nXvm9AHYASLDja9qmRzQP5WoC+p0w6xxSActW3SyB2bu/qznYhHMAAAGGUMNkXgAA\nBAMARzBFAiANFslH1aV9v2t5pmZIkiJCzsaLMt5EZ4PrjXtJJt7XZAIhAI/HCMqv\nEVWz6ajfdXh3VNMq8+3K0zESy76P2uPBGg9FAHYA2ra/az+1tiKfm8K7XGvocJFx\nbLtRhIU0vaQ9MEjX+6sAAAGGUMNkywAABAMARzBFAiEAm2ATsPbuEgd8Ne01rtIb\nRcE3YKrP4WKQ7sGuVYjlT44CICBW3ZaLGoweeYW64zuCmEYzz72hmk1n6e7ywLiG\nYU/EMA0GCSqGSIb3DQEBCwUAA4IBAQA7ux1luDw+nn17SzvtzUzpxHwrqS0+ebdx\ncOqvt4Si2fLHM7cACD7SuRjm8L6XzzDGu/BiryUpwIWGIa8HxlTI1XyC8NzvISoM\nFSQNMGd7x7FfRilFqL9dBrCbX86lFK3KgOX+Rk8yxaCLwxjF7bb7YB3SH/djJgAF\ngjcOeheUiBIHM/yf+Xu3UzT5ob5D1kzm8lBXusUBcl9Cn6uRNC/Ls0HUkINaTWb0\nkfb8Nxy5VqhgOVfFItTJ/URKj210uv/nRk+bQwaBQZewspIocPnzghWmNtlRwSJq\nlfIDVmPNixnQCv6DvWIt/NGfEAlnhyOL6SyGHg1ionPtA3EdCyuc\n-----END CERTIFICATE-----\n",
                 "caCertificate": "-----BEGIN CERTIFICATE-----\nMIIE0DCCA7igAwIBAgIBBzANBgkqhkiG9w0BAQsFADCBgzELMAkGA1UEBhMCVVMx\nEDAOBgNVBAgTB0FyaXpvbmExEzARBgNVBAcTClNjb3R0c2RhbGUxGjAYBgNVBAoT\nEUdvRGFkZHkuY29tLCBJbmMuMTEwLwYDVQQDEyhHbyBEYWRkeSBSb290IENlcnRp\nZmljYXRlIEF1dGhvcml0eSAtIEcyMB4XDTExMDUwMzA3MDAwMFoXDTMxMDUwMzA3\nMDAwMFowgbQxCzAJBgNVBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQH\nEwpTY290dHNkYWxlMRowGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UE\nCxMkaHR0cDovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQD\nEypHbyBEYWRkeSBTZWN1cmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwggEi\nMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC54MsQ1K92vdSTYuswZLiBCGzD\nBNliF44v/z5lz4/OYuY8UhzaFkVLVat4a2ODYpDOD2lsmcgaFItMzEUz6ojcnqOv\nK/6AYZ15V8TPLvQ/MDxdR/yaFrzDN5ZBUY4RS1T4KL7QjL7wMDge87Am+GZHY23e\ncSZHjzhHU9FGHbTj3ADqRay9vHHZqm8A29vNMDp5T19MR/gd71vCxJ1gO7GyQ5HY\npDNO6rPWJ0+tJYqlxvTV0KaudAVkV4i1RFXULSo6Pvi4vekyCgKUZMQWOlDxSq7n\neTOvDCAHf+jfBDnCaQJsY1L6d8EbyHSHyLmTGFBUNUtpTrw700kuH9zB0lL7AgMB\nAAGjggEaMIIBFjAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBBjAdBgNV\nHQ4EFgQUQMK9J47MNIMwojPX+2yz8LQsgM4wHwYDVR0jBBgwFoAUOpqFBxBnKLbv\n9r0FQW4gwZTaD94wNAYIKwYBBQUHAQEEKDAmMCQGCCsGAQUFBzABhhhodHRwOi8v\nb2NzcC5nb2RhZGR5LmNvbS8wNQYDVR0fBC4wLDAqoCigJoYkaHR0cDovL2NybC5n\nb2RhZGR5LmNvbS9nZHJvb3QtZzIuY3JsMEYGA1UdIAQ/MD0wOwYEVR0gADAzMDEG\nCCsGAQUFBwIBFiVodHRwczovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkv\nMA0GCSqGSIb3DQEBCwUAA4IBAQAIfmyTEMg4uJapkEv/oV9PBO9sPpyIBslQj6Zz\n91cxG7685C/b+LrTW+C05+Z5Yg4MotdqY3MxtfWoSKQ7CC2iXZDXtHwlTxFWMMS2\nRJ17LJ3lXubvDGGqv+QqG+6EnriDfcFDzkSnE3ANkR/0yBOtg2DZ2HKocyQetawi\nDsoXiWJYRBuriSUBAA/NxBti21G00w9RKpv0vHP8ds42pM3Z2Czqrpv1KrKQ0U11\nGIo/ikGQI31bS/6kA1ibRrLDYGCD+H1QQc7CoZDDu+8CL9IVVO5EFdkKrqeKM+2x\nLXY2JtwE65/3YR8V3Idv7kaWKK2hJn0KCacuBKONvPi8BDAB\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIEfTCCA2WgAwIBAgIDG+cVMA0GCSqGSIb3DQEBCwUAMGMxCzAJBgNVBAYTAlVT\nMSEwHwYDVQQKExhUaGUgR28gRGFkZHkgR3JvdXAsIEluYy4xMTAvBgNVBAsTKEdv\nIERhZGR5IENsYXNzIDIgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMTQwMTAx\nMDcwMDAwWhcNMzEwNTMwMDcwMDAwWjCBgzELMAkGA1UEBhMCVVMxEDAOBgNVBAgT\nB0FyaXpvbmExEzARBgNVBAcTClNjb3R0c2RhbGUxGjAYBgNVBAoTEUdvRGFkZHku\nY29tLCBJbmMuMTEwLwYDVQQDEyhHbyBEYWRkeSBSb290IENlcnRpZmljYXRlIEF1\ndGhvcml0eSAtIEcyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv3Fi\nCPH6WTT3G8kYo/eASVjpIoMTpsUgQwE7hPHmhUmfJ+r2hBtOoLTbcJjHMgGxBT4H\nTu70+k8vWTAi56sZVmvigAf88xZ1gDlRe+X5NbZ0TqmNghPktj+pA4P6or6KFWp/\n3gvDthkUBcrqw6gElDtGfDIN8wBmIsiNaW02jBEYt9OyHGC0OPoCjM7T3UYH3go+\n6118yHz7sCtTpJJiaVElBWEaRIGMLKlDliPfrDqBmg4pxRyp6V0etp6eMAo5zvGI\ngPtLXcwy7IViQyU0AlYnAZG0O3AqP26x6JyIAX2f1PnbU21gnb8s51iruF9G/M7E\nGwM8CetJMVxpRrPgRwIDAQABo4IBFzCCARMwDwYDVR0TAQH/BAUwAwEB/zAOBgNV\nHQ8BAf8EBAMCAQYwHQYDVR0OBBYEFDqahQcQZyi27/a9BUFuIMGU2g/eMB8GA1Ud\nIwQYMBaAFNLEsNKR1EwRcbNhyz2h/t2oatTjMDQGCCsGAQUFBwEBBCgwJjAkBggr\nBgEFBQcwAYYYaHR0cDovL29jc3AuZ29kYWRkeS5jb20vMDIGA1UdHwQrMCkwJ6Al\noCOGIWh0dHA6Ly9jcmwuZ29kYWRkeS5jb20vZ2Ryb290LmNybDBGBgNVHSAEPzA9\nMDsGBFUdIAAwMzAxBggrBgEFBQcCARYlaHR0cHM6Ly9jZXJ0cy5nb2RhZGR5LmNv\nbS9yZXBvc2l0b3J5LzANBgkqhkiG9w0BAQsFAAOCAQEAWQtTvZKGEacke+1bMc8d\nH2xwxbhuvk679r6XUOEwf7ooXGKUwuN+M/f7QnaF25UcjCJYdQkMiGVnOQoWCcWg\nOJekxSOTP7QYpgEGRJHjp2kntFolfzq3Ms3dhP8qOCkzpN1nsoX+oYggHFCJyNwq\n9kIDN0zmiN/VryTyscPfzLXs4Jlet0lUIDyUGAzHHFIYSaRt4bNYC8nY7NmuHDKO\nKHAN4v6mF56ED71XcLNa6R+ghlO773z/aQvgSMO3kwvIClTErF0UZzdsyqUvMQg3\nqm5vjLyb4lddJIGvl5echK1srDdMZvNhkREg5L4wn3qkKQmw4TRfZHcYQFHfjDCm\nrw==\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIEADCCAuigAwIBAgIBADANBgkqhkiG9w0BAQUFADBjMQswCQYDVQQGEwJVUzEh\nMB8GA1UEChMYVGhlIEdvIERhZGR5IEdyb3VwLCBJbmMuMTEwLwYDVQQLEyhHbyBE\nYWRkeSBDbGFzcyAyIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTA0MDYyOTE3\nMDYyMFoXDTM0MDYyOTE3MDYyMFowYzELMAkGA1UEBhMCVVMxITAfBgNVBAoTGFRo\nZSBHbyBEYWRkeSBHcm91cCwgSW5jLjExMC8GA1UECxMoR28gRGFkZHkgQ2xhc3Mg\nMiBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTCCASAwDQYJKoZIhvcNAQEBBQADggEN\nADCCAQgCggEBAN6d1+pXGEmhW+vXX0iG6r7d/+TvZxz0ZWizV3GgXne77ZtJ6XCA\nPVYYYwhv2vLM0D9/AlQiVBDYsoHUwHU9S3/Hd8M+eKsaA7Ugay9qK7HFiH7Eux6w\nwdhFJ2+qN1j3hybX2C32qRe3H3I2TqYXP2WYktsqbl2i/ojgC95/5Y0V4evLOtXi\nEqITLdiOr18SPaAIBQi2XKVlOARFmR6jYGB0xUGlcmIbYsUfb18aQr4CUWWoriMY\navx4A6lNf4DD+qta/KFApMoZFv6yyO9ecw3ud72a9nmYvLEHZ6IVDd2gWMZEewo+\nYihfukEHU1jPEX44dMX4/7VpkI+EdOqXG68CAQOjgcAwgb0wHQYDVR0OBBYEFNLE\nsNKR1EwRcbNhyz2h/t2oatTjMIGNBgNVHSMEgYUwgYKAFNLEsNKR1EwRcbNhyz2h\n/t2oatTjoWekZTBjMQswCQYDVQQGEwJVUzEhMB8GA1UEChMYVGhlIEdvIERhZGR5\nIEdyb3VwLCBJbmMuMTEwLwYDVQQLEyhHbyBEYWRkeSBDbGFzcyAyIENlcnRpZmlj\nYXRpb24gQXV0aG9yaXR5ggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQAD\nggEBADJL87LKPpH8EsahB4yOd6AzBhRckB4Y9wimPQoZ+YeAEW5p5JYXMP80kWNy\nOO7MHAGjHZQopDH2esRU1/blMVgDoszOYtuURXO1v0XJJLXVggKtI3lpjbi2Tc7P\nTMozI+gciKqdi0FuFskg5YmezTvacPd+mSYgFFQlq25zheabIZ0KbIIOqPjCDPoQ\nHmyW74cNxA9hi63ugyuV+I6ShHI56yDqg+2DzZduCLzrTia2cyvk0/ZM/iZx4mER\ndEr/VxqHD3VILs9RaRegAhJhldXRQLIQTO7ErBBDpqWeCtWVYpoNz4iCxTIM5Cuf\nReYNnyicsbkqWletNw+vHX/bvZ8=\n-----END CERTIFICATE-----\n"
             },
-            "InternalSelfCert-Dev-CERT": {
-                "certificateName": "InternalSelfCert-Dev-CERT",
+            "octa-test-1b-internal": {
+                "certificateName": "octa-test-1b-internal",
                 "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIFjzCCA3egAwIBAgIEY5tNuDANBgkqhkiG9w0BAQsFADBwMQswCQYDVQQGEwJ1\r\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\r\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMRowGAYDVQQDDBEqLmV0Y2Nob3N0ZWQu\r\ndGVzdDAeFw0yMjEyMTUxNjM5MjBaFw0yMzEyMTUxNjM5MjBaMHAxCzAJBgNVBAYT\r\nAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsGA1UECgwE\r\nZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xGjAYBgNVBAMMESouZXRjY2hvc3Rl\r\nZC50ZXN0MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAtXWcmOT9zT7v\r\n1nliTOO95DKmzrX4mvXIMGL2Yj9eQDzuzdaIEnik35gqmn63kulq0MM4rYRY7eO3\r\n0DWubBj1JGzSAUdoEViqHUlnocv5D9vGLpKBoW6fIJ3K3BP7h9vvs87p+x0iogAM\r\nTnNkNV1XQ0f1r1z+cUlnMEGIVyJaxX5W+ey7MNaqga+hTX8pzR8QnVl0hpLts0t0\r\nbTMSl9XwT6rZ/LIjTpxWKesZs7GPXwQpMawFIWRI23AIiaotFz262aNKkZrZ66Et\r\n5MDDzzdcO9BZsTQDcYaw+gYUl95s3fkLXrJxso0DeIiH0HmDakLdtI94GVc51kh3\r\ny2YT66ebHOc5+v+z006si140PRtghrdPHHcZJrBn/Sx8CayO+EiGse61iQ84KgMG\r\nK+X0QYTtZpuZShfi1OUewFOVmbDCS8r27MmblwYDmUbnkfoDsq5de/Y++LTpNn8z\r\nm/zxDxn+dsCoVqzxMQrhJcle+EoUo8Xe82hP8al2Xim7gFTxUnG/jaFiI681IoOV\r\nNhsWqrDFRS8T41mh6dNKWxYi652fSbsbOFwqwyYuZ+yJ7oEsSZuWATfQkaDKw1mB\r\nPr85vA6fYodZ53d4v5loejLUhVCXi5wrKFQyILy2fHa8J+u7oaTtPvwChw+wKq71\r\n8IeZjJiDSIxt4GUinfugs0MaWT4lKBkCAwEAAaMxMC8wLQYDVR0RBCYwJIIRKi5l\r\ndGNjaG9zdGVkLnRlc3SCD2V0Y2Nob3N0ZWQudGVzdDANBgkqhkiG9w0BAQsFAAOC\r\nAgEAXWgLw9riE48sl1CiBHtJFmqPrgY7YBGR090qeoqoDowmGMOnU0vKduwQvio7\r\nvh45nBryT33MYfUgmUhcwTsB8o8kjxutPJmpOvHgs+2SoNN33P091kUfJMOuIZ2m\r\nvpZ4/KY3Zdzr1y9LB29OG8CHWYfHpzMNPyi+AE8exFst/WNUlPcxVp8V7AxKFWF+\r\ni1+LJjnHjhhFwdGIWhOUNkbQsJ3sUVstSz2YMa4gjMiSNqJ/rjRaRofDXi3DwysU\r\nSuIrG8c9r7tR5cm1AwL6jpo+M0hC5bYbyAH6fqz/f58yLvR+kNMGolsSp/zEllbj\r\n8rs3gxHAKCD5sHJZ9uhoNr0seSUFSqQJ0nfu9n8GgW/LdhlFcx2HcNNiu/wNmeDV\r\nXhOSc6TZ64lh6kjbsKpW7hzymVsCz/R0C1FfazmTNs5W2ORokbFjgyitHwLdXFbm\r\nkjbgPqWpCcbAuybrppNgWeW/JvJ13yiIfk3MH4YVpaDfY38FNUGcRDAYMf/0zsIX\r\na+L7EWAh8ha20mUElYTAHcC1r18qGn8ZZlmcYyNa26ncJd1kJQqxtvyfuzxpAJNU\r\ns4yJfYIzXszczxhqy2/dnheBDnbdIlziAiSmhET5Jfd5rzfIOcHBdX+U9Ex5Gng4\r\n6mnl56J/ddi/GOUTJ8CIicwcWs/EaUwUH6sMWr+Cbomhv5A=\n-----END CERTIFICATE-----\n",
                 "caCertificate": "-----BEGIN CERTIFICATE-----\nMIIFjzCCA3egAwIBAgIEY5tNuDANBgkqhkiG9w0BAQsFADBwMQswCQYDVQQGEwJ1\r\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\r\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMRowGAYDVQQDDBEqLmV0Y2Nob3N0ZWQu\r\ndGVzdDAeFw0yMjEyMTUxNjM5MjBaFw0yMzEyMTUxNjM5MjBaMHAxCzAJBgNVBAYT\r\nAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsGA1UECgwE\r\nZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xGjAYBgNVBAMMESouZXRjY2hvc3Rl\r\nZC50ZXN0MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAtXWcmOT9zT7v\r\n1nliTOO95DKmzrX4mvXIMGL2Yj9eQDzuzdaIEnik35gqmn63kulq0MM4rYRY7eO3\r\n0DWubBj1JGzSAUdoEViqHUlnocv5D9vGLpKBoW6fIJ3K3BP7h9vvs87p+x0iogAM\r\nTnNkNV1XQ0f1r1z+cUlnMEGIVyJaxX5W+ey7MNaqga+hTX8pzR8QnVl0hpLts0t0\r\nbTMSl9XwT6rZ/LIjTpxWKesZs7GPXwQpMawFIWRI23AIiaotFz262aNKkZrZ66Et\r\n5MDDzzdcO9BZsTQDcYaw+gYUl95s3fkLXrJxso0DeIiH0HmDakLdtI94GVc51kh3\r\ny2YT66ebHOc5+v+z006si140PRtghrdPHHcZJrBn/Sx8CayO+EiGse61iQ84KgMG\r\nK+X0QYTtZpuZShfi1OUewFOVmbDCS8r27MmblwYDmUbnkfoDsq5de/Y++LTpNn8z\r\nm/zxDxn+dsCoVqzxMQrhJcle+EoUo8Xe82hP8al2Xim7gFTxUnG/jaFiI681IoOV\r\nNhsWqrDFRS8T41mh6dNKWxYi652fSbsbOFwqwyYuZ+yJ7oEsSZuWATfQkaDKw1mB\r\nPr85vA6fYodZ53d4v5loejLUhVCXi5wrKFQyILy2fHa8J+u7oaTtPvwChw+wKq71\r\n8IeZjJiDSIxt4GUinfugs0MaWT4lKBkCAwEAAaMxMC8wLQYDVR0RBCYwJIIRKi5l\r\ndGNjaG9zdGVkLnRlc3SCD2V0Y2Nob3N0ZWQudGVzdDANBgkqhkiG9w0BAQsFAAOC\r\nAgEAXWgLw9riE48sl1CiBHtJFmqPrgY7YBGR090qeoqoDowmGMOnU0vKduwQvio7\r\nvh45nBryT33MYfUgmUhcwTsB8o8kjxutPJmpOvHgs+2SoNN33P091kUfJMOuIZ2m\r\nvpZ4/KY3Zdzr1y9LB29OG8CHWYfHpzMNPyi+AE8exFst/WNUlPcxVp8V7AxKFWF+\r\ni1+LJjnHjhhFwdGIWhOUNkbQsJ3sUVstSz2YMa4gjMiSNqJ/rjRaRofDXi3DwysU\r\nSuIrG8c9r7tR5cm1AwL6jpo+M0hC5bYbyAH6fqz/f58yLvR+kNMGolsSp/zEllbj\r\n8rs3gxHAKCD5sHJZ9uhoNr0seSUFSqQJ0nfu9n8GgW/LdhlFcx2HcNNiu/wNmeDV\r\nXhOSc6TZ64lh6kjbsKpW7hzymVsCz/R0C1FfazmTNs5W2ORokbFjgyitHwLdXFbm\r\nkjbgPqWpCcbAuybrppNgWeW/JvJ13yiIfk3MH4YVpaDfY38FNUGcRDAYMf/0zsIX\r\na+L7EWAh8ha20mUElYTAHcC1r18qGn8ZZlmcYyNa26ncJd1kJQqxtvyfuzxpAJNU\r\ns4yJfYIzXszczxhqy2/dnheBDnbdIlziAiSmhET5Jfd5rzfIOcHBdX+U9Ex5Gng4\r\n6mnl56J/ddi/GOUTJ8CIicwcWs/EaUwUH6sMWr+Cbomhv5A=\n-----END CERTIFICATE-----\n"
             }
         },
         "backendSets": {
-            "icrsws": {
-                "name": "icrsws",
-                "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.68:7139",
-                        "ipAddress": "10.152.51.68",
-                        "port": 7139,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
-                "backendMaxConnections": null,
-                "healthChecker": {
-                    "protocol": "TCP",
-                    "urlPath": null,
-                    "port": 7139,
-                    "returnCode": 200,
-                    "retries": 3,
-                    "timeoutInMillis": 3000,
-                    "intervalInMillis": 10000,
-                    "responseBodyRegex": ".*",
-                    "isForcePlainText": null
-                },
-                "sslConfiguration": {
-                    "verifyDepth": 1,
-                    "verifyPeerCertificate": false,
-                    "trustedCertificateAuthorityIds": [],
-                    "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
-                    "serverOrderPreference": null,
-                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
-                },
-                "sessionPersistenceConfiguration": null,
-                "lbCookieSessionPersistenceConfiguration": null
-            },
             "images": {
                 "name": "images",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.69:8543",
-                        "ipAddress": "10.152.51.69",
-                        "port": 8543,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 8543,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -1216,38 +1061,27 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "octa-test-1b-internal",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
-                        "TLSv1.2",
                         "TLSv1",
-                        "TLSv1.1"
+                        "TLSv1.1",
+                        "TLSv1.2"
                     ]
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
             },
-            "sos-admin": {
-                "name": "sos-admin",
+            "icrsws": {
+                "name": "icrsws",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.77:8002",
-                        "ipAddress": "10.152.51.77",
-                        "port": 8002,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 8002,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -1260,13 +1094,13 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "octa-test-1b-internal",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
-                        "TLSv1.2",
                         "TLSv1",
-                        "TLSv1.1"
+                        "TLSv1.1",
+                        "TLSv1.2"
                     ]
                 },
                 "sessionPersistenceConfiguration": null,
@@ -1275,23 +1109,12 @@
             "paymentws": {
                 "name": "paymentws",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.68:7121",
-                        "ipAddress": "10.152.51.68",
-                        "port": 7121,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 7121,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -1304,13 +1127,13 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "octa-test-1b-internal",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
-                        "TLSv1.2",
                         "TLSv1",
-                        "TLSv1.1"
+                        "TLSv1.1",
+                        "TLSv1.2"
                     ]
                 },
                 "sessionPersistenceConfiguration": null,
@@ -1319,23 +1142,12 @@
             "odoo": {
                 "name": "odoo",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.82:8069",
-                        "ipAddress": "10.152.51.82",
-                        "port": 8069,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 8069,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -1358,23 +1170,32 @@
             "oracle-report": {
                 "name": "oracle-report",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.81:9002",
-                        "ipAddress": "10.152.51.81",
-                        "port": 9002,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 9002,
+                    "port": 0,
+                    "returnCode": 200,
+                    "retries": 3,
+                    "timeoutInMillis": 3000,
+                    "intervalInMillis": 10000,
+                    "responseBodyRegex": ".*",
+                    "isForcePlainText": null
+                },
+                "sslConfiguration": null,
+                "sessionPersistenceConfiguration": null,
+                "lbCookieSessionPersistenceConfiguration": null
+            },
+            "kapsch-host": {
+                "name": "kapsch-host",
+                "policy": "ROUND_ROBIN",
+                "backends": [],
+                "backendMaxConnections": null,
+                "healthChecker": {
+                    "protocol": "TCP",
+                    "urlPath": null,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -1389,23 +1210,12 @@
             "CrystalReport": {
                 "name": "CrystalReport",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.92:8080",
-                        "ipAddress": "10.152.51.92",
-                        "port": 8080,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 8080,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -1420,23 +1230,12 @@
             "payment": {
                 "name": "payment",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.68:7171",
-                        "ipAddress": "10.152.51.68",
-                        "port": 7171,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 7171,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -1449,57 +1248,13 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "octa-test-1b-internal",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
-                        "TLSv1.2",
                         "TLSv1",
-                        "TLSv1.1"
-                    ]
-                },
-                "sessionPersistenceConfiguration": null,
-                "lbCookieSessionPersistenceConfiguration": null
-            },
-            "hostws": {
-                "name": "hostws",
-                "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.68:7159",
-                        "ipAddress": "10.152.51.68",
-                        "port": 7159,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
-                "backendMaxConnections": null,
-                "healthChecker": {
-                    "protocol": "TCP",
-                    "urlPath": null,
-                    "port": 7159,
-                    "returnCode": 200,
-                    "retries": 3,
-                    "timeoutInMillis": 3000,
-                    "intervalInMillis": 10000,
-                    "responseBodyRegex": ".*",
-                    "isForcePlainText": null
-                },
-                "sslConfiguration": {
-                    "verifyDepth": 1,
-                    "verifyPeerCertificate": false,
-                    "trustedCertificateAuthorityIds": [],
-                    "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
-                    "serverOrderPreference": null,
-                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
+                        "TLSv1.1",
+                        "TLSv1.2"
                     ]
                 },
                 "sessionPersistenceConfiguration": null,
@@ -1508,23 +1263,12 @@
             "weblogic-report": {
                 "name": "weblogic-report",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.67:7012",
-                        "ipAddress": "10.152.51.67",
-                        "port": 7012,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 7012,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -1536,26 +1280,15 @@
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
             },
-            "ritehelp": {
-                "name": "ritehelp",
+            "hostws": {
+                "name": "hostws",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.199:8023",
-                        "ipAddress": "10.152.51.199",
-                        "port": 8023,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 8023,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -1568,13 +1301,46 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "octa-test-1b-internal",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
-                        "TLSv1.2",
                         "TLSv1",
-                        "TLSv1.1"
+                        "TLSv1.1",
+                        "TLSv1.2"
+                    ]
+                },
+                "sessionPersistenceConfiguration": null,
+                "lbCookieSessionPersistenceConfiguration": null
+            },
+            "ritehelp": {
+                "name": "ritehelp",
+                "policy": "IP_HASH",
+                "backends": [],
+                "backendMaxConnections": null,
+                "healthChecker": {
+                    "protocol": "TCP",
+                    "urlPath": null,
+                    "port": 0,
+                    "returnCode": 200,
+                    "retries": 3,
+                    "timeoutInMillis": 3000,
+                    "intervalInMillis": 10000,
+                    "responseBodyRegex": ".*",
+                    "isForcePlainText": null
+                },
+                "sslConfiguration": {
+                    "verifyDepth": 1,
+                    "verifyPeerCertificate": false,
+                    "trustedCertificateAuthorityIds": [],
+                    "certificateIds": [],
+                    "certificateName": "octa-test-1b-internal",
+                    "serverOrderPreference": null,
+                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
+                    "protocols": [
+                        "TLSv1",
+                        "TLSv1.1",
+                        "TLSv1.2"
                     ]
                 },
                 "sessionPersistenceConfiguration": null,
@@ -1613,7 +1379,7 @@
                     },
                     {
                         "name": "nas_files",
-                        "condition": "any(http.request.url.path sw (i '/bos_r_octa_images'), http.request.url.path sw (i '/bos_r_octa_files'))",
+                        "condition": "all(http.request.url.path sw (i '/bos_u_octa_images'), http.request.url.path sw (i '/bos_u_octa_files'))",
                         "actions": [
                             {
                                 "name": "FORWARD_TO_BACKENDSET",
@@ -1623,7 +1389,7 @@
                     },
                     {
                         "name": "paymentws",
-                        "condition": "all(http.request.url.path sw (i '/paymentws/'))",
+                        "condition": "all(http.request.url.path sw (i '/paymentws'))",
                         "actions": [
                             {
                                 "name": "FORWARD_TO_BACKENDSET",
@@ -1633,7 +1399,7 @@
                     },
                     {
                         "name": "payment",
-                        "condition": "all(http.request.url.path sw (i '/payment'), http.request.url.path not sw (i '/paymentws'))",
+                        "condition": "all(http.request.url.path sw (i '/payment'))",
                         "actions": [
                             {
                                 "name": "FORWARD_TO_BACKENDSET",
@@ -1696,14 +1462,14 @@
         }
     },
     {
-        "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaabbg43pozjiftpyqtm3nhw6j5eu2beagmdw5i2r5l33j6yfkolunq",
-        "compartmentId": "ocid1.compartment.oc1..aaaaaaaab7hx3zu46elcic7olpm5b6uks55ionfi6ergf7uurj3smi25pt2q",
-        "displayName": "new-octa-training-lb-internal",
+        "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaavnjg7oqxesnuo5sajdaaomtxpxx67eqiht42mj3ffhu7pycf4vzq",
+        "compartmentId": "ocid1.compartment.oc1..aaaaaaaaiqazmnzv3yukhi3shxdeygkj2b65dpk4b7i774sbs4hhykcyz52a",
+        "displayName": "octa-test-1b-lb-internal",
         "lifecycleState": "ACTIVE",
-        "timeCreated": "2023-08-18T18:08:15.555Z",
+        "timeCreated": "2023-09-29T20:50:52.130Z",
         "ipAddresses": [
             {
-                "ipAddress": "10.152.51.116",
+                "ipAddress": "10.152.51.253",
                 "isPublic": false,
                 "reservedIp": null
             }
@@ -1716,7 +1482,7 @@
         "isPrivate": true,
         "isDeleteProtectionEnabled": null,
         "subnetIds": [
-            "ocid1.subnet.oc1.iad.aaaaaaaawvzt5n3k73ysesjwr7hqei6aqejiscjndsqiroqm2frsuoajtdtq"
+            "ocid1.subnet.oc1.iad.aaaaaaaa4yqvjbkk5ktuwapxo4kfe6w5u5wyxky6lpc3malfmbsyq7674mkq"
         ],
         "networkSecurityGroupIds": [],
         "listeners": {
@@ -1726,7 +1492,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritecamunda-training.octa.rite.etcchosted.com"
+                    "ritecamunda-test-1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1735,37 +1501,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT",
-                    "serverOrderPreference": "DISABLED",
-                    "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
-                },
-                "connectionConfiguration": {
-                    "idleTimeout": 60,
-                    "backendTcpProxyProtocolVersion": null,
-                    "backendTcpProxyProtocolOptions": null
-                },
-                "ruleSetNames": [],
-                "routingPolicyName": null
-            },
-            "online_gateway": {
-                "name": "online_gateway",
-                "defaultBackendSetName": "online_gateway",
-                "port": 443,
-                "protocol": "HTTP",
-                "hostnameNames": [
-                    "riteonlinegateway-training.octa.rite.etcchosted.com"
-                ],
-                "serverName": null,
-                "pathRouteSetName": null,
-                "sslConfiguration": {
-                    "verifyDepth": 1,
-                    "verifyPeerCertificate": false,
-                    "trustedCertificateAuthorityIds": [],
-                    "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT",
+                    "certificateName": "octa-test-1b-public",
                     "serverOrderPreference": "DISABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -1786,7 +1522,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "riteadapter-training.octa.rite.etcchosted.com"
+                    "riteadapter-test-1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1795,8 +1531,8 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT",
-                    "serverOrderPreference": "ENABLED",
+                    "certificateName": "octa-test-1b-public",
+                    "serverOrderPreference": "DISABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
                         "TLSv1.2"
@@ -1810,13 +1546,13 @@
                 "ruleSetNames": [],
                 "routingPolicyName": null
             },
-            "ritereportserver": {
-                "name": "ritereportserver",
-                "defaultBackendSetName": "weblogic-report-ui",
+            "online_gateway": {
+                "name": "online_gateway",
+                "defaultBackendSetName": "online_gateway",
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritereportserver-training.octa.rite.etcchosted.com"
+                    "riteonlinegateway-test-1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1825,8 +1561,38 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT",
-                    "serverOrderPreference": "ENABLED",
+                    "certificateName": "octa-test-1b-public",
+                    "serverOrderPreference": "DISABLED",
+                    "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
+                    "protocols": [
+                        "TLSv1.2"
+                    ]
+                },
+                "connectionConfiguration": {
+                    "idleTimeout": 60,
+                    "backendTcpProxyProtocolVersion": null,
+                    "backendTcpProxyProtocolOptions": null
+                },
+                "ruleSetNames": [],
+                "routingPolicyName": null
+            },
+            "ritereportserver": {
+                "name": "ritereportserver",
+                "defaultBackendSetName": "weblogic-report-ui",
+                "port": 443,
+                "protocol": "HTTP",
+                "hostnameNames": [
+                    "ritereportserver-test-1b.octa.rite.etcchosted.com"
+                ],
+                "serverName": null,
+                "pathRouteSetName": null,
+                "sslConfiguration": {
+                    "verifyDepth": 1,
+                    "verifyPeerCertificate": false,
+                    "trustedCertificateAuthorityIds": [],
+                    "certificateIds": [],
+                    "certificateName": "octa-test-1b-public",
+                    "serverOrderPreference": "DISABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
                         "TLSv1.2"
@@ -1846,7 +1612,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritesearch-training.octa.rite.etcchosted.com"
+                    "ritesearch-test-1b.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1855,7 +1621,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT",
+                    "certificateName": "octa-test-1b-public",
                     "serverOrderPreference": "DISABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -1872,37 +1638,37 @@
             }
         },
         "hostnames": {
-            "ritecamunda-training.octa.rite.etcchosted.com": {
-                "name": "ritecamunda-training.octa.rite.etcchosted.com",
-                "hostname": "ritecamunda-training.octa.rite.etcchosted.com"
+            "ritecamunda-test-1b.octa.rite.etcchosted.com": {
+                "name": "ritecamunda-test-1b.octa.rite.etcchosted.com",
+                "hostname": "ritecamunda-test1b.octa.rite.etcchosted.com"
             },
-            "ritesearch-training.octa.rite.etcchosted.com": {
-                "name": "ritesearch-training.octa.rite.etcchosted.com",
-                "hostname": "ritesearch-training.octa.rite.etcchosted.com"
+            "ritereportserver-test-1b.octa.rite.etcchosted.com": {
+                "name": "ritereportserver-test-1b.octa.rite.etcchosted.com",
+                "hostname": "ritereportserver-test1b.octa.rite.etcchosted.com"
             },
-            "ritereportserver-training.octa.rite.etcchosted.com": {
-                "name": "ritereportserver-training.octa.rite.etcchosted.com",
-                "hostname": "ritereportserver-training.octa.rite.etcchosted.com"
+            "riteonlinegateway-test-1b.octa.rite.etcchosted.com": {
+                "name": "riteonlinegateway-test-1b.octa.rite.etcchosted.com",
+                "hostname": "riteonlinegateway-test1b.octa.rite.etcchosted.com"
             },
-            "riteadapter-training.octa.rite.etcchosted.com": {
-                "name": "riteadapter-training.octa.rite.etcchosted.com",
-                "hostname": "riteadapter-training.octa.rite.etcchosted.com"
+            "ritesearch-test-1b.octa.rite.etcchosted.com": {
+                "name": "ritesearch-test-1b.octa.rite.etcchosted.com",
+                "hostname": "ritesearch-test1b.octa.rite.etcchosted.com"
             },
-            "riteonlinegateway-training.octa.rite.etcchosted.com": {
-                "name": "riteonlinegateway-training.octa.rite.etcchosted.com",
-                "hostname": "riteonlinegateway-training.octa.rite.etcchosted.com"
+            "riteadapter-test-1b.octa.rite.etcchosted.com": {
+                "name": "riteadapter-test-1b.octa.rite.etcchosted.com",
+                "hostname": "riteadapter-test1b.octa.rite.etcchosted.com"
             }
         },
         "cidrBlocks": null,
         "sslCipherSuites": {},
         "certificates": {
-            "LB-OCTA-CERT": {
-                "certificateName": "LB-OCTA-CERT",
+            "octa-test-1b-public": {
+                "certificateName": "octa-test-1b-public",
                 "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIGszCCBZugAwIBAgIIY5n1rNUu6iAwDQYJKoZIhvcNAQELBQAwgbQxCzAJBgNV\nBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQHEwpTY290dHNkYWxlMRow\nGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UECxMkaHR0cDovL2NlcnRz\nLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQDEypHbyBEYWRkeSBTZWN1\ncmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwHhcNMjMwMjE0MTYzMDI3WhcN\nMjQwMzE3MTYzMDI3WjAlMSMwIQYDVQQDDBoqLm9jdGEucml0ZS5ldGNjaG9zdGVk\nLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAM+ftul06q4PosIJ\nAIIDcqkjtB7cWwiwEgWaQMjdcJLO7rqeFsiBJvV7rK+fU6lXaL/9UX0oi6XjE+ll\nNSYogqcBM+OZyl8W/QxkNAcKCLEIxm2WPo2PgYCOlY5pK5CqsvssKFbKZZuztWbA\nksyMV+kaUkOZR7YpMqc1dAfQaQFQ9Rc4qetRNr98bNzxhgFu277cKi0KuuS5SCEc\nt5BSNY7NEcbgTEMcafWMsVieJAUoFzFcxTHxrcvx2OjZZVrq51vijbdvCDOnv9B3\neGM5/SknPI1ILEYqASOzfi3XWyfmsNePzfE2AQolaiRry09VOSeiKYFTlI5JimTn\n0NYiY40CAwEAAaOCA1UwggNRMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYB\nBQUHAwEGCCsGAQUFBwMCMA4GA1UdDwEB/wQEAwIFoDA4BgNVHR8EMTAvMC2gK6Ap\nhidodHRwOi8vY3JsLmdvZGFkZHkuY29tL2dkaWcyczEtNTIwMS5jcmwwXQYDVR0g\nBFYwVDBIBgtghkgBhv1tAQcXATA5MDcGCCsGAQUFBwIBFitodHRwOi8vY2VydGlm\naWNhdGVzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMAgGBmeBDAECATB2BggrBgEF\nBQcBAQRqMGgwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmdvZGFkZHkuY29tLzBA\nBggrBgEFBQcwAoY0aHR0cDovL2NlcnRpZmljYXRlcy5nb2RhZGR5LmNvbS9yZXBv\nc2l0b3J5L2dkaWcyLmNydDAfBgNVHSMEGDAWgBRAwr0njsw0gzCiM9f7bLPwtCyA\nzjA/BgNVHREEODA2ghoqLm9jdGEucml0ZS5ldGNjaG9zdGVkLmNvbYIYb2N0YS5y\naXRlLmV0Y2Nob3N0ZWQuY29tMB0GA1UdDgQWBBQKnRe6aegyKoosjM9GRRD/Klc3\n1zCCAX4GCisGAQQB1nkCBAIEggFuBIIBagFoAHYA7s3QZNXbGs7FXLedtM0TojKH\nRny87N7DUUhZRnEftZsAAAGGUMNjdgAABAMARzBFAiAfVHpgap6pJtg1OKLTQpyE\nVGA5XuG9Q8J8B+4d8jEMsAIhAM8PHccqd8FAQQnzjdAi+2NnJjP3Pc8miyxFAbJD\nXvm9AHYASLDja9qmRzQP5WoC+p0w6xxSActW3SyB2bu/qznYhHMAAAGGUMNkXgAA\nBAMARzBFAiANFslH1aV9v2t5pmZIkiJCzsaLMt5EZ4PrjXtJJt7XZAIhAI/HCMqv\nEVWz6ajfdXh3VNMq8+3K0zESy76P2uPBGg9FAHYA2ra/az+1tiKfm8K7XGvocJFx\nbLtRhIU0vaQ9MEjX+6sAAAGGUMNkywAABAMARzBFAiEAm2ATsPbuEgd8Ne01rtIb\nRcE3YKrP4WKQ7sGuVYjlT44CICBW3ZaLGoweeYW64zuCmEYzz72hmk1n6e7ywLiG\nYU/EMA0GCSqGSIb3DQEBCwUAA4IBAQA7ux1luDw+nn17SzvtzUzpxHwrqS0+ebdx\ncOqvt4Si2fLHM7cACD7SuRjm8L6XzzDGu/BiryUpwIWGIa8HxlTI1XyC8NzvISoM\nFSQNMGd7x7FfRilFqL9dBrCbX86lFK3KgOX+Rk8yxaCLwxjF7bb7YB3SH/djJgAF\ngjcOeheUiBIHM/yf+Xu3UzT5ob5D1kzm8lBXusUBcl9Cn6uRNC/Ls0HUkINaTWb0\nkfb8Nxy5VqhgOVfFItTJ/URKj210uv/nRk+bQwaBQZewspIocPnzghWmNtlRwSJq\nlfIDVmPNixnQCv6DvWIt/NGfEAlnhyOL6SyGHg1ionPtA3EdCyuc\n-----END CERTIFICATE-----\n",
                 "caCertificate": "-----BEGIN CERTIFICATE-----\nMIIE0DCCA7igAwIBAgIBBzANBgkqhkiG9w0BAQsFADCBgzELMAkGA1UEBhMCVVMx\nEDAOBgNVBAgTB0FyaXpvbmExEzARBgNVBAcTClNjb3R0c2RhbGUxGjAYBgNVBAoT\nEUdvRGFkZHkuY29tLCBJbmMuMTEwLwYDVQQDEyhHbyBEYWRkeSBSb290IENlcnRp\nZmljYXRlIEF1dGhvcml0eSAtIEcyMB4XDTExMDUwMzA3MDAwMFoXDTMxMDUwMzA3\nMDAwMFowgbQxCzAJBgNVBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQH\nEwpTY290dHNkYWxlMRowGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UE\nCxMkaHR0cDovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQD\nEypHbyBEYWRkeSBTZWN1cmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwggEi\nMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC54MsQ1K92vdSTYuswZLiBCGzD\nBNliF44v/z5lz4/OYuY8UhzaFkVLVat4a2ODYpDOD2lsmcgaFItMzEUz6ojcnqOv\nK/6AYZ15V8TPLvQ/MDxdR/yaFrzDN5ZBUY4RS1T4KL7QjL7wMDge87Am+GZHY23e\ncSZHjzhHU9FGHbTj3ADqRay9vHHZqm8A29vNMDp5T19MR/gd71vCxJ1gO7GyQ5HY\npDNO6rPWJ0+tJYqlxvTV0KaudAVkV4i1RFXULSo6Pvi4vekyCgKUZMQWOlDxSq7n\neTOvDCAHf+jfBDnCaQJsY1L6d8EbyHSHyLmTGFBUNUtpTrw700kuH9zB0lL7AgMB\nAAGjggEaMIIBFjAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBBjAdBgNV\nHQ4EFgQUQMK9J47MNIMwojPX+2yz8LQsgM4wHwYDVR0jBBgwFoAUOpqFBxBnKLbv\n9r0FQW4gwZTaD94wNAYIKwYBBQUHAQEEKDAmMCQGCCsGAQUFBzABhhhodHRwOi8v\nb2NzcC5nb2RhZGR5LmNvbS8wNQYDVR0fBC4wLDAqoCigJoYkaHR0cDovL2NybC5n\nb2RhZGR5LmNvbS9nZHJvb3QtZzIuY3JsMEYGA1UdIAQ/MD0wOwYEVR0gADAzMDEG\nCCsGAQUFBwIBFiVodHRwczovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkv\nMA0GCSqGSIb3DQEBCwUAA4IBAQAIfmyTEMg4uJapkEv/oV9PBO9sPpyIBslQj6Zz\n91cxG7685C/b+LrTW+C05+Z5Yg4MotdqY3MxtfWoSKQ7CC2iXZDXtHwlTxFWMMS2\nRJ17LJ3lXubvDGGqv+QqG+6EnriDfcFDzkSnE3ANkR/0yBOtg2DZ2HKocyQetawi\nDsoXiWJYRBuriSUBAA/NxBti21G00w9RKpv0vHP8ds42pM3Z2Czqrpv1KrKQ0U11\nGIo/ikGQI31bS/6kA1ibRrLDYGCD+H1QQc7CoZDDu+8CL9IVVO5EFdkKrqeKM+2x\nLXY2JtwE65/3YR8V3Idv7kaWKK2hJn0KCacuBKONvPi8BDAB\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIEfTCCA2WgAwIBAgIDG+cVMA0GCSqGSIb3DQEBCwUAMGMxCzAJBgNVBAYTAlVT\nMSEwHwYDVQQKExhUaGUgR28gRGFkZHkgR3JvdXAsIEluYy4xMTAvBgNVBAsTKEdv\nIERhZGR5IENsYXNzIDIgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMTQwMTAx\nMDcwMDAwWhcNMzEwNTMwMDcwMDAwWjCBgzELMAkGA1UEBhMCVVMxEDAOBgNVBAgT\nB0FyaXpvbmExEzARBgNVBAcTClNjb3R0c2RhbGUxGjAYBgNVBAoTEUdvRGFkZHku\nY29tLCBJbmMuMTEwLwYDVQQDEyhHbyBEYWRkeSBSb290IENlcnRpZmljYXRlIEF1\ndGhvcml0eSAtIEcyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv3Fi\nCPH6WTT3G8kYo/eASVjpIoMTpsUgQwE7hPHmhUmfJ+r2hBtOoLTbcJjHMgGxBT4H\nTu70+k8vWTAi56sZVmvigAf88xZ1gDlRe+X5NbZ0TqmNghPktj+pA4P6or6KFWp/\n3gvDthkUBcrqw6gElDtGfDIN8wBmIsiNaW02jBEYt9OyHGC0OPoCjM7T3UYH3go+\n6118yHz7sCtTpJJiaVElBWEaRIGMLKlDliPfrDqBmg4pxRyp6V0etp6eMAo5zvGI\ngPtLXcwy7IViQyU0AlYnAZG0O3AqP26x6JyIAX2f1PnbU21gnb8s51iruF9G/M7E\nGwM8CetJMVxpRrPgRwIDAQABo4IBFzCCARMwDwYDVR0TAQH/BAUwAwEB/zAOBgNV\nHQ8BAf8EBAMCAQYwHQYDVR0OBBYEFDqahQcQZyi27/a9BUFuIMGU2g/eMB8GA1Ud\nIwQYMBaAFNLEsNKR1EwRcbNhyz2h/t2oatTjMDQGCCsGAQUFBwEBBCgwJjAkBggr\nBgEFBQcwAYYYaHR0cDovL29jc3AuZ29kYWRkeS5jb20vMDIGA1UdHwQrMCkwJ6Al\noCOGIWh0dHA6Ly9jcmwuZ29kYWRkeS5jb20vZ2Ryb290LmNybDBGBgNVHSAEPzA9\nMDsGBFUdIAAwMzAxBggrBgEFBQcCARYlaHR0cHM6Ly9jZXJ0cy5nb2RhZGR5LmNv\nbS9yZXBvc2l0b3J5LzANBgkqhkiG9w0BAQsFAAOCAQEAWQtTvZKGEacke+1bMc8d\nH2xwxbhuvk679r6XUOEwf7ooXGKUwuN+M/f7QnaF25UcjCJYdQkMiGVnOQoWCcWg\nOJekxSOTP7QYpgEGRJHjp2kntFolfzq3Ms3dhP8qOCkzpN1nsoX+oYggHFCJyNwq\n9kIDN0zmiN/VryTyscPfzLXs4Jlet0lUIDyUGAzHHFIYSaRt4bNYC8nY7NmuHDKO\nKHAN4v6mF56ED71XcLNa6R+ghlO773z/aQvgSMO3kwvIClTErF0UZzdsyqUvMQg3\nqm5vjLyb4lddJIGvl5echK1srDdMZvNhkREg5L4wn3qkKQmw4TRfZHcYQFHfjDCm\nrw==\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIEADCCAuigAwIBAgIBADANBgkqhkiG9w0BAQUFADBjMQswCQYDVQQGEwJVUzEh\nMB8GA1UEChMYVGhlIEdvIERhZGR5IEdyb3VwLCBJbmMuMTEwLwYDVQQLEyhHbyBE\nYWRkeSBDbGFzcyAyIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTA0MDYyOTE3\nMDYyMFoXDTM0MDYyOTE3MDYyMFowYzELMAkGA1UEBhMCVVMxITAfBgNVBAoTGFRo\nZSBHbyBEYWRkeSBHcm91cCwgSW5jLjExMC8GA1UECxMoR28gRGFkZHkgQ2xhc3Mg\nMiBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTCCASAwDQYJKoZIhvcNAQEBBQADggEN\nADCCAQgCggEBAN6d1+pXGEmhW+vXX0iG6r7d/+TvZxz0ZWizV3GgXne77ZtJ6XCA\nPVYYYwhv2vLM0D9/AlQiVBDYsoHUwHU9S3/Hd8M+eKsaA7Ugay9qK7HFiH7Eux6w\nwdhFJ2+qN1j3hybX2C32qRe3H3I2TqYXP2WYktsqbl2i/ojgC95/5Y0V4evLOtXi\nEqITLdiOr18SPaAIBQi2XKVlOARFmR6jYGB0xUGlcmIbYsUfb18aQr4CUWWoriMY\navx4A6lNf4DD+qta/KFApMoZFv6yyO9ecw3ud72a9nmYvLEHZ6IVDd2gWMZEewo+\nYihfukEHU1jPEX44dMX4/7VpkI+EdOqXG68CAQOjgcAwgb0wHQYDVR0OBBYEFNLE\nsNKR1EwRcbNhyz2h/t2oatTjMIGNBgNVHSMEgYUwgYKAFNLEsNKR1EwRcbNhyz2h\n/t2oatTjoWekZTBjMQswCQYDVQQGEwJVUzEhMB8GA1UEChMYVGhlIEdvIERhZGR5\nIEdyb3VwLCBJbmMuMTEwLwYDVQQLEyhHbyBEYWRkeSBDbGFzcyAyIENlcnRpZmlj\nYXRpb24gQXV0aG9yaXR5ggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQAD\nggEBADJL87LKPpH8EsahB4yOd6AzBhRckB4Y9wimPQoZ+YeAEW5p5JYXMP80kWNy\nOO7MHAGjHZQopDH2esRU1/blMVgDoszOYtuURXO1v0XJJLXVggKtI3lpjbi2Tc7P\nTMozI+gciKqdi0FuFskg5YmezTvacPd+mSYgFFQlq25zheabIZ0KbIIOqPjCDPoQ\nHmyW74cNxA9hi63ugyuV+I6ShHI56yDqg+2DzZduCLzrTia2cyvk0/ZM/iZx4mER\ndEr/VxqHD3VILs9RaRegAhJhldXRQLIQTO7ErBBDpqWeCtWVYpoNz4iCxTIM5Cuf\nReYNnyicsbkqWletNw+vHX/bvZ8=\n-----END CERTIFICATE-----\n"
             },
-            "InternalSelfCert-Dev-CERT": {
-                "certificateName": "InternalSelfCert-Dev-CERT",
+            "octa-test-1b-internal": {
+                "certificateName": "octa-test-1b-internal",
                 "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIFjzCCA3egAwIBAgIEY5tNuDANBgkqhkiG9w0BAQsFADBwMQswCQYDVQQGEwJ1\r\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\r\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMRowGAYDVQQDDBEqLmV0Y2Nob3N0ZWQu\r\ndGVzdDAeFw0yMjEyMTUxNjM5MjBaFw0yMzEyMTUxNjM5MjBaMHAxCzAJBgNVBAYT\r\nAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsGA1UECgwE\r\nZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xGjAYBgNVBAMMESouZXRjY2hvc3Rl\r\nZC50ZXN0MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAtXWcmOT9zT7v\r\n1nliTOO95DKmzrX4mvXIMGL2Yj9eQDzuzdaIEnik35gqmn63kulq0MM4rYRY7eO3\r\n0DWubBj1JGzSAUdoEViqHUlnocv5D9vGLpKBoW6fIJ3K3BP7h9vvs87p+x0iogAM\r\nTnNkNV1XQ0f1r1z+cUlnMEGIVyJaxX5W+ey7MNaqga+hTX8pzR8QnVl0hpLts0t0\r\nbTMSl9XwT6rZ/LIjTpxWKesZs7GPXwQpMawFIWRI23AIiaotFz262aNKkZrZ66Et\r\n5MDDzzdcO9BZsTQDcYaw+gYUl95s3fkLXrJxso0DeIiH0HmDakLdtI94GVc51kh3\r\ny2YT66ebHOc5+v+z006si140PRtghrdPHHcZJrBn/Sx8CayO+EiGse61iQ84KgMG\r\nK+X0QYTtZpuZShfi1OUewFOVmbDCS8r27MmblwYDmUbnkfoDsq5de/Y++LTpNn8z\r\nm/zxDxn+dsCoVqzxMQrhJcle+EoUo8Xe82hP8al2Xim7gFTxUnG/jaFiI681IoOV\r\nNhsWqrDFRS8T41mh6dNKWxYi652fSbsbOFwqwyYuZ+yJ7oEsSZuWATfQkaDKw1mB\r\nPr85vA6fYodZ53d4v5loejLUhVCXi5wrKFQyILy2fHa8J+u7oaTtPvwChw+wKq71\r\n8IeZjJiDSIxt4GUinfugs0MaWT4lKBkCAwEAAaMxMC8wLQYDVR0RBCYwJIIRKi5l\r\ndGNjaG9zdGVkLnRlc3SCD2V0Y2Nob3N0ZWQudGVzdDANBgkqhkiG9w0BAQsFAAOC\r\nAgEAXWgLw9riE48sl1CiBHtJFmqPrgY7YBGR090qeoqoDowmGMOnU0vKduwQvio7\r\nvh45nBryT33MYfUgmUhcwTsB8o8kjxutPJmpOvHgs+2SoNN33P091kUfJMOuIZ2m\r\nvpZ4/KY3Zdzr1y9LB29OG8CHWYfHpzMNPyi+AE8exFst/WNUlPcxVp8V7AxKFWF+\r\ni1+LJjnHjhhFwdGIWhOUNkbQsJ3sUVstSz2YMa4gjMiSNqJ/rjRaRofDXi3DwysU\r\nSuIrG8c9r7tR5cm1AwL6jpo+M0hC5bYbyAH6fqz/f58yLvR+kNMGolsSp/zEllbj\r\n8rs3gxHAKCD5sHJZ9uhoNr0seSUFSqQJ0nfu9n8GgW/LdhlFcx2HcNNiu/wNmeDV\r\nXhOSc6TZ64lh6kjbsKpW7hzymVsCz/R0C1FfazmTNs5W2ORokbFjgyitHwLdXFbm\r\nkjbgPqWpCcbAuybrppNgWeW/JvJ13yiIfk3MH4YVpaDfY38FNUGcRDAYMf/0zsIX\r\na+L7EWAh8ha20mUElYTAHcC1r18qGn8ZZlmcYyNa26ncJd1kJQqxtvyfuzxpAJNU\r\ns4yJfYIzXszczxhqy2/dnheBDnbdIlziAiSmhET5Jfd5rzfIOcHBdX+U9Ex5Gng4\r\n6mnl56J/ddi/GOUTJ8CIicwcWs/EaUwUH6sMWr+Cbomhv5A=\n-----END CERTIFICATE-----\n",
                 "caCertificate": "-----BEGIN CERTIFICATE-----\nMIIFjzCCA3egAwIBAgIEY5tNuDANBgkqhkiG9w0BAQsFADBwMQswCQYDVQQGEwJ1\r\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\r\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMRowGAYDVQQDDBEqLmV0Y2Nob3N0ZWQu\r\ndGVzdDAeFw0yMjEyMTUxNjM5MjBaFw0yMzEyMTUxNjM5MjBaMHAxCzAJBgNVBAYT\r\nAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsGA1UECgwE\r\nZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xGjAYBgNVBAMMESouZXRjY2hvc3Rl\r\nZC50ZXN0MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAtXWcmOT9zT7v\r\n1nliTOO95DKmzrX4mvXIMGL2Yj9eQDzuzdaIEnik35gqmn63kulq0MM4rYRY7eO3\r\n0DWubBj1JGzSAUdoEViqHUlnocv5D9vGLpKBoW6fIJ3K3BP7h9vvs87p+x0iogAM\r\nTnNkNV1XQ0f1r1z+cUlnMEGIVyJaxX5W+ey7MNaqga+hTX8pzR8QnVl0hpLts0t0\r\nbTMSl9XwT6rZ/LIjTpxWKesZs7GPXwQpMawFIWRI23AIiaotFz262aNKkZrZ66Et\r\n5MDDzzdcO9BZsTQDcYaw+gYUl95s3fkLXrJxso0DeIiH0HmDakLdtI94GVc51kh3\r\ny2YT66ebHOc5+v+z006si140PRtghrdPHHcZJrBn/Sx8CayO+EiGse61iQ84KgMG\r\nK+X0QYTtZpuZShfi1OUewFOVmbDCS8r27MmblwYDmUbnkfoDsq5de/Y++LTpNn8z\r\nm/zxDxn+dsCoVqzxMQrhJcle+EoUo8Xe82hP8al2Xim7gFTxUnG/jaFiI681IoOV\r\nNhsWqrDFRS8T41mh6dNKWxYi652fSbsbOFwqwyYuZ+yJ7oEsSZuWATfQkaDKw1mB\r\nPr85vA6fYodZ53d4v5loejLUhVCXi5wrKFQyILy2fHa8J+u7oaTtPvwChw+wKq71\r\n8IeZjJiDSIxt4GUinfugs0MaWT4lKBkCAwEAAaMxMC8wLQYDVR0RBCYwJIIRKi5l\r\ndGNjaG9zdGVkLnRlc3SCD2V0Y2Nob3N0ZWQudGVzdDANBgkqhkiG9w0BAQsFAAOC\r\nAgEAXWgLw9riE48sl1CiBHtJFmqPrgY7YBGR090qeoqoDowmGMOnU0vKduwQvio7\r\nvh45nBryT33MYfUgmUhcwTsB8o8kjxutPJmpOvHgs+2SoNN33P091kUfJMOuIZ2m\r\nvpZ4/KY3Zdzr1y9LB29OG8CHWYfHpzMNPyi+AE8exFst/WNUlPcxVp8V7AxKFWF+\r\ni1+LJjnHjhhFwdGIWhOUNkbQsJ3sUVstSz2YMa4gjMiSNqJ/rjRaRofDXi3DwysU\r\nSuIrG8c9r7tR5cm1AwL6jpo+M0hC5bYbyAH6fqz/f58yLvR+kNMGolsSp/zEllbj\r\n8rs3gxHAKCD5sHJZ9uhoNr0seSUFSqQJ0nfu9n8GgW/LdhlFcx2HcNNiu/wNmeDV\r\nXhOSc6TZ64lh6kjbsKpW7hzymVsCz/R0C1FfazmTNs5W2ORokbFjgyitHwLdXFbm\r\nkjbgPqWpCcbAuybrppNgWeW/JvJ13yiIfk3MH4YVpaDfY38FNUGcRDAYMf/0zsIX\r\na+L7EWAh8ha20mUElYTAHcC1r18qGn8ZZlmcYyNa26ncJd1kJQqxtvyfuzxpAJNU\r\ns4yJfYIzXszczxhqy2/dnheBDnbdIlziAiSmhET5Jfd5rzfIOcHBdX+U9Ex5Gng4\r\n6mnl56J/ddi/GOUTJ8CIicwcWs/EaUwUH6sMWr+Cbomhv5A=\n-----END CERTIFICATE-----\n"
             }
@@ -1911,23 +1677,12 @@
             "camunda": {
                 "name": "camunda",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.74:8021",
-                        "ipAddress": "10.152.51.74",
-                        "port": 8021,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 8021,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -1940,13 +1695,13 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "octa-test-1b-internal",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
-                        "TLSv1.2",
                         "TLSv1",
-                        "TLSv1.1"
+                        "TLSv1.1",
+                        "TLSv1.2"
                     ]
                 },
                 "sessionPersistenceConfiguration": null,
@@ -1955,23 +1710,12 @@
             "crystal-report": {
                 "name": "crystal-report",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.92:8080",
-                        "ipAddress": "10.152.51.92",
-                        "port": 8080,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 8080,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -1983,26 +1727,15 @@
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
             },
-            "mendix_adapter": {
-                "name": "mendix_adapter",
+            "online_gateway": {
+                "name": "online_gateway",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.72:8017",
-                        "ipAddress": "10.152.51.72",
-                        "port": 8017,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 8017,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -2015,38 +1748,27 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "octa-test-1b-internal",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
-                        "TLSv1.2",
                         "TLSv1",
-                        "TLSv1.1"
+                        "TLSv1.1",
+                        "TLSv1.2"
                     ]
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
             },
-            "online_gateway": {
-                "name": "online_gateway",
+            "mendix_adapter": {
+                "name": "mendix_adapter",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.80:8095",
-                        "ipAddress": "10.152.51.80",
-                        "port": 8095,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 8095,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -2059,13 +1781,13 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "octa-test-1b-internal",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
-                        "TLSv1.2",
                         "TLSv1",
-                        "TLSv1.1"
+                        "TLSv1.1",
+                        "TLSv1.2"
                     ]
                 },
                 "sessionPersistenceConfiguration": null,
@@ -2074,23 +1796,12 @@
             "oracle-report": {
                 "name": "oracle-report",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.81:9002",
-                        "ipAddress": "10.152.51.81",
-                        "port": 9002,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 9002,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -2105,23 +1816,12 @@
             "ritesearch": {
                 "name": "ritesearch",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.74:8189",
-                        "ipAddress": "10.152.51.74",
-                        "port": 8189,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 8189,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -2134,13 +1834,13 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "octa-test-1b-internal",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
-                        "TLSv1.2",
                         "TLSv1",
-                        "TLSv1.1"
+                        "TLSv1.1",
+                        "TLSv1.2"
                     ]
                 },
                 "sessionPersistenceConfiguration": null,
@@ -2149,23 +1849,12 @@
             "weblogic-report-ui": {
                 "name": "weblogic-report-ui",
                 "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.51.67:7012",
-                        "ipAddress": "10.152.51.67",
-                        "port": 7012,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
+                "backends": [],
                 "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 7012,
+                    "port": 0,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -2221,5 +1910,116 @@
                 ]
             }
         }
+    },
+    {
+        "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaanzjw3qy5aa3xpqom2253oiqpa6kdicdll6qpstnkob4s42dioedq",
+        "compartmentId": "ocid1.compartment.oc1..aaaaaaaaiqazmnzv3yukhi3shxdeygkj2b65dpk4b7i774sbs4hhykcyz52a",
+        "displayName": "octa-test-1b-iva-public",
+        "lifecycleState": "ACTIVE",
+        "timeCreated": "2023-09-29T21:29:25.853Z",
+        "ipAddresses": [
+            {
+                "ipAddress": "129.153.135.94",
+                "isPublic": true,
+                "reservedIp": null
+            }
+        ],
+        "shapeName": "flexible",
+        "shapeDetails": {
+            "minimumBandwidthInMbps": 10,
+            "maximumBandwidthInMbps": 99
+        },
+        "isPrivate": false,
+        "isDeleteProtectionEnabled": null,
+        "subnetIds": [
+            "ocid1.subnet.oc1.iad.aaaaaaaaay7lt7g2g65rpyn74dgmrtkug7iylyyovi7jev2gp6rbexyhrefq"
+        ],
+        "networkSecurityGroupIds": [],
+        "listeners": {
+            "iva": {
+                "name": "iva",
+                "defaultBackendSetName": "test-1b-iva",
+                "port": 443,
+                "protocol": "HTTP",
+                "hostnameNames": [
+                    "iva-test-1b.octa.rite.etcchosted.com"
+                ],
+                "serverName": null,
+                "pathRouteSetName": null,
+                "sslConfiguration": {
+                    "verifyDepth": 1,
+                    "verifyPeerCertificate": false,
+                    "trustedCertificateAuthorityIds": [],
+                    "certificateIds": [],
+                    "certificateName": "octa-test-1b-public",
+                    "serverOrderPreference": "DISABLED",
+                    "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
+                    "protocols": [
+                        "TLSv1.2"
+                    ]
+                },
+                "connectionConfiguration": {
+                    "idleTimeout": 60,
+                    "backendTcpProxyProtocolVersion": null,
+                    "backendTcpProxyProtocolOptions": null
+                },
+                "ruleSetNames": [],
+                "routingPolicyName": null
+            }
+        },
+        "hostnames": {
+            "iva-test-1b.octa.rite.etcchosted.com": {
+                "name": "iva-test-1b.octa.rite.etcchosted.com",
+                "hostname": "iva-test1b.octa.rite.etcchosted.com"
+            }
+        },
+        "cidrBlocks": null,
+        "sslCipherSuites": {},
+        "certificates": {
+            "octa-test-1b-public": {
+                "certificateName": "octa-test-1b-public",
+                "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIGszCCBZugAwIBAgIIY5n1rNUu6iAwDQYJKoZIhvcNAQELBQAwgbQxCzAJBgNV\nBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQHEwpTY290dHNkYWxlMRow\nGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UECxMkaHR0cDovL2NlcnRz\nLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQDEypHbyBEYWRkeSBTZWN1\ncmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwHhcNMjMwMjE0MTYzMDI3WhcN\nMjQwMzE3MTYzMDI3WjAlMSMwIQYDVQQDDBoqLm9jdGEucml0ZS5ldGNjaG9zdGVk\nLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAM+ftul06q4PosIJ\nAIIDcqkjtB7cWwiwEgWaQMjdcJLO7rqeFsiBJvV7rK+fU6lXaL/9UX0oi6XjE+ll\nNSYogqcBM+OZyl8W/QxkNAcKCLEIxm2WPo2PgYCOlY5pK5CqsvssKFbKZZuztWbA\nksyMV+kaUkOZR7YpMqc1dAfQaQFQ9Rc4qetRNr98bNzxhgFu277cKi0KuuS5SCEc\nt5BSNY7NEcbgTEMcafWMsVieJAUoFzFcxTHxrcvx2OjZZVrq51vijbdvCDOnv9B3\neGM5/SknPI1ILEYqASOzfi3XWyfmsNePzfE2AQolaiRry09VOSeiKYFTlI5JimTn\n0NYiY40CAwEAAaOCA1UwggNRMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYB\nBQUHAwEGCCsGAQUFBwMCMA4GA1UdDwEB/wQEAwIFoDA4BgNVHR8EMTAvMC2gK6Ap\nhidodHRwOi8vY3JsLmdvZGFkZHkuY29tL2dkaWcyczEtNTIwMS5jcmwwXQYDVR0g\nBFYwVDBIBgtghkgBhv1tAQcXATA5MDcGCCsGAQUFBwIBFitodHRwOi8vY2VydGlm\naWNhdGVzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMAgGBmeBDAECATB2BggrBgEF\nBQcBAQRqMGgwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmdvZGFkZHkuY29tLzBA\nBggrBgEFBQcwAoY0aHR0cDovL2NlcnRpZmljYXRlcy5nb2RhZGR5LmNvbS9yZXBv\nc2l0b3J5L2dkaWcyLmNydDAfBgNVHSMEGDAWgBRAwr0njsw0gzCiM9f7bLPwtCyA\nzjA/BgNVHREEODA2ghoqLm9jdGEucml0ZS5ldGNjaG9zdGVkLmNvbYIYb2N0YS5y\naXRlLmV0Y2Nob3N0ZWQuY29tMB0GA1UdDgQWBBQKnRe6aegyKoosjM9GRRD/Klc3\n1zCCAX4GCisGAQQB1nkCBAIEggFuBIIBagFoAHYA7s3QZNXbGs7FXLedtM0TojKH\nRny87N7DUUhZRnEftZsAAAGGUMNjdgAABAMARzBFAiAfVHpgap6pJtg1OKLTQpyE\nVGA5XuG9Q8J8B+4d8jEMsAIhAM8PHccqd8FAQQnzjdAi+2NnJjP3Pc8miyxFAbJD\nXvm9AHYASLDja9qmRzQP5WoC+p0w6xxSActW3SyB2bu/qznYhHMAAAGGUMNkXgAA\nBAMARzBFAiANFslH1aV9v2t5pmZIkiJCzsaLMt5EZ4PrjXtJJt7XZAIhAI/HCMqv\nEVWz6ajfdXh3VNMq8+3K0zESy76P2uPBGg9FAHYA2ra/az+1tiKfm8K7XGvocJFx\nbLtRhIU0vaQ9MEjX+6sAAAGGUMNkywAABAMARzBFAiEAm2ATsPbuEgd8Ne01rtIb\nRcE3YKrP4WKQ7sGuVYjlT44CICBW3ZaLGoweeYW64zuCmEYzz72hmk1n6e7ywLiG\nYU/EMA0GCSqGSIb3DQEBCwUAA4IBAQA7ux1luDw+nn17SzvtzUzpxHwrqS0+ebdx\ncOqvt4Si2fLHM7cACD7SuRjm8L6XzzDGu/BiryUpwIWGIa8HxlTI1XyC8NzvISoM\nFSQNMGd7x7FfRilFqL9dBrCbX86lFK3KgOX+Rk8yxaCLwxjF7bb7YB3SH/djJgAF\ngjcOeheUiBIHM/yf+Xu3UzT5ob5D1kzm8lBXusUBcl9Cn6uRNC/Ls0HUkINaTWb0\nkfb8Nxy5VqhgOVfFItTJ/URKj210uv/nRk+bQwaBQZewspIocPnzghWmNtlRwSJq\nlfIDVmPNixnQCv6DvWIt/NGfEAlnhyOL6SyGHg1ionPtA3EdCyuc\n-----END CERTIFICATE-----\n",
+                "caCertificate": "-----BEGIN CERTIFICATE-----\nMIIE0DCCA7igAwIBAgIBBzANBgkqhkiG9w0BAQsFADCBgzELMAkGA1UEBhMCVVMx\nEDAOBgNVBAgTB0FyaXpvbmExEzARBgNVBAcTClNjb3R0c2RhbGUxGjAYBgNVBAoT\nEUdvRGFkZHkuY29tLCBJbmMuMTEwLwYDVQQDEyhHbyBEYWRkeSBSb290IENlcnRp\nZmljYXRlIEF1dGhvcml0eSAtIEcyMB4XDTExMDUwMzA3MDAwMFoXDTMxMDUwMzA3\nMDAwMFowgbQxCzAJBgNVBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQH\nEwpTY290dHNkYWxlMRowGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UE\nCxMkaHR0cDovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQD\nEypHbyBEYWRkeSBTZWN1cmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwggEi\nMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC54MsQ1K92vdSTYuswZLiBCGzD\nBNliF44v/z5lz4/OYuY8UhzaFkVLVat4a2ODYpDOD2lsmcgaFItMzEUz6ojcnqOv\nK/6AYZ15V8TPLvQ/MDxdR/yaFrzDN5ZBUY4RS1T4KL7QjL7wMDge87Am+GZHY23e\ncSZHjzhHU9FGHbTj3ADqRay9vHHZqm8A29vNMDp5T19MR/gd71vCxJ1gO7GyQ5HY\npDNO6rPWJ0+tJYqlxvTV0KaudAVkV4i1RFXULSo6Pvi4vekyCgKUZMQWOlDxSq7n\neTOvDCAHf+jfBDnCaQJsY1L6d8EbyHSHyLmTGFBUNUtpTrw700kuH9zB0lL7AgMB\nAAGjggEaMIIBFjAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBBjAdBgNV\nHQ4EFgQUQMK9J47MNIMwojPX+2yz8LQsgM4wHwYDVR0jBBgwFoAUOpqFBxBnKLbv\n9r0FQW4gwZTaD94wNAYIKwYBBQUHAQEEKDAmMCQGCCsGAQUFBzABhhhodHRwOi8v\nb2NzcC5nb2RhZGR5LmNvbS8wNQYDVR0fBC4wLDAqoCigJoYkaHR0cDovL2NybC5n\nb2RhZGR5LmNvbS9nZHJvb3QtZzIuY3JsMEYGA1UdIAQ/MD0wOwYEVR0gADAzMDEG\nCCsGAQUFBwIBFiVodHRwczovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkv\nMA0GCSqGSIb3DQEBCwUAA4IBAQAIfmyTEMg4uJapkEv/oV9PBO9sPpyIBslQj6Zz\n91cxG7685C/b+LrTW+C05+Z5Yg4MotdqY3MxtfWoSKQ7CC2iXZDXtHwlTxFWMMS2\nRJ17LJ3lXubvDGGqv+QqG+6EnriDfcFDzkSnE3ANkR/0yBOtg2DZ2HKocyQetawi\nDsoXiWJYRBuriSUBAA/NxBti21G00w9RKpv0vHP8ds42pM3Z2Czqrpv1KrKQ0U11\nGIo/ikGQI31bS/6kA1ibRrLDYGCD+H1QQc7CoZDDu+8CL9IVVO5EFdkKrqeKM+2x\nLXY2JtwE65/3YR8V3Idv7kaWKK2hJn0KCacuBKONvPi8BDAB\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIEfTCCA2WgAwIBAgIDG+cVMA0GCSqGSIb3DQEBCwUAMGMxCzAJBgNVBAYTAlVT\nMSEwHwYDVQQKExhUaGUgR28gRGFkZHkgR3JvdXAsIEluYy4xMTAvBgNVBAsTKEdv\nIERhZGR5IENsYXNzIDIgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMTQwMTAx\nMDcwMDAwWhcNMzEwNTMwMDcwMDAwWjCBgzELMAkGA1UEBhMCVVMxEDAOBgNVBAgT\nB0FyaXpvbmExEzARBgNVBAcTClNjb3R0c2RhbGUxGjAYBgNVBAoTEUdvRGFkZHku\nY29tLCBJbmMuMTEwLwYDVQQDEyhHbyBEYWRkeSBSb290IENlcnRpZmljYXRlIEF1\ndGhvcml0eSAtIEcyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv3Fi\nCPH6WTT3G8kYo/eASVjpIoMTpsUgQwE7hPHmhUmfJ+r2hBtOoLTbcJjHMgGxBT4H\nTu70+k8vWTAi56sZVmvigAf88xZ1gDlRe+X5NbZ0TqmNghPktj+pA4P6or6KFWp/\n3gvDthkUBcrqw6gElDtGfDIN8wBmIsiNaW02jBEYt9OyHGC0OPoCjM7T3UYH3go+\n6118yHz7sCtTpJJiaVElBWEaRIGMLKlDliPfrDqBmg4pxRyp6V0etp6eMAo5zvGI\ngPtLXcwy7IViQyU0AlYnAZG0O3AqP26x6JyIAX2f1PnbU21gnb8s51iruF9G/M7E\nGwM8CetJMVxpRrPgRwIDAQABo4IBFzCCARMwDwYDVR0TAQH/BAUwAwEB/zAOBgNV\nHQ8BAf8EBAMCAQYwHQYDVR0OBBYEFDqahQcQZyi27/a9BUFuIMGU2g/eMB8GA1Ud\nIwQYMBaAFNLEsNKR1EwRcbNhyz2h/t2oatTjMDQGCCsGAQUFBwEBBCgwJjAkBggr\nBgEFBQcwAYYYaHR0cDovL29jc3AuZ29kYWRkeS5jb20vMDIGA1UdHwQrMCkwJ6Al\noCOGIWh0dHA6Ly9jcmwuZ29kYWRkeS5jb20vZ2Ryb290LmNybDBGBgNVHSAEPzA9\nMDsGBFUdIAAwMzAxBggrBgEFBQcCARYlaHR0cHM6Ly9jZXJ0cy5nb2RhZGR5LmNv\nbS9yZXBvc2l0b3J5LzANBgkqhkiG9w0BAQsFAAOCAQEAWQtTvZKGEacke+1bMc8d\nH2xwxbhuvk679r6XUOEwf7ooXGKUwuN+M/f7QnaF25UcjCJYdQkMiGVnOQoWCcWg\nOJekxSOTP7QYpgEGRJHjp2kntFolfzq3Ms3dhP8qOCkzpN1nsoX+oYggHFCJyNwq\n9kIDN0zmiN/VryTyscPfzLXs4Jlet0lUIDyUGAzHHFIYSaRt4bNYC8nY7NmuHDKO\nKHAN4v6mF56ED71XcLNa6R+ghlO773z/aQvgSMO3kwvIClTErF0UZzdsyqUvMQg3\nqm5vjLyb4lddJIGvl5echK1srDdMZvNhkREg5L4wn3qkKQmw4TRfZHcYQFHfjDCm\nrw==\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIEADCCAuigAwIBAgIBADANBgkqhkiG9w0BAQUFADBjMQswCQYDVQQGEwJVUzEh\nMB8GA1UEChMYVGhlIEdvIERhZGR5IEdyb3VwLCBJbmMuMTEwLwYDVQQLEyhHbyBE\nYWRkeSBDbGFzcyAyIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTA0MDYyOTE3\nMDYyMFoXDTM0MDYyOTE3MDYyMFowYzELMAkGA1UEBhMCVVMxITAfBgNVBAoTGFRo\nZSBHbyBEYWRkeSBHcm91cCwgSW5jLjExMC8GA1UECxMoR28gRGFkZHkgQ2xhc3Mg\nMiBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTCCASAwDQYJKoZIhvcNAQEBBQADggEN\nADCCAQgCggEBAN6d1+pXGEmhW+vXX0iG6r7d/+TvZxz0ZWizV3GgXne77ZtJ6XCA\nPVYYYwhv2vLM0D9/AlQiVBDYsoHUwHU9S3/Hd8M+eKsaA7Ugay9qK7HFiH7Eux6w\nwdhFJ2+qN1j3hybX2C32qRe3H3I2TqYXP2WYktsqbl2i/ojgC95/5Y0V4evLOtXi\nEqITLdiOr18SPaAIBQi2XKVlOARFmR6jYGB0xUGlcmIbYsUfb18aQr4CUWWoriMY\navx4A6lNf4DD+qta/KFApMoZFv6yyO9ecw3ud72a9nmYvLEHZ6IVDd2gWMZEewo+\nYihfukEHU1jPEX44dMX4/7VpkI+EdOqXG68CAQOjgcAwgb0wHQYDVR0OBBYEFNLE\nsNKR1EwRcbNhyz2h/t2oatTjMIGNBgNVHSMEgYUwgYKAFNLEsNKR1EwRcbNhyz2h\n/t2oatTjoWekZTBjMQswCQYDVQQGEwJVUzEhMB8GA1UEChMYVGhlIEdvIERhZGR5\nIEdyb3VwLCBJbmMuMTEwLwYDVQQLEyhHbyBEYWRkeSBDbGFzcyAyIENlcnRpZmlj\nYXRpb24gQXV0aG9yaXR5ggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQAD\nggEBADJL87LKPpH8EsahB4yOd6AzBhRckB4Y9wimPQoZ+YeAEW5p5JYXMP80kWNy\nOO7MHAGjHZQopDH2esRU1/blMVgDoszOYtuURXO1v0XJJLXVggKtI3lpjbi2Tc7P\nTMozI+gciKqdi0FuFskg5YmezTvacPd+mSYgFFQlq25zheabIZ0KbIIOqPjCDPoQ\nHmyW74cNxA9hi63ugyuV+I6ShHI56yDqg+2DzZduCLzrTia2cyvk0/ZM/iZx4mER\ndEr/VxqHD3VILs9RaRegAhJhldXRQLIQTO7ErBBDpqWeCtWVYpoNz4iCxTIM5Cuf\nReYNnyicsbkqWletNw+vHX/bvZ8=\n-----END CERTIFICATE-----\n"
+            }
+        },
+        "backendSets": {
+            "test-1b-iva": {
+                "name": "test-1b-iva",
+                "policy": "ROUND_ROBIN",
+                "backends": [],
+                "backendMaxConnections": null,
+                "healthChecker": {
+                    "protocol": "TCP",
+                    "urlPath": null,
+                    "port": 0,
+                    "returnCode": 200,
+                    "retries": 3,
+                    "timeoutInMillis": 3000,
+                    "intervalInMillis": 10000,
+                    "responseBodyRegex": ".*",
+                    "isForcePlainText": null
+                },
+                "sslConfiguration": null,
+                "sessionPersistenceConfiguration": null,
+                "lbCookieSessionPersistenceConfiguration": null
+            }
+        },
+        "pathRouteSets": {},
+        "freeformTags": {},
+        "definedTags": {},
+        "systemTags": {},
+        "ruleSets": {
+            "iva": {
+                "name": "iva",
+                "items": [
+                    {
+                        "action": "ADD_HTTP_RESPONSE_HEADER",
+                        "header": "Access-Control-Allow-Origin",
+                        "value": "*"
+                    }
+                ]
+            }
+        },
+        "routingPolicies": {}
     }
 ]

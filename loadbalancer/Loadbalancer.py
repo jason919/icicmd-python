@@ -63,7 +63,7 @@ def backup_all_loadbalancers():
             __backup_load_balancer_of_compartment(key, value)
 
 
-def create_all_loadbalancer(compartment_id: str, post_json):
+def create(compartment_id: str, post_json):
     print("start LoadBalancer create 1")
     url = f"{LB_API_ENDPOINT}?compartmentId={compartment_id}"
     OciHttpHelper.restCall(url, post_json, "POST")
@@ -83,6 +83,7 @@ def create_single_loadbalancer(
     certificates = parsed_data["certificates"]
     Cert.fix_certs_in_creation_json(certificates)
     routing_policies = parsed_data["routingPolicies"]
+    parsed_data["networkSecurityGroupIds"] = []
 
     if len(json.dumps(routing_policies)) > 10:
         listeners_backup = parsed_data["listeners"]

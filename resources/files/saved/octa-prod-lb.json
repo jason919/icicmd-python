@@ -20,6 +20,7 @@
             "maximumBandwidthInMbps": 2000
         },
         "isPrivate": false,
+        "isDeleteProtectionEnabled": null,
         "subnetIds": [
             "ocid1.subnet.oc1.iad.aaaaaaaaay7lt7g2g65rpyn74dgmrtkug7iylyyovi7jev2gp6rbexyhrefq"
         ],
@@ -88,6 +89,7 @@
                         "ipAddress": "10.152.11.157",
                         "port": 8487,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
@@ -97,11 +99,13 @@
                         "ipAddress": "10.152.11.158",
                         "port": 8487,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -159,6 +163,7 @@
             "maximumBandwidthInMbps": 8000
         },
         "isPrivate": false,
+        "isDeleteProtectionEnabled": null,
         "subnetIds": [
             "ocid1.subnet.oc1.iad.aaaaaaaaay7lt7g2g65rpyn74dgmrtkug7iylyyovi7jev2gp6rbexyhrefq"
         ],
@@ -266,11 +271,13 @@
                         "ipAddress": "10.152.11.149",
                         "port": 8011,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -338,6 +345,7 @@
             "maximumBandwidthInMbps": 3000
         },
         "isPrivate": true,
+        "isDeleteProtectionEnabled": null,
         "subnetIds": [
             "ocid1.subnet.oc1.iad.aaaaaaaay2y5w75bgn33kzpapdocfmxbs6hfwtqyazghjqrghink5neeagsa"
         ],
@@ -540,11 +548,13 @@
                         "ipAddress": "10.152.11.143",
                         "port": 8021,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -582,11 +592,13 @@
                         "ipAddress": "10.152.11.163",
                         "port": 8080,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -611,11 +623,13 @@
                         "ipAddress": "10.152.11.141",
                         "port": 8017,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -653,11 +667,13 @@
                         "ipAddress": "10.152.11.149",
                         "port": 8095,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -695,11 +711,13 @@
                         "ipAddress": "10.152.11.150",
                         "port": 9002,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -724,11 +742,13 @@
                         "ipAddress": "10.152.11.143",
                         "port": 8189,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -766,11 +786,13 @@
                         "ipAddress": "10.152.11.135",
                         "port": 7012,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -854,6 +876,7 @@
             "maximumBandwidthInMbps": 2500
         },
         "isPrivate": true,
+        "isDeleteProtectionEnabled": null,
         "subnetIds": [
             "ocid1.subnet.oc1.iad.aaaaaaaaay7lt7g2g65rpyn74dgmrtkug7iylyyovi7jev2gp6rbexyhrefq"
         ],
@@ -1029,11 +1052,13 @@
                         "ipAddress": "10.152.11.136",
                         "port": 7139,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -1071,11 +1096,13 @@
                         "ipAddress": "10.152.11.137",
                         "port": 8543,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -1113,11 +1140,13 @@
                         "ipAddress": "10.152.11.136",
                         "port": 7121,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -1155,11 +1184,13 @@
                         "ipAddress": "10.152.11.151",
                         "port": 8069,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -1192,11 +1223,13 @@
                         "ipAddress": "10.152.11.150",
                         "port": 9002,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -1221,6 +1254,7 @@
                         "ipAddress": "10.152.11.224",
                         "port": 9003,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
@@ -1230,11 +1264,13 @@
                         "ipAddress": "10.152.11.223",
                         "port": 9003,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -1259,11 +1295,13 @@
                         "ipAddress": "10.152.11.163",
                         "port": 8080,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -1288,11 +1326,13 @@
                         "ipAddress": "10.152.11.136",
                         "port": 7171,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -1330,11 +1370,13 @@
                         "ipAddress": "110.152.11.136",
                         "port": 7159,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -1372,11 +1414,13 @@
                         "ipAddress": "10.152.11.135",
                         "port": 7012,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -1401,11 +1445,13 @@
                         "ipAddress": "10.152.11.185",
                         "port": 5601,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -1443,11 +1489,13 @@
                         "ipAddress": "10.152.11.199",
                         "port": 8023,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -1614,6 +1662,7 @@
             "maximumBandwidthInMbps": 4000
         },
         "isPrivate": true,
+        "isDeleteProtectionEnabled": null,
         "subnetIds": [
             "ocid1.subnet.oc1.iad.aaaaaaaaay7lt7g2g65rpyn74dgmrtkug7iylyyovi7jev2gp6rbexyhrefq"
         ],
@@ -1986,11 +2035,13 @@
                         "ipAddress": "10.152.11.148",
                         "port": 8013,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -2036,11 +2087,13 @@
                         "ipAddress": "10.152.11.157",
                         "port": 8487,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -2078,11 +2131,13 @@
                         "ipAddress": "10.152.11.143",
                         "port": 8081,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -2128,11 +2183,13 @@
                         "ipAddress": "10.152.11.149",
                         "port": 8011,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -2178,11 +2235,13 @@
                         "ipAddress": "10.152.11.146",
                         "port": 8099,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -2220,11 +2279,13 @@
                         "ipAddress": "10.152.11.141",
                         "port": 8015,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -2262,11 +2323,13 @@
                         "ipAddress": "10.152.11.144",
                         "port": 8007,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -2312,11 +2375,13 @@
                         "ipAddress": "10.152.11.147",
                         "port": 8005,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -2362,11 +2427,13 @@
                         "ipAddress": "10.152.11.145",
                         "port": 8009,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -2412,11 +2479,13 @@
                         "ipAddress": "10.152.11.146",
                         "port": 8443,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
@@ -2462,11 +2531,13 @@
                         "ipAddress": "10.152.11.142",
                         "port": 8001,
                         "weight": 1,
+                        "maxConnections": null,
                         "drain": false,
                         "backup": false,
                         "offline": false
                     }
                 ],
+                "backendMaxConnections": null,
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,

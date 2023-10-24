@@ -8,4 +8,6 @@ auth = Signer(
     fingerprint=config["fingerprint"],
     private_key_file_location=config["key_file"],
 )
-LB_API_ENDPOINT = "https://iaas.us-ashburn-1.oraclecloud.com/20170115/loadBalancers"
+# LB_API_ENDPOINT = "https://iaas.us-ashburn-1.oraclecloud.com/20170115/loadBalancers"
+
+LB_API_ENDPOINT = "https://iaas.us-phoenix-1.oraclecloud.com/20170115/loadBalancers"

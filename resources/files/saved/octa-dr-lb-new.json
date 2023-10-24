@@ -1,38 +1,28 @@
 [
     {
-        "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaajgko2vqbqp5kq6ifhysov3lva2kfel6bhymo2qilnn535dq3kpda",
-        "compartmentId": "ocid1.compartment.oc1..aaaaaaaavlllxvqztlsc3qqorammnbw65hzewqk7xpvawlzbh7r53u2fdeqq",
-        "displayName": "octa-uat-iva-public",
-        "lifecycleState": "ACTIVE",
-        "timeCreated": "2023-06-07T17:29:18.352Z",
-        "ipAddresses": [
-            {
-                "ipAddress": "152.70.207.49",
-                "isPublic": true,
-                "reservedIp": null
-            }
-        ],
+        "compartmentId": "ocid1.compartment.oc1..aaaaaaaa3ybyt4tx2zasleqqcc34bgaismmoh3yhtjnmkmk3v5t4t3xedqxq",
+        "displayName": "new-octa-dr-iva-public",
         "shapeName": "flexible",
         "shapeDetails": {
-            "minimumBandwidthInMbps": 10,
-            "maximumBandwidthInMbps": 100
+            "minimumBandwidthInMbps": 100,
+            "maximumBandwidthInMbps": 300
         },
         "isPrivate": false,
         "isDeleteProtectionEnabled": null,
         "subnetIds": [
-            "ocid1.subnet.oc1.iad.aaaaaaaaay7lt7g2g65rpyn74dgmrtkug7iylyyovi7jev2gp6rbexyhrefq"
+            "ocid1.subnet.oc1.phx.aaaaaaaa7sn6mko4cl5pla5aodfw45d6krrghnfrkpccacuuf5dxpw3gwv2a"
         ],
         "networkSecurityGroupIds": [
-            "ocid1.networksecuritygroup.oc1.iad.aaaaaaaap7qf7vemvvxap57pogpdaetwwaucmbqarm33c3fkyl4e3ew2phna"
+            "ocid1.networksecuritygroup.oc1.iad.aaaaaaaa353rhwee46ag5xfbjwearf5s5c4vrjbr56oic47ectknhsdl2w2a"
         ],
         "listeners": {
-            "iva": {
-                "name": "iva",
-                "defaultBackendSetName": "uat_iva",
+            "IVA_PROD": {
+                "name": "IVA_PROD",
+                "defaultBackendSetName": "IVA_PROD",
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "iva-uat.octa.rite.etcchosted.com"
+                    "iva-prod.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -58,9 +48,9 @@
             }
         },
         "hostnames": {
-            "iva-uat.octa.rite.etcchosted.com": {
-                "name": "iva-uat.octa.rite.etcchosted.com",
-                "hostname": "iva-uat.octa.rite.etcchosted.com"
+            "iva-prod.octa.rite.etcchosted.com": {
+                "name": "iva-prod.octa.rite.etcchosted.com",
+                "hostname": "iva-prod.octa.rite.etcchosted.com"
             }
         },
         "cidrBlocks": null,
@@ -70,17 +60,22 @@
                 "certificateName": "LB-OCTA-CERT",
                 "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIGszCCBZugAwIBAgIIY5n1rNUu6iAwDQYJKoZIhvcNAQELBQAwgbQxCzAJBgNV\nBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQHEwpTY290dHNkYWxlMRow\nGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UECxMkaHR0cDovL2NlcnRz\nLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQDEypHbyBEYWRkeSBTZWN1\ncmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwHhcNMjMwMjE0MTYzMDI3WhcN\nMjQwMzE3MTYzMDI3WjAlMSMwIQYDVQQDDBoqLm9jdGEucml0ZS5ldGNjaG9zdGVk\nLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAM+ftul06q4PosIJ\nAIIDcqkjtB7cWwiwEgWaQMjdcJLO7rqeFsiBJvV7rK+fU6lXaL/9UX0oi6XjE+ll\nNSYogqcBM+OZyl8W/QxkNAcKCLEIxm2WPo2PgYCOlY5pK5CqsvssKFbKZZuztWbA\nksyMV+kaUkOZR7YpMqc1dAfQaQFQ9Rc4qetRNr98bNzxhgFu277cKi0KuuS5SCEc\nt5BSNY7NEcbgTEMcafWMsVieJAUoFzFcxTHxrcvx2OjZZVrq51vijbdvCDOnv9B3\neGM5/SknPI1ILEYqASOzfi3XWyfmsNePzfE2AQolaiRry09VOSeiKYFTlI5JimTn\n0NYiY40CAwEAAaOCA1UwggNRMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYB\nBQUHAwEGCCsGAQUFBwMCMA4GA1UdDwEB/wQEAwIFoDA4BgNVHR8EMTAvMC2gK6Ap\nhidodHRwOi8vY3JsLmdvZGFkZHkuY29tL2dkaWcyczEtNTIwMS5jcmwwXQYDVR0g\nBFYwVDBIBgtghkgBhv1tAQcXATA5MDcGCCsGAQUFBwIBFitodHRwOi8vY2VydGlm\naWNhdGVzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMAgGBmeBDAECATB2BggrBgEF\nBQcBAQRqMGgwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmdvZGFkZHkuY29tLzBA\nBggrBgEFBQcwAoY0aHR0cDovL2NlcnRpZmljYXRlcy5nb2RhZGR5LmNvbS9yZXBv\nc2l0b3J5L2dkaWcyLmNydDAfBgNVHSMEGDAWgBRAwr0njsw0gzCiM9f7bLPwtCyA\nzjA/BgNVHREEODA2ghoqLm9jdGEucml0ZS5ldGNjaG9zdGVkLmNvbYIYb2N0YS5y\naXRlLmV0Y2Nob3N0ZWQuY29tMB0GA1UdDgQWBBQKnRe6aegyKoosjM9GRRD/Klc3\n1zCCAX4GCisGAQQB1nkCBAIEggFuBIIBagFoAHYA7s3QZNXbGs7FXLedtM0TojKH\nRny87N7DUUhZRnEftZsAAAGGUMNjdgAABAMARzBFAiAfVHpgap6pJtg1OKLTQpyE\nVGA5XuG9Q8J8B+4d8jEMsAIhAM8PHccqd8FAQQnzjdAi+2NnJjP3Pc8miyxFAbJD\nXvm9AHYASLDja9qmRzQP5WoC+p0w6xxSActW3SyB2bu/qznYhHMAAAGGUMNkXgAA\nBAMARzBFAiANFslH1aV9v2t5pmZIkiJCzsaLMt5EZ4PrjXtJJt7XZAIhAI/HCMqv\nEVWz6ajfdXh3VNMq8+3K0zESy76P2uPBGg9FAHYA2ra/az+1tiKfm8K7XGvocJFx\nbLtRhIU0vaQ9MEjX+6sAAAGGUMNkywAABAMARzBFAiEAm2ATsPbuEgd8Ne01rtIb\nRcE3YKrP4WKQ7sGuVYjlT44CICBW3ZaLGoweeYW64zuCmEYzz72hmk1n6e7ywLiG\nYU/EMA0GCSqGSIb3DQEBCwUAA4IBAQA7ux1luDw+nn17SzvtzUzpxHwrqS0+ebdx\ncOqvt4Si2fLHM7cACD7SuRjm8L6XzzDGu/BiryUpwIWGIa8HxlTI1XyC8NzvISoM\nFSQNMGd7x7FfRilFqL9dBrCbX86lFK3KgOX+Rk8yxaCLwxjF7bb7YB3SH/djJgAF\ngjcOeheUiBIHM/yf+Xu3UzT5ob5D1kzm8lBXusUBcl9Cn6uRNC/Ls0HUkINaTWb0\nkfb8Nxy5VqhgOVfFItTJ/URKj210uv/nRk+bQwaBQZewspIocPnzghWmNtlRwSJq\nlfIDVmPNixnQCv6DvWIt/NGfEAlnhyOL6SyGHg1ionPtA3EdCyuc\n-----END CERTIFICATE-----\n",
                 "caCertificate": "-----BEGIN CERTIFICATE-----\nMIIE0DCCA7igAwIBAgIBBzANBgkqhkiG9w0BAQsFADCBgzELMAkGA1UEBhMCVVMx\nEDAOBgNVBAgTB0FyaXpvbmExEzARBgNVBAcTClNjb3R0c2RhbGUxGjAYBgNVBAoT\nEUdvRGFkZHkuY29tLCBJbmMuMTEwLwYDVQQDEyhHbyBEYWRkeSBSb290IENlcnRp\nZmljYXRlIEF1dGhvcml0eSAtIEcyMB4XDTExMDUwMzA3MDAwMFoXDTMxMDUwMzA3\nMDAwMFowgbQxCzAJBgNVBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQH\nEwpTY290dHNkYWxlMRowGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UE\nCxMkaHR0cDovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQD\nEypHbyBEYWRkeSBTZWN1cmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwggEi\nMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC54MsQ1K92vdSTYuswZLiBCGzD\nBNliF44v/z5lz4/OYuY8UhzaFkVLVat4a2ODYpDOD2lsmcgaFItMzEUz6ojcnqOv\nK/6AYZ15V8TPLvQ/MDxdR/yaFrzDN5ZBUY4RS1T4KL7QjL7wMDge87Am+GZHY23e\ncSZHjzhHU9FGHbTj3ADqRay9vHHZqm8A29vNMDp5T19MR/gd71vCxJ1gO7GyQ5HY\npDNO6rPWJ0+tJYqlxvTV0KaudAVkV4i1RFXULSo6Pvi4vekyCgKUZMQWOlDxSq7n\neTOvDCAHf+jfBDnCaQJsY1L6d8EbyHSHyLmTGFBUNUtpTrw700kuH9zB0lL7AgMB\nAAGjggEaMIIBFjAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBBjAdBgNV\nHQ4EFgQUQMK9J47MNIMwojPX+2yz8LQsgM4wHwYDVR0jBBgwFoAUOpqFBxBnKLbv\n9r0FQW4gwZTaD94wNAYIKwYBBQUHAQEEKDAmMCQGCCsGAQUFBzABhhhodHRwOi8v\nb2NzcC5nb2RhZGR5LmNvbS8wNQYDVR0fBC4wLDAqoCigJoYkaHR0cDovL2NybC5n\nb2RhZGR5LmNvbS9nZHJvb3QtZzIuY3JsMEYGA1UdIAQ/MD0wOwYEVR0gADAzMDEG\nCCsGAQUFBwIBFiVodHRwczovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkv\nMA0GCSqGSIb3DQEBCwUAA4IBAQAIfmyTEMg4uJapkEv/oV9PBO9sPpyIBslQj6Zz\n91cxG7685C/b+LrTW+C05+Z5Yg4MotdqY3MxtfWoSKQ7CC2iXZDXtHwlTxFWMMS2\nRJ17LJ3lXubvDGGqv+QqG+6EnriDfcFDzkSnE3ANkR/0yBOtg2DZ2HKocyQetawi\nDsoXiWJYRBuriSUBAA/NxBti21G00w9RKpv0vHP8ds42pM3Z2Czqrpv1KrKQ0U11\nGIo/ikGQI31bS/6kA1ibRrLDYGCD+H1QQc7CoZDDu+8CL9IVVO5EFdkKrqeKM+2x\nLXY2JtwE65/3YR8V3Idv7kaWKK2hJn0KCacuBKONvPi8BDAB\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIEfTCCA2WgAwIBAgIDG+cVMA0GCSqGSIb3DQEBCwUAMGMxCzAJBgNVBAYTAlVT\nMSEwHwYDVQQKExhUaGUgR28gRGFkZHkgR3JvdXAsIEluYy4xMTAvBgNVBAsTKEdv\nIERhZGR5IENsYXNzIDIgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMTQwMTAx\nMDcwMDAwWhcNMzEwNTMwMDcwMDAwWjCBgzELMAkGA1UEBhMCVVMxEDAOBgNVBAgT\nB0FyaXpvbmExEzARBgNVBAcTClNjb3R0c2RhbGUxGjAYBgNVBAoTEUdvRGFkZHku\nY29tLCBJbmMuMTEwLwYDVQQDEyhHbyBEYWRkeSBSb290IENlcnRpZmljYXRlIEF1\ndGhvcml0eSAtIEcyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv3Fi\nCPH6WTT3G8kYo/eASVjpIoMTpsUgQwE7hPHmhUmfJ+r2hBtOoLTbcJjHMgGxBT4H\nTu70+k8vWTAi56sZVmvigAf88xZ1gDlRe+X5NbZ0TqmNghPktj+pA4P6or6KFWp/\n3gvDthkUBcrqw6gElDtGfDIN8wBmIsiNaW02jBEYt9OyHGC0OPoCjM7T3UYH3go+\n6118yHz7sCtTpJJiaVElBWEaRIGMLKlDliPfrDqBmg4pxRyp6V0etp6eMAo5zvGI\ngPtLXcwy7IViQyU0AlYnAZG0O3AqP26x6JyIAX2f1PnbU21gnb8s51iruF9G/M7E\nGwM8CetJMVxpRrPgRwIDAQABo4IBFzCCARMwDwYDVR0TAQH/BAUwAwEB/zAOBgNV\nHQ8BAf8EBAMCAQYwHQYDVR0OBBYEFDqahQcQZyi27/a9BUFuIMGU2g/eMB8GA1Ud\nIwQYMBaAFNLEsNKR1EwRcbNhyz2h/t2oatTjMDQGCCsGAQUFBwEBBCgwJjAkBggr\nBgEFBQcwAYYYaHR0cDovL29jc3AuZ29kYWRkeS5jb20vMDIGA1UdHwQrMCkwJ6Al\noCOGIWh0dHA6Ly9jcmwuZ29kYWRkeS5jb20vZ2Ryb290LmNybDBGBgNVHSAEPzA9\nMDsGBFUdIAAwMzAxBggrBgEFBQcCARYlaHR0cHM6Ly9jZXJ0cy5nb2RhZGR5LmNv\nbS9yZXBvc2l0b3J5LzANBgkqhkiG9w0BAQsFAAOCAQEAWQtTvZKGEacke+1bMc8d\nH2xwxbhuvk679r6XUOEwf7ooXGKUwuN+M/f7QnaF25UcjCJYdQkMiGVnOQoWCcWg\nOJekxSOTP7QYpgEGRJHjp2kntFolfzq3Ms3dhP8qOCkzpN1nsoX+oYggHFCJyNwq\n9kIDN0zmiN/VryTyscPfzLXs4Jlet0lUIDyUGAzHHFIYSaRt4bNYC8nY7NmuHDKO\nKHAN4v6mF56ED71XcLNa6R+ghlO773z/aQvgSMO3kwvIClTErF0UZzdsyqUvMQg3\nqm5vjLyb4lddJIGvl5echK1srDdMZvNhkREg5L4wn3qkKQmw4TRfZHcYQFHfjDCm\nrw==\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIEADCCAuigAwIBAgIBADANBgkqhkiG9w0BAQUFADBjMQswCQYDVQQGEwJVUzEh\nMB8GA1UEChMYVGhlIEdvIERhZGR5IEdyb3VwLCBJbmMuMTEwLwYDVQQLEyhHbyBE\nYWRkeSBDbGFzcyAyIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTA0MDYyOTE3\nMDYyMFoXDTM0MDYyOTE3MDYyMFowYzELMAkGA1UEBhMCVVMxITAfBgNVBAoTGFRo\nZSBHbyBEYWRkeSBHcm91cCwgSW5jLjExMC8GA1UECxMoR28gRGFkZHkgQ2xhc3Mg\nMiBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTCCASAwDQYJKoZIhvcNAQEBBQADggEN\nADCCAQgCggEBAN6d1+pXGEmhW+vXX0iG6r7d/+TvZxz0ZWizV3GgXne77ZtJ6XCA\nPVYYYwhv2vLM0D9/AlQiVBDYsoHUwHU9S3/Hd8M+eKsaA7Ugay9qK7HFiH7Eux6w\nwdhFJ2+qN1j3hybX2C32qRe3H3I2TqYXP2WYktsqbl2i/ojgC95/5Y0V4evLOtXi\nEqITLdiOr18SPaAIBQi2XKVlOARFmR6jYGB0xUGlcmIbYsUfb18aQr4CUWWoriMY\navx4A6lNf4DD+qta/KFApMoZFv6yyO9ecw3ud72a9nmYvLEHZ6IVDd2gWMZEewo+\nYihfukEHU1jPEX44dMX4/7VpkI+EdOqXG68CAQOjgcAwgb0wHQYDVR0OBBYEFNLE\nsNKR1EwRcbNhyz2h/t2oatTjMIGNBgNVHSMEgYUwgYKAFNLEsNKR1EwRcbNhyz2h\n/t2oatTjoWekZTBjMQswCQYDVQQGEwJVUzEhMB8GA1UEChMYVGhlIEdvIERhZGR5\nIEdyb3VwLCBJbmMuMTEwLwYDVQQLEyhHbyBEYWRkeSBDbGFzcyAyIENlcnRpZmlj\nYXRpb24gQXV0aG9yaXR5ggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQAD\nggEBADJL87LKPpH8EsahB4yOd6AzBhRckB4Y9wimPQoZ+YeAEW5p5JYXMP80kWNy\nOO7MHAGjHZQopDH2esRU1/blMVgDoszOYtuURXO1v0XJJLXVggKtI3lpjbi2Tc7P\nTMozI+gciKqdi0FuFskg5YmezTvacPd+mSYgFFQlq25zheabIZ0KbIIOqPjCDPoQ\nHmyW74cNxA9hi63ugyuV+I6ShHI56yDqg+2DzZduCLzrTia2cyvk0/ZM/iZx4mER\ndEr/VxqHD3VILs9RaRegAhJhldXRQLIQTO7ErBBDpqWeCtWVYpoNz4iCxTIM5Cuf\nReYNnyicsbkqWletNw+vHX/bvZ8=\n-----END CERTIFICATE-----\n"
+            },
+            "InternalSelfCert-Prod-CERT": {
+                "certificateName": "InternalSelfCert-Prod-CERT",
+                "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIFpzCCA4+gAwIBAgIEZQCRszANBgkqhkiG9w0BAQsFADB2MQswCQYDVQQGEwJ1\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMSAwHgYDVQQDDBcqLm9jdGEuZXRjY2hv\nc3RlZC5sb2NhbDAeFw0yMzA5MTIxNjI4MzVaFw0zMzA5MTIxNjI4MzVaMHYxCzAJ\nBgNVBAYTAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsG\nA1UECgwEZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xIDAeBgNVBAMMFyoub2N0\nYS5ldGNjaG9zdGVkLmxvY2FsMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKC\nAgEAjwUCZeGsQ+xFL2rqRO6X+T7ADpfAJXbA2WA2eeCI1KD33o0DegWlU5V7Ufrf\ndbfQqCme58Xlpqt7NELGSgGJ5UPAVI4Z539fCLX7K6AFy7TRBRgjLt+eJQss38Cc\nvH9+5kuWl0e3GNTVh0t7S07Com1pExrUfSrXnu5ma8W5RdkhC7yh4XOIh7aUzR+2\nsJ5ksibdzJFI7gFqs367UCQ5fWR/nr49tn2GQOghPOuPQAkLKB1X4FsjvSMUDup3\nIPt9hHFooTyf7o/M1hqvK1GqFQkr/4AFw7v4sU9xbHiDWOkRESRVaEo6JO/6/R39\nl+697aCXF0RZOfNF2pvUqisfNg/l4GDoTXOjjUcPcUzsUnoVj8Wtv5qSmgUm5bin\n+4DJ/0LH6jVhcGZnthkfre4OKMvBGhy1PTZoE3VYnvjm2jf0bU/Bi/BbDW7rr8Mw\nF9mV5pTCV3gYesyXfkeAfWRZKCdTBUUAUBLBTHLHIbZuwjdxroZ4uPlHjPlIPwGy\n+1gLzzalifWlvrWaIIJ2ZlMHFWQo+3/1CJOVFKOFVsbd0V7t7hkYyoIK6d28vQM+\nudbXEEERXBAYF/eB60CvPENsuhgK6uX3+SG2CFjJe//8nGnVmXvYo0C3G4ACHQK0\nYWLHYIuIjfVN6XY00utl1j2LcpnXmBaa+I3H/NYNMS4TKfMCAwEAAaM9MDswOQYD\nVR0RBDIwMIIXKi5vY3RhLmV0Y2Nob3N0ZWQubG9jYWyCFW9jdGEuZXRjY2hvc3Rl\nZC5sb2NhbDANBgkqhkiG9w0BAQsFAAOCAgEASj95eTXHtNXsS65AoDmCoqmg8Y9L\nXCS9mqLswWspd5A/yf56xlvECECieC8/XlYgNj0dTPDw2btJFiNXF6iOPV5km+f/\n+LLpunqC6+5qa5NWtyYc3wrRRP91WPzcdVqmEINpLquOxiRZis1fb5KcqxCqNiLA\nZiHwkqRJaPi3/XP0131H08odSoCtsTLK5tY7xg9aHtUXq6A1wVGlWi1/y3lNwB4K\nqykmDhbS2IuqK68uy78Lj0KUxQ/tcg1MufJL4tcpWLJob3lzDbzqIWfxcYRjuPi9\nmh90RuYGjLlmK0Z8B6yc49eWcLijxmE7N00IZLyF93Rs2URWAQQsS9n8AceK3xGS\nzUJ+xHmwHtFl037+R6Nybe/Jt5evqRjT+nFQIGGVw/56fK0LryWQsS9WxME6lw6P\ndvI0WKMwZTEHBDxYki0nBHBrccAiFPA7C3OITNL1U7FrVVtlph/BXa3patN7N8dO\nShy210pZworMcfjcGInS2uE56FrWzfBNpwNZLBXSbeZg6ZldqY/ToJdO2Xlt+vDS\nzKZU2SADbdbLszdpQzCBgPDG9fOYVkgWxTlFkYlu3CshSdqt1v8YzON5cvipqiDv\nsNMuifcn4XWuzSNSvDdzsSJCrzAlGbwiH/oivz7mIr/9q/1pLbvPs3AiW+sgQgQm\nPPv3cM8p9h1KrIk=\n-----END CERTIFICATE-----\n",
+                "caCertificate": "-----BEGIN CERTIFICATE-----\nMIIFpzCCA4+gAwIBAgIEZQCRszANBgkqhkiG9w0BAQsFADB2MQswCQYDVQQGEwJ1\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMSAwHgYDVQQDDBcqLm9jdGEuZXRjY2hv\nc3RlZC5sb2NhbDAeFw0yMzA5MTIxNjI4MzVaFw0zMzA5MTIxNjI4MzVaMHYxCzAJ\nBgNVBAYTAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsG\nA1UECgwEZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xIDAeBgNVBAMMFyoub2N0\nYS5ldGNjaG9zdGVkLmxvY2FsMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKC\nAgEAjwUCZeGsQ+xFL2rqRO6X+T7ADpfAJXbA2WA2eeCI1KD33o0DegWlU5V7Ufrf\ndbfQqCme58Xlpqt7NELGSgGJ5UPAVI4Z539fCLX7K6AFy7TRBRgjLt+eJQss38Cc\nvH9+5kuWl0e3GNTVh0t7S07Com1pExrUfSrXnu5ma8W5RdkhC7yh4XOIh7aUzR+2\nsJ5ksibdzJFI7gFqs367UCQ5fWR/nr49tn2GQOghPOuPQAkLKB1X4FsjvSMUDup3\nIPt9hHFooTyf7o/M1hqvK1GqFQkr/4AFw7v4sU9xbHiDWOkRESRVaEo6JO/6/R39\nl+697aCXF0RZOfNF2pvUqisfNg/l4GDoTXOjjUcPcUzsUnoVj8Wtv5qSmgUm5bin\n+4DJ/0LH6jVhcGZnthkfre4OKMvBGhy1PTZoE3VYnvjm2jf0bU/Bi/BbDW7rr8Mw\nF9mV5pTCV3gYesyXfkeAfWRZKCdTBUUAUBLBTHLHIbZuwjdxroZ4uPlHjPlIPwGy\n+1gLzzalifWlvrWaIIJ2ZlMHFWQo+3/1CJOVFKOFVsbd0V7t7hkYyoIK6d28vQM+\nudbXEEERXBAYF/eB60CvPENsuhgK6uX3+SG2CFjJe//8nGnVmXvYo0C3G4ACHQK0\nYWLHYIuIjfVN6XY00utl1j2LcpnXmBaa+I3H/NYNMS4TKfMCAwEAAaM9MDswOQYD\nVR0RBDIwMIIXKi5vY3RhLmV0Y2Nob3N0ZWQubG9jYWyCFW9jdGEuZXRjY2hvc3Rl\nZC5sb2NhbDANBgkqhkiG9w0BAQsFAAOCAgEASj95eTXHtNXsS65AoDmCoqmg8Y9L\nXCS9mqLswWspd5A/yf56xlvECECieC8/XlYgNj0dTPDw2btJFiNXF6iOPV5km+f/\n+LLpunqC6+5qa5NWtyYc3wrRRP91WPzcdVqmEINpLquOxiRZis1fb5KcqxCqNiLA\nZiHwkqRJaPi3/XP0131H08odSoCtsTLK5tY7xg9aHtUXq6A1wVGlWi1/y3lNwB4K\nqykmDhbS2IuqK68uy78Lj0KUxQ/tcg1MufJL4tcpWLJob3lzDbzqIWfxcYRjuPi9\nmh90RuYGjLlmK0Z8B6yc49eWcLijxmE7N00IZLyF93Rs2URWAQQsS9n8AceK3xGS\nzUJ+xHmwHtFl037+R6Nybe/Jt5evqRjT+nFQIGGVw/56fK0LryWQsS9WxME6lw6P\ndvI0WKMwZTEHBDxYki0nBHBrccAiFPA7C3OITNL1U7FrVVtlph/BXa3patN7N8dO\nShy210pZworMcfjcGInS2uE56FrWzfBNpwNZLBXSbeZg6ZldqY/ToJdO2Xlt+vDS\nzKZU2SADbdbLszdpQzCBgPDG9fOYVkgWxTlFkYlu3CshSdqt1v8YzON5cvipqiDv\nsNMuifcn4XWuzSNSvDdzsSJCrzAlGbwiH/oivz7mIr/9q/1pLbvPs3AiW+sgQgQm\nPPv3cM8p9h1KrIk=\n-----END CERTIFICATE-----\n"
             }
         },
         "backendSets": {
-            "uat_iva": {
-                "name": "uat_iva",
-                "policy": "ROUND_ROBIN",
+            "IVA_PROD": {
+                "name": "IVA_PROD",
+                "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.222:8087",
-                        "ipAddress": "10.152.11.222",
-                        "port": 8087,
+                        "name": "10.153.64.99:8487",
+                        "ipAddress": "10.153.64.99",
+                        "port": 8487,
                         "weight": 1,
                         "maxConnections": null,
                         "drain": false,
@@ -88,9 +83,9 @@
                         "offline": false
                     },
                     {
-                        "name": "10.152.11.221:8087",
-                        "ipAddress": "10.152.11.221",
-                        "port": 8087,
+                        "name": "10.153.64.98:8487",
+                        "ipAddress": "10.153.64.98",
+                        "port": 8487,
                         "weight": 1,
                         "maxConnections": null,
                         "drain": false,
@@ -102,7 +97,7 @@
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 8087,
+                    "port": 8487,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -110,7 +105,18 @@
                     "responseBodyRegex": ".*",
                     "isForcePlainText": null
                 },
-                "sslConfiguration": null,
+                "sslConfiguration": {
+                    "verifyDepth": 1,
+                    "verifyPeerCertificate": false,
+                    "trustedCertificateAuthorityIds": [],
+                    "certificateIds": [],
+                    "certificateName": "InternalSelfCert-Prod-CERT",
+                    "serverOrderPreference": null,
+                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
+                    "protocols": [
+                        "TLSv1.2"
+                    ]
+                },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
             }
@@ -123,52 +129,43 @@
                 "free-tier-retained": "false"
             }
         },
-        "ruleSets": {
-            "iva": {
-                "name": "iva",
-                "items": [
-                    {
-                        "action": "ADD_HTTP_RESPONSE_HEADER",
-                        "header": "Access-Control-Allow-Origin",
-                        "value": "*"
-                    }
-                ]
-            }
-        },
+        "ruleSets": {},
         "routingPolicies": {}
     },
     {
-        "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaawfwnx7howeyggtwzjsyy4abdcnl47axex73rlqmkpmwlcehkpu7a",
-        "compartmentId": "ocid1.compartment.oc1..aaaaaaaavlllxvqztlsc3qqorammnbw65hzewqk7xpvawlzbh7r53u2fdeqq",
-        "displayName": "new-octa-uat-lb-internal",
+        "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaa5op3hmdlvedenc4d7f6hvxt6fnjnjfwprnfepzobvdier3kwfkya",
+        "compartmentId": "ocid1.compartment.oc1..aaaaaaaa3ybyt4tx2zasleqqcc34bgaismmoh3yhtjnmkmk3v5t4t3xedqxq",
+        "displayName": "new-octa-dr-online-public",
         "lifecycleState": "ACTIVE",
-        "timeCreated": "2023-08-18T00:46:36.913Z",
+        "timeCreated": "2023-08-11T16:25:30.302Z",
         "ipAddresses": [
             {
-                "ipAddress": "10.152.11.233",
-                "isPublic": false,
+                "ipAddress": "129.80.59.103",
+                "isPublic": true,
                 "reservedIp": null
             }
         ],
         "shapeName": "flexible",
         "shapeDetails": {
-            "minimumBandwidthInMbps": 100,
-            "maximumBandwidthInMbps": 500
+            "minimumBandwidthInMbps": 4000,
+            "maximumBandwidthInMbps": 8000
         },
-        "isPrivate": true,
+        "isPrivate": false,
         "isDeleteProtectionEnabled": null,
         "subnetIds": [
-            "ocid1.subnet.oc1.iad.aaaaaaaagmsolj4slbflhkwqhfk4u7gmtoxoum6q4p6b5wmaeezblmnduwqq"
+            "ocid1.subnet.oc1.phx.aaaaaaaa7sn6mko4cl5pla5aodfw45d6krrghnfrkpccacuuf5dxpw3gwv2a"
         ],
-        "networkSecurityGroupIds": [],
+        "networkSecurityGroupIds": [
+            "ocid1.networksecuritygroup.oc1.iad.aaaaaaaaaxv5bv5of22ljkk7igody2dey4apxamxtughkvikghbwgiosaksq"
+        ],
         "listeners": {
-            "camunda": {
-                "name": "camunda",
-                "defaultBackendSetName": "camunda",
+            "myaccount_405expresslanes_com": {
+                "name": "myaccount_405expresslanes_com",
+                "defaultBackendSetName": "online",
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritecamunda-uat.octa.rite.etcchosted.com"
+                    "myaccount.405expresslanes.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -177,8 +174,8 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT2",
-                    "serverOrderPreference": "ENABLED",
+                    "certificateName": "myaccount.405expresslanes.com",
+                    "serverOrderPreference": "DISABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
                         "TLSv1.2"
@@ -192,13 +189,13 @@
                 "ruleSetNames": [],
                 "routingPolicyName": null
             },
-            "online_gateway": {
-                "name": "online_gateway",
-                "defaultBackendSetName": "online_gateway",
+            "Online": {
+                "name": "Online",
+                "defaultBackendSetName": "online",
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "riteonlinegateway-uat.octa.rite.etcchosted.com"
+                    "riteonline-prod.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -207,7 +204,157 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT2",
+                    "certificateName": "LB-OCTA-CERT",
+                    "serverOrderPreference": "DISABLED",
+                    "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
+                    "protocols": [
+                        "TLSv1.2"
+                    ]
+                },
+                "connectionConfiguration": {
+                    "idleTimeout": 60,
+                    "backendTcpProxyProtocolVersion": null,
+                    "backendTcpProxyProtocolOptions": null
+                },
+                "ruleSetNames": [],
+                "routingPolicyName": null
+            }
+        },
+        "hostnames": {
+            "riteonline-prod.octa.rite.etcchosted.com": {
+                "name": "riteonline-prod.octa.rite.etcchosted.com",
+                "hostname": "riteonline-prod.octa.rite.etcchosted.com"
+            },
+            "myaccount.405expresslanes.com": {
+                "name": "myaccount.405expresslanes.com",
+                "hostname": "myaccount.405expresslanes.com"
+            }
+        },
+        "cidrBlocks": null,
+        "sslCipherSuites": {},
+        "certificates": {
+            "LB-OCTA-CERT": {
+                "certificateName": "LB-OCTA-CERT",
+                "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIGszCCBZugAwIBAgIIY5n1rNUu6iAwDQYJKoZIhvcNAQELBQAwgbQxCzAJBgNV\nBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQHEwpTY290dHNkYWxlMRow\nGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UECxMkaHR0cDovL2NlcnRz\nLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQDEypHbyBEYWRkeSBTZWN1\ncmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwHhcNMjMwMjE0MTYzMDI3WhcN\nMjQwMzE3MTYzMDI3WjAlMSMwIQYDVQQDDBoqLm9jdGEucml0ZS5ldGNjaG9zdGVk\nLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAM+ftul06q4PosIJ\nAIIDcqkjtB7cWwiwEgWaQMjdcJLO7rqeFsiBJvV7rK+fU6lXaL/9UX0oi6XjE+ll\nNSYogqcBM+OZyl8W/QxkNAcKCLEIxm2WPo2PgYCOlY5pK5CqsvssKFbKZZuztWbA\nksyMV+kaUkOZR7YpMqc1dAfQaQFQ9Rc4qetRNr98bNzxhgFu277cKi0KuuS5SCEc\nt5BSNY7NEcbgTEMcafWMsVieJAUoFzFcxTHxrcvx2OjZZVrq51vijbdvCDOnv9B3\neGM5/SknPI1ILEYqASOzfi3XWyfmsNePzfE2AQolaiRry09VOSeiKYFTlI5JimTn\n0NYiY40CAwEAAaOCA1UwggNRMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYB\nBQUHAwEGCCsGAQUFBwMCMA4GA1UdDwEB/wQEAwIFoDA4BgNVHR8EMTAvMC2gK6Ap\nhidodHRwOi8vY3JsLmdvZGFkZHkuY29tL2dkaWcyczEtNTIwMS5jcmwwXQYDVR0g\nBFYwVDBIBgtghkgBhv1tAQcXATA5MDcGCCsGAQUFBwIBFitodHRwOi8vY2VydGlm\naWNhdGVzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMAgGBmeBDAECATB2BggrBgEF\nBQcBAQRqMGgwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmdvZGFkZHkuY29tLzBA\nBggrBgEFBQcwAoY0aHR0cDovL2NlcnRpZmljYXRlcy5nb2RhZGR5LmNvbS9yZXBv\nc2l0b3J5L2dkaWcyLmNydDAfBgNVHSMEGDAWgBRAwr0njsw0gzCiM9f7bLPwtCyA\nzjA/BgNVHREEODA2ghoqLm9jdGEucml0ZS5ldGNjaG9zdGVkLmNvbYIYb2N0YS5y\naXRlLmV0Y2Nob3N0ZWQuY29tMB0GA1UdDgQWBBQKnRe6aegyKoosjM9GRRD/Klc3\n1zCCAX4GCisGAQQB1nkCBAIEggFuBIIBagFoAHYA7s3QZNXbGs7FXLedtM0TojKH\nRny87N7DUUhZRnEftZsAAAGGUMNjdgAABAMARzBFAiAfVHpgap6pJtg1OKLTQpyE\nVGA5XuG9Q8J8B+4d8jEMsAIhAM8PHccqd8FAQQnzjdAi+2NnJjP3Pc8miyxFAbJD\nXvm9AHYASLDja9qmRzQP5WoC+p0w6xxSActW3SyB2bu/qznYhHMAAAGGUMNkXgAA\nBAMARzBFAiANFslH1aV9v2t5pmZIkiJCzsaLMt5EZ4PrjXtJJt7XZAIhAI/HCMqv\nEVWz6ajfdXh3VNMq8+3K0zESy76P2uPBGg9FAHYA2ra/az+1tiKfm8K7XGvocJFx\nbLtRhIU0vaQ9MEjX+6sAAAGGUMNkywAABAMARzBFAiEAm2ATsPbuEgd8Ne01rtIb\nRcE3YKrP4WKQ7sGuVYjlT44CICBW3ZaLGoweeYW64zuCmEYzz72hmk1n6e7ywLiG\nYU/EMA0GCSqGSIb3DQEBCwUAA4IBAQA7ux1luDw+nn17SzvtzUzpxHwrqS0+ebdx\ncOqvt4Si2fLHM7cACD7SuRjm8L6XzzDGu/BiryUpwIWGIa8HxlTI1XyC8NzvISoM\nFSQNMGd7x7FfRilFqL9dBrCbX86lFK3KgOX+Rk8yxaCLwxjF7bb7YB3SH/djJgAF\ngjcOeheUiBIHM/yf+Xu3UzT5ob5D1kzm8lBXusUBcl9Cn6uRNC/Ls0HUkINaTWb0\nkfb8Nxy5VqhgOVfFItTJ/URKj210uv/nRk+bQwaBQZewspIocPnzghWmNtlRwSJq\nlfIDVmPNixnQCv6DvWIt/NGfEAlnhyOL6SyGHg1ionPtA3EdCyuc\n-----END CERTIFICATE-----\n",
+                "caCertificate": "-----BEGIN CERTIFICATE-----\nMIIE0DCCA7igAwIBAgIBBzANBgkqhkiG9w0BAQsFADCBgzELMAkGA1UEBhMCVVMx\nEDAOBgNVBAgTB0FyaXpvbmExEzARBgNVBAcTClNjb3R0c2RhbGUxGjAYBgNVBAoT\nEUdvRGFkZHkuY29tLCBJbmMuMTEwLwYDVQQDEyhHbyBEYWRkeSBSb290IENlcnRp\nZmljYXRlIEF1dGhvcml0eSAtIEcyMB4XDTExMDUwMzA3MDAwMFoXDTMxMDUwMzA3\nMDAwMFowgbQxCzAJBgNVBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQH\nEwpTY290dHNkYWxlMRowGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UE\nCxMkaHR0cDovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQD\nEypHbyBEYWRkeSBTZWN1cmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwggEi\nMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC54MsQ1K92vdSTYuswZLiBCGzD\nBNliF44v/z5lz4/OYuY8UhzaFkVLVat4a2ODYpDOD2lsmcgaFItMzEUz6ojcnqOv\nK/6AYZ15V8TPLvQ/MDxdR/yaFrzDN5ZBUY4RS1T4KL7QjL7wMDge87Am+GZHY23e\ncSZHjzhHU9FGHbTj3ADqRay9vHHZqm8A29vNMDp5T19MR/gd71vCxJ1gO7GyQ5HY\npDNO6rPWJ0+tJYqlxvTV0KaudAVkV4i1RFXULSo6Pvi4vekyCgKUZMQWOlDxSq7n\neTOvDCAHf+jfBDnCaQJsY1L6d8EbyHSHyLmTGFBUNUtpTrw700kuH9zB0lL7AgMB\nAAGjggEaMIIBFjAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBBjAdBgNV\nHQ4EFgQUQMK9J47MNIMwojPX+2yz8LQsgM4wHwYDVR0jBBgwFoAUOpqFBxBnKLbv\n9r0FQW4gwZTaD94wNAYIKwYBBQUHAQEEKDAmMCQGCCsGAQUFBzABhhhodHRwOi8v\nb2NzcC5nb2RhZGR5LmNvbS8wNQYDVR0fBC4wLDAqoCigJoYkaHR0cDovL2NybC5n\nb2RhZGR5LmNvbS9nZHJvb3QtZzIuY3JsMEYGA1UdIAQ/MD0wOwYEVR0gADAzMDEG\nCCsGAQUFBwIBFiVodHRwczovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkv\nMA0GCSqGSIb3DQEBCwUAA4IBAQAIfmyTEMg4uJapkEv/oV9PBO9sPpyIBslQj6Zz\n91cxG7685C/b+LrTW+C05+Z5Yg4MotdqY3MxtfWoSKQ7CC2iXZDXtHwlTxFWMMS2\nRJ17LJ3lXubvDGGqv+QqG+6EnriDfcFDzkSnE3ANkR/0yBOtg2DZ2HKocyQetawi\nDsoXiWJYRBuriSUBAA/NxBti21G00w9RKpv0vHP8ds42pM3Z2Czqrpv1KrKQ0U11\nGIo/ikGQI31bS/6kA1ibRrLDYGCD+H1QQc7CoZDDu+8CL9IVVO5EFdkKrqeKM+2x\nLXY2JtwE65/3YR8V3Idv7kaWKK2hJn0KCacuBKONvPi8BDAB\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIEfTCCA2WgAwIBAgIDG+cVMA0GCSqGSIb3DQEBCwUAMGMxCzAJBgNVBAYTAlVT\nMSEwHwYDVQQKExhUaGUgR28gRGFkZHkgR3JvdXAsIEluYy4xMTAvBgNVBAsTKEdv\nIERhZGR5IENsYXNzIDIgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMTQwMTAx\nMDcwMDAwWhcNMzEwNTMwMDcwMDAwWjCBgzELMAkGA1UEBhMCVVMxEDAOBgNVBAgT\nB0FyaXpvbmExEzARBgNVBAcTClNjb3R0c2RhbGUxGjAYBgNVBAoTEUdvRGFkZHku\nY29tLCBJbmMuMTEwLwYDVQQDEyhHbyBEYWRkeSBSb290IENlcnRpZmljYXRlIEF1\ndGhvcml0eSAtIEcyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv3Fi\nCPH6WTT3G8kYo/eASVjpIoMTpsUgQwE7hPHmhUmfJ+r2hBtOoLTbcJjHMgGxBT4H\nTu70+k8vWTAi56sZVmvigAf88xZ1gDlRe+X5NbZ0TqmNghPktj+pA4P6or6KFWp/\n3gvDthkUBcrqw6gElDtGfDIN8wBmIsiNaW02jBEYt9OyHGC0OPoCjM7T3UYH3go+\n6118yHz7sCtTpJJiaVElBWEaRIGMLKlDliPfrDqBmg4pxRyp6V0etp6eMAo5zvGI\ngPtLXcwy7IViQyU0AlYnAZG0O3AqP26x6JyIAX2f1PnbU21gnb8s51iruF9G/M7E\nGwM8CetJMVxpRrPgRwIDAQABo4IBFzCCARMwDwYDVR0TAQH/BAUwAwEB/zAOBgNV\nHQ8BAf8EBAMCAQYwHQYDVR0OBBYEFDqahQcQZyi27/a9BUFuIMGU2g/eMB8GA1Ud\nIwQYMBaAFNLEsNKR1EwRcbNhyz2h/t2oatTjMDQGCCsGAQUFBwEBBCgwJjAkBggr\nBgEFBQcwAYYYaHR0cDovL29jc3AuZ29kYWRkeS5jb20vMDIGA1UdHwQrMCkwJ6Al\noCOGIWh0dHA6Ly9jcmwuZ29kYWRkeS5jb20vZ2Ryb290LmNybDBGBgNVHSAEPzA9\nMDsGBFUdIAAwMzAxBggrBgEFBQcCARYlaHR0cHM6Ly9jZXJ0cy5nb2RhZGR5LmNv\nbS9yZXBvc2l0b3J5LzANBgkqhkiG9w0BAQsFAAOCAQEAWQtTvZKGEacke+1bMc8d\nH2xwxbhuvk679r6XUOEwf7ooXGKUwuN+M/f7QnaF25UcjCJYdQkMiGVnOQoWCcWg\nOJekxSOTP7QYpgEGRJHjp2kntFolfzq3Ms3dhP8qOCkzpN1nsoX+oYggHFCJyNwq\n9kIDN0zmiN/VryTyscPfzLXs4Jlet0lUIDyUGAzHHFIYSaRt4bNYC8nY7NmuHDKO\nKHAN4v6mF56ED71XcLNa6R+ghlO773z/aQvgSMO3kwvIClTErF0UZzdsyqUvMQg3\nqm5vjLyb4lddJIGvl5echK1srDdMZvNhkREg5L4wn3qkKQmw4TRfZHcYQFHfjDCm\nrw==\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIEADCCAuigAwIBAgIBADANBgkqhkiG9w0BAQUFADBjMQswCQYDVQQGEwJVUzEh\nMB8GA1UEChMYVGhlIEdvIERhZGR5IEdyb3VwLCBJbmMuMTEwLwYDVQQLEyhHbyBE\nYWRkeSBDbGFzcyAyIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTA0MDYyOTE3\nMDYyMFoXDTM0MDYyOTE3MDYyMFowYzELMAkGA1UEBhMCVVMxITAfBgNVBAoTGFRo\nZSBHbyBEYWRkeSBHcm91cCwgSW5jLjExMC8GA1UECxMoR28gRGFkZHkgQ2xhc3Mg\nMiBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTCCASAwDQYJKoZIhvcNAQEBBQADggEN\nADCCAQgCggEBAN6d1+pXGEmhW+vXX0iG6r7d/+TvZxz0ZWizV3GgXne77ZtJ6XCA\nPVYYYwhv2vLM0D9/AlQiVBDYsoHUwHU9S3/Hd8M+eKsaA7Ugay9qK7HFiH7Eux6w\nwdhFJ2+qN1j3hybX2C32qRe3H3I2TqYXP2WYktsqbl2i/ojgC95/5Y0V4evLOtXi\nEqITLdiOr18SPaAIBQi2XKVlOARFmR6jYGB0xUGlcmIbYsUfb18aQr4CUWWoriMY\navx4A6lNf4DD+qta/KFApMoZFv6yyO9ecw3ud72a9nmYvLEHZ6IVDd2gWMZEewo+\nYihfukEHU1jPEX44dMX4/7VpkI+EdOqXG68CAQOjgcAwgb0wHQYDVR0OBBYEFNLE\nsNKR1EwRcbNhyz2h/t2oatTjMIGNBgNVHSMEgYUwgYKAFNLEsNKR1EwRcbNhyz2h\n/t2oatTjoWekZTBjMQswCQYDVQQGEwJVUzEhMB8GA1UEChMYVGhlIEdvIERhZGR5\nIEdyb3VwLCBJbmMuMTEwLwYDVQQLEyhHbyBEYWRkeSBDbGFzcyAyIENlcnRpZmlj\nYXRpb24gQXV0aG9yaXR5ggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQAD\nggEBADJL87LKPpH8EsahB4yOd6AzBhRckB4Y9wimPQoZ+YeAEW5p5JYXMP80kWNy\nOO7MHAGjHZQopDH2esRU1/blMVgDoszOYtuURXO1v0XJJLXVggKtI3lpjbi2Tc7P\nTMozI+gciKqdi0FuFskg5YmezTvacPd+mSYgFFQlq25zheabIZ0KbIIOqPjCDPoQ\nHmyW74cNxA9hi63ugyuV+I6ShHI56yDqg+2DzZduCLzrTia2cyvk0/ZM/iZx4mER\ndEr/VxqHD3VILs9RaRegAhJhldXRQLIQTO7ErBBDpqWeCtWVYpoNz4iCxTIM5Cuf\nReYNnyicsbkqWletNw+vHX/bvZ8=\n-----END CERTIFICATE-----\n"
+            },
+            "InternalSelfCert-Prod-CERT": {
+                "certificateName": "InternalSelfCert-Prod-CERT",
+                "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIFpzCCA4+gAwIBAgIEZQCRszANBgkqhkiG9w0BAQsFADB2MQswCQYDVQQGEwJ1\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMSAwHgYDVQQDDBcqLm9jdGEuZXRjY2hv\nc3RlZC5sb2NhbDAeFw0yMzA5MTIxNjI4MzVaFw0zMzA5MTIxNjI4MzVaMHYxCzAJ\nBgNVBAYTAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsG\nA1UECgwEZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xIDAeBgNVBAMMFyoub2N0\nYS5ldGNjaG9zdGVkLmxvY2FsMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKC\nAgEAjwUCZeGsQ+xFL2rqRO6X+T7ADpfAJXbA2WA2eeCI1KD33o0DegWlU5V7Ufrf\ndbfQqCme58Xlpqt7NELGSgGJ5UPAVI4Z539fCLX7K6AFy7TRBRgjLt+eJQss38Cc\nvH9+5kuWl0e3GNTVh0t7S07Com1pExrUfSrXnu5ma8W5RdkhC7yh4XOIh7aUzR+2\nsJ5ksibdzJFI7gFqs367UCQ5fWR/nr49tn2GQOghPOuPQAkLKB1X4FsjvSMUDup3\nIPt9hHFooTyf7o/M1hqvK1GqFQkr/4AFw7v4sU9xbHiDWOkRESRVaEo6JO/6/R39\nl+697aCXF0RZOfNF2pvUqisfNg/l4GDoTXOjjUcPcUzsUnoVj8Wtv5qSmgUm5bin\n+4DJ/0LH6jVhcGZnthkfre4OKMvBGhy1PTZoE3VYnvjm2jf0bU/Bi/BbDW7rr8Mw\nF9mV5pTCV3gYesyXfkeAfWRZKCdTBUUAUBLBTHLHIbZuwjdxroZ4uPlHjPlIPwGy\n+1gLzzalifWlvrWaIIJ2ZlMHFWQo+3/1CJOVFKOFVsbd0V7t7hkYyoIK6d28vQM+\nudbXEEERXBAYF/eB60CvPENsuhgK6uX3+SG2CFjJe//8nGnVmXvYo0C3G4ACHQK0\nYWLHYIuIjfVN6XY00utl1j2LcpnXmBaa+I3H/NYNMS4TKfMCAwEAAaM9MDswOQYD\nVR0RBDIwMIIXKi5vY3RhLmV0Y2Nob3N0ZWQubG9jYWyCFW9jdGEuZXRjY2hvc3Rl\nZC5sb2NhbDANBgkqhkiG9w0BAQsFAAOCAgEASj95eTXHtNXsS65AoDmCoqmg8Y9L\nXCS9mqLswWspd5A/yf56xlvECECieC8/XlYgNj0dTPDw2btJFiNXF6iOPV5km+f/\n+LLpunqC6+5qa5NWtyYc3wrRRP91WPzcdVqmEINpLquOxiRZis1fb5KcqxCqNiLA\nZiHwkqRJaPi3/XP0131H08odSoCtsTLK5tY7xg9aHtUXq6A1wVGlWi1/y3lNwB4K\nqykmDhbS2IuqK68uy78Lj0KUxQ/tcg1MufJL4tcpWLJob3lzDbzqIWfxcYRjuPi9\nmh90RuYGjLlmK0Z8B6yc49eWcLijxmE7N00IZLyF93Rs2URWAQQsS9n8AceK3xGS\nzUJ+xHmwHtFl037+R6Nybe/Jt5evqRjT+nFQIGGVw/56fK0LryWQsS9WxME6lw6P\ndvI0WKMwZTEHBDxYki0nBHBrccAiFPA7C3OITNL1U7FrVVtlph/BXa3patN7N8dO\nShy210pZworMcfjcGInS2uE56FrWzfBNpwNZLBXSbeZg6ZldqY/ToJdO2Xlt+vDS\nzKZU2SADbdbLszdpQzCBgPDG9fOYVkgWxTlFkYlu3CshSdqt1v8YzON5cvipqiDv\nsNMuifcn4XWuzSNSvDdzsSJCrzAlGbwiH/oivz7mIr/9q/1pLbvPs3AiW+sgQgQm\nPPv3cM8p9h1KrIk=\n-----END CERTIFICATE-----\n",
+                "caCertificate": "-----BEGIN CERTIFICATE-----\nMIIFpzCCA4+gAwIBAgIEZQCRszANBgkqhkiG9w0BAQsFADB2MQswCQYDVQQGEwJ1\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMSAwHgYDVQQDDBcqLm9jdGEuZXRjY2hv\nc3RlZC5sb2NhbDAeFw0yMzA5MTIxNjI4MzVaFw0zMzA5MTIxNjI4MzVaMHYxCzAJ\nBgNVBAYTAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsG\nA1UECgwEZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xIDAeBgNVBAMMFyoub2N0\nYS5ldGNjaG9zdGVkLmxvY2FsMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKC\nAgEAjwUCZeGsQ+xFL2rqRO6X+T7ADpfAJXbA2WA2eeCI1KD33o0DegWlU5V7Ufrf\ndbfQqCme58Xlpqt7NELGSgGJ5UPAVI4Z539fCLX7K6AFy7TRBRgjLt+eJQss38Cc\nvH9+5kuWl0e3GNTVh0t7S07Com1pExrUfSrXnu5ma8W5RdkhC7yh4XOIh7aUzR+2\nsJ5ksibdzJFI7gFqs367UCQ5fWR/nr49tn2GQOghPOuPQAkLKB1X4FsjvSMUDup3\nIPt9hHFooTyf7o/M1hqvK1GqFQkr/4AFw7v4sU9xbHiDWOkRESRVaEo6JO/6/R39\nl+697aCXF0RZOfNF2pvUqisfNg/l4GDoTXOjjUcPcUzsUnoVj8Wtv5qSmgUm5bin\n+4DJ/0LH6jVhcGZnthkfre4OKMvBGhy1PTZoE3VYnvjm2jf0bU/Bi/BbDW7rr8Mw\nF9mV5pTCV3gYesyXfkeAfWRZKCdTBUUAUBLBTHLHIbZuwjdxroZ4uPlHjPlIPwGy\n+1gLzzalifWlvrWaIIJ2ZlMHFWQo+3/1CJOVFKOFVsbd0V7t7hkYyoIK6d28vQM+\nudbXEEERXBAYF/eB60CvPENsuhgK6uX3+SG2CFjJe//8nGnVmXvYo0C3G4ACHQK0\nYWLHYIuIjfVN6XY00utl1j2LcpnXmBaa+I3H/NYNMS4TKfMCAwEAAaM9MDswOQYD\nVR0RBDIwMIIXKi5vY3RhLmV0Y2Nob3N0ZWQubG9jYWyCFW9jdGEuZXRjY2hvc3Rl\nZC5sb2NhbDANBgkqhkiG9w0BAQsFAAOCAgEASj95eTXHtNXsS65AoDmCoqmg8Y9L\nXCS9mqLswWspd5A/yf56xlvECECieC8/XlYgNj0dTPDw2btJFiNXF6iOPV5km+f/\n+LLpunqC6+5qa5NWtyYc3wrRRP91WPzcdVqmEINpLquOxiRZis1fb5KcqxCqNiLA\nZiHwkqRJaPi3/XP0131H08odSoCtsTLK5tY7xg9aHtUXq6A1wVGlWi1/y3lNwB4K\nqykmDhbS2IuqK68uy78Lj0KUxQ/tcg1MufJL4tcpWLJob3lzDbzqIWfxcYRjuPi9\nmh90RuYGjLlmK0Z8B6yc49eWcLijxmE7N00IZLyF93Rs2URWAQQsS9n8AceK3xGS\nzUJ+xHmwHtFl037+R6Nybe/Jt5evqRjT+nFQIGGVw/56fK0LryWQsS9WxME6lw6P\ndvI0WKMwZTEHBDxYki0nBHBrccAiFPA7C3OITNL1U7FrVVtlph/BXa3patN7N8dO\nShy210pZworMcfjcGInS2uE56FrWzfBNpwNZLBXSbeZg6ZldqY/ToJdO2Xlt+vDS\nzKZU2SADbdbLszdpQzCBgPDG9fOYVkgWxTlFkYlu3CshSdqt1v8YzON5cvipqiDv\nsNMuifcn4XWuzSNSvDdzsSJCrzAlGbwiH/oivz7mIr/9q/1pLbvPs3AiW+sgQgQm\nPPv3cM8p9h1KrIk=\n-----END CERTIFICATE-----\n"
+            },
+            "myaccount.405expresslanes.com": {
+                "certificateName": "myaccount.405expresslanes.com",
+                "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIGwjCCBaqgAwIBAgIIO1GjBmYGXuYwDQYJKoZIhvcNAQELBQAwgbQxCzAJBgNV\nBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQHEwpTY290dHNkYWxlMRow\nGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UECxMkaHR0cDovL2NlcnRz\nLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQDEypHbyBEYWRkeSBTZWN1\ncmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwHhcNMjMwODIyMTkxMDI4WhcN\nMjQwOTIyMTkxMDI4WjAoMSYwJAYDVQQDEx1teWFjY291bnQuNDA1ZXhwcmVzc2xh\nbmVzLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJuLfD6G47o4\nA6tCrPSfGZpU532ikVUaMcmlvg/YKDRmMndxpkhsgkRYIvcrsS9mc6IRjdDu+WCP\n8VVxfoERXaUwA6tGqW4CQ47pSXa8vlVVvh7i1AA+x2ZWmAPg8VUOvB5yEOKrRHPm\n92HsDBExqW+3f6cT1mMDLTWNkKpOIJ7i+RVJRKzagtwjHO+u650sKJ7gm3lppXQ2\nEF7cfFZ4Q7EfkEnthg0NCb0Sngwm+kDxYHykc9Mo2SBF5ZtADRw+pBsXCvCNjnsR\nb06mK93ipNvobc4S266PeLHLuRjKzLYxl5sNjGUitDCcDDQfQLX1iAV7yD0LlDm2\nasOtutFlR+kCAwEAAaOCA2EwggNdMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYI\nKwYBBQUHAwEGCCsGAQUFBwMCMA4GA1UdDwEB/wQEAwIFoDA4BgNVHR8EMTAvMC2g\nK6AphidodHRwOi8vY3JsLmdvZGFkZHkuY29tL2dkaWcyczEtODYxOS5jcmwwXQYD\nVR0gBFYwVDBIBgtghkgBhv1tAQcXATA5MDcGCCsGAQUFBwIBFitodHRwOi8vY2Vy\ndGlmaWNhdGVzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMAgGBmeBDAECATB2Bggr\nBgEFBQcBAQRqMGgwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmdvZGFkZHkuY29t\nLzBABggrBgEFBQcwAoY0aHR0cDovL2NlcnRpZmljYXRlcy5nb2RhZGR5LmNvbS9y\nZXBvc2l0b3J5L2dkaWcyLmNydDAfBgNVHSMEGDAWgBRAwr0njsw0gzCiM9f7bLPw\ntCyAzjBLBgNVHREERDBCgh1teWFjY291bnQuNDA1ZXhwcmVzc2xhbmVzLmNvbYIh\nd3d3Lm15YWNjb3VudC40MDVleHByZXNzbGFuZXMuY29tMB0GA1UdDgQWBBSJHNEm\nVqxsnoVL9gBoUVS7YzvjzzCCAX4GCisGAQQB1nkCBAIEggFuBIIBagFoAHUA7s3Q\nZNXbGs7FXLedtM0TojKHRny87N7DUUhZRnEftZsAAAGKHqfRZAAABAMARjBEAiBx\nlZ5y7YamwojUroIKHXHHqUSz4CH7WFH8dIvnemdWswIgVFsjC5i/tLpKevE6lZc0\nzZPS0eqNdCC3KyOnsXhD7DQAdwBIsONr2qZHNA/lagL6nTDrHFIBy1bdLIHZu7+r\nOdiEcwAAAYoep9KoAAAEAwBIMEYCIQCVboyrIlGMrqNeJLX1qryRdSKGVGcKvh1x\n2VRpIGXzWgIhANMv4lqhfNfWP1aGDztu1eb4GSy5kFEdd9wBobEEd3yvAHYA2ra/\naz+1tiKfm8K7XGvocJFxbLtRhIU0vaQ9MEjX+6sAAAGKHqfTJQAABAMARzBFAiBx\nkYf3OSreBNBltAq/1BGfPHedjU5fM6Xe3qoRsq9RfQIhAL+yRUxOaq5+LYRH3hOv\nMcvUTPvMdJ2AfuF0hdAwvFpQMA0GCSqGSIb3DQEBCwUAA4IBAQBzQeP1NI90/3cU\nyo0PMc1eHVE8FWv053dx03COBz1/wRrNnFwvjThuxMB4YA0CJdHSK8yVmttnmOS3\nAGlKUE7BIQkgEfdDBG1wvsCiSUI5Yzf/zkXi8oX8F5CeaHmyCb37gHLB5dggM1bj\nkuyCyPwwnGPQJt6gaPNINdeRmvem0Xckod7dZu3k+P2NfOlIf/3Tp3P1/noHQELs\nCWexAiCUHRVjZOCFPGm3HA6d5XTnB+YfOlo1+i121iJIKAJ+zgQNKNygEU/7lNDG\nBo8W8LC+jHkQz8l0RLoSTTQQIp2CRq77KjRvfVpKQaB/zyjaQtTMAqs31/yn/jNO\njKwvKTSH\n-----END CERTIFICATE-----",
+                "caCertificate": "-----BEGIN CERTIFICATE-----\nMIIE0DCCA7igAwIBAgIBBzANBgkqhkiG9w0BAQsFADCBgzELMAkGA1UEBhMCVVMx\nEDAOBgNVBAgTB0FyaXpvbmExEzARBgNVBAcTClNjb3R0c2RhbGUxGjAYBgNVBAoT\nEUdvRGFkZHkuY29tLCBJbmMuMTEwLwYDVQQDEyhHbyBEYWRkeSBSb290IENlcnRp\nZmljYXRlIEF1dGhvcml0eSAtIEcyMB4XDTExMDUwMzA3MDAwMFoXDTMxMDUwMzA3\nMDAwMFowgbQxCzAJBgNVBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQH\nEwpTY290dHNkYWxlMRowGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UE\nCxMkaHR0cDovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQD\nEypHbyBEYWRkeSBTZWN1cmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwggEi\nMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC54MsQ1K92vdSTYuswZLiBCGzD\nBNliF44v/z5lz4/OYuY8UhzaFkVLVat4a2ODYpDOD2lsmcgaFItMzEUz6ojcnqOv\nK/6AYZ15V8TPLvQ/MDxdR/yaFrzDN5ZBUY4RS1T4KL7QjL7wMDge87Am+GZHY23e\ncSZHjzhHU9FGHbTj3ADqRay9vHHZqm8A29vNMDp5T19MR/gd71vCxJ1gO7GyQ5HY\npDNO6rPWJ0+tJYqlxvTV0KaudAVkV4i1RFXULSo6Pvi4vekyCgKUZMQWOlDxSq7n\neTOvDCAHf+jfBDnCaQJsY1L6d8EbyHSHyLmTGFBUNUtpTrw700kuH9zB0lL7AgMB\nAAGjggEaMIIBFjAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBBjAdBgNV\nHQ4EFgQUQMK9J47MNIMwojPX+2yz8LQsgM4wHwYDVR0jBBgwFoAUOpqFBxBnKLbv\n9r0FQW4gwZTaD94wNAYIKwYBBQUHAQEEKDAmMCQGCCsGAQUFBzABhhhodHRwOi8v\nb2NzcC5nb2RhZGR5LmNvbS8wNQYDVR0fBC4wLDAqoCigJoYkaHR0cDovL2NybC5n\nb2RhZGR5LmNvbS9nZHJvb3QtZzIuY3JsMEYGA1UdIAQ/MD0wOwYEVR0gADAzMDEG\nCCsGAQUFBwIBFiVodHRwczovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkv\nMA0GCSqGSIb3DQEBCwUAA4IBAQAIfmyTEMg4uJapkEv/oV9PBO9sPpyIBslQj6Zz\n91cxG7685C/b+LrTW+C05+Z5Yg4MotdqY3MxtfWoSKQ7CC2iXZDXtHwlTxFWMMS2\nRJ17LJ3lXubvDGGqv+QqG+6EnriDfcFDzkSnE3ANkR/0yBOtg2DZ2HKocyQetawi\nDsoXiWJYRBuriSUBAA/NxBti21G00w9RKpv0vHP8ds42pM3Z2Czqrpv1KrKQ0U11\nGIo/ikGQI31bS/6kA1ibRrLDYGCD+H1QQc7CoZDDu+8CL9IVVO5EFdkKrqeKM+2x\nLXY2JtwE65/3YR8V3Idv7kaWKK2hJn0KCacuBKONvPi8BDAB\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIEfTCCA2WgAwIBAgIDG+cVMA0GCSqGSIb3DQEBCwUAMGMxCzAJBgNVBAYTAlVT\nMSEwHwYDVQQKExhUaGUgR28gRGFkZHkgR3JvdXAsIEluYy4xMTAvBgNVBAsTKEdv\nIERhZGR5IENsYXNzIDIgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMTQwMTAx\nMDcwMDAwWhcNMzEwNTMwMDcwMDAwWjCBgzELMAkGA1UEBhMCVVMxEDAOBgNVBAgT\nB0FyaXpvbmExEzARBgNVBAcTClNjb3R0c2RhbGUxGjAYBgNVBAoTEUdvRGFkZHku\nY29tLCBJbmMuMTEwLwYDVQQDEyhHbyBEYWRkeSBSb290IENlcnRpZmljYXRlIEF1\ndGhvcml0eSAtIEcyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv3Fi\nCPH6WTT3G8kYo/eASVjpIoMTpsUgQwE7hPHmhUmfJ+r2hBtOoLTbcJjHMgGxBT4H\nTu70+k8vWTAi56sZVmvigAf88xZ1gDlRe+X5NbZ0TqmNghPktj+pA4P6or6KFWp/\n3gvDthkUBcrqw6gElDtGfDIN8wBmIsiNaW02jBEYt9OyHGC0OPoCjM7T3UYH3go+\n6118yHz7sCtTpJJiaVElBWEaRIGMLKlDliPfrDqBmg4pxRyp6V0etp6eMAo5zvGI\ngPtLXcwy7IViQyU0AlYnAZG0O3AqP26x6JyIAX2f1PnbU21gnb8s51iruF9G/M7E\nGwM8CetJMVxpRrPgRwIDAQABo4IBFzCCARMwDwYDVR0TAQH/BAUwAwEB/zAOBgNV\nHQ8BAf8EBAMCAQYwHQYDVR0OBBYEFDqahQcQZyi27/a9BUFuIMGU2g/eMB8GA1Ud\nIwQYMBaAFNLEsNKR1EwRcbNhyz2h/t2oatTjMDQGCCsGAQUFBwEBBCgwJjAkBggr\nBgEFBQcwAYYYaHR0cDovL29jc3AuZ29kYWRkeS5jb20vMDIGA1UdHwQrMCkwJ6Al\noCOGIWh0dHA6Ly9jcmwuZ29kYWRkeS5jb20vZ2Ryb290LmNybDBGBgNVHSAEPzA9\nMDsGBFUdIAAwMzAxBggrBgEFBQcCARYlaHR0cHM6Ly9jZXJ0cy5nb2RhZGR5LmNv\nbS9yZXBvc2l0b3J5LzANBgkqhkiG9w0BAQsFAAOCAQEAWQtTvZKGEacke+1bMc8d\nH2xwxbhuvk679r6XUOEwf7ooXGKUwuN+M/f7QnaF25UcjCJYdQkMiGVnOQoWCcWg\nOJekxSOTP7QYpgEGRJHjp2kntFolfzq3Ms3dhP8qOCkzpN1nsoX+oYggHFCJyNwq\n9kIDN0zmiN/VryTyscPfzLXs4Jlet0lUIDyUGAzHHFIYSaRt4bNYC8nY7NmuHDKO\nKHAN4v6mF56ED71XcLNa6R+ghlO773z/aQvgSMO3kwvIClTErF0UZzdsyqUvMQg3\nqm5vjLyb4lddJIGvl5echK1srDdMZvNhkREg5L4wn3qkKQmw4TRfZHcYQFHfjDCm\nrw==\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIEADCCAuigAwIBAgIBADANBgkqhkiG9w0BAQUFADBjMQswCQYDVQQGEwJVUzEh\nMB8GA1UEChMYVGhlIEdvIERhZGR5IEdyb3VwLCBJbmMuMTEwLwYDVQQLEyhHbyBE\nYWRkeSBDbGFzcyAyIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTA0MDYyOTE3\nMDYyMFoXDTM0MDYyOTE3MDYyMFowYzELMAkGA1UEBhMCVVMxITAfBgNVBAoTGFRo\nZSBHbyBEYWRkeSBHcm91cCwgSW5jLjExMC8GA1UECxMoR28gRGFkZHkgQ2xhc3Mg\nMiBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTCCASAwDQYJKoZIhvcNAQEBBQADggEN\nADCCAQgCggEBAN6d1+pXGEmhW+vXX0iG6r7d/+TvZxz0ZWizV3GgXne77ZtJ6XCA\nPVYYYwhv2vLM0D9/AlQiVBDYsoHUwHU9S3/Hd8M+eKsaA7Ugay9qK7HFiH7Eux6w\nwdhFJ2+qN1j3hybX2C32qRe3H3I2TqYXP2WYktsqbl2i/ojgC95/5Y0V4evLOtXi\nEqITLdiOr18SPaAIBQi2XKVlOARFmR6jYGB0xUGlcmIbYsUfb18aQr4CUWWoriMY\navx4A6lNf4DD+qta/KFApMoZFv6yyO9ecw3ud72a9nmYvLEHZ6IVDd2gWMZEewo+\nYihfukEHU1jPEX44dMX4/7VpkI+EdOqXG68CAQOjgcAwgb0wHQYDVR0OBBYEFNLE\nsNKR1EwRcbNhyz2h/t2oatTjMIGNBgNVHSMEgYUwgYKAFNLEsNKR1EwRcbNhyz2h\n/t2oatTjoWekZTBjMQswCQYDVQQGEwJVUzEhMB8GA1UEChMYVGhlIEdvIERhZGR5\nIEdyb3VwLCBJbmMuMTEwLwYDVQQLEyhHbyBEYWRkeSBDbGFzcyAyIENlcnRpZmlj\nYXRpb24gQXV0aG9yaXR5ggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQAD\nggEBADJL87LKPpH8EsahB4yOd6AzBhRckB4Y9wimPQoZ+YeAEW5p5JYXMP80kWNy\nOO7MHAGjHZQopDH2esRU1/blMVgDoszOYtuURXO1v0XJJLXVggKtI3lpjbi2Tc7P\nTMozI+gciKqdi0FuFskg5YmezTvacPd+mSYgFFQlq25zheabIZ0KbIIOqPjCDPoQ\nHmyW74cNxA9hi63ugyuV+I6ShHI56yDqg+2DzZduCLzrTia2cyvk0/ZM/iZx4mER\ndEr/VxqHD3VILs9RaRegAhJhldXRQLIQTO7ErBBDpqWeCtWVYpoNz4iCxTIM5Cuf\nReYNnyicsbkqWletNw+vHX/bvZ8=\n-----END CERTIFICATE-----\n"
+            } 
+        },
+        "backendSets": {
+            "online": {
+                "name": "online",
+                "policy": "IP_HASH",
+                "backends": [
+                    {
+                        "name": "10.153.64.112:8011",
+                        "ipAddress": "10.153.64.112",
+                        "port": 8011,
+                        "weight": 1,
+                        "maxConnections": null,
+                        "drain": false,
+                        "backup": false,
+                        "offline": false
+                    }
+                ],
+                "backendMaxConnections": null,
+                "healthChecker": {
+                    "protocol": "TCP",
+                    "urlPath": null,
+                    "port": 8011,
+                    "returnCode": 200,
+                    "retries": 3,
+                    "timeoutInMillis": 3000,
+                    "intervalInMillis": 10000,
+                    "responseBodyRegex": ".*",
+                    "isForcePlainText": null
+                },
+                "sslConfiguration": {
+                    "verifyDepth": 1,
+                    "verifyPeerCertificate": false,
+                    "trustedCertificateAuthorityIds": [],
+                    "certificateIds": [],
+                    "certificateName": "InternalSelfCert-Prod-CERT",
+                    "serverOrderPreference": null,
+                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
+                    "protocols": [
+                        "TLSv1.2",
+                        "TLSv1",
+                        "TLSv1.1"
+                    ]
+                },
+                "sessionPersistenceConfiguration": null,
+                "lbCookieSessionPersistenceConfiguration": {
+                    "cookieName": "X-Oracle-BMC-LBS-Route",
+                    "disableFallback": null,
+                    "domain": null,
+                    "path": "/",
+                    "maxAgeInSeconds": null,
+                    "isSecure": true,
+                    "isHttpOnly": true
+                }
+            }
+        },
+        "pathRouteSets": {},
+        "freeformTags": {},
+        "definedTags": {},
+        "systemTags": {
+            "orcl-cloud": {
+                "free-tier-retained": "false"
+            }
+        },
+        "ruleSets": {},
+        "routingPolicies": {}
+    },
+    {
+        "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaazd5kfclg2j6oqabdrj7wvdohwi65lier6sgzptlenp2fxq276r7q",
+        "compartmentId": "ocid1.compartment.oc1..aaaaaaaa3ybyt4tx2zasleqqcc34bgaismmoh3yhtjnmkmk3v5t4t3xedqxq",
+        "displayName": "new-octa-dr-lb-internal",
+        "lifecycleState": "ACTIVE",
+        "timeCreated": "2023-09-13T22:58:43.860Z",
+        "ipAddresses": [
+            {
+                "ipAddress": "10.152.11.180",
+                "isPublic": false,
+                "reservedIp": null
+            }
+        ],
+        "shapeName": "flexible",
+        "shapeDetails": {
+            "minimumBandwidthInMbps": 100,
+            "maximumBandwidthInMbps": 300
+        },
+        "isPrivate": true,
+        "isDeleteProtectionEnabled": null,
+        "subnetIds": [
+            "ocid1.subnet.oc1.phx.aaaaaaaa6yz4q7b2ydznosawcqx22kbok5fady5eodvui4pb2lk56wsuyxaq"
+        ],
+        "networkSecurityGroupIds": [],
+        "listeners": {
+            "camunda": {
+                "name": "camunda",
+                "defaultBackendSetName": "camunda",
+                "port": 443,
+                "protocol": "HTTP",
+                "hostnameNames": [
+                    "ritecamunda-prod.octa.rite.etcchosted.com"
+                ],
+                "serverName": null,
+                "pathRouteSetName": null,
+                "sslConfiguration": {
+                    "verifyDepth": 1,
+                    "verifyPeerCertificate": false,
+                    "trustedCertificateAuthorityIds": [],
+                    "certificateIds": [],
+                    "certificateName": "LB-OCTA-CERT",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -228,7 +375,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "riteadapter-uat.octa.rite.etcchosted.com"
+                    "riteadapter-prod.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -237,7 +384,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT2",
+                    "certificateName": "LB-OCTA-CERT",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -252,13 +399,13 @@
                 "ruleSetNames": [],
                 "routingPolicyName": null
             },
-            "ritereportserver": {
-                "name": "ritereportserver",
-                "defaultBackendSetName": "weblogic-report-ui",
+            "online_gateway": {
+                "name": "online_gateway",
+                "defaultBackendSetName": "online_gateway",
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritereportserver-uat.octa.rite.etcchosted.com"
+                    "riteonlinegateway-prod.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -267,7 +414,37 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT2",
+                    "certificateName": "LB-OCTA-CERT",
+                    "serverOrderPreference": "ENABLED",
+                    "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
+                    "protocols": [
+                        "TLSv1.2"
+                    ]
+                },
+                "connectionConfiguration": {
+                    "idleTimeout": 60,
+                    "backendTcpProxyProtocolVersion": null,
+                    "backendTcpProxyProtocolOptions": null
+                },
+                "ruleSetNames": [],
+                "routingPolicyName": null
+            },
+            "ritereportserver": {
+                "name": "ritereportserver",
+                "defaultBackendSetName": "weblogic-report-ui",
+                "port": 443,
+                "protocol": "HTTP",
+                "hostnameNames": [
+                    "ritereportserver-prod.octa.rite.etcchosted.com"
+                ],
+                "serverName": null,
+                "pathRouteSetName": null,
+                "sslConfiguration": {
+                    "verifyDepth": 1,
+                    "verifyPeerCertificate": false,
+                    "trustedCertificateAuthorityIds": [],
+                    "certificateIds": [],
+                    "certificateName": "LB-OCTA-CERT",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -288,7 +465,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritesearch-uat.octa.rite.etcchosted.com"
+                    "ritesearch-prod.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -297,7 +474,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT2",
+                    "certificateName": "LB-OCTA-CERT",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -314,39 +491,39 @@
             }
         },
         "hostnames": {
-            "ritesearch-uat.octa.rite.etcchosted.com": {
-                "name": "ritesearch-uat.octa.rite.etcchosted.com",
-                "hostname": "ritesearch-uat.octa.rite.etcchosted.com"
+            "riteonlinegateway-prod.octa.rite.etcchosted.com": {
+                "name": "riteonlinegateway-prod.octa.rite.etcchosted.com",
+                "hostname": "riteonlinegateway-prod.octa.rite.etcchosted.com"
             },
-            "riteadapter-uat.octa.rite.etcchosted.com": {
-                "name": "riteadapter-uat.octa.rite.etcchosted.com",
-                "hostname": "riteadapter-uat.octa.rite.etcchosted.com"
+            "riteadapter-prod.octa.rite.etcchosted.com": {
+                "name": "riteadapter-prod.octa.rite.etcchosted.com",
+                "hostname": "riteadapter-prod.octa.rite.etcchosted.com"
             },
-            "ritereportserver-uat.octa.rite.etcchosted.com": {
-                "name": "ritereportserver-uat.octa.rite.etcchosted.com",
-                "hostname": "ritereportserver-uat.octa.rite.etcchosted.com"
+            "ritecamunda-prod.octa.rite.etcchosted.com": {
+                "name": "ritecamunda-prod.octa.rite.etcchosted.com",
+                "hostname": "ritecamunda-prod.octa.rite.etcchosted.com"
             },
-            "ritecamunda-uat.octa.rite.etcchosted.com": {
-                "name": "ritecamunda-uat.octa.rite.etcchosted.com",
-                "hostname": "ritecamunda-uat.octa.rite.etcchosted.com"
+            "ritereportserver-prod.octa.rite.etcchosted.com": {
+                "name": "ritereportserver-prod.octa.rite.etcchosted.com",
+                "hostname": "ritereportserver-prod.octa.rite.etcchosted.com"
             },
-            "riteonlinegateway-uat.octa.rite.etcchosted.com": {
-                "name": "riteonlinegateway-uat.octa.rite.etcchosted.com",
-                "hostname": "riteonlinegateway-uat.octa.rite.etcchosted.com"
+            "ritesearch-prod.octa.rite.etcchosted.com": {
+                "name": "ritesearch-prod.octa.rite.etcchosted.com",
+                "hostname": "ritesearch-prod.octa.rite.etcchosted.com"
             }
         },
         "cidrBlocks": null,
         "sslCipherSuites": {},
         "certificates": {
-            "LB-OCTA-CERT2": {
-                "certificateName": "LB-OCTA-CERT2",
+            "LB-OCTA-CERT": {
+                "certificateName": "LB-OCTA-CERT",
                 "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIGszCCBZugAwIBAgIIY5n1rNUu6iAwDQYJKoZIhvcNAQELBQAwgbQxCzAJBgNV\nBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQHEwpTY290dHNkYWxlMRow\nGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UECxMkaHR0cDovL2NlcnRz\nLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQDEypHbyBEYWRkeSBTZWN1\ncmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwHhcNMjMwMjE0MTYzMDI3WhcN\nMjQwMzE3MTYzMDI3WjAlMSMwIQYDVQQDDBoqLm9jdGEucml0ZS5ldGNjaG9zdGVk\nLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAM+ftul06q4PosIJ\nAIIDcqkjtB7cWwiwEgWaQMjdcJLO7rqeFsiBJvV7rK+fU6lXaL/9UX0oi6XjE+ll\nNSYogqcBM+OZyl8W/QxkNAcKCLEIxm2WPo2PgYCOlY5pK5CqsvssKFbKZZuztWbA\nksyMV+kaUkOZR7YpMqc1dAfQaQFQ9Rc4qetRNr98bNzxhgFu277cKi0KuuS5SCEc\nt5BSNY7NEcbgTEMcafWMsVieJAUoFzFcxTHxrcvx2OjZZVrq51vijbdvCDOnv9B3\neGM5/SknPI1ILEYqASOzfi3XWyfmsNePzfE2AQolaiRry09VOSeiKYFTlI5JimTn\n0NYiY40CAwEAAaOCA1UwggNRMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYB\nBQUHAwEGCCsGAQUFBwMCMA4GA1UdDwEB/wQEAwIFoDA4BgNVHR8EMTAvMC2gK6Ap\nhidodHRwOi8vY3JsLmdvZGFkZHkuY29tL2dkaWcyczEtNTIwMS5jcmwwXQYDVR0g\nBFYwVDBIBgtghkgBhv1tAQcXATA5MDcGCCsGAQUFBwIBFitodHRwOi8vY2VydGlm\naWNhdGVzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMAgGBmeBDAECATB2BggrBgEF\nBQcBAQRqMGgwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmdvZGFkZHkuY29tLzBA\nBggrBgEFBQcwAoY0aHR0cDovL2NlcnRpZmljYXRlcy5nb2RhZGR5LmNvbS9yZXBv\nc2l0b3J5L2dkaWcyLmNydDAfBgNVHSMEGDAWgBRAwr0njsw0gzCiM9f7bLPwtCyA\nzjA/BgNVHREEODA2ghoqLm9jdGEucml0ZS5ldGNjaG9zdGVkLmNvbYIYb2N0YS5y\naXRlLmV0Y2Nob3N0ZWQuY29tMB0GA1UdDgQWBBQKnRe6aegyKoosjM9GRRD/Klc3\n1zCCAX4GCisGAQQB1nkCBAIEggFuBIIBagFoAHYA7s3QZNXbGs7FXLedtM0TojKH\nRny87N7DUUhZRnEftZsAAAGGUMNjdgAABAMARzBFAiAfVHpgap6pJtg1OKLTQpyE\nVGA5XuG9Q8J8B+4d8jEMsAIhAM8PHccqd8FAQQnzjdAi+2NnJjP3Pc8miyxFAbJD\nXvm9AHYASLDja9qmRzQP5WoC+p0w6xxSActW3SyB2bu/qznYhHMAAAGGUMNkXgAA\nBAMARzBFAiANFslH1aV9v2t5pmZIkiJCzsaLMt5EZ4PrjXtJJt7XZAIhAI/HCMqv\nEVWz6ajfdXh3VNMq8+3K0zESy76P2uPBGg9FAHYA2ra/az+1tiKfm8K7XGvocJFx\nbLtRhIU0vaQ9MEjX+6sAAAGGUMNkywAABAMARzBFAiEAm2ATsPbuEgd8Ne01rtIb\nRcE3YKrP4WKQ7sGuVYjlT44CICBW3ZaLGoweeYW64zuCmEYzz72hmk1n6e7ywLiG\nYU/EMA0GCSqGSIb3DQEBCwUAA4IBAQA7ux1luDw+nn17SzvtzUzpxHwrqS0+ebdx\ncOqvt4Si2fLHM7cACD7SuRjm8L6XzzDGu/BiryUpwIWGIa8HxlTI1XyC8NzvISoM\nFSQNMGd7x7FfRilFqL9dBrCbX86lFK3KgOX+Rk8yxaCLwxjF7bb7YB3SH/djJgAF\ngjcOeheUiBIHM/yf+Xu3UzT5ob5D1kzm8lBXusUBcl9Cn6uRNC/Ls0HUkINaTWb0\nkfb8Nxy5VqhgOVfFItTJ/URKj210uv/nRk+bQwaBQZewspIocPnzghWmNtlRwSJq\nlfIDVmPNixnQCv6DvWIt/NGfEAlnhyOL6SyGHg1ionPtA3EdCyuc\n-----END CERTIFICATE-----\n",
                 "caCertificate": "-----BEGIN CERTIFICATE-----\nMIIE0DCCA7igAwIBAgIBBzANBgkqhkiG9w0BAQsFADCBgzELMAkGA1UEBhMCVVMx\nEDAOBgNVBAgTB0FyaXpvbmExEzARBgNVBAcTClNjb3R0c2RhbGUxGjAYBgNVBAoT\nEUdvRGFkZHkuY29tLCBJbmMuMTEwLwYDVQQDEyhHbyBEYWRkeSBSb290IENlcnRp\nZmljYXRlIEF1dGhvcml0eSAtIEcyMB4XDTExMDUwMzA3MDAwMFoXDTMxMDUwMzA3\nMDAwMFowgbQxCzAJBgNVBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQH\nEwpTY290dHNkYWxlMRowGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UE\nCxMkaHR0cDovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQD\nEypHbyBEYWRkeSBTZWN1cmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwggEi\nMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC54MsQ1K92vdSTYuswZLiBCGzD\nBNliF44v/z5lz4/OYuY8UhzaFkVLVat4a2ODYpDOD2lsmcgaFItMzEUz6ojcnqOv\nK/6AYZ15V8TPLvQ/MDxdR/yaFrzDN5ZBUY4RS1T4KL7QjL7wMDge87Am+GZHY23e\ncSZHjzhHU9FGHbTj3ADqRay9vHHZqm8A29vNMDp5T19MR/gd71vCxJ1gO7GyQ5HY\npDNO6rPWJ0+tJYqlxvTV0KaudAVkV4i1RFXULSo6Pvi4vekyCgKUZMQWOlDxSq7n\neTOvDCAHf+jfBDnCaQJsY1L6d8EbyHSHyLmTGFBUNUtpTrw700kuH9zB0lL7AgMB\nAAGjggEaMIIBFjAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBBjAdBgNV\nHQ4EFgQUQMK9J47MNIMwojPX+2yz8LQsgM4wHwYDVR0jBBgwFoAUOpqFBxBnKLbv\n9r0FQW4gwZTaD94wNAYIKwYBBQUHAQEEKDAmMCQGCCsGAQUFBzABhhhodHRwOi8v\nb2NzcC5nb2RhZGR5LmNvbS8wNQYDVR0fBC4wLDAqoCigJoYkaHR0cDovL2NybC5n\nb2RhZGR5LmNvbS9nZHJvb3QtZzIuY3JsMEYGA1UdIAQ/MD0wOwYEVR0gADAzMDEG\nCCsGAQUFBwIBFiVodHRwczovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkv\nMA0GCSqGSIb3DQEBCwUAA4IBAQAIfmyTEMg4uJapkEv/oV9PBO9sPpyIBslQj6Zz\n91cxG7685C/b+LrTW+C05+Z5Yg4MotdqY3MxtfWoSKQ7CC2iXZDXtHwlTxFWMMS2\nRJ17LJ3lXubvDGGqv+QqG+6EnriDfcFDzkSnE3ANkR/0yBOtg2DZ2HKocyQetawi\nDsoXiWJYRBuriSUBAA/NxBti21G00w9RKpv0vHP8ds42pM3Z2Czqrpv1KrKQ0U11\nGIo/ikGQI31bS/6kA1ibRrLDYGCD+H1QQc7CoZDDu+8CL9IVVO5EFdkKrqeKM+2x\nLXY2JtwE65/3YR8V3Idv7kaWKK2hJn0KCacuBKONvPi8BDAB\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIEfTCCA2WgAwIBAgIDG+cVMA0GCSqGSIb3DQEBCwUAMGMxCzAJBgNVBAYTAlVT\nMSEwHwYDVQQKExhUaGUgR28gRGFkZHkgR3JvdXAsIEluYy4xMTAvBgNVBAsTKEdv\nIERhZGR5IENsYXNzIDIgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMTQwMTAx\nMDcwMDAwWhcNMzEwNTMwMDcwMDAwWjCBgzELMAkGA1UEBhMCVVMxEDAOBgNVBAgT\nB0FyaXpvbmExEzARBgNVBAcTClNjb3R0c2RhbGUxGjAYBgNVBAoTEUdvRGFkZHku\nY29tLCBJbmMuMTEwLwYDVQQDEyhHbyBEYWRkeSBSb290IENlcnRpZmljYXRlIEF1\ndGhvcml0eSAtIEcyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv3Fi\nCPH6WTT3G8kYo/eASVjpIoMTpsUgQwE7hPHmhUmfJ+r2hBtOoLTbcJjHMgGxBT4H\nTu70+k8vWTAi56sZVmvigAf88xZ1gDlRe+X5NbZ0TqmNghPktj+pA4P6or6KFWp/\n3gvDthkUBcrqw6gElDtGfDIN8wBmIsiNaW02jBEYt9OyHGC0OPoCjM7T3UYH3go+\n6118yHz7sCtTpJJiaVElBWEaRIGMLKlDliPfrDqBmg4pxRyp6V0etp6eMAo5zvGI\ngPtLXcwy7IViQyU0AlYnAZG0O3AqP26x6JyIAX2f1PnbU21gnb8s51iruF9G/M7E\nGwM8CetJMVxpRrPgRwIDAQABo4IBFzCCARMwDwYDVR0TAQH/BAUwAwEB/zAOBgNV\nHQ8BAf8EBAMCAQYwHQYDVR0OBBYEFDqahQcQZyi27/a9BUFuIMGU2g/eMB8GA1Ud\nIwQYMBaAFNLEsNKR1EwRcbNhyz2h/t2oatTjMDQGCCsGAQUFBwEBBCgwJjAkBggr\nBgEFBQcwAYYYaHR0cDovL29jc3AuZ29kYWRkeS5jb20vMDIGA1UdHwQrMCkwJ6Al\noCOGIWh0dHA6Ly9jcmwuZ29kYWRkeS5jb20vZ2Ryb290LmNybDBGBgNVHSAEPzA9\nMDsGBFUdIAAwMzAxBggrBgEFBQcCARYlaHR0cHM6Ly9jZXJ0cy5nb2RhZGR5LmNv\nbS9yZXBvc2l0b3J5LzANBgkqhkiG9w0BAQsFAAOCAQEAWQtTvZKGEacke+1bMc8d\nH2xwxbhuvk679r6XUOEwf7ooXGKUwuN+M/f7QnaF25UcjCJYdQkMiGVnOQoWCcWg\nOJekxSOTP7QYpgEGRJHjp2kntFolfzq3Ms3dhP8qOCkzpN1nsoX+oYggHFCJyNwq\n9kIDN0zmiN/VryTyscPfzLXs4Jlet0lUIDyUGAzHHFIYSaRt4bNYC8nY7NmuHDKO\nKHAN4v6mF56ED71XcLNa6R+ghlO773z/aQvgSMO3kwvIClTErF0UZzdsyqUvMQg3\nqm5vjLyb4lddJIGvl5echK1srDdMZvNhkREg5L4wn3qkKQmw4TRfZHcYQFHfjDCm\nrw==\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIEADCCAuigAwIBAgIBADANBgkqhkiG9w0BAQUFADBjMQswCQYDVQQGEwJVUzEh\nMB8GA1UEChMYVGhlIEdvIERhZGR5IEdyb3VwLCBJbmMuMTEwLwYDVQQLEyhHbyBE\nYWRkeSBDbGFzcyAyIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTA0MDYyOTE3\nMDYyMFoXDTM0MDYyOTE3MDYyMFowYzELMAkGA1UEBhMCVVMxITAfBgNVBAoTGFRo\nZSBHbyBEYWRkeSBHcm91cCwgSW5jLjExMC8GA1UECxMoR28gRGFkZHkgQ2xhc3Mg\nMiBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTCCASAwDQYJKoZIhvcNAQEBBQADggEN\nADCCAQgCggEBAN6d1+pXGEmhW+vXX0iG6r7d/+TvZxz0ZWizV3GgXne77ZtJ6XCA\nPVYYYwhv2vLM0D9/AlQiVBDYsoHUwHU9S3/Hd8M+eKsaA7Ugay9qK7HFiH7Eux6w\nwdhFJ2+qN1j3hybX2C32qRe3H3I2TqYXP2WYktsqbl2i/ojgC95/5Y0V4evLOtXi\nEqITLdiOr18SPaAIBQi2XKVlOARFmR6jYGB0xUGlcmIbYsUfb18aQr4CUWWoriMY\navx4A6lNf4DD+qta/KFApMoZFv6yyO9ecw3ud72a9nmYvLEHZ6IVDd2gWMZEewo+\nYihfukEHU1jPEX44dMX4/7VpkI+EdOqXG68CAQOjgcAwgb0wHQYDVR0OBBYEFNLE\nsNKR1EwRcbNhyz2h/t2oatTjMIGNBgNVHSMEgYUwgYKAFNLEsNKR1EwRcbNhyz2h\n/t2oatTjoWekZTBjMQswCQYDVQQGEwJVUzEhMB8GA1UEChMYVGhlIEdvIERhZGR5\nIEdyb3VwLCBJbmMuMTEwLwYDVQQLEyhHbyBEYWRkeSBDbGFzcyAyIENlcnRpZmlj\nYXRpb24gQXV0aG9yaXR5ggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQAD\nggEBADJL87LKPpH8EsahB4yOd6AzBhRckB4Y9wimPQoZ+YeAEW5p5JYXMP80kWNy\nOO7MHAGjHZQopDH2esRU1/blMVgDoszOYtuURXO1v0XJJLXVggKtI3lpjbi2Tc7P\nTMozI+gciKqdi0FuFskg5YmezTvacPd+mSYgFFQlq25zheabIZ0KbIIOqPjCDPoQ\nHmyW74cNxA9hi63ugyuV+I6ShHI56yDqg+2DzZduCLzrTia2cyvk0/ZM/iZx4mER\ndEr/VxqHD3VILs9RaRegAhJhldXRQLIQTO7ErBBDpqWeCtWVYpoNz4iCxTIM5Cuf\nReYNnyicsbkqWletNw+vHX/bvZ8=\n-----END CERTIFICATE-----\n"
             },
-            "InternalSelfCert-Dev-CERT": {
-                "certificateName": "InternalSelfCert-Dev-CERT",
-                "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIFjzCCA3egAwIBAgIEY5tNuDANBgkqhkiG9w0BAQsFADBwMQswCQYDVQQGEwJ1\r\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\r\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMRowGAYDVQQDDBEqLmV0Y2Nob3N0ZWQu\r\ndGVzdDAeFw0yMjEyMTUxNjM5MjBaFw0yMzEyMTUxNjM5MjBaMHAxCzAJBgNVBAYT\r\nAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsGA1UECgwE\r\nZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xGjAYBgNVBAMMESouZXRjY2hvc3Rl\r\nZC50ZXN0MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAtXWcmOT9zT7v\r\n1nliTOO95DKmzrX4mvXIMGL2Yj9eQDzuzdaIEnik35gqmn63kulq0MM4rYRY7eO3\r\n0DWubBj1JGzSAUdoEViqHUlnocv5D9vGLpKBoW6fIJ3K3BP7h9vvs87p+x0iogAM\r\nTnNkNV1XQ0f1r1z+cUlnMEGIVyJaxX5W+ey7MNaqga+hTX8pzR8QnVl0hpLts0t0\r\nbTMSl9XwT6rZ/LIjTpxWKesZs7GPXwQpMawFIWRI23AIiaotFz262aNKkZrZ66Et\r\n5MDDzzdcO9BZsTQDcYaw+gYUl95s3fkLXrJxso0DeIiH0HmDakLdtI94GVc51kh3\r\ny2YT66ebHOc5+v+z006si140PRtghrdPHHcZJrBn/Sx8CayO+EiGse61iQ84KgMG\r\nK+X0QYTtZpuZShfi1OUewFOVmbDCS8r27MmblwYDmUbnkfoDsq5de/Y++LTpNn8z\r\nm/zxDxn+dsCoVqzxMQrhJcle+EoUo8Xe82hP8al2Xim7gFTxUnG/jaFiI681IoOV\r\nNhsWqrDFRS8T41mh6dNKWxYi652fSbsbOFwqwyYuZ+yJ7oEsSZuWATfQkaDKw1mB\r\nPr85vA6fYodZ53d4v5loejLUhVCXi5wrKFQyILy2fHa8J+u7oaTtPvwChw+wKq71\r\n8IeZjJiDSIxt4GUinfugs0MaWT4lKBkCAwEAAaMxMC8wLQYDVR0RBCYwJIIRKi5l\r\ndGNjaG9zdGVkLnRlc3SCD2V0Y2Nob3N0ZWQudGVzdDANBgkqhkiG9w0BAQsFAAOC\r\nAgEAXWgLw9riE48sl1CiBHtJFmqPrgY7YBGR090qeoqoDowmGMOnU0vKduwQvio7\r\nvh45nBryT33MYfUgmUhcwTsB8o8kjxutPJmpOvHgs+2SoNN33P091kUfJMOuIZ2m\r\nvpZ4/KY3Zdzr1y9LB29OG8CHWYfHpzMNPyi+AE8exFst/WNUlPcxVp8V7AxKFWF+\r\ni1+LJjnHjhhFwdGIWhOUNkbQsJ3sUVstSz2YMa4gjMiSNqJ/rjRaRofDXi3DwysU\r\nSuIrG8c9r7tR5cm1AwL6jpo+M0hC5bYbyAH6fqz/f58yLvR+kNMGolsSp/zEllbj\r\n8rs3gxHAKCD5sHJZ9uhoNr0seSUFSqQJ0nfu9n8GgW/LdhlFcx2HcNNiu/wNmeDV\r\nXhOSc6TZ64lh6kjbsKpW7hzymVsCz/R0C1FfazmTNs5W2ORokbFjgyitHwLdXFbm\r\nkjbgPqWpCcbAuybrppNgWeW/JvJ13yiIfk3MH4YVpaDfY38FNUGcRDAYMf/0zsIX\r\na+L7EWAh8ha20mUElYTAHcC1r18qGn8ZZlmcYyNa26ncJd1kJQqxtvyfuzxpAJNU\r\ns4yJfYIzXszczxhqy2/dnheBDnbdIlziAiSmhET5Jfd5rzfIOcHBdX+U9Ex5Gng4\r\n6mnl56J/ddi/GOUTJ8CIicwcWs/EaUwUH6sMWr+Cbomhv5A=\n-----END CERTIFICATE-----\n",
-                "caCertificate": "-----BEGIN CERTIFICATE-----\nMIIFjzCCA3egAwIBAgIEY5tNuDANBgkqhkiG9w0BAQsFADBwMQswCQYDVQQGEwJ1\r\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\r\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMRowGAYDVQQDDBEqLmV0Y2Nob3N0ZWQu\r\ndGVzdDAeFw0yMjEyMTUxNjM5MjBaFw0yMzEyMTUxNjM5MjBaMHAxCzAJBgNVBAYT\r\nAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsGA1UECgwE\r\nZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xGjAYBgNVBAMMESouZXRjY2hvc3Rl\r\nZC50ZXN0MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAtXWcmOT9zT7v\r\n1nliTOO95DKmzrX4mvXIMGL2Yj9eQDzuzdaIEnik35gqmn63kulq0MM4rYRY7eO3\r\n0DWubBj1JGzSAUdoEViqHUlnocv5D9vGLpKBoW6fIJ3K3BP7h9vvs87p+x0iogAM\r\nTnNkNV1XQ0f1r1z+cUlnMEGIVyJaxX5W+ey7MNaqga+hTX8pzR8QnVl0hpLts0t0\r\nbTMSl9XwT6rZ/LIjTpxWKesZs7GPXwQpMawFIWRI23AIiaotFz262aNKkZrZ66Et\r\n5MDDzzdcO9BZsTQDcYaw+gYUl95s3fkLXrJxso0DeIiH0HmDakLdtI94GVc51kh3\r\ny2YT66ebHOc5+v+z006si140PRtghrdPHHcZJrBn/Sx8CayO+EiGse61iQ84KgMG\r\nK+X0QYTtZpuZShfi1OUewFOVmbDCS8r27MmblwYDmUbnkfoDsq5de/Y++LTpNn8z\r\nm/zxDxn+dsCoVqzxMQrhJcle+EoUo8Xe82hP8al2Xim7gFTxUnG/jaFiI681IoOV\r\nNhsWqrDFRS8T41mh6dNKWxYi652fSbsbOFwqwyYuZ+yJ7oEsSZuWATfQkaDKw1mB\r\nPr85vA6fYodZ53d4v5loejLUhVCXi5wrKFQyILy2fHa8J+u7oaTtPvwChw+wKq71\r\n8IeZjJiDSIxt4GUinfugs0MaWT4lKBkCAwEAAaMxMC8wLQYDVR0RBCYwJIIRKi5l\r\ndGNjaG9zdGVkLnRlc3SCD2V0Y2Nob3N0ZWQudGVzdDANBgkqhkiG9w0BAQsFAAOC\r\nAgEAXWgLw9riE48sl1CiBHtJFmqPrgY7YBGR090qeoqoDowmGMOnU0vKduwQvio7\r\nvh45nBryT33MYfUgmUhcwTsB8o8kjxutPJmpOvHgs+2SoNN33P091kUfJMOuIZ2m\r\nvpZ4/KY3Zdzr1y9LB29OG8CHWYfHpzMNPyi+AE8exFst/WNUlPcxVp8V7AxKFWF+\r\ni1+LJjnHjhhFwdGIWhOUNkbQsJ3sUVstSz2YMa4gjMiSNqJ/rjRaRofDXi3DwysU\r\nSuIrG8c9r7tR5cm1AwL6jpo+M0hC5bYbyAH6fqz/f58yLvR+kNMGolsSp/zEllbj\r\n8rs3gxHAKCD5sHJZ9uhoNr0seSUFSqQJ0nfu9n8GgW/LdhlFcx2HcNNiu/wNmeDV\r\nXhOSc6TZ64lh6kjbsKpW7hzymVsCz/R0C1FfazmTNs5W2ORokbFjgyitHwLdXFbm\r\nkjbgPqWpCcbAuybrppNgWeW/JvJ13yiIfk3MH4YVpaDfY38FNUGcRDAYMf/0zsIX\r\na+L7EWAh8ha20mUElYTAHcC1r18qGn8ZZlmcYyNa26ncJd1kJQqxtvyfuzxpAJNU\r\ns4yJfYIzXszczxhqy2/dnheBDnbdIlziAiSmhET5Jfd5rzfIOcHBdX+U9Ex5Gng4\r\n6mnl56J/ddi/GOUTJ8CIicwcWs/EaUwUH6sMWr+Cbomhv5A=\n-----END CERTIFICATE-----\n"
+            "InternalSelfCert-Prod-CERT": {
+                "certificateName": "InternalSelfCert-Prod-CERT",
+                "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIFpzCCA4+gAwIBAgIEZQCRszANBgkqhkiG9w0BAQsFADB2MQswCQYDVQQGEwJ1\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMSAwHgYDVQQDDBcqLm9jdGEuZXRjY2hv\nc3RlZC5sb2NhbDAeFw0yMzA5MTIxNjI4MzVaFw0zMzA5MTIxNjI4MzVaMHYxCzAJ\nBgNVBAYTAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsG\nA1UECgwEZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xIDAeBgNVBAMMFyoub2N0\nYS5ldGNjaG9zdGVkLmxvY2FsMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKC\nAgEAjwUCZeGsQ+xFL2rqRO6X+T7ADpfAJXbA2WA2eeCI1KD33o0DegWlU5V7Ufrf\ndbfQqCme58Xlpqt7NELGSgGJ5UPAVI4Z539fCLX7K6AFy7TRBRgjLt+eJQss38Cc\nvH9+5kuWl0e3GNTVh0t7S07Com1pExrUfSrXnu5ma8W5RdkhC7yh4XOIh7aUzR+2\nsJ5ksibdzJFI7gFqs367UCQ5fWR/nr49tn2GQOghPOuPQAkLKB1X4FsjvSMUDup3\nIPt9hHFooTyf7o/M1hqvK1GqFQkr/4AFw7v4sU9xbHiDWOkRESRVaEo6JO/6/R39\nl+697aCXF0RZOfNF2pvUqisfNg/l4GDoTXOjjUcPcUzsUnoVj8Wtv5qSmgUm5bin\n+4DJ/0LH6jVhcGZnthkfre4OKMvBGhy1PTZoE3VYnvjm2jf0bU/Bi/BbDW7rr8Mw\nF9mV5pTCV3gYesyXfkeAfWRZKCdTBUUAUBLBTHLHIbZuwjdxroZ4uPlHjPlIPwGy\n+1gLzzalifWlvrWaIIJ2ZlMHFWQo+3/1CJOVFKOFVsbd0V7t7hkYyoIK6d28vQM+\nudbXEEERXBAYF/eB60CvPENsuhgK6uX3+SG2CFjJe//8nGnVmXvYo0C3G4ACHQK0\nYWLHYIuIjfVN6XY00utl1j2LcpnXmBaa+I3H/NYNMS4TKfMCAwEAAaM9MDswOQYD\nVR0RBDIwMIIXKi5vY3RhLmV0Y2Nob3N0ZWQubG9jYWyCFW9jdGEuZXRjY2hvc3Rl\nZC5sb2NhbDANBgkqhkiG9w0BAQsFAAOCAgEASj95eTXHtNXsS65AoDmCoqmg8Y9L\nXCS9mqLswWspd5A/yf56xlvECECieC8/XlYgNj0dTPDw2btJFiNXF6iOPV5km+f/\n+LLpunqC6+5qa5NWtyYc3wrRRP91WPzcdVqmEINpLquOxiRZis1fb5KcqxCqNiLA\nZiHwkqRJaPi3/XP0131H08odSoCtsTLK5tY7xg9aHtUXq6A1wVGlWi1/y3lNwB4K\nqykmDhbS2IuqK68uy78Lj0KUxQ/tcg1MufJL4tcpWLJob3lzDbzqIWfxcYRjuPi9\nmh90RuYGjLlmK0Z8B6yc49eWcLijxmE7N00IZLyF93Rs2URWAQQsS9n8AceK3xGS\nzUJ+xHmwHtFl037+R6Nybe/Jt5evqRjT+nFQIGGVw/56fK0LryWQsS9WxME6lw6P\ndvI0WKMwZTEHBDxYki0nBHBrccAiFPA7C3OITNL1U7FrVVtlph/BXa3patN7N8dO\nShy210pZworMcfjcGInS2uE56FrWzfBNpwNZLBXSbeZg6ZldqY/ToJdO2Xlt+vDS\nzKZU2SADbdbLszdpQzCBgPDG9fOYVkgWxTlFkYlu3CshSdqt1v8YzON5cvipqiDv\nsNMuifcn4XWuzSNSvDdzsSJCrzAlGbwiH/oivz7mIr/9q/1pLbvPs3AiW+sgQgQm\nPPv3cM8p9h1KrIk=\n-----END CERTIFICATE-----\n",
+                "caCertificate": "-----BEGIN CERTIFICATE-----\nMIIFpzCCA4+gAwIBAgIEZQCRszANBgkqhkiG9w0BAQsFADB2MQswCQYDVQQGEwJ1\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMSAwHgYDVQQDDBcqLm9jdGEuZXRjY2hv\nc3RlZC5sb2NhbDAeFw0yMzA5MTIxNjI4MzVaFw0zMzA5MTIxNjI4MzVaMHYxCzAJ\nBgNVBAYTAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsG\nA1UECgwEZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xIDAeBgNVBAMMFyoub2N0\nYS5ldGNjaG9zdGVkLmxvY2FsMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKC\nAgEAjwUCZeGsQ+xFL2rqRO6X+T7ADpfAJXbA2WA2eeCI1KD33o0DegWlU5V7Ufrf\ndbfQqCme58Xlpqt7NELGSgGJ5UPAVI4Z539fCLX7K6AFy7TRBRgjLt+eJQss38Cc\nvH9+5kuWl0e3GNTVh0t7S07Com1pExrUfSrXnu5ma8W5RdkhC7yh4XOIh7aUzR+2\nsJ5ksibdzJFI7gFqs367UCQ5fWR/nr49tn2GQOghPOuPQAkLKB1X4FsjvSMUDup3\nIPt9hHFooTyf7o/M1hqvK1GqFQkr/4AFw7v4sU9xbHiDWOkRESRVaEo6JO/6/R39\nl+697aCXF0RZOfNF2pvUqisfNg/l4GDoTXOjjUcPcUzsUnoVj8Wtv5qSmgUm5bin\n+4DJ/0LH6jVhcGZnthkfre4OKMvBGhy1PTZoE3VYnvjm2jf0bU/Bi/BbDW7rr8Mw\nF9mV5pTCV3gYesyXfkeAfWRZKCdTBUUAUBLBTHLHIbZuwjdxroZ4uPlHjPlIPwGy\n+1gLzzalifWlvrWaIIJ2ZlMHFWQo+3/1CJOVFKOFVsbd0V7t7hkYyoIK6d28vQM+\nudbXEEERXBAYF/eB60CvPENsuhgK6uX3+SG2CFjJe//8nGnVmXvYo0C3G4ACHQK0\nYWLHYIuIjfVN6XY00utl1j2LcpnXmBaa+I3H/NYNMS4TKfMCAwEAAaM9MDswOQYD\nVR0RBDIwMIIXKi5vY3RhLmV0Y2Nob3N0ZWQubG9jYWyCFW9jdGEuZXRjY2hvc3Rl\nZC5sb2NhbDANBgkqhkiG9w0BAQsFAAOCAgEASj95eTXHtNXsS65AoDmCoqmg8Y9L\nXCS9mqLswWspd5A/yf56xlvECECieC8/XlYgNj0dTPDw2btJFiNXF6iOPV5km+f/\n+LLpunqC6+5qa5NWtyYc3wrRRP91WPzcdVqmEINpLquOxiRZis1fb5KcqxCqNiLA\nZiHwkqRJaPi3/XP0131H08odSoCtsTLK5tY7xg9aHtUXq6A1wVGlWi1/y3lNwB4K\nqykmDhbS2IuqK68uy78Lj0KUxQ/tcg1MufJL4tcpWLJob3lzDbzqIWfxcYRjuPi9\nmh90RuYGjLlmK0Z8B6yc49eWcLijxmE7N00IZLyF93Rs2URWAQQsS9n8AceK3xGS\nzUJ+xHmwHtFl037+R6Nybe/Jt5evqRjT+nFQIGGVw/56fK0LryWQsS9WxME6lw6P\ndvI0WKMwZTEHBDxYki0nBHBrccAiFPA7C3OITNL1U7FrVVtlph/BXa3patN7N8dO\nShy210pZworMcfjcGInS2uE56FrWzfBNpwNZLBXSbeZg6ZldqY/ToJdO2Xlt+vDS\nzKZU2SADbdbLszdpQzCBgPDG9fOYVkgWxTlFkYlu3CshSdqt1v8YzON5cvipqiDv\nsNMuifcn4XWuzSNSvDdzsSJCrzAlGbwiH/oivz7mIr/9q/1pLbvPs3AiW+sgQgQm\nPPv3cM8p9h1KrIk=\n-----END CERTIFICATE-----\n"
             }
         },
         "backendSets": {
@@ -355,8 +532,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.202:8021",
-                        "ipAddress": "10.152.11.202",
+                        "name": "10.153.64.114:8021",
+                        "ipAddress": "10.153.64.114",
                         "port": 8021,
                         "weight": 1,
                         "maxConnections": null,
@@ -382,7 +559,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "InternalSelfCert-Prod-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
@@ -399,8 +576,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.220:8080",
-                        "ipAddress": "10.152.11.220",
+                        "name": "10.153.64.102:8080",
+                        "ipAddress": "10.153.64.102",
                         "port": 8080,
                         "weight": 1,
                         "maxConnections": null,
@@ -430,8 +607,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.200:8017",
-                        "ipAddress": "10.152.11.200",
+                        "name": "10.153.64.108:8017",
+                        "ipAddress": "10.153.64.108",
                         "port": 8017,
                         "weight": 1,
                         "maxConnections": null,
@@ -457,7 +634,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "InternalSelfCert-Prod-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
@@ -474,8 +651,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.208:8095",
-                        "ipAddress": "10.152.11.208",
+                        "name": "10.153.64.112:8095",
+                        "ipAddress": "10.153.64.112",
                         "port": 8095,
                         "weight": 1,
                         "maxConnections": null,
@@ -501,7 +678,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "InternalSelfCert-Prod-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
@@ -518,8 +695,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.209:9002",
-                        "ipAddress": "10.152.11.209",
+                        "name": "10.153.64.120:9002",
+                        "ipAddress": "10.153.64.120",
                         "port": 9002,
                         "weight": 1,
                         "maxConnections": null,
@@ -549,8 +726,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.202:8189",
-                        "ipAddress": "10.152.11.202",
+                        "name": "10.153.64.114:8189",
+                        "ipAddress": "10.153.64.114",
                         "port": 8189,
                         "weight": 1,
                         "maxConnections": null,
@@ -576,7 +753,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "InternalSelfCert-Prod-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
@@ -593,8 +770,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.195:7012",
-                        "ipAddress": "10.152.11.195",
+                        "name": "10.153.64.125:7012",
+                        "ipAddress": "10.153.64.125",
                         "port": 7012,
                         "weight": 1,
                         "maxConnections": null,
@@ -623,7 +800,11 @@
         "pathRouteSets": {},
         "freeformTags": {},
         "definedTags": {},
-        "systemTags": {},
+        "systemTags": {
+            "orcl-cloud": {
+                "free-tier-retained": "false"
+            }
+        },
         "ruleSets": {},
         "routingPolicies": {
             "internal_routes": {
@@ -665,27 +846,27 @@
         }
     },
     {
-        "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaatezhi3cyxvrafmn2qlwkwbqeazk534xa4sq4dfjxk3p7gw3u4kpq",
-        "compartmentId": "ocid1.compartment.oc1..aaaaaaaavlllxvqztlsc3qqorammnbw65hzewqk7xpvawlzbh7r53u2fdeqq",
-        "displayName": "new-octa-uat-lb-2",
+        "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaacintnfwf2ibfnkwlgkhylarq6kacqg6kyn4637fv352nefgzcvoa",
+        "compartmentId": "ocid1.compartment.oc1..aaaaaaaa3ybyt4tx2zasleqqcc34bgaismmoh3yhtjnmkmk3v5t4t3xedqxq",
+        "displayName": "new-octa-dr-lb-2",
         "lifecycleState": "ACTIVE",
-        "timeCreated": "2023-08-18T01:52:39.125Z",
+        "timeCreated": "2023-09-13T23:01:55.778Z",
         "ipAddresses": [
             {
-                "ipAddress": "10.152.7.53",
+                "ipAddress": "10.152.6.250",
                 "isPublic": false,
                 "reservedIp": null
             }
         ],
         "shapeName": "flexible",
         "shapeDetails": {
-            "minimumBandwidthInMbps": 1500,
-            "maximumBandwidthInMbps": 2000
+            "minimumBandwidthInMbps": 100,
+            "maximumBandwidthInMbps": 300
         },
         "isPrivate": true,
         "isDeleteProtectionEnabled": null,
         "subnetIds": [
-            "ocid1.subnet.oc1.iad.aaaaaaaaay7lt7g2g65rpyn74dgmrtkug7iylyyovi7jev2gp6rbexyhrefq"
+            "ocid1.subnet.oc1.phx.aaaaaaaa7sn6mko4cl5pla5aodfw45d6krrghnfrkpccacuuf5dxpw3gwv2a"
         ],
         "networkSecurityGroupIds": [],
         "listeners": {
@@ -695,7 +876,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "riteodoo-uat.octa.rite.etcchosted.com"
+                    "riteodoo-prod.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -704,7 +885,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT2",
+                    "certificateName": "LB-OCTA-CERT",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -725,7 +906,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritebos-uat.octa.rite.etcchosted.com"
+                    "ritebos-prod.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -734,7 +915,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT2",
+                    "certificateName": "LB-OCTA-CERT",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -757,7 +938,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "kapsch-uat.octa.rite.etcchosted.com"
+                    "kapsch-prod.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -766,7 +947,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT2",
+                    "certificateName": "LB-OCTA-CERT",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -780,38 +961,73 @@
                 },
                 "ruleSetNames": [],
                 "routingPolicyName": null
+            },
+            "ritelogs": {
+                "name": "ritelogs",
+                "defaultBackendSetName": "open-search-dashboard",
+                "port": 443,
+                "protocol": "HTTP",
+                "hostnameNames": [
+                    "ritelogs-prod.octa.rite.etcchosted.com"
+                ],
+                "serverName": null,
+                "pathRouteSetName": null,
+                "sslConfiguration": {
+                    "verifyDepth": 1,
+                    "verifyPeerCertificate": false,
+                    "trustedCertificateAuthorityIds": [],
+                    "certificateIds": [],
+                    "certificateName": "LB-OCTA-CERT",
+                    "serverOrderPreference": "DISABLED",
+                    "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
+                    "protocols": [
+                        "TLSv1.2"
+                    ]
+                },
+                "connectionConfiguration": {
+                    "idleTimeout": 1,
+                    "backendTcpProxyProtocolVersion": null,
+                    "backendTcpProxyProtocolOptions": null
+                },
+                "ruleSetNames": [],
+                "routingPolicyName": null
             }
         },
         "hostnames": {
-            "kapsch-uat.octa.rite.etcchosted.com": {
-                "name": "kapsch-uat.octa.rite.etcchosted.com",
-                "hostname": "kapsch-uat.octa.rite.etcchosted.com"
+            "kapsch-prod.octa.rite.etcchosted.com": {
+                "name": "kapsch-prod.octa.rite.etcchosted.com",
+                "hostname": "kapsch-prod.octa.rite.etcchosted.com"
             },
-            "ritelogs-uat.octa.rite.etcchosted.com": {
-                "name": "ritelogs-uat.octa.rite.etcchosted.com",
-                "hostname": "ritelogs-uat.octa.rite.etcchosted.com"
+            "ritelogs-prod.octa.rite.etcchosted.com": {
+                "name": "ritelogs-prod.octa.rite.etcchosted.com",
+                "hostname": "ritelogs-prod.octa.rite.etcchosted.com"
             },
-            "ritebos-uat.octa.rite.etcchosted.com": {
-                "name": "ritebos-uat.octa.rite.etcchosted.com",
-                "hostname": "ritebos-uat.octa.rite.etcchosted.com"
+            "ritebos-prod.octa.rite.etcchosted.com": {
+                "name": "ritebos-prod.octa.rite.etcchosted.com",
+                "hostname": "ritebos-prod.octa.rite.etcchosted.com"
             },
-            "riteodoo-uat.octa.rite.etcchosted.com": {
-                "name": "riteodoo-uat.octa.rite.etcchosted.com",
-                "hostname": "riteodoo-uat.octa.rite.etcchosted.com"
+            "riteodoo-prod.octa.rite.etcchosted.com": {
+                "name": "riteodoo-prod.octa.rite.etcchosted.com",
+                "hostname": "riteodoo-prod.octa.rite.etcchosted.com"
             }
         },
         "cidrBlocks": null,
         "sslCipherSuites": {},
         "certificates": {
-            "LB-OCTA-CERT2": {
-                "certificateName": "LB-OCTA-CERT2",
+            "LB-OCTA-CERT": {
+                "certificateName": "LB-OCTA-CERT",
                 "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIGszCCBZugAwIBAgIIY5n1rNUu6iAwDQYJKoZIhvcNAQELBQAwgbQxCzAJBgNV\nBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQHEwpTY290dHNkYWxlMRow\nGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UECxMkaHR0cDovL2NlcnRz\nLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQDEypHbyBEYWRkeSBTZWN1\ncmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwHhcNMjMwMjE0MTYzMDI3WhcN\nMjQwMzE3MTYzMDI3WjAlMSMwIQYDVQQDDBoqLm9jdGEucml0ZS5ldGNjaG9zdGVk\nLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAM+ftul06q4PosIJ\nAIIDcqkjtB7cWwiwEgWaQMjdcJLO7rqeFsiBJvV7rK+fU6lXaL/9UX0oi6XjE+ll\nNSYogqcBM+OZyl8W/QxkNAcKCLEIxm2WPo2PgYCOlY5pK5CqsvssKFbKZZuztWbA\nksyMV+kaUkOZR7YpMqc1dAfQaQFQ9Rc4qetRNr98bNzxhgFu277cKi0KuuS5SCEc\nt5BSNY7NEcbgTEMcafWMsVieJAUoFzFcxTHxrcvx2OjZZVrq51vijbdvCDOnv9B3\neGM5/SknPI1ILEYqASOzfi3XWyfmsNePzfE2AQolaiRry09VOSeiKYFTlI5JimTn\n0NYiY40CAwEAAaOCA1UwggNRMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYB\nBQUHAwEGCCsGAQUFBwMCMA4GA1UdDwEB/wQEAwIFoDA4BgNVHR8EMTAvMC2gK6Ap\nhidodHRwOi8vY3JsLmdvZGFkZHkuY29tL2dkaWcyczEtNTIwMS5jcmwwXQYDVR0g\nBFYwVDBIBgtghkgBhv1tAQcXATA5MDcGCCsGAQUFBwIBFitodHRwOi8vY2VydGlm\naWNhdGVzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMAgGBmeBDAECATB2BggrBgEF\nBQcBAQRqMGgwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmdvZGFkZHkuY29tLzBA\nBggrBgEFBQcwAoY0aHR0cDovL2NlcnRpZmljYXRlcy5nb2RhZGR5LmNvbS9yZXBv\nc2l0b3J5L2dkaWcyLmNydDAfBgNVHSMEGDAWgBRAwr0njsw0gzCiM9f7bLPwtCyA\nzjA/BgNVHREEODA2ghoqLm9jdGEucml0ZS5ldGNjaG9zdGVkLmNvbYIYb2N0YS5y\naXRlLmV0Y2Nob3N0ZWQuY29tMB0GA1UdDgQWBBQKnRe6aegyKoosjM9GRRD/Klc3\n1zCCAX4GCisGAQQB1nkCBAIEggFuBIIBagFoAHYA7s3QZNXbGs7FXLedtM0TojKH\nRny87N7DUUhZRnEftZsAAAGGUMNjdgAABAMARzBFAiAfVHpgap6pJtg1OKLTQpyE\nVGA5XuG9Q8J8B+4d8jEMsAIhAM8PHccqd8FAQQnzjdAi+2NnJjP3Pc8miyxFAbJD\nXvm9AHYASLDja9qmRzQP5WoC+p0w6xxSActW3SyB2bu/qznYhHMAAAGGUMNkXgAA\nBAMARzBFAiANFslH1aV9v2t5pmZIkiJCzsaLMt5EZ4PrjXtJJt7XZAIhAI/HCMqv\nEVWz6ajfdXh3VNMq8+3K0zESy76P2uPBGg9FAHYA2ra/az+1tiKfm8K7XGvocJFx\nbLtRhIU0vaQ9MEjX+6sAAAGGUMNkywAABAMARzBFAiEAm2ATsPbuEgd8Ne01rtIb\nRcE3YKrP4WKQ7sGuVYjlT44CICBW3ZaLGoweeYW64zuCmEYzz72hmk1n6e7ywLiG\nYU/EMA0GCSqGSIb3DQEBCwUAA4IBAQA7ux1luDw+nn17SzvtzUzpxHwrqS0+ebdx\ncOqvt4Si2fLHM7cACD7SuRjm8L6XzzDGu/BiryUpwIWGIa8HxlTI1XyC8NzvISoM\nFSQNMGd7x7FfRilFqL9dBrCbX86lFK3KgOX+Rk8yxaCLwxjF7bb7YB3SH/djJgAF\ngjcOeheUiBIHM/yf+Xu3UzT5ob5D1kzm8lBXusUBcl9Cn6uRNC/Ls0HUkINaTWb0\nkfb8Nxy5VqhgOVfFItTJ/URKj210uv/nRk+bQwaBQZewspIocPnzghWmNtlRwSJq\nlfIDVmPNixnQCv6DvWIt/NGfEAlnhyOL6SyGHg1ionPtA3EdCyuc\n-----END CERTIFICATE-----\n",
                 "caCertificate": "-----BEGIN CERTIFICATE-----\nMIIE0DCCA7igAwIBAgIBBzANBgkqhkiG9w0BAQsFADCBgzELMAkGA1UEBhMCVVMx\nEDAOBgNVBAgTB0FyaXpvbmExEzARBgNVBAcTClNjb3R0c2RhbGUxGjAYBgNVBAoT\nEUdvRGFkZHkuY29tLCBJbmMuMTEwLwYDVQQDEyhHbyBEYWRkeSBSb290IENlcnRp\nZmljYXRlIEF1dGhvcml0eSAtIEcyMB4XDTExMDUwMzA3MDAwMFoXDTMxMDUwMzA3\nMDAwMFowgbQxCzAJBgNVBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQH\nEwpTY290dHNkYWxlMRowGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UE\nCxMkaHR0cDovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQD\nEypHbyBEYWRkeSBTZWN1cmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwggEi\nMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC54MsQ1K92vdSTYuswZLiBCGzD\nBNliF44v/z5lz4/OYuY8UhzaFkVLVat4a2ODYpDOD2lsmcgaFItMzEUz6ojcnqOv\nK/6AYZ15V8TPLvQ/MDxdR/yaFrzDN5ZBUY4RS1T4KL7QjL7wMDge87Am+GZHY23e\ncSZHjzhHU9FGHbTj3ADqRay9vHHZqm8A29vNMDp5T19MR/gd71vCxJ1gO7GyQ5HY\npDNO6rPWJ0+tJYqlxvTV0KaudAVkV4i1RFXULSo6Pvi4vekyCgKUZMQWOlDxSq7n\neTOvDCAHf+jfBDnCaQJsY1L6d8EbyHSHyLmTGFBUNUtpTrw700kuH9zB0lL7AgMB\nAAGjggEaMIIBFjAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBBjAdBgNV\nHQ4EFgQUQMK9J47MNIMwojPX+2yz8LQsgM4wHwYDVR0jBBgwFoAUOpqFBxBnKLbv\n9r0FQW4gwZTaD94wNAYIKwYBBQUHAQEEKDAmMCQGCCsGAQUFBzABhhhodHRwOi8v\nb2NzcC5nb2RhZGR5LmNvbS8wNQYDVR0fBC4wLDAqoCigJoYkaHR0cDovL2NybC5n\nb2RhZGR5LmNvbS9nZHJvb3QtZzIuY3JsMEYGA1UdIAQ/MD0wOwYEVR0gADAzMDEG\nCCsGAQUFBwIBFiVodHRwczovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkv\nMA0GCSqGSIb3DQEBCwUAA4IBAQAIfmyTEMg4uJapkEv/oV9PBO9sPpyIBslQj6Zz\n91cxG7685C/b+LrTW+C05+Z5Yg4MotdqY3MxtfWoSKQ7CC2iXZDXtHwlTxFWMMS2\nRJ17LJ3lXubvDGGqv+QqG+6EnriDfcFDzkSnE3ANkR/0yBOtg2DZ2HKocyQetawi\nDsoXiWJYRBuriSUBAA/NxBti21G00w9RKpv0vHP8ds42pM3Z2Czqrpv1KrKQ0U11\nGIo/ikGQI31bS/6kA1ibRrLDYGCD+H1QQc7CoZDDu+8CL9IVVO5EFdkKrqeKM+2x\nLXY2JtwE65/3YR8V3Idv7kaWKK2hJn0KCacuBKONvPi8BDAB\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIEfTCCA2WgAwIBAgIDG+cVMA0GCSqGSIb3DQEBCwUAMGMxCzAJBgNVBAYTAlVT\nMSEwHwYDVQQKExhUaGUgR28gRGFkZHkgR3JvdXAsIEluYy4xMTAvBgNVBAsTKEdv\nIERhZGR5IENsYXNzIDIgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMTQwMTAx\nMDcwMDAwWhcNMzEwNTMwMDcwMDAwWjCBgzELMAkGA1UEBhMCVVMxEDAOBgNVBAgT\nB0FyaXpvbmExEzARBgNVBAcTClNjb3R0c2RhbGUxGjAYBgNVBAoTEUdvRGFkZHku\nY29tLCBJbmMuMTEwLwYDVQQDEyhHbyBEYWRkeSBSb290IENlcnRpZmljYXRlIEF1\ndGhvcml0eSAtIEcyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv3Fi\nCPH6WTT3G8kYo/eASVjpIoMTpsUgQwE7hPHmhUmfJ+r2hBtOoLTbcJjHMgGxBT4H\nTu70+k8vWTAi56sZVmvigAf88xZ1gDlRe+X5NbZ0TqmNghPktj+pA4P6or6KFWp/\n3gvDthkUBcrqw6gElDtGfDIN8wBmIsiNaW02jBEYt9OyHGC0OPoCjM7T3UYH3go+\n6118yHz7sCtTpJJiaVElBWEaRIGMLKlDliPfrDqBmg4pxRyp6V0etp6eMAo5zvGI\ngPtLXcwy7IViQyU0AlYnAZG0O3AqP26x6JyIAX2f1PnbU21gnb8s51iruF9G/M7E\nGwM8CetJMVxpRrPgRwIDAQABo4IBFzCCARMwDwYDVR0TAQH/BAUwAwEB/zAOBgNV\nHQ8BAf8EBAMCAQYwHQYDVR0OBBYEFDqahQcQZyi27/a9BUFuIMGU2g/eMB8GA1Ud\nIwQYMBaAFNLEsNKR1EwRcbNhyz2h/t2oatTjMDQGCCsGAQUFBwEBBCgwJjAkBggr\nBgEFBQcwAYYYaHR0cDovL29jc3AuZ29kYWRkeS5jb20vMDIGA1UdHwQrMCkwJ6Al\noCOGIWh0dHA6Ly9jcmwuZ29kYWRkeS5jb20vZ2Ryb290LmNybDBGBgNVHSAEPzA9\nMDsGBFUdIAAwMzAxBggrBgEFBQcCARYlaHR0cHM6Ly9jZXJ0cy5nb2RhZGR5LmNv\nbS9yZXBvc2l0b3J5LzANBgkqhkiG9w0BAQsFAAOCAQEAWQtTvZKGEacke+1bMc8d\nH2xwxbhuvk679r6XUOEwf7ooXGKUwuN+M/f7QnaF25UcjCJYdQkMiGVnOQoWCcWg\nOJekxSOTP7QYpgEGRJHjp2kntFolfzq3Ms3dhP8qOCkzpN1nsoX+oYggHFCJyNwq\n9kIDN0zmiN/VryTyscPfzLXs4Jlet0lUIDyUGAzHHFIYSaRt4bNYC8nY7NmuHDKO\nKHAN4v6mF56ED71XcLNa6R+ghlO773z/aQvgSMO3kwvIClTErF0UZzdsyqUvMQg3\nqm5vjLyb4lddJIGvl5echK1srDdMZvNhkREg5L4wn3qkKQmw4TRfZHcYQFHfjDCm\nrw==\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIEADCCAuigAwIBAgIBADANBgkqhkiG9w0BAQUFADBjMQswCQYDVQQGEwJVUzEh\nMB8GA1UEChMYVGhlIEdvIERhZGR5IEdyb3VwLCBJbmMuMTEwLwYDVQQLEyhHbyBE\nYWRkeSBDbGFzcyAyIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTA0MDYyOTE3\nMDYyMFoXDTM0MDYyOTE3MDYyMFowYzELMAkGA1UEBhMCVVMxITAfBgNVBAoTGFRo\nZSBHbyBEYWRkeSBHcm91cCwgSW5jLjExMC8GA1UECxMoR28gRGFkZHkgQ2xhc3Mg\nMiBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTCCASAwDQYJKoZIhvcNAQEBBQADggEN\nADCCAQgCggEBAN6d1+pXGEmhW+vXX0iG6r7d/+TvZxz0ZWizV3GgXne77ZtJ6XCA\nPVYYYwhv2vLM0D9/AlQiVBDYsoHUwHU9S3/Hd8M+eKsaA7Ugay9qK7HFiH7Eux6w\nwdhFJ2+qN1j3hybX2C32qRe3H3I2TqYXP2WYktsqbl2i/ojgC95/5Y0V4evLOtXi\nEqITLdiOr18SPaAIBQi2XKVlOARFmR6jYGB0xUGlcmIbYsUfb18aQr4CUWWoriMY\navx4A6lNf4DD+qta/KFApMoZFv6yyO9ecw3ud72a9nmYvLEHZ6IVDd2gWMZEewo+\nYihfukEHU1jPEX44dMX4/7VpkI+EdOqXG68CAQOjgcAwgb0wHQYDVR0OBBYEFNLE\nsNKR1EwRcbNhyz2h/t2oatTjMIGNBgNVHSMEgYUwgYKAFNLEsNKR1EwRcbNhyz2h\n/t2oatTjoWekZTBjMQswCQYDVQQGEwJVUzEhMB8GA1UEChMYVGhlIEdvIERhZGR5\nIEdyb3VwLCBJbmMuMTEwLwYDVQQLEyhHbyBEYWRkeSBDbGFzcyAyIENlcnRpZmlj\nYXRpb24gQXV0aG9yaXR5ggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQAD\nggEBADJL87LKPpH8EsahB4yOd6AzBhRckB4Y9wimPQoZ+YeAEW5p5JYXMP80kWNy\nOO7MHAGjHZQopDH2esRU1/blMVgDoszOYtuURXO1v0XJJLXVggKtI3lpjbi2Tc7P\nTMozI+gciKqdi0FuFskg5YmezTvacPd+mSYgFFQlq25zheabIZ0KbIIOqPjCDPoQ\nHmyW74cNxA9hi63ugyuV+I6ShHI56yDqg+2DzZduCLzrTia2cyvk0/ZM/iZx4mER\ndEr/VxqHD3VILs9RaRegAhJhldXRQLIQTO7ErBBDpqWeCtWVYpoNz4iCxTIM5Cuf\nReYNnyicsbkqWletNw+vHX/bvZ8=\n-----END CERTIFICATE-----\n"
             },
-            "InternalSelfCert-Dev-CERT": {
-                "certificateName": "InternalSelfCert-Dev-CERT",
-                "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIFjzCCA3egAwIBAgIEY5tNuDANBgkqhkiG9w0BAQsFADBwMQswCQYDVQQGEwJ1\r\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\r\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMRowGAYDVQQDDBEqLmV0Y2Nob3N0ZWQu\r\ndGVzdDAeFw0yMjEyMTUxNjM5MjBaFw0yMzEyMTUxNjM5MjBaMHAxCzAJBgNVBAYT\r\nAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsGA1UECgwE\r\nZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xGjAYBgNVBAMMESouZXRjY2hvc3Rl\r\nZC50ZXN0MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAtXWcmOT9zT7v\r\n1nliTOO95DKmzrX4mvXIMGL2Yj9eQDzuzdaIEnik35gqmn63kulq0MM4rYRY7eO3\r\n0DWubBj1JGzSAUdoEViqHUlnocv5D9vGLpKBoW6fIJ3K3BP7h9vvs87p+x0iogAM\r\nTnNkNV1XQ0f1r1z+cUlnMEGIVyJaxX5W+ey7MNaqga+hTX8pzR8QnVl0hpLts0t0\r\nbTMSl9XwT6rZ/LIjTpxWKesZs7GPXwQpMawFIWRI23AIiaotFz262aNKkZrZ66Et\r\n5MDDzzdcO9BZsTQDcYaw+gYUl95s3fkLXrJxso0DeIiH0HmDakLdtI94GVc51kh3\r\ny2YT66ebHOc5+v+z006si140PRtghrdPHHcZJrBn/Sx8CayO+EiGse61iQ84KgMG\r\nK+X0QYTtZpuZShfi1OUewFOVmbDCS8r27MmblwYDmUbnkfoDsq5de/Y++LTpNn8z\r\nm/zxDxn+dsCoVqzxMQrhJcle+EoUo8Xe82hP8al2Xim7gFTxUnG/jaFiI681IoOV\r\nNhsWqrDFRS8T41mh6dNKWxYi652fSbsbOFwqwyYuZ+yJ7oEsSZuWATfQkaDKw1mB\r\nPr85vA6fYodZ53d4v5loejLUhVCXi5wrKFQyILy2fHa8J+u7oaTtPvwChw+wKq71\r\n8IeZjJiDSIxt4GUinfugs0MaWT4lKBkCAwEAAaMxMC8wLQYDVR0RBCYwJIIRKi5l\r\ndGNjaG9zdGVkLnRlc3SCD2V0Y2Nob3N0ZWQudGVzdDANBgkqhkiG9w0BAQsFAAOC\r\nAgEAXWgLw9riE48sl1CiBHtJFmqPrgY7YBGR090qeoqoDowmGMOnU0vKduwQvio7\r\nvh45nBryT33MYfUgmUhcwTsB8o8kjxutPJmpOvHgs+2SoNN33P091kUfJMOuIZ2m\r\nvpZ4/KY3Zdzr1y9LB29OG8CHWYfHpzMNPyi+AE8exFst/WNUlPcxVp8V7AxKFWF+\r\ni1+LJjnHjhhFwdGIWhOUNkbQsJ3sUVstSz2YMa4gjMiSNqJ/rjRaRofDXi3DwysU\r\nSuIrG8c9r7tR5cm1AwL6jpo+M0hC5bYbyAH6fqz/f58yLvR+kNMGolsSp/zEllbj\r\n8rs3gxHAKCD5sHJZ9uhoNr0seSUFSqQJ0nfu9n8GgW/LdhlFcx2HcNNiu/wNmeDV\r\nXhOSc6TZ64lh6kjbsKpW7hzymVsCz/R0C1FfazmTNs5W2ORokbFjgyitHwLdXFbm\r\nkjbgPqWpCcbAuybrppNgWeW/JvJ13yiIfk3MH4YVpaDfY38FNUGcRDAYMf/0zsIX\r\na+L7EWAh8ha20mUElYTAHcC1r18qGn8ZZlmcYyNa26ncJd1kJQqxtvyfuzxpAJNU\r\ns4yJfYIzXszczxhqy2/dnheBDnbdIlziAiSmhET5Jfd5rzfIOcHBdX+U9Ex5Gng4\r\n6mnl56J/ddi/GOUTJ8CIicwcWs/EaUwUH6sMWr+Cbomhv5A=\n-----END CERTIFICATE-----\n",
-                "caCertificate": "-----BEGIN CERTIFICATE-----\nMIIFjzCCA3egAwIBAgIEY5tNuDANBgkqhkiG9w0BAQsFADBwMQswCQYDVQQGEwJ1\r\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\r\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMRowGAYDVQQDDBEqLmV0Y2Nob3N0ZWQu\r\ndGVzdDAeFw0yMjEyMTUxNjM5MjBaFw0yMzEyMTUxNjM5MjBaMHAxCzAJBgNVBAYT\r\nAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsGA1UECgwE\r\nZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xGjAYBgNVBAMMESouZXRjY2hvc3Rl\r\nZC50ZXN0MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAtXWcmOT9zT7v\r\n1nliTOO95DKmzrX4mvXIMGL2Yj9eQDzuzdaIEnik35gqmn63kulq0MM4rYRY7eO3\r\n0DWubBj1JGzSAUdoEViqHUlnocv5D9vGLpKBoW6fIJ3K3BP7h9vvs87p+x0iogAM\r\nTnNkNV1XQ0f1r1z+cUlnMEGIVyJaxX5W+ey7MNaqga+hTX8pzR8QnVl0hpLts0t0\r\nbTMSl9XwT6rZ/LIjTpxWKesZs7GPXwQpMawFIWRI23AIiaotFz262aNKkZrZ66Et\r\n5MDDzzdcO9BZsTQDcYaw+gYUl95s3fkLXrJxso0DeIiH0HmDakLdtI94GVc51kh3\r\ny2YT66ebHOc5+v+z006si140PRtghrdPHHcZJrBn/Sx8CayO+EiGse61iQ84KgMG\r\nK+X0QYTtZpuZShfi1OUewFOVmbDCS8r27MmblwYDmUbnkfoDsq5de/Y++LTpNn8z\r\nm/zxDxn+dsCoVqzxMQrhJcle+EoUo8Xe82hP8al2Xim7gFTxUnG/jaFiI681IoOV\r\nNhsWqrDFRS8T41mh6dNKWxYi652fSbsbOFwqwyYuZ+yJ7oEsSZuWATfQkaDKw1mB\r\nPr85vA6fYodZ53d4v5loejLUhVCXi5wrKFQyILy2fHa8J+u7oaTtPvwChw+wKq71\r\n8IeZjJiDSIxt4GUinfugs0MaWT4lKBkCAwEAAaMxMC8wLQYDVR0RBCYwJIIRKi5l\r\ndGNjaG9zdGVkLnRlc3SCD2V0Y2Nob3N0ZWQudGVzdDANBgkqhkiG9w0BAQsFAAOC\r\nAgEAXWgLw9riE48sl1CiBHtJFmqPrgY7YBGR090qeoqoDowmGMOnU0vKduwQvio7\r\nvh45nBryT33MYfUgmUhcwTsB8o8kjxutPJmpOvHgs+2SoNN33P091kUfJMOuIZ2m\r\nvpZ4/KY3Zdzr1y9LB29OG8CHWYfHpzMNPyi+AE8exFst/WNUlPcxVp8V7AxKFWF+\r\ni1+LJjnHjhhFwdGIWhOUNkbQsJ3sUVstSz2YMa4gjMiSNqJ/rjRaRofDXi3DwysU\r\nSuIrG8c9r7tR5cm1AwL6jpo+M0hC5bYbyAH6fqz/f58yLvR+kNMGolsSp/zEllbj\r\n8rs3gxHAKCD5sHJZ9uhoNr0seSUFSqQJ0nfu9n8GgW/LdhlFcx2HcNNiu/wNmeDV\r\nXhOSc6TZ64lh6kjbsKpW7hzymVsCz/R0C1FfazmTNs5W2ORokbFjgyitHwLdXFbm\r\nkjbgPqWpCcbAuybrppNgWeW/JvJ13yiIfk3MH4YVpaDfY38FNUGcRDAYMf/0zsIX\r\na+L7EWAh8ha20mUElYTAHcC1r18qGn8ZZlmcYyNa26ncJd1kJQqxtvyfuzxpAJNU\r\ns4yJfYIzXszczxhqy2/dnheBDnbdIlziAiSmhET5Jfd5rzfIOcHBdX+U9Ex5Gng4\r\n6mnl56J/ddi/GOUTJ8CIicwcWs/EaUwUH6sMWr+Cbomhv5A=\n-----END CERTIFICATE-----\n"
+            "InternalSelfCert-Prod-CERT": {
+                "certificateName": "InternalSelfCert-Prod-CERT",
+                "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIFpzCCA4+gAwIBAgIEZQCRszANBgkqhkiG9w0BAQsFADB2MQswCQYDVQQGEwJ1\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMSAwHgYDVQQDDBcqLm9jdGEuZXRjY2hv\nc3RlZC5sb2NhbDAeFw0yMzA5MTIxNjI4MzVaFw0zMzA5MTIxNjI4MzVaMHYxCzAJ\nBgNVBAYTAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsG\nA1UECgwEZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xIDAeBgNVBAMMFyoub2N0\nYS5ldGNjaG9zdGVkLmxvY2FsMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKC\nAgEAjwUCZeGsQ+xFL2rqRO6X+T7ADpfAJXbA2WA2eeCI1KD33o0DegWlU5V7Ufrf\ndbfQqCme58Xlpqt7NELGSgGJ5UPAVI4Z539fCLX7K6AFy7TRBRgjLt+eJQss38Cc\nvH9+5kuWl0e3GNTVh0t7S07Com1pExrUfSrXnu5ma8W5RdkhC7yh4XOIh7aUzR+2\nsJ5ksibdzJFI7gFqs367UCQ5fWR/nr49tn2GQOghPOuPQAkLKB1X4FsjvSMUDup3\nIPt9hHFooTyf7o/M1hqvK1GqFQkr/4AFw7v4sU9xbHiDWOkRESRVaEo6JO/6/R39\nl+697aCXF0RZOfNF2pvUqisfNg/l4GDoTXOjjUcPcUzsUnoVj8Wtv5qSmgUm5bin\n+4DJ/0LH6jVhcGZnthkfre4OKMvBGhy1PTZoE3VYnvjm2jf0bU/Bi/BbDW7rr8Mw\nF9mV5pTCV3gYesyXfkeAfWRZKCdTBUUAUBLBTHLHIbZuwjdxroZ4uPlHjPlIPwGy\n+1gLzzalifWlvrWaIIJ2ZlMHFWQo+3/1CJOVFKOFVsbd0V7t7hkYyoIK6d28vQM+\nudbXEEERXBAYF/eB60CvPENsuhgK6uX3+SG2CFjJe//8nGnVmXvYo0C3G4ACHQK0\nYWLHYIuIjfVN6XY00utl1j2LcpnXmBaa+I3H/NYNMS4TKfMCAwEAAaM9MDswOQYD\nVR0RBDIwMIIXKi5vY3RhLmV0Y2Nob3N0ZWQubG9jYWyCFW9jdGEuZXRjY2hvc3Rl\nZC5sb2NhbDANBgkqhkiG9w0BAQsFAAOCAgEASj95eTXHtNXsS65AoDmCoqmg8Y9L\nXCS9mqLswWspd5A/yf56xlvECECieC8/XlYgNj0dTPDw2btJFiNXF6iOPV5km+f/\n+LLpunqC6+5qa5NWtyYc3wrRRP91WPzcdVqmEINpLquOxiRZis1fb5KcqxCqNiLA\nZiHwkqRJaPi3/XP0131H08odSoCtsTLK5tY7xg9aHtUXq6A1wVGlWi1/y3lNwB4K\nqykmDhbS2IuqK68uy78Lj0KUxQ/tcg1MufJL4tcpWLJob3lzDbzqIWfxcYRjuPi9\nmh90RuYGjLlmK0Z8B6yc49eWcLijxmE7N00IZLyF93Rs2URWAQQsS9n8AceK3xGS\nzUJ+xHmwHtFl037+R6Nybe/Jt5evqRjT+nFQIGGVw/56fK0LryWQsS9WxME6lw6P\ndvI0WKMwZTEHBDxYki0nBHBrccAiFPA7C3OITNL1U7FrVVtlph/BXa3patN7N8dO\nShy210pZworMcfjcGInS2uE56FrWzfBNpwNZLBXSbeZg6ZldqY/ToJdO2Xlt+vDS\nzKZU2SADbdbLszdpQzCBgPDG9fOYVkgWxTlFkYlu3CshSdqt1v8YzON5cvipqiDv\nsNMuifcn4XWuzSNSvDdzsSJCrzAlGbwiH/oivz7mIr/9q/1pLbvPs3AiW+sgQgQm\nPPv3cM8p9h1KrIk=\n-----END CERTIFICATE-----\n",
+                "caCertificate": "-----BEGIN CERTIFICATE-----\nMIIFpzCCA4+gAwIBAgIEZQCRszANBgkqhkiG9w0BAQsFADB2MQswCQYDVQQGEwJ1\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMSAwHgYDVQQDDBcqLm9jdGEuZXRjY2hv\nc3RlZC5sb2NhbDAeFw0yMzA5MTIxNjI4MzVaFw0zMzA5MTIxNjI4MzVaMHYxCzAJ\nBgNVBAYTAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsG\nA1UECgwEZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xIDAeBgNVBAMMFyoub2N0\nYS5ldGNjaG9zdGVkLmxvY2FsMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKC\nAgEAjwUCZeGsQ+xFL2rqRO6X+T7ADpfAJXbA2WA2eeCI1KD33o0DegWlU5V7Ufrf\ndbfQqCme58Xlpqt7NELGSgGJ5UPAVI4Z539fCLX7K6AFy7TRBRgjLt+eJQss38Cc\nvH9+5kuWl0e3GNTVh0t7S07Com1pExrUfSrXnu5ma8W5RdkhC7yh4XOIh7aUzR+2\nsJ5ksibdzJFI7gFqs367UCQ5fWR/nr49tn2GQOghPOuPQAkLKB1X4FsjvSMUDup3\nIPt9hHFooTyf7o/M1hqvK1GqFQkr/4AFw7v4sU9xbHiDWOkRESRVaEo6JO/6/R39\nl+697aCXF0RZOfNF2pvUqisfNg/l4GDoTXOjjUcPcUzsUnoVj8Wtv5qSmgUm5bin\n+4DJ/0LH6jVhcGZnthkfre4OKMvBGhy1PTZoE3VYnvjm2jf0bU/Bi/BbDW7rr8Mw\nF9mV5pTCV3gYesyXfkeAfWRZKCdTBUUAUBLBTHLHIbZuwjdxroZ4uPlHjPlIPwGy\n+1gLzzalifWlvrWaIIJ2ZlMHFWQo+3/1CJOVFKOFVsbd0V7t7hkYyoIK6d28vQM+\nudbXEEERXBAYF/eB60CvPENsuhgK6uX3+SG2CFjJe//8nGnVmXvYo0C3G4ACHQK0\nYWLHYIuIjfVN6XY00utl1j2LcpnXmBaa+I3H/NYNMS4TKfMCAwEAAaM9MDswOQYD\nVR0RBDIwMIIXKi5vY3RhLmV0Y2Nob3N0ZWQubG9jYWyCFW9jdGEuZXRjY2hvc3Rl\nZC5sb2NhbDANBgkqhkiG9w0BAQsFAAOCAgEASj95eTXHtNXsS65AoDmCoqmg8Y9L\nXCS9mqLswWspd5A/yf56xlvECECieC8/XlYgNj0dTPDw2btJFiNXF6iOPV5km+f/\n+LLpunqC6+5qa5NWtyYc3wrRRP91WPzcdVqmEINpLquOxiRZis1fb5KcqxCqNiLA\nZiHwkqRJaPi3/XP0131H08odSoCtsTLK5tY7xg9aHtUXq6A1wVGlWi1/y3lNwB4K\nqykmDhbS2IuqK68uy78Lj0KUxQ/tcg1MufJL4tcpWLJob3lzDbzqIWfxcYRjuPi9\nmh90RuYGjLlmK0Z8B6yc49eWcLijxmE7N00IZLyF93Rs2URWAQQsS9n8AceK3xGS\nzUJ+xHmwHtFl037+R6Nybe/Jt5evqRjT+nFQIGGVw/56fK0LryWQsS9WxME6lw6P\ndvI0WKMwZTEHBDxYki0nBHBrccAiFPA7C3OITNL1U7FrVVtlph/BXa3patN7N8dO\nShy210pZworMcfjcGInS2uE56FrWzfBNpwNZLBXSbeZg6ZldqY/ToJdO2Xlt+vDS\nzKZU2SADbdbLszdpQzCBgPDG9fOYVkgWxTlFkYlu3CshSdqt1v8YzON5cvipqiDv\nsNMuifcn4XWuzSNSvDdzsSJCrzAlGbwiH/oivz7mIr/9q/1pLbvPs3AiW+sgQgQm\nPPv3cM8p9h1KrIk=\n-----END CERTIFICATE-----\n"
+            },
+            "open-search": {
+                "certificateName": "open-search",
+                "publicCertificate": "-----BEGIN CERTIFICATE-----\r\nMIIHHDCCBgSgAwIBAgIQBQ7p+Y1HdhutJLjONvlV5zANBgkqhkiG9w0BAQsFADBZ\r\nMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMTMwMQYDVQQDEypE\r\naWdpQ2VydCBHbG9iYWwgRzIgVExTIFJTQSBTSEEyNTYgMjAyMCBDQTEwHhcNMjMw\r\nODA0MDAwMDAwWhcNMjQwODA3MjM1OTU5WjCBjjELMAkGA1UEBhMCVVMxEzARBgNV\r\nBAgTCkNhbGlmb3JuaWExFTATBgNVBAcTDFJlZHdvb2QgQ2l0eTEbMBkGA1UEChMS\r\nT3JhY2xlIENvcnBvcmF0aW9uMTYwNAYDVQQDDC0qLm9wZW5zZWFyY2gudXMtYXNo\r\nYnVybi0xLm9jaS5vcmFjbGVjbG91ZC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IB\r\nDwAwggEKAoIBAQDgIHhgTkL4LQDko0Uqs1amWwPtYaqrop0aLk8FswgRMyv/As03\r\nOVsaFEUOAaE2IMIIsb6Ajb4pTPoZVQ+JCZeuwmeWNAUa6Yx0Nn17XSh+ndyCYCpu\r\nZLG82pxAiO2lPooe/V/MnwnI8qy5iC+sZuTz9kBX8Ox0mA+4De3DxJOkvs7hHvcq\r\nvftWA/sQBM4nA2Uz5XxErGBsPA4qrajzF+JfKOwW5Zm+BlDMm9AMAeWf2eScKWVE\r\n9yu1oH2sqxwzvNRoz1GRvuDCtUsMBYQXtNryM4ylbcjLALkfQnAjPezJlpB0aDtn\r\nHLl0Izbdgev+4F1vjzkuN1h4n/bkqs7xULy7AgMBAAGjggOoMIIDpDAfBgNVHSME\r\nGDAWgBR0hYDAZsffN97PvSk3qgMdvu3NFzAdBgNVHQ4EFgQUoYwS/BTBRTZLZavZ\r\nSrLXdCBsXlswOAYDVR0RBDEwL4ItKi5vcGVuc2VhcmNoLnVzLWFzaGJ1cm4tMS5v\r\nY2kub3JhY2xlY2xvdWQuY29tMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggr\r\nBgEFBQcDAQYIKwYBBQUHAwIwgZ8GA1UdHwSBlzCBlDBIoEagRIZCaHR0cDovL2Ny\r\nbDMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0R2xvYmFsRzJUTFNSU0FTSEEyNTYyMDIw\r\nQ0ExLTEuY3JsMEigRqBEhkJodHRwOi8vY3JsNC5kaWdpY2VydC5jb20vRGlnaUNl\r\ncnRHbG9iYWxHMlRMU1JTQVNIQTI1NjIwMjBDQTEtMS5jcmwwPgYDVR0gBDcwNTAz\r\nBgZngQwBAgIwKTAnBggrBgEFBQcCARYbaHR0cDovL3d3dy5kaWdpY2VydC5jb20v\r\nQ1BTMIGHBggrBgEFBQcBAQR7MHkwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRp\r\nZ2ljZXJ0LmNvbTBRBggrBgEFBQcwAoZFaHR0cDovL2NhY2VydHMuZGlnaWNlcnQu\r\nY29tL0RpZ2lDZXJ0R2xvYmFsRzJUTFNSU0FTSEEyNTYyMDIwQ0ExLTEuY3J0MAkG\r\nA1UdEwQCMAAwggGABgorBgEEAdZ5AgQCBIIBcASCAWwBagB3AO7N0GTV2xrOxVy3\r\nnbTNE6Iyh0Z8vOzew1FIWUZxH7WbAAABib3ZBVkAAAQDAEgwRgIhAP6BDtnADvuc\r\n4nR4/SpD7YJ92ThYPfhF58rW9NnpZlQrAiEAmF7KkRfTQl6Ry7vKj0OoZQhWiXzx\r\nc0CDnufp9mp6w9EAdgBIsONr2qZHNA/lagL6nTDrHFIBy1bdLIHZu7+rOdiEcwAA\r\nAYm92QVbAAAEAwBHMEUCIQCBtoPcUBx7TEcU6rTH8N9l3ZsaLhL89RgFStlui7Du\r\nHAIgHBNi3Sxs6Nn5fTcZ2pwQw3wMBcdRTxTQdd3vj166OY8AdwDatr9rP7W2Ip+b\r\nwrtca+hwkXFsu1GEhTS9pD0wSNf7qwAAAYm92QUFAAAEAwBIMEYCIQCNvkrbvV+W\r\nfV5ZZ6LMXbMcsGEjR+LFFqzyceaU/1fLPAIhAPYNAAzAp20EETwK77Ed2RG9iT8U\r\n5ScQODfPkMs49bYdMA0GCSqGSIb3DQEBCwUAA4IBAQDGMca96lgiQCzAZdrR46Ym\r\nyP778Kk48cFks/4kRrfjq0tQmCxt+20jK5/E5W3ODGu76/ge0W/dvZF1QCLGctPG\r\n0+wDd/IP9lptR4byY3Tc0yHobfZPLDsJQShYCa7EzSPuNID2TUCcuRRZigJXwWrv\r\npemdDAqYo2os1v+vCkQUIr/zoIcMd8JL/yhSECONdpF2rl64oSwlI5RZXekCmF1K\r\nmmfHHr9Aewh50ysVXuNhMnyD8af3wCWJMnPFN1u57VbFkbDZZ1ZvVSQll4qiTYN7\r\njPey2goni2lfVACRGgSo+QQoLabnumc6LHHobe6cGw+ou03dWDC6JGaNiP56+E9d\r\n-----END CERTIFICATE-----\r\n",
+                "caCertificate": "-----BEGIN CERTIFICATE-----\r\nMIIDjjCCAnagAwIBAgIQAzrx5qcRqaC7KGSxHQn65TANBgkqhkiG9w0BAQsFADBh\r\nMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3\r\nd3cuZGlnaWNlcnQuY29tMSAwHgYDVQQDExdEaWdpQ2VydCBHbG9iYWwgUm9vdCBH\r\nMjAeFw0xMzA4MDExMjAwMDBaFw0zODAxMTUxMjAwMDBaMGExCzAJBgNVBAYTAlVT\r\nMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5j\r\nb20xIDAeBgNVBAMTF0RpZ2lDZXJ0IEdsb2JhbCBSb290IEcyMIIBIjANBgkqhkiG\r\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuzfNNNx7a8myaJCtSnX/RrohCgiN9RlUyfuI\r\n2/Ou8jqJkTx65qsGGmvPrC3oXgkkRLpimn7Wo6h+4FR1IAWsULecYxpsMNzaHxmx\r\n1x7e/dfgy5SDN67sH0NO3Xss0r0upS/kqbitOtSZpLYl6ZtrAGCSYP9PIUkY92eQ\r\nq2EGnI/yuum06ZIya7XzV+hdG82MHauVBJVJ8zUtluNJbd134/tJS7SsVQepj5Wz\r\ntCO7TG1F8PapspUwtP1MVYwnSlcUfIKdzXOS0xZKBgyMUNGPHgm+F6HmIcr9g+UQ\r\nvIOlCsRnKPZzFBQ9RnbDhxSJITRNrw9FDKZJobq7nMWxM4MphQIDAQABo0IwQDAP\r\nBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBhjAdBgNVHQ4EFgQUTiJUIBiV\r\n5uNu5g/6+rkS7QYXjzkwDQYJKoZIhvcNAQELBQADggEBAGBnKJRvDkhj6zHd6mcY\r\n1Yl9PMWLSn/pvtsrF9+wX3N3KjITOYFnQoQj8kVnNeyIv/iPsGEMNKSuIEyExtv4\r\nNeF22d+mQrvHRAiGfzZ0JFrabA0UWTW98kndth/Jsw1HKj2ZL7tcu7XUIOGZX1NG\r\nFdtom/DzMNU+MeKNhJ7jitralj41E6Vf8PlwUHBHQRFXGU7Aj64GxJUTFy8bJZ91\r\n8rGOmaFvE7FBcf6IKshPECBV1/MUReXgRPTqh5Uykw7+U0b6LJ3/iyK5S9kJRaTe\r\npLiaWN0bfVKfjllDiIGknibVb63dDcY3fe0Dkhvld1927jyNxF1WW6LZZm6zNTfl\r\nMrY=\r\n-----END CERTIFICATE-----\r\n"
             }
         },
         "backendSets": {
@@ -820,8 +1036,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.196:7139",
-                        "ipAddress": "10.152.11.196",
+                        "name": "10.152.11.136:7139",
+                        "ipAddress": "10.152.11.136",
                         "port": 7139,
                         "weight": 1,
                         "maxConnections": null,
@@ -847,7 +1063,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "InternalSelfCert-Prod-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
@@ -864,8 +1080,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.197:8543",
-                        "ipAddress": "10.152.11.197",
+                        "name": "10.152.11.137:8543",
+                        "ipAddress": "10.152.11.137",
                         "port": 8543,
                         "weight": 1,
                         "maxConnections": null,
@@ -891,7 +1107,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "InternalSelfCert-Prod-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
@@ -908,8 +1124,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.196:7121",
-                        "ipAddress": "10.152.11.196",
+                        "name": "10.153.64.124:7121",
+                        "ipAddress": "10.153.64.124",
                         "port": 7121,
                         "weight": 1,
                         "maxConnections": null,
@@ -935,7 +1151,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "InternalSelfCert-Prod-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
@@ -952,8 +1168,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.210:8069",
-                        "ipAddress": "10.152.11.210",
+                        "name": "10.153.64.105:8069",
+                        "ipAddress": "10.153.64.105",
                         "port": 8069,
                         "weight": 1,
                         "maxConnections": null,
@@ -991,8 +1207,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.209:9002",
-                        "ipAddress": "10.152.11.209",
+                        "name": "10.153.64.120:9002",
+                        "ipAddress": "10.153.64.120",
                         "port": 9002,
                         "weight": 1,
                         "maxConnections": null,
@@ -1022,8 +1238,8 @@
                 "policy": "ROUND_ROBIN",
                 "backends": [
                     {
-                        "name": "10.152.11.224:9003",
-                        "ipAddress": "10.152.11.224",
+                        "name": "10.153.64.97:9003",
+                        "ipAddress": "10.153.64.97",
                         "port": 9003,
                         "weight": 1,
                         "maxConnections": null,
@@ -1032,8 +1248,8 @@
                         "offline": false
                     },
                     {
-                        "name": "10.152.11.223:9003",
-                        "ipAddress": "10.152.11.223",
+                        "name": "10.153.64.96:9003",
+                        "ipAddress": "10.153.64.96",
                         "port": 9003,
                         "weight": 1,
                         "maxConnections": null,
@@ -1063,8 +1279,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.220:8080",
-                        "ipAddress": "10.152.11.220",
+                        "name": "10.153.64.102:8080",
+                        "ipAddress": "10.153.64.102",
                         "port": 8080,
                         "weight": 1,
                         "maxConnections": null,
@@ -1094,8 +1310,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.196:7171",
-                        "ipAddress": "10.152.11.196",
+                        "name": "10.153.64.124:7171",
+                        "ipAddress": "10.153.64.124",
                         "port": 7171,
                         "weight": 1,
                         "maxConnections": null,
@@ -1121,7 +1337,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "InternalSelfCert-Prod-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
@@ -1138,8 +1354,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.196:7159",
-                        "ipAddress": "10.152.11.196",
+                        "name": "110.152.11.136:7159",
+                        "ipAddress": "110.152.11.136",
                         "port": 7159,
                         "weight": 1,
                         "maxConnections": null,
@@ -1165,7 +1381,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "InternalSelfCert-Prod-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
@@ -1182,8 +1398,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.195:7012",
-                        "ipAddress": "10.152.11.195",
+                        "name": "10.153.64.125:7012",
+                        "ipAddress": "10.153.64.125",
                         "port": 7012,
                         "weight": 1,
                         "maxConnections": null,
@@ -1205,6 +1421,50 @@
                     "isForcePlainText": null
                 },
                 "sslConfiguration": null,
+                "sessionPersistenceConfiguration": null,
+                "lbCookieSessionPersistenceConfiguration": null
+            },
+            "open-search-dashboard": {
+                "name": "open-search-dashboard",
+                "policy": "ROUND_ROBIN",
+                "backends": [
+                    {
+                        "name": "10.152.11.185:5601",
+                        "ipAddress": "10.152.11.185",
+                        "port": 5601,
+                        "weight": 1,
+                        "maxConnections": null,
+                        "drain": false,
+                        "backup": false,
+                        "offline": false
+                    }
+                ],
+                "backendMaxConnections": null,
+                "healthChecker": {
+                    "protocol": "TCP",
+                    "urlPath": null,
+                    "port": 5601,
+                    "returnCode": 200,
+                    "retries": 3,
+                    "timeoutInMillis": 3000,
+                    "intervalInMillis": 10000,
+                    "responseBodyRegex": ".*",
+                    "isForcePlainText": null
+                },
+                "sslConfiguration": {
+                    "verifyDepth": 1,
+                    "verifyPeerCertificate": false,
+                    "trustedCertificateAuthorityIds": [],
+                    "certificateIds": [],
+                    "certificateName": "open-search",
+                    "serverOrderPreference": null,
+                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
+                    "protocols": [
+                        "TLSv1",
+                        "TLSv1.1",
+                        "TLSv1.2"
+                    ]
+                },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
             },
@@ -1240,7 +1500,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "InternalSelfCert-Prod-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
@@ -1289,7 +1549,7 @@
                     },
                     {
                         "name": "nas_files",
-                        "condition": "any(http.request.url.path sw (i '/bos_u_octa_images'), http.request.url.path sw (i '/bos_u_octa_files'))",
+                        "condition": "any(http.request.url.path sw (i '/bos_p_octa_images'), http.request.url.path sw (i '/bos_p_octa_files'))",
                         "actions": [
                             {
                                 "name": "FORWARD_TO_BACKENDSET",
@@ -1372,27 +1632,27 @@
         }
     },
     {
-        "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaavlkgpnoridtrp6mfhdj3he37c7hi5tfof5ddtdeb5buklj6gqkha",
-        "compartmentId": "ocid1.compartment.oc1..aaaaaaaavlllxvqztlsc3qqorammnbw65hzewqk7xpvawlzbh7r53u2fdeqq",
-        "displayName": "new-octa-uat-lb",
+        "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaar4jcwkasakbc3finj3qobb74pwicr5idmomh2h2mpeer33nfqc6q",
+        "compartmentId": "ocid1.compartment.oc1..aaaaaaaa3ybyt4tx2zasleqqcc34bgaismmoh3yhtjnmkmk3v5t4t3xedqxq",
+        "displayName": "new-octa-dr-lb",
         "lifecycleState": "ACTIVE",
-        "timeCreated": "2023-08-18T01:58:59.141Z",
+        "timeCreated": "2023-09-13T23:05:33.854Z",
         "ipAddresses": [
             {
-                "ipAddress": "10.152.6.180",
+                "ipAddress": "10.152.6.229",
                 "isPublic": false,
                 "reservedIp": null
             }
         ],
         "shapeName": "flexible",
         "shapeDetails": {
-            "minimumBandwidthInMbps": 4000,
+            "minimumBandwidthInMbps": 500,
             "maximumBandwidthInMbps": 4000
         },
         "isPrivate": true,
         "isDeleteProtectionEnabled": null,
         "subnetIds": [
-            "ocid1.subnet.oc1.iad.aaaaaaaaay7lt7g2g65rpyn74dgmrtkug7iylyyovi7jev2gp6rbexyhrefq"
+            "ocid1.subnet.oc1.phx.aaaaaaaa7sn6mko4cl5pla5aodfw45d6krrghnfrkpccacuuf5dxpw3gwv2a"
         ],
         "networkSecurityGroupIds": [],
         "listeners": {
@@ -1402,7 +1662,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritefulfillment-uat.octa.rite.etcchosted.com"
+                    "ritefulfillment-prod.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1411,7 +1671,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT2",
+                    "certificateName": "LB-OCTA-CERT",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -1432,7 +1692,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritesso-uat.octa.rite.etcchosted.com"
+                    "ritesso-prod.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1441,7 +1701,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT2",
+                    "certificateName": "LB-OCTA-CERT",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -1462,7 +1722,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritecrm-uat.octa.rite.etcchosted.com"
+                    "ritecrm-prod.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1471,7 +1731,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT2",
+                    "certificateName": "LB-OCTA-CERT",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -1492,7 +1752,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "riteivr-uat.octa.rite.etcchosted.com"
+                    "riteivr-prod.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1501,7 +1761,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT2",
+                    "certificateName": "LB-OCTA-CERT",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -1522,7 +1782,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "riteledger-uat.octa.rite.etcchosted.com"
+                    "riteledger-prod.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1531,7 +1791,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT2",
+                    "certificateName": "LB-OCTA-CERT",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -1552,7 +1812,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "riteonline-uat.octa.rite.etcchosted.com"
+                    "riteonline-prod.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1561,37 +1821,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT2",
-                    "serverOrderPreference": "ENABLED",
-                    "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
-                },
-                "connectionConfiguration": {
-                    "idleTimeout": 60,
-                    "backendTcpProxyProtocolVersion": null,
-                    "backendTcpProxyProtocolOptions": null
-                },
-                "ruleSetNames": [],
-                "routingPolicyName": null
-            },
-            "TM": {
-                "name": "TM",
-                "defaultBackendSetName": "TM",
-                "port": 443,
-                "protocol": "HTTP",
-                "hostnameNames": [
-                    "ritetm-uat.octa.rite.etcchosted.com"
-                ],
-                "serverName": null,
-                "pathRouteSetName": null,
-                "sslConfiguration": {
-                    "verifyDepth": 1,
-                    "verifyPeerCertificate": false,
-                    "trustedCertificateAuthorityIds": [],
-                    "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT2",
+                    "certificateName": "LB-OCTA-CERT",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -1612,7 +1842,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritereports-uat.octa.rite.etcchosted.com"
+                    "ritereports-prod.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1621,7 +1851,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT2",
+                    "certificateName": "LB-OCTA-CERT",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -1636,13 +1866,13 @@
                 "ruleSetNames": [],
                 "routingPolicyName": null
             },
-            "ritemanager": {
-                "name": "ritemanager",
-                "defaultBackendSetName": "ritemanager",
+            "TM": {
+                "name": "TM",
+                "defaultBackendSetName": "TM",
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritemanager-uat.octa.rite.etcchosted.com"
+                    "ritetm-prod.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1651,7 +1881,37 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT2",
+                    "certificateName": "LB-OCTA-CERT",
+                    "serverOrderPreference": "ENABLED",
+                    "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
+                    "protocols": [
+                        "TLSv1.2"
+                    ]
+                },
+                "connectionConfiguration": {
+                    "idleTimeout": 60,
+                    "backendTcpProxyProtocolVersion": null,
+                    "backendTcpProxyProtocolOptions": null
+                },
+                "ruleSetNames": [],
+                "routingPolicyName": null
+            },
+            "ritemanager": {
+                "name": "ritemanager",
+                "defaultBackendSetName": "ritemanager",
+                "port": 443,
+                "protocol": "HTTP",
+                "hostnameNames": [
+                    "ritemanager-prod.octa.rite.etcchosted.com"
+                ],
+                "serverName": null,
+                "pathRouteSetName": null,
+                "sslConfiguration": {
+                    "verifyDepth": 1,
+                    "verifyPeerCertificate": false,
+                    "trustedCertificateAuthorityIds": [],
+                    "certificateIds": [],
+                    "certificateName": "LB-OCTA-CERT",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -1672,7 +1932,7 @@
                 "port": 443,
                 "protocol": "HTTP",
                 "hostnameNames": [
-                    "ritenotification-uat.octa.rite.etcchosted.com"
+                    "ritenotification-prod.octa.rite.etcchosted.com"
                 ],
                 "serverName": null,
                 "pathRouteSetName": null,
@@ -1681,7 +1941,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT2",
+                    "certificateName": "LB-OCTA-CERT",
                     "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
@@ -1698,59 +1958,59 @@
             }
         },
         "hostnames": {
-            "riteonline-uat.octa.rite.etcchosted.com": {
-                "name": "riteonline-uat.octa.rite.etcchosted.com",
-                "hostname": "riteonline-uat.octa.rite.etcchosted.com"
+            "ritecrm-prod.octa.rite.etcchosted.com": {
+                "name": "ritecrm-prod.octa.rite.etcchosted.com",
+                "hostname": "ritecrm-prod.octa.rite.etcchosted.com"
             },
-            "ritecrm-uat.octa.rite.etcchosted.com": {
-                "name": "ritecrm-uat.octa.rite.etcchosted.com",
-                "hostname": "ritecrm-uat.octa.rite.etcchosted.com"
+            "ritefulfillment-prod.octa.rite.etcchosted.com": {
+                "name": "ritefulfillment-prod.octa.rite.etcchosted.com",
+                "hostname": "ritefulfillment-prod.octa.rite.etcchosted.com"
             },
-            "ritereports-uat.octa.rite.etcchosted.com": {
-                "name": "ritereports-uat.octa.rite.etcchosted.com",
-                "hostname": "ritereports-uat.octa.rite.etcchosted.com"
+            "ritesso-prod.octa.rite.etcchosted.com": {
+                "name": "ritesso-prod.octa.rite.etcchosted.com",
+                "hostname": "ritesso-prod.octa.rite.etcchosted.com"
             },
-            "ritefulfillment-uat.octa.rite.etcchosted.com": {
-                "name": "ritefulfillment-uat.octa.rite.etcchosted.com",
-                "hostname": "ritefulfillment-uat.octa.rite.etcchosted.com"
+            "riteivr-prod.octa.rite.etcchosted.com": {
+                "name": "riteivr-prod.octa.rite.etcchosted.com",
+                "hostname": "riteivr-prod.octa.rite.etcchosted.com"
             },
-            "riteivr-uat.octa.rite.etcchosted.com": {
-                "name": "riteivr-uat.octa.rite.etcchosted.com",
-                "hostname": "riteivr-uat.octa.rite.etcchosted.com"
+            "ritenotification-prod.octa.rite.etcchosted.com": {
+                "name": "ritenotification-prod.octa.rite.etcchosted.com",
+                "hostname": "ritenotification-prod.octa.rite.etcchosted.com"
             },
-            "ritesso-uat.octa.rite.etcchosted.com": {
-                "name": "ritesso-uat.octa.rite.etcchosted.com",
-                "hostname": "ritesso-uat.octa.rite.etcchosted.com"
+            "riteonline-prod.octa.rite.etcchosted.com": {
+                "name": "riteonline-prod.octa.rite.etcchosted.com",
+                "hostname": "riteonline-prod.octa.rite.etcchosted.com"
             },
-            "ritetm-uat.octa.rite.etcchosted.com": {
-                "name": "ritetm-uat.octa.rite.etcchosted.com",
-                "hostname": "ritetm-uat.octa.rite.etcchosted.com"
+            "riteledger-prod.octa.rite.etcchosted.com": {
+                "name": "riteledger-prod.octa.rite.etcchosted.com",
+                "hostname": "riteledger-prod.octa.rite.etcchosted.com"
             },
-            "riteledger-uat.octa.rite.etcchosted.com": {
-                "name": "riteledger-uat.octa.rite.etcchosted.com",
-                "hostname": "riteledger-uat.octa.rite.etcchosted.com"
+            "ritetm-prod.octa.rite.etcchosted.com": {
+                "name": "ritetm-prod.octa.rite.etcchosted.com",
+                "hostname": "ritetm-prod.octa.rite.etcchosted.com"
             },
-            "ritemanager-uat.octa.rite.etcchosted.com": {
-                "name": "ritemanager-uat.octa.rite.etcchosted.com",
-                "hostname": "ritemanager-uat.octa.rite.etcchosted.com"
+            "ritemanager-prod.octa.rite.etcchosted.com": {
+                "name": "ritemanager-prod.octa.rite.etcchosted.com",
+                "hostname": "ritemanager-prod.octa.rite.etcchosted.com"
             },
-            "ritenotification-uat.octa.rite.etcchosted.com": {
-                "name": "ritenotification-uat.octa.rite.etcchosted.com",
-                "hostname": "ritenotification-uat.octa.rite.etcchosted.com"
+            "ritereports-prod.octa.rite.etcchosted.com": {
+                "name": "ritereports-prod.octa.rite.etcchosted.com",
+                "hostname": "ritereports-prod.octa.rite.etcchosted.com"
             }
         },
         "cidrBlocks": null,
         "sslCipherSuites": {},
         "certificates": {
-            "LB-OCTA-CERT2": {
-                "certificateName": "LB-OCTA-CERT2",
+            "LB-OCTA-CERT": {
+                "certificateName": "LB-OCTA-CERT",
                 "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIGszCCBZugAwIBAgIIY5n1rNUu6iAwDQYJKoZIhvcNAQELBQAwgbQxCzAJBgNV\nBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQHEwpTY290dHNkYWxlMRow\nGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UECxMkaHR0cDovL2NlcnRz\nLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQDEypHbyBEYWRkeSBTZWN1\ncmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwHhcNMjMwMjE0MTYzMDI3WhcN\nMjQwMzE3MTYzMDI3WjAlMSMwIQYDVQQDDBoqLm9jdGEucml0ZS5ldGNjaG9zdGVk\nLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAM+ftul06q4PosIJ\nAIIDcqkjtB7cWwiwEgWaQMjdcJLO7rqeFsiBJvV7rK+fU6lXaL/9UX0oi6XjE+ll\nNSYogqcBM+OZyl8W/QxkNAcKCLEIxm2WPo2PgYCOlY5pK5CqsvssKFbKZZuztWbA\nksyMV+kaUkOZR7YpMqc1dAfQaQFQ9Rc4qetRNr98bNzxhgFu277cKi0KuuS5SCEc\nt5BSNY7NEcbgTEMcafWMsVieJAUoFzFcxTHxrcvx2OjZZVrq51vijbdvCDOnv9B3\neGM5/SknPI1ILEYqASOzfi3XWyfmsNePzfE2AQolaiRry09VOSeiKYFTlI5JimTn\n0NYiY40CAwEAAaOCA1UwggNRMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYB\nBQUHAwEGCCsGAQUFBwMCMA4GA1UdDwEB/wQEAwIFoDA4BgNVHR8EMTAvMC2gK6Ap\nhidodHRwOi8vY3JsLmdvZGFkZHkuY29tL2dkaWcyczEtNTIwMS5jcmwwXQYDVR0g\nBFYwVDBIBgtghkgBhv1tAQcXATA5MDcGCCsGAQUFBwIBFitodHRwOi8vY2VydGlm\naWNhdGVzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMAgGBmeBDAECATB2BggrBgEF\nBQcBAQRqMGgwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmdvZGFkZHkuY29tLzBA\nBggrBgEFBQcwAoY0aHR0cDovL2NlcnRpZmljYXRlcy5nb2RhZGR5LmNvbS9yZXBv\nc2l0b3J5L2dkaWcyLmNydDAfBgNVHSMEGDAWgBRAwr0njsw0gzCiM9f7bLPwtCyA\nzjA/BgNVHREEODA2ghoqLm9jdGEucml0ZS5ldGNjaG9zdGVkLmNvbYIYb2N0YS5y\naXRlLmV0Y2Nob3N0ZWQuY29tMB0GA1UdDgQWBBQKnRe6aegyKoosjM9GRRD/Klc3\n1zCCAX4GCisGAQQB1nkCBAIEggFuBIIBagFoAHYA7s3QZNXbGs7FXLedtM0TojKH\nRny87N7DUUhZRnEftZsAAAGGUMNjdgAABAMARzBFAiAfVHpgap6pJtg1OKLTQpyE\nVGA5XuG9Q8J8B+4d8jEMsAIhAM8PHccqd8FAQQnzjdAi+2NnJjP3Pc8miyxFAbJD\nXvm9AHYASLDja9qmRzQP5WoC+p0w6xxSActW3SyB2bu/qznYhHMAAAGGUMNkXgAA\nBAMARzBFAiANFslH1aV9v2t5pmZIkiJCzsaLMt5EZ4PrjXtJJt7XZAIhAI/HCMqv\nEVWz6ajfdXh3VNMq8+3K0zESy76P2uPBGg9FAHYA2ra/az+1tiKfm8K7XGvocJFx\nbLtRhIU0vaQ9MEjX+6sAAAGGUMNkywAABAMARzBFAiEAm2ATsPbuEgd8Ne01rtIb\nRcE3YKrP4WKQ7sGuVYjlT44CICBW3ZaLGoweeYW64zuCmEYzz72hmk1n6e7ywLiG\nYU/EMA0GCSqGSIb3DQEBCwUAA4IBAQA7ux1luDw+nn17SzvtzUzpxHwrqS0+ebdx\ncOqvt4Si2fLHM7cACD7SuRjm8L6XzzDGu/BiryUpwIWGIa8HxlTI1XyC8NzvISoM\nFSQNMGd7x7FfRilFqL9dBrCbX86lFK3KgOX+Rk8yxaCLwxjF7bb7YB3SH/djJgAF\ngjcOeheUiBIHM/yf+Xu3UzT5ob5D1kzm8lBXusUBcl9Cn6uRNC/Ls0HUkINaTWb0\nkfb8Nxy5VqhgOVfFItTJ/URKj210uv/nRk+bQwaBQZewspIocPnzghWmNtlRwSJq\nlfIDVmPNixnQCv6DvWIt/NGfEAlnhyOL6SyGHg1ionPtA3EdCyuc\n-----END CERTIFICATE-----\n",
                 "caCertificate": "-----BEGIN CERTIFICATE-----\nMIIE0DCCA7igAwIBAgIBBzANBgkqhkiG9w0BAQsFADCBgzELMAkGA1UEBhMCVVMx\nEDAOBgNVBAgTB0FyaXpvbmExEzARBgNVBAcTClNjb3R0c2RhbGUxGjAYBgNVBAoT\nEUdvRGFkZHkuY29tLCBJbmMuMTEwLwYDVQQDEyhHbyBEYWRkeSBSb290IENlcnRp\nZmljYXRlIEF1dGhvcml0eSAtIEcyMB4XDTExMDUwMzA3MDAwMFoXDTMxMDUwMzA3\nMDAwMFowgbQxCzAJBgNVBAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQH\nEwpTY290dHNkYWxlMRowGAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UE\nCxMkaHR0cDovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQD\nEypHbyBEYWRkeSBTZWN1cmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwggEi\nMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC54MsQ1K92vdSTYuswZLiBCGzD\nBNliF44v/z5lz4/OYuY8UhzaFkVLVat4a2ODYpDOD2lsmcgaFItMzEUz6ojcnqOv\nK/6AYZ15V8TPLvQ/MDxdR/yaFrzDN5ZBUY4RS1T4KL7QjL7wMDge87Am+GZHY23e\ncSZHjzhHU9FGHbTj3ADqRay9vHHZqm8A29vNMDp5T19MR/gd71vCxJ1gO7GyQ5HY\npDNO6rPWJ0+tJYqlxvTV0KaudAVkV4i1RFXULSo6Pvi4vekyCgKUZMQWOlDxSq7n\neTOvDCAHf+jfBDnCaQJsY1L6d8EbyHSHyLmTGFBUNUtpTrw700kuH9zB0lL7AgMB\nAAGjggEaMIIBFjAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBBjAdBgNV\nHQ4EFgQUQMK9J47MNIMwojPX+2yz8LQsgM4wHwYDVR0jBBgwFoAUOpqFBxBnKLbv\n9r0FQW4gwZTaD94wNAYIKwYBBQUHAQEEKDAmMCQGCCsGAQUFBzABhhhodHRwOi8v\nb2NzcC5nb2RhZGR5LmNvbS8wNQYDVR0fBC4wLDAqoCigJoYkaHR0cDovL2NybC5n\nb2RhZGR5LmNvbS9nZHJvb3QtZzIuY3JsMEYGA1UdIAQ/MD0wOwYEVR0gADAzMDEG\nCCsGAQUFBwIBFiVodHRwczovL2NlcnRzLmdvZGFkZHkuY29tL3JlcG9zaXRvcnkv\nMA0GCSqGSIb3DQEBCwUAA4IBAQAIfmyTEMg4uJapkEv/oV9PBO9sPpyIBslQj6Zz\n91cxG7685C/b+LrTW+C05+Z5Yg4MotdqY3MxtfWoSKQ7CC2iXZDXtHwlTxFWMMS2\nRJ17LJ3lXubvDGGqv+QqG+6EnriDfcFDzkSnE3ANkR/0yBOtg2DZ2HKocyQetawi\nDsoXiWJYRBuriSUBAA/NxBti21G00w9RKpv0vHP8ds42pM3Z2Czqrpv1KrKQ0U11\nGIo/ikGQI31bS/6kA1ibRrLDYGCD+H1QQc7CoZDDu+8CL9IVVO5EFdkKrqeKM+2x\nLXY2JtwE65/3YR8V3Idv7kaWKK2hJn0KCacuBKONvPi8BDAB\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIEfTCCA2WgAwIBAgIDG+cVMA0GCSqGSIb3DQEBCwUAMGMxCzAJBgNVBAYTAlVT\nMSEwHwYDVQQKExhUaGUgR28gRGFkZHkgR3JvdXAsIEluYy4xMTAvBgNVBAsTKEdv\nIERhZGR5IENsYXNzIDIgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMTQwMTAx\nMDcwMDAwWhcNMzEwNTMwMDcwMDAwWjCBgzELMAkGA1UEBhMCVVMxEDAOBgNVBAgT\nB0FyaXpvbmExEzARBgNVBAcTClNjb3R0c2RhbGUxGjAYBgNVBAoTEUdvRGFkZHku\nY29tLCBJbmMuMTEwLwYDVQQDEyhHbyBEYWRkeSBSb290IENlcnRpZmljYXRlIEF1\ndGhvcml0eSAtIEcyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv3Fi\nCPH6WTT3G8kYo/eASVjpIoMTpsUgQwE7hPHmhUmfJ+r2hBtOoLTbcJjHMgGxBT4H\nTu70+k8vWTAi56sZVmvigAf88xZ1gDlRe+X5NbZ0TqmNghPktj+pA4P6or6KFWp/\n3gvDthkUBcrqw6gElDtGfDIN8wBmIsiNaW02jBEYt9OyHGC0OPoCjM7T3UYH3go+\n6118yHz7sCtTpJJiaVElBWEaRIGMLKlDliPfrDqBmg4pxRyp6V0etp6eMAo5zvGI\ngPtLXcwy7IViQyU0AlYnAZG0O3AqP26x6JyIAX2f1PnbU21gnb8s51iruF9G/M7E\nGwM8CetJMVxpRrPgRwIDAQABo4IBFzCCARMwDwYDVR0TAQH/BAUwAwEB/zAOBgNV\nHQ8BAf8EBAMCAQYwHQYDVR0OBBYEFDqahQcQZyi27/a9BUFuIMGU2g/eMB8GA1Ud\nIwQYMBaAFNLEsNKR1EwRcbNhyz2h/t2oatTjMDQGCCsGAQUFBwEBBCgwJjAkBggr\nBgEFBQcwAYYYaHR0cDovL29jc3AuZ29kYWRkeS5jb20vMDIGA1UdHwQrMCkwJ6Al\noCOGIWh0dHA6Ly9jcmwuZ29kYWRkeS5jb20vZ2Ryb290LmNybDBGBgNVHSAEPzA9\nMDsGBFUdIAAwMzAxBggrBgEFBQcCARYlaHR0cHM6Ly9jZXJ0cy5nb2RhZGR5LmNv\nbS9yZXBvc2l0b3J5LzANBgkqhkiG9w0BAQsFAAOCAQEAWQtTvZKGEacke+1bMc8d\nH2xwxbhuvk679r6XUOEwf7ooXGKUwuN+M/f7QnaF25UcjCJYdQkMiGVnOQoWCcWg\nOJekxSOTP7QYpgEGRJHjp2kntFolfzq3Ms3dhP8qOCkzpN1nsoX+oYggHFCJyNwq\n9kIDN0zmiN/VryTyscPfzLXs4Jlet0lUIDyUGAzHHFIYSaRt4bNYC8nY7NmuHDKO\nKHAN4v6mF56ED71XcLNa6R+ghlO773z/aQvgSMO3kwvIClTErF0UZzdsyqUvMQg3\nqm5vjLyb4lddJIGvl5echK1srDdMZvNhkREg5L4wn3qkKQmw4TRfZHcYQFHfjDCm\nrw==\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIEADCCAuigAwIBAgIBADANBgkqhkiG9w0BAQUFADBjMQswCQYDVQQGEwJVUzEh\nMB8GA1UEChMYVGhlIEdvIERhZGR5IEdyb3VwLCBJbmMuMTEwLwYDVQQLEyhHbyBE\nYWRkeSBDbGFzcyAyIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTA0MDYyOTE3\nMDYyMFoXDTM0MDYyOTE3MDYyMFowYzELMAkGA1UEBhMCVVMxITAfBgNVBAoTGFRo\nZSBHbyBEYWRkeSBHcm91cCwgSW5jLjExMC8GA1UECxMoR28gRGFkZHkgQ2xhc3Mg\nMiBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTCCASAwDQYJKoZIhvcNAQEBBQADggEN\nADCCAQgCggEBAN6d1+pXGEmhW+vXX0iG6r7d/+TvZxz0ZWizV3GgXne77ZtJ6XCA\nPVYYYwhv2vLM0D9/AlQiVBDYsoHUwHU9S3/Hd8M+eKsaA7Ugay9qK7HFiH7Eux6w\nwdhFJ2+qN1j3hybX2C32qRe3H3I2TqYXP2WYktsqbl2i/ojgC95/5Y0V4evLOtXi\nEqITLdiOr18SPaAIBQi2XKVlOARFmR6jYGB0xUGlcmIbYsUfb18aQr4CUWWoriMY\navx4A6lNf4DD+qta/KFApMoZFv6yyO9ecw3ud72a9nmYvLEHZ6IVDd2gWMZEewo+\nYihfukEHU1jPEX44dMX4/7VpkI+EdOqXG68CAQOjgcAwgb0wHQYDVR0OBBYEFNLE\nsNKR1EwRcbNhyz2h/t2oatTjMIGNBgNVHSMEgYUwgYKAFNLEsNKR1EwRcbNhyz2h\n/t2oatTjoWekZTBjMQswCQYDVQQGEwJVUzEhMB8GA1UEChMYVGhlIEdvIERhZGR5\nIEdyb3VwLCBJbmMuMTEwLwYDVQQLEyhHbyBEYWRkeSBDbGFzcyAyIENlcnRpZmlj\nYXRpb24gQXV0aG9yaXR5ggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQAD\nggEBADJL87LKPpH8EsahB4yOd6AzBhRckB4Y9wimPQoZ+YeAEW5p5JYXMP80kWNy\nOO7MHAGjHZQopDH2esRU1/blMVgDoszOYtuURXO1v0XJJLXVggKtI3lpjbi2Tc7P\nTMozI+gciKqdi0FuFskg5YmezTvacPd+mSYgFFQlq25zheabIZ0KbIIOqPjCDPoQ\nHmyW74cNxA9hi63ugyuV+I6ShHI56yDqg+2DzZduCLzrTia2cyvk0/ZM/iZx4mER\ndEr/VxqHD3VILs9RaRegAhJhldXRQLIQTO7ErBBDpqWeCtWVYpoNz4iCxTIM5Cuf\nReYNnyicsbkqWletNw+vHX/bvZ8=\n-----END CERTIFICATE-----\n"
             },
-            "InternalSelfCert-Dev-CERT": {
-                "certificateName": "InternalSelfCert-Dev-CERT",
-                "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIFjzCCA3egAwIBAgIEY5tNuDANBgkqhkiG9w0BAQsFADBwMQswCQYDVQQGEwJ1\r\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\r\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMRowGAYDVQQDDBEqLmV0Y2Nob3N0ZWQu\r\ndGVzdDAeFw0yMjEyMTUxNjM5MjBaFw0yMzEyMTUxNjM5MjBaMHAxCzAJBgNVBAYT\r\nAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsGA1UECgwE\r\nZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xGjAYBgNVBAMMESouZXRjY2hvc3Rl\r\nZC50ZXN0MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAtXWcmOT9zT7v\r\n1nliTOO95DKmzrX4mvXIMGL2Yj9eQDzuzdaIEnik35gqmn63kulq0MM4rYRY7eO3\r\n0DWubBj1JGzSAUdoEViqHUlnocv5D9vGLpKBoW6fIJ3K3BP7h9vvs87p+x0iogAM\r\nTnNkNV1XQ0f1r1z+cUlnMEGIVyJaxX5W+ey7MNaqga+hTX8pzR8QnVl0hpLts0t0\r\nbTMSl9XwT6rZ/LIjTpxWKesZs7GPXwQpMawFIWRI23AIiaotFz262aNKkZrZ66Et\r\n5MDDzzdcO9BZsTQDcYaw+gYUl95s3fkLXrJxso0DeIiH0HmDakLdtI94GVc51kh3\r\ny2YT66ebHOc5+v+z006si140PRtghrdPHHcZJrBn/Sx8CayO+EiGse61iQ84KgMG\r\nK+X0QYTtZpuZShfi1OUewFOVmbDCS8r27MmblwYDmUbnkfoDsq5de/Y++LTpNn8z\r\nm/zxDxn+dsCoVqzxMQrhJcle+EoUo8Xe82hP8al2Xim7gFTxUnG/jaFiI681IoOV\r\nNhsWqrDFRS8T41mh6dNKWxYi652fSbsbOFwqwyYuZ+yJ7oEsSZuWATfQkaDKw1mB\r\nPr85vA6fYodZ53d4v5loejLUhVCXi5wrKFQyILy2fHa8J+u7oaTtPvwChw+wKq71\r\n8IeZjJiDSIxt4GUinfugs0MaWT4lKBkCAwEAAaMxMC8wLQYDVR0RBCYwJIIRKi5l\r\ndGNjaG9zdGVkLnRlc3SCD2V0Y2Nob3N0ZWQudGVzdDANBgkqhkiG9w0BAQsFAAOC\r\nAgEAXWgLw9riE48sl1CiBHtJFmqPrgY7YBGR090qeoqoDowmGMOnU0vKduwQvio7\r\nvh45nBryT33MYfUgmUhcwTsB8o8kjxutPJmpOvHgs+2SoNN33P091kUfJMOuIZ2m\r\nvpZ4/KY3Zdzr1y9LB29OG8CHWYfHpzMNPyi+AE8exFst/WNUlPcxVp8V7AxKFWF+\r\ni1+LJjnHjhhFwdGIWhOUNkbQsJ3sUVstSz2YMa4gjMiSNqJ/rjRaRofDXi3DwysU\r\nSuIrG8c9r7tR5cm1AwL6jpo+M0hC5bYbyAH6fqz/f58yLvR+kNMGolsSp/zEllbj\r\n8rs3gxHAKCD5sHJZ9uhoNr0seSUFSqQJ0nfu9n8GgW/LdhlFcx2HcNNiu/wNmeDV\r\nXhOSc6TZ64lh6kjbsKpW7hzymVsCz/R0C1FfazmTNs5W2ORokbFjgyitHwLdXFbm\r\nkjbgPqWpCcbAuybrppNgWeW/JvJ13yiIfk3MH4YVpaDfY38FNUGcRDAYMf/0zsIX\r\na+L7EWAh8ha20mUElYTAHcC1r18qGn8ZZlmcYyNa26ncJd1kJQqxtvyfuzxpAJNU\r\ns4yJfYIzXszczxhqy2/dnheBDnbdIlziAiSmhET5Jfd5rzfIOcHBdX+U9Ex5Gng4\r\n6mnl56J/ddi/GOUTJ8CIicwcWs/EaUwUH6sMWr+Cbomhv5A=\n-----END CERTIFICATE-----\n",
-                "caCertificate": "-----BEGIN CERTIFICATE-----\nMIIFjzCCA3egAwIBAgIEY5tNuDANBgkqhkiG9w0BAQsFADBwMQswCQYDVQQGEwJ1\r\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\r\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMRowGAYDVQQDDBEqLmV0Y2Nob3N0ZWQu\r\ndGVzdDAeFw0yMjEyMTUxNjM5MjBaFw0yMzEyMTUxNjM5MjBaMHAxCzAJBgNVBAYT\r\nAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsGA1UECgwE\r\nZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xGjAYBgNVBAMMESouZXRjY2hvc3Rl\r\nZC50ZXN0MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAtXWcmOT9zT7v\r\n1nliTOO95DKmzrX4mvXIMGL2Yj9eQDzuzdaIEnik35gqmn63kulq0MM4rYRY7eO3\r\n0DWubBj1JGzSAUdoEViqHUlnocv5D9vGLpKBoW6fIJ3K3BP7h9vvs87p+x0iogAM\r\nTnNkNV1XQ0f1r1z+cUlnMEGIVyJaxX5W+ey7MNaqga+hTX8pzR8QnVl0hpLts0t0\r\nbTMSl9XwT6rZ/LIjTpxWKesZs7GPXwQpMawFIWRI23AIiaotFz262aNKkZrZ66Et\r\n5MDDzzdcO9BZsTQDcYaw+gYUl95s3fkLXrJxso0DeIiH0HmDakLdtI94GVc51kh3\r\ny2YT66ebHOc5+v+z006si140PRtghrdPHHcZJrBn/Sx8CayO+EiGse61iQ84KgMG\r\nK+X0QYTtZpuZShfi1OUewFOVmbDCS8r27MmblwYDmUbnkfoDsq5de/Y++LTpNn8z\r\nm/zxDxn+dsCoVqzxMQrhJcle+EoUo8Xe82hP8al2Xim7gFTxUnG/jaFiI681IoOV\r\nNhsWqrDFRS8T41mh6dNKWxYi652fSbsbOFwqwyYuZ+yJ7oEsSZuWATfQkaDKw1mB\r\nPr85vA6fYodZ53d4v5loejLUhVCXi5wrKFQyILy2fHa8J+u7oaTtPvwChw+wKq71\r\n8IeZjJiDSIxt4GUinfugs0MaWT4lKBkCAwEAAaMxMC8wLQYDVR0RBCYwJIIRKi5l\r\ndGNjaG9zdGVkLnRlc3SCD2V0Y2Nob3N0ZWQudGVzdDANBgkqhkiG9w0BAQsFAAOC\r\nAgEAXWgLw9riE48sl1CiBHtJFmqPrgY7YBGR090qeoqoDowmGMOnU0vKduwQvio7\r\nvh45nBryT33MYfUgmUhcwTsB8o8kjxutPJmpOvHgs+2SoNN33P091kUfJMOuIZ2m\r\nvpZ4/KY3Zdzr1y9LB29OG8CHWYfHpzMNPyi+AE8exFst/WNUlPcxVp8V7AxKFWF+\r\ni1+LJjnHjhhFwdGIWhOUNkbQsJ3sUVstSz2YMa4gjMiSNqJ/rjRaRofDXi3DwysU\r\nSuIrG8c9r7tR5cm1AwL6jpo+M0hC5bYbyAH6fqz/f58yLvR+kNMGolsSp/zEllbj\r\n8rs3gxHAKCD5sHJZ9uhoNr0seSUFSqQJ0nfu9n8GgW/LdhlFcx2HcNNiu/wNmeDV\r\nXhOSc6TZ64lh6kjbsKpW7hzymVsCz/R0C1FfazmTNs5W2ORokbFjgyitHwLdXFbm\r\nkjbgPqWpCcbAuybrppNgWeW/JvJ13yiIfk3MH4YVpaDfY38FNUGcRDAYMf/0zsIX\r\na+L7EWAh8ha20mUElYTAHcC1r18qGn8ZZlmcYyNa26ncJd1kJQqxtvyfuzxpAJNU\r\ns4yJfYIzXszczxhqy2/dnheBDnbdIlziAiSmhET5Jfd5rzfIOcHBdX+U9Ex5Gng4\r\n6mnl56J/ddi/GOUTJ8CIicwcWs/EaUwUH6sMWr+Cbomhv5A=\n-----END CERTIFICATE-----\n"
+            "InternalSelfCert-Prod-CERT": {
+                "certificateName": "InternalSelfCert-Prod-CERT",
+                "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIFpzCCA4+gAwIBAgIEZQCRszANBgkqhkiG9w0BAQsFADB2MQswCQYDVQQGEwJ1\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMSAwHgYDVQQDDBcqLm9jdGEuZXRjY2hv\nc3RlZC5sb2NhbDAeFw0yMzA5MTIxNjI4MzVaFw0zMzA5MTIxNjI4MzVaMHYxCzAJ\nBgNVBAYTAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsG\nA1UECgwEZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xIDAeBgNVBAMMFyoub2N0\nYS5ldGNjaG9zdGVkLmxvY2FsMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKC\nAgEAjwUCZeGsQ+xFL2rqRO6X+T7ADpfAJXbA2WA2eeCI1KD33o0DegWlU5V7Ufrf\ndbfQqCme58Xlpqt7NELGSgGJ5UPAVI4Z539fCLX7K6AFy7TRBRgjLt+eJQss38Cc\nvH9+5kuWl0e3GNTVh0t7S07Com1pExrUfSrXnu5ma8W5RdkhC7yh4XOIh7aUzR+2\nsJ5ksibdzJFI7gFqs367UCQ5fWR/nr49tn2GQOghPOuPQAkLKB1X4FsjvSMUDup3\nIPt9hHFooTyf7o/M1hqvK1GqFQkr/4AFw7v4sU9xbHiDWOkRESRVaEo6JO/6/R39\nl+697aCXF0RZOfNF2pvUqisfNg/l4GDoTXOjjUcPcUzsUnoVj8Wtv5qSmgUm5bin\n+4DJ/0LH6jVhcGZnthkfre4OKMvBGhy1PTZoE3VYnvjm2jf0bU/Bi/BbDW7rr8Mw\nF9mV5pTCV3gYesyXfkeAfWRZKCdTBUUAUBLBTHLHIbZuwjdxroZ4uPlHjPlIPwGy\n+1gLzzalifWlvrWaIIJ2ZlMHFWQo+3/1CJOVFKOFVsbd0V7t7hkYyoIK6d28vQM+\nudbXEEERXBAYF/eB60CvPENsuhgK6uX3+SG2CFjJe//8nGnVmXvYo0C3G4ACHQK0\nYWLHYIuIjfVN6XY00utl1j2LcpnXmBaa+I3H/NYNMS4TKfMCAwEAAaM9MDswOQYD\nVR0RBDIwMIIXKi5vY3RhLmV0Y2Nob3N0ZWQubG9jYWyCFW9jdGEuZXRjY2hvc3Rl\nZC5sb2NhbDANBgkqhkiG9w0BAQsFAAOCAgEASj95eTXHtNXsS65AoDmCoqmg8Y9L\nXCS9mqLswWspd5A/yf56xlvECECieC8/XlYgNj0dTPDw2btJFiNXF6iOPV5km+f/\n+LLpunqC6+5qa5NWtyYc3wrRRP91WPzcdVqmEINpLquOxiRZis1fb5KcqxCqNiLA\nZiHwkqRJaPi3/XP0131H08odSoCtsTLK5tY7xg9aHtUXq6A1wVGlWi1/y3lNwB4K\nqykmDhbS2IuqK68uy78Lj0KUxQ/tcg1MufJL4tcpWLJob3lzDbzqIWfxcYRjuPi9\nmh90RuYGjLlmK0Z8B6yc49eWcLijxmE7N00IZLyF93Rs2URWAQQsS9n8AceK3xGS\nzUJ+xHmwHtFl037+R6Nybe/Jt5evqRjT+nFQIGGVw/56fK0LryWQsS9WxME6lw6P\ndvI0WKMwZTEHBDxYki0nBHBrccAiFPA7C3OITNL1U7FrVVtlph/BXa3patN7N8dO\nShy210pZworMcfjcGInS2uE56FrWzfBNpwNZLBXSbeZg6ZldqY/ToJdO2Xlt+vDS\nzKZU2SADbdbLszdpQzCBgPDG9fOYVkgWxTlFkYlu3CshSdqt1v8YzON5cvipqiDv\nsNMuifcn4XWuzSNSvDdzsSJCrzAlGbwiH/oivz7mIr/9q/1pLbvPs3AiW+sgQgQm\nPPv3cM8p9h1KrIk=\n-----END CERTIFICATE-----\n",
+                "caCertificate": "-----BEGIN CERTIFICATE-----\nMIIFpzCCA4+gAwIBAgIEZQCRszANBgkqhkiG9w0BAQsFADB2MQswCQYDVQQGEwJ1\nczELMAkGA1UECAwCdHgxEzARBgNVBAcMCnJpY2hhcmRzb24xDTALBgNVBAoMBGV0\nY2MxFDASBgNVBAsMC2ludGVncmF0aW9uMSAwHgYDVQQDDBcqLm9jdGEuZXRjY2hv\nc3RlZC5sb2NhbDAeFw0yMzA5MTIxNjI4MzVaFw0zMzA5MTIxNjI4MzVaMHYxCzAJ\nBgNVBAYTAnVzMQswCQYDVQQIDAJ0eDETMBEGA1UEBwwKcmljaGFyZHNvbjENMAsG\nA1UECgwEZXRjYzEUMBIGA1UECwwLaW50ZWdyYXRpb24xIDAeBgNVBAMMFyoub2N0\nYS5ldGNjaG9zdGVkLmxvY2FsMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKC\nAgEAjwUCZeGsQ+xFL2rqRO6X+T7ADpfAJXbA2WA2eeCI1KD33o0DegWlU5V7Ufrf\ndbfQqCme58Xlpqt7NELGSgGJ5UPAVI4Z539fCLX7K6AFy7TRBRgjLt+eJQss38Cc\nvH9+5kuWl0e3GNTVh0t7S07Com1pExrUfSrXnu5ma8W5RdkhC7yh4XOIh7aUzR+2\nsJ5ksibdzJFI7gFqs367UCQ5fWR/nr49tn2GQOghPOuPQAkLKB1X4FsjvSMUDup3\nIPt9hHFooTyf7o/M1hqvK1GqFQkr/4AFw7v4sU9xbHiDWOkRESRVaEo6JO/6/R39\nl+697aCXF0RZOfNF2pvUqisfNg/l4GDoTXOjjUcPcUzsUnoVj8Wtv5qSmgUm5bin\n+4DJ/0LH6jVhcGZnthkfre4OKMvBGhy1PTZoE3VYnvjm2jf0bU/Bi/BbDW7rr8Mw\nF9mV5pTCV3gYesyXfkeAfWRZKCdTBUUAUBLBTHLHIbZuwjdxroZ4uPlHjPlIPwGy\n+1gLzzalifWlvrWaIIJ2ZlMHFWQo+3/1CJOVFKOFVsbd0V7t7hkYyoIK6d28vQM+\nudbXEEERXBAYF/eB60CvPENsuhgK6uX3+SG2CFjJe//8nGnVmXvYo0C3G4ACHQK0\nYWLHYIuIjfVN6XY00utl1j2LcpnXmBaa+I3H/NYNMS4TKfMCAwEAAaM9MDswOQYD\nVR0RBDIwMIIXKi5vY3RhLmV0Y2Nob3N0ZWQubG9jYWyCFW9jdGEuZXRjY2hvc3Rl\nZC5sb2NhbDANBgkqhkiG9w0BAQsFAAOCAgEASj95eTXHtNXsS65AoDmCoqmg8Y9L\nXCS9mqLswWspd5A/yf56xlvECECieC8/XlYgNj0dTPDw2btJFiNXF6iOPV5km+f/\n+LLpunqC6+5qa5NWtyYc3wrRRP91WPzcdVqmEINpLquOxiRZis1fb5KcqxCqNiLA\nZiHwkqRJaPi3/XP0131H08odSoCtsTLK5tY7xg9aHtUXq6A1wVGlWi1/y3lNwB4K\nqykmDhbS2IuqK68uy78Lj0KUxQ/tcg1MufJL4tcpWLJob3lzDbzqIWfxcYRjuPi9\nmh90RuYGjLlmK0Z8B6yc49eWcLijxmE7N00IZLyF93Rs2URWAQQsS9n8AceK3xGS\nzUJ+xHmwHtFl037+R6Nybe/Jt5evqRjT+nFQIGGVw/56fK0LryWQsS9WxME6lw6P\ndvI0WKMwZTEHBDxYki0nBHBrccAiFPA7C3OITNL1U7FrVVtlph/BXa3patN7N8dO\nShy210pZworMcfjcGInS2uE56FrWzfBNpwNZLBXSbeZg6ZldqY/ToJdO2Xlt+vDS\nzKZU2SADbdbLszdpQzCBgPDG9fOYVkgWxTlFkYlu3CshSdqt1v8YzON5cvipqiDv\nsNMuifcn4XWuzSNSvDdzsSJCrzAlGbwiH/oivz7mIr/9q/1pLbvPs3AiW+sgQgQm\nPPv3cM8p9h1KrIk=\n-----END CERTIFICATE-----\n"
             }
         },
         "backendSets": {
@@ -1759,8 +2019,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.207:8013",
-                        "ipAddress": "10.152.11.207",
+                        "name": "10.153.64.109:8013",
+                        "ipAddress": "10.153.64.109",
                         "port": 8013,
                         "weight": 1,
                         "maxConnections": null,
@@ -1786,7 +2046,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "InternalSelfCert-Prod-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
@@ -1811,18 +2071,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.221:8487",
-                        "ipAddress": "10.152.11.221",
-                        "port": 8487,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    },
-                    {
-                        "name": "10.152.11.222:8487",
-                        "ipAddress": "10.152.11.222",
+                        "name": "10.153.64.99:8487",
+                        "ipAddress": "10.153.64.99",
                         "port": 8487,
                         "weight": 1,
                         "maxConnections": null,
@@ -1848,7 +2098,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "InternalSelfCert-Prod-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
@@ -1865,8 +2115,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.202:8081",
-                        "ipAddress": "10.152.11.202",
+                        "name": "10.153.64.114:8081",
+                        "ipAddress": "10.153.64.114",
                         "port": 8081,
                         "weight": 1,
                         "maxConnections": null,
@@ -1892,7 +2142,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "InternalSelfCert-Prod-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
@@ -1917,8 +2167,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.208:8011",
-                        "ipAddress": "10.152.11.208",
+                        "name": "10.153.64.112:8011",
+                        "ipAddress": "10.153.64.112",
                         "port": 8011,
                         "weight": 1,
                         "maxConnections": null,
@@ -1944,7 +2194,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "InternalSelfCert-Prod-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
@@ -1964,46 +2214,13 @@
                     "isHttpOnly": true
                 }
             },
-            "tmp": {
-                "name": "tmp",
-                "policy": "ROUND_ROBIN",
-                "backends": [],
-                "backendMaxConnections": null,
-                "healthChecker": {
-                    "protocol": "TCP",
-                    "urlPath": null,
-                    "port": 8543,
-                    "returnCode": 200,
-                    "retries": 3,
-                    "timeoutInMillis": 3000,
-                    "intervalInMillis": 10000,
-                    "responseBodyRegex": ".*",
-                    "isForcePlainText": null
-                },
-                "sslConfiguration": {
-                    "verifyDepth": 1,
-                    "verifyPeerCertificate": false,
-                    "trustedCertificateAuthorityIds": [],
-                    "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
-                    "serverOrderPreference": null,
-                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1",
-                        "TLSv1.1",
-                        "TLSv1.2"
-                    ]
-                },
-                "sessionPersistenceConfiguration": null,
-                "lbCookieSessionPersistenceConfiguration": null
-            },
             "supervisor_override_sso": {
                 "name": "supervisor_override_sso",
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.205:8099",
-                        "ipAddress": "10.152.11.205",
+                        "name": "10.153.64.103:8099",
+                        "ipAddress": "10.153.64.103",
                         "port": 8099,
                         "weight": 1,
                         "maxConnections": null,
@@ -2029,7 +2246,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "InternalSelfCert-Prod-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
@@ -2046,8 +2263,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.200:8015",
-                        "ipAddress": "10.152.11.200",
+                        "name": "10.153.64.108:8015",
+                        "ipAddress": "10.153.64.108",
                         "port": 8015,
                         "weight": 1,
                         "maxConnections": null,
@@ -2073,7 +2290,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "InternalSelfCert-Prod-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
@@ -2090,8 +2307,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.203:8007",
-                        "ipAddress": "10.152.11.203",
+                        "name": "10.153.64.104:8007",
+                        "ipAddress": "10.153.64.104",
                         "port": 8007,
                         "weight": 1,
                         "maxConnections": null,
@@ -2117,7 +2334,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "InternalSelfCert-Prod-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
@@ -2142,8 +2359,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.206:8005",
-                        "ipAddress": "10.152.11.206",
+                        "name": "10.152.11.147:8005",
+                        "ipAddress": "10.152.11.147",
                         "port": 8005,
                         "weight": 1,
                         "maxConnections": null,
@@ -2169,7 +2386,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "InternalSelfCert-Prod-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
@@ -2194,8 +2411,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.204:8009",
-                        "ipAddress": "10.152.11.204",
+                        "name": "10.153.64.106:8009",
+                        "ipAddress": "10.153.64.106",
                         "port": 8009,
                         "weight": 1,
                         "maxConnections": null,
@@ -2221,7 +2438,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "InternalSelfCert-Prod-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
@@ -2246,8 +2463,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.205:8443",
-                        "ipAddress": "10.152.11.205",
+                        "name": "10.153.64.103:8443",
+                        "ipAddress": "10.153.64.103",
                         "port": 8443,
                         "weight": 1,
                         "maxConnections": null,
@@ -2273,7 +2490,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "InternalSelfCert-Prod-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
@@ -2298,8 +2515,8 @@
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.201:8001",
-                        "ipAddress": "10.152.11.201",
+                        "name": "10.153.64.113:8001",
+                        "ipAddress": "10.153.64.113",
                         "port": 8001,
                         "weight": 1,
                         "maxConnections": null,
@@ -2325,7 +2542,7 @@
                     "verifyPeerCertificate": false,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Dev-CERT",
+                    "certificateName": "InternalSelfCert-Prod-CERT",
                     "serverOrderPreference": null,
                     "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
                     "protocols": [
@@ -2373,29 +2590,6 @@
                             "host": "{host}",
                             "port": null,
                             "path": "/oauth_login",
-                            "query": "?{query}"
-                        }
-                    }
-                ]
-            },
-            "iva": {
-                "name": "iva",
-                "items": [
-                    {
-                        "action": "REDIRECT",
-                        "responseCode": 302,
-                        "conditions": [
-                            {
-                                "attributeName": "PATH",
-                                "attributeValue": "/iva2/redirectToPage",
-                                "operator": "FORCE_LONGEST_PREFIX_MATCH"
-                            }
-                        ],
-                        "redirectUri": {
-                            "protocol": "{protocol}",
-                            "host": "{host}",
-                            "port": null,
-                            "path": "/iva/redirectToPage",
                             "query": "?{query}"
                         }
                     }

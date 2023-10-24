@@ -45,8 +45,11 @@ def restCall(url: str, body, method: str):
     print(f"response code: {response.status_code}")
     if response.status_code != 204:
         print(f"restCall error body, {response.text}")
+    else:
+        print(f"restCall good body, {response.text}")
     if response.status_code == 500:
         raise Exception("response code: 500, stop it now")
+
     return response
 
 

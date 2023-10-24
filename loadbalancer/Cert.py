@@ -40,6 +40,10 @@ def __fix_certs_in_creation_json(cert_json, client: str):
             cert_json["publicCertificate"] = self_prod_certs["octa-public"]
             cert_json["privateKey"] = self_prod_certs["octa-private"]
             cert_json["caCertificate"] = self_prod_certs["octa-public"]
+    elif "myaccount.405expresslanes.com" in json_str:
+        cert_json["publicCertificate"] = octa_certs["public-405"]
+        cert_json["privateKey"] = octa_certs["private-405"]
+        cert_json["caCertificate"] = octa_certs["ca-405"]
 
 
 def update_expired_cert(

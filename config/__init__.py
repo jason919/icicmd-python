@@ -29,6 +29,15 @@ with open(f"{current_dir}/resources/oci/ssl/octa/public.pem", "r") as octa_pub_f
 with open(f"{current_dir}/resources/oci/ssl/octa/private.pem", "r") as octa_pri_file:
     octa_certs["private"] = octa_pri_file.read()
 
+with open(f"{current_dir}/resources/oci/ssl/octa/405/ca.crt", "r") as octa_pri_file:
+    octa_certs["ca-405"] = octa_pri_file.read()
+with open(f"{current_dir}/resources/oci/ssl/octa/405/public.pem", "r") as octa_pri_file:
+    octa_certs["public-405"] = octa_pri_file.read()
+with open(
+    f"{current_dir}/resources/oci/ssl/octa/405/private.pem", "r"
+) as octa_pri_file:
+    octa_certs["private-405"] = octa_pri_file.read()
+
 with open(
     f"{current_dir}/resources/oci/ssl/self/dev1-public.pem", "r"
 ) as self_dev_pub_file:
