@@ -84,6 +84,8 @@ def create_single_loadbalancer(
     Cert.fix_certs_in_creation_json(certificates)
     routing_policies = parsed_data["routingPolicies"]
     parsed_data["networkSecurityGroupIds"] = []
+    parsed_data["compartmentId"] = compartment_id
+    parsed_data["ipAddresses"] = []
 
     if len(json.dumps(routing_policies)) > 10:
         listeners_backup = parsed_data["listeners"]
