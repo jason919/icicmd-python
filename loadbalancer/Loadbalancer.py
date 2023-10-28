@@ -3,20 +3,20 @@ import os
 import time
 
 from config import compartments
-from helper import LB_API_ENDPOINT, JsonHelper
+from helper import JsonHelper
 from helper import OciHttpHelper
 from loadbalancer import Cert, RouteSet, Listener
 
 
 def update_display_name(compartment_id: str, ocid: str, new_name: str):
     print("start update_loadbalancer_display_name 1")
-    url = f"{LB_API_ENDPOINT}/{ocid}?compartmentId={compartment_id}"
+    url = f"{OciHttpHelper.getLB_API_ENDPOINT()}/{ocid}?compartmentId={compartment_id}"
     post_json = {"displayName": new_name}
     OciHttpHelper.restCall(url, post_json, "PUT")
 
 
 def list_load_balancers(compartment_id: str) -> str:
-    url = f"{LB_API_ENDPOINT}?compartmentId={compartment_id}"
+    url = f"{OciHttpHelper.getLB_API_ENDPOINT()}?compartmentId={compartment_id}"
     return OciHttpHelper.restGet(url)
 
 
@@ -60,12 +60,16 @@ def backup_all_loadbalancers():
     print("start full backup")
     for key, value in compartments.items():
         if value != "":
+            if "-dr" in key:
+                OciHttpHelper.setDr(True)
+            else:
+                OciHttpHelper.setDr(False)
             __backup_load_balancer_of_compartment(key, value)
 
 
 def create(compartment_id: str, post_json):
     print("start LoadBalancer create 1")
-    url = f"{LB_API_ENDPOINT}?compartmentId={compartment_id}"
+    url = f"{OciHttpHelper.getLB_API_ENDPOINT()}?compartmentId={compartment_id}"
     OciHttpHelper.restCall(url, post_json, "POST")
 
 

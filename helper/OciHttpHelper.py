@@ -4,7 +4,28 @@ import time
 
 import requests
 
-from helper import LB_API_ENDPOINT, auth
+from helper import auth
+
+__LB_API_ENDPOINT = "https://iaas.us-ashburn-1.oraclecloud.com/20170115/loadBalancers"
+
+__LB_API_ENDPOINT_DR = (
+    "https://iaas.us-phoenix-1.oraclecloud.com/20170115/loadBalancers"
+)
+
+__isDR = False
+
+
+def setDr(dr: bool):
+    global __isDR
+    print(f"setDr: {dr}")
+    __isDR = dr
+
+
+def getLB_API_ENDPOINT():
+    if __isDR:
+        return __LB_API_ENDPOINT_DR
+    else:  # DR is default, if not DR, use DR API endpoint.
+        return __LB_API_ENDPOINT
 
 
 def restGet(url: str):
@@ -56,7 +77,7 @@ def restCall(url: str, body, method: str):
 def retryRestCall(
     compartment_id: str, load_balancer_ocid: str, post_path: str, post_json, method: str
 ):
-    url = f"{LB_API_ENDPOINT}/{load_balancer_ocid}/{post_path}?compartmentId={compartment_id}"
+    url = f"{getLB_API_ENDPOINT()}/{load_balancer_ocid}/{post_path}?compartmentId={compartment_id}"
     for i in range(1, 3):
         response = restCall(url, post_json, method)
         if response.status_code != 204:
