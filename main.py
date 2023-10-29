@@ -6,9 +6,9 @@ from loadbalancer import Backendset, Listener, Loadbalancer
 # Loadbalancer.create_single_loadbalancer(
 #     "test.json", "lb_test", get_compartment_id("octa-prod")
 # )
-# Loadbalancer.create_single_loadbalancer(
-#     "octa-dr-lb-new.json", "new-octa-dr-online-public", get_compartment_id("octa-dr")
-# )
+Loadbalancer.create_single_loadbalancer(
+    "octa-dr-lb-new.json", "new-octa-dr-online-public", get_compartment_id("octa-dr")
+)
 
 # with open(
 #     "C:/drive-d/projects/etcc/company/CICD/ocicmd-python/resources/files/saved/octa-dr-lb-new.json",
@@ -24,7 +24,7 @@ from loadbalancer import Backendset, Listener, Loadbalancer
 #     "ocid1.loadbalancer.oc1.iad.aaaaaaaajgko2vqbqp5kq6ifhysov3lva2kfel6bhymo2qilnn535dq3kpda",
 #     "octa-uat-iva-public",
 # )
-Loadbalancer.backup_all_loadbalancers()
+# Loadbalancer.backup_all_loadbalancers()
 # Backendset.print_all_ip_port()
 # Listener.update_listeners("octa-test-lb.json", "new-octa-test-lb")
 # Backendset.update_backend_sets("octa-test-lb.json", "new-octa-test-lb", "SSO")

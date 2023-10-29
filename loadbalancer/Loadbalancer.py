@@ -3,6 +3,7 @@ import os
 import time
 
 from config import compartments
+from config.ConfigReader import get_compartment_id
 from helper import JsonHelper
 from helper import OciHttpHelper
 from loadbalancer import Cert, RouteSet, Listener
@@ -33,7 +34,7 @@ def __backup_load_balancer_of_compartment(compartment_name: str, compartment_id:
 
 
 def get_ocid_from_new_load_balancer(
-    compartment_id: str, load_balancer_display_name: str
+        compartment_id: str, load_balancer_display_name: str
 ) -> str:
     for i in range(0, 5):
         all_load_balancers_json = json.loads(list_load_balancers(compartment_id))
@@ -52,18 +53,11 @@ def get_ocid_from_new_load_balancer(
     return ""
 
 
-def list_loadbalancer():
-    print(list_load_balancers(compartments["octa-prod"]))
-
-
 def backup_all_loadbalancers():
     print("start full backup")
     for key, value in compartments.items():
         if value != "":
-            if "-dr" in key:
-                OciHttpHelper.setDr(True)
-            else:
-                OciHttpHelper.setDr(False)
+            get_compartment_id(key)
             __backup_load_balancer_of_compartment(key, value)
 
 
@@ -74,10 +68,10 @@ def create(compartment_id: str, post_json):
 
 
 def create_single_loadbalancer(
-    json_file_name: str, load_balancer_name: str, compartment_id: str
+        json_file_name: str, load_balancer_name: str, compartment_id: str
 ):
     with open(
-        f"{os.getcwd()}/resources/files/saved/{json_file_name}", "r"
+            f"{os.getcwd()}/resources/files/saved/{json_file_name}", "r"
     ) as json_file:
         json_text = json_file.read()
     parsed_data = JsonHelper.get_lb_data_from_compartment_json(
