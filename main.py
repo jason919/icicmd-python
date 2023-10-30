@@ -1,14 +1,14 @@
 import json
 from config import compartments
 from config.ConfigReader import get_compartment_id
-from loadbalancer import Backendset, Listener, Loadbalancer
+from loadbalancer import Backendset, Listener, Loadbalancer, Cert
 
 # Loadbalancer.create_single_loadbalancer(
 #     "test.json", "lb_test", get_compartment_id("octa-prod")
 # )
-Loadbalancer.create_single_loadbalancer(
-    "octa-dr-lb-new.json", "new-octa-dr-online-public", get_compartment_id("octa-dr")
-)
+# Loadbalancer.create_single_loadbalancer(
+#     "octa-dr-lb-new.json", "new-octa-dr-online-public", get_compartment_id("octa-dr")
+# )
 
 # with open(
 #     "C:/drive-d/projects/etcc/company/CICD/ocicmd-python/resources/files/saved/octa-dr-lb-new.json",
@@ -34,3 +34,6 @@ Loadbalancer.create_single_loadbalancer(
 #         get_compartment_id("octa-prod"), "new-octa-prod-lb-internal"
 #     )
 # )
+Cert.update_expired_cert(
+    "/Users/jason/Documents/projects/etcc/company/CICD/ocicmd/ocicmd-python/resources/oci/ssl/orb",
+    "orb-uat-lb.json", "LB", "orb-uat-internal")

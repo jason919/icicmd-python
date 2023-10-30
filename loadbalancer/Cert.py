@@ -1,8 +1,9 @@
 import json
+import os
 import time
 
 from config import orb_certs, octa_certs, self_prod_certs, self_dev_certs
-from helper import OciHttpHelper
+from helper import OciHttpHelper, JsonHelper
 from loadbalancer import Backendset, Listener
 
 
@@ -47,15 +48,20 @@ def __fix_certs_in_creation_json(cert_json, client: str):
 
 
 def update_expired_cert(
-    new_cert_folder_path: str,
-    full_json_path: str,
-    cert_name: str,
+        new_cert_folder_path: str,
+        json_file_name: str,
+        cert_name: str,
+        load_balancer_name: str
 ):
-    tmp_cert_name = f"tmp-{cert_name}"
+    tmp_cert_name = f"tmptmp-{cert_name}"
 
-    with open(f"{full_json_path}", "r") as json_file:
-        json_data = json_file.read()
-    parsed_data = json.loads(json_data)
+    with open(
+            f"{os.getcwd()}/resources/files/saved/{json_file_name}", "r"
+    ) as json_file:
+        json_text = json_file.read()
+    parsed_data = JsonHelper.get_lb_data_from_compartment_json(
+        json_text, load_balancer_name
+    )
     compartment_id = str(parsed_data["compartmentId"])
     load_balancer_ocid = str(parsed_data["id"])
 
@@ -78,7 +84,7 @@ def update_expired_cert(
     )
     time.sleep(15)
     # set the certificate to the tmp name one
-    if "LB-" in cert_name:
+    if "LB" in cert_name or "Wild" in cert_name:
         Listener.update_listeners_with_cert_name(
             compartment_id, load_balancer_ocid, parsed_data, tmp_cert_name
         )
@@ -105,7 +111,7 @@ def update_expired_cert(
     )
     time.sleep(15)
     # set the certificate to the good name
-    if "LB-" in cert_name:
+    if "LB" in cert_name or "Wild" in cert_name:
         Listener.update_listeners_with_cert_name(
             compartment_id, load_balancer_ocid, parsed_data, cert_name
         )

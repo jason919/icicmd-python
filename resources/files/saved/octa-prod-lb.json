@@ -1043,50 +1043,6 @@
             }
         },
         "backendSets": {
-            "icrsws": {
-                "name": "icrsws",
-                "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.11.136:7139",
-                        "ipAddress": "10.152.11.136",
-                        "port": 7139,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
-                "backendMaxConnections": null,
-                "healthChecker": {
-                    "protocol": "TCP",
-                    "urlPath": null,
-                    "port": 7139,
-                    "returnCode": 200,
-                    "retries": 3,
-                    "timeoutInMillis": 3000,
-                    "intervalInMillis": 10000,
-                    "responseBodyRegex": ".*",
-                    "isForcePlainText": null
-                },
-                "sslConfiguration": {
-                    "verifyDepth": 1,
-                    "verifyPeerCertificate": false,
-                    "trustedCertificateAuthorityIds": [],
-                    "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Prod-CERT",
-                    "serverOrderPreference": null,
-                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
-                },
-                "sessionPersistenceConfiguration": null,
-                "lbCookieSessionPersistenceConfiguration": null
-            },
             "images": {
                 "name": "images",
                 "policy": "IP_HASH",
@@ -1361,50 +1317,6 @@
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
             },
-            "hostws": {
-                "name": "hostws",
-                "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "110.152.11.136:7159",
-                        "ipAddress": "110.152.11.136",
-                        "port": 7159,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
-                "backendMaxConnections": null,
-                "healthChecker": {
-                    "protocol": "TCP",
-                    "urlPath": null,
-                    "port": 7159,
-                    "returnCode": 200,
-                    "retries": 3,
-                    "timeoutInMillis": 3000,
-                    "intervalInMillis": 10000,
-                    "responseBodyRegex": ".*",
-                    "isForcePlainText": null
-                },
-                "sslConfiguration": {
-                    "verifyDepth": 1,
-                    "verifyPeerCertificate": false,
-                    "trustedCertificateAuthorityIds": [],
-                    "certificateIds": [],
-                    "certificateName": "InternalSelfCert-Prod-CERT",
-                    "serverOrderPreference": null,
-                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
-                },
-                "sessionPersistenceConfiguration": null,
-                "lbCookieSessionPersistenceConfiguration": null
-            },
             "weblogic-report": {
                 "name": "weblogic-report",
                 "policy": "IP_HASH",
@@ -1606,26 +1518,6 @@
                             {
                                 "name": "FORWARD_TO_BACKENDSET",
                                 "backendSetName": "oracle-report"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "hostws",
-                        "condition": "all(http.request.url.path sw (i '/hostws'))",
-                        "actions": [
-                            {
-                                "name": "FORWARD_TO_BACKENDSET",
-                                "backendSetName": "hostws"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "icrsws",
-                        "condition": "all(http.request.url.path sw (i '/icrsws'))",
-                        "actions": [
-                            {
-                                "name": "FORWARD_TO_BACKENDSET",
-                                "backendSetName": "icrsws"
                             }
                         ]
                     },

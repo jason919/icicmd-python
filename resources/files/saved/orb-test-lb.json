@@ -1265,24 +1265,7 @@
                     "X_Frame_Options"
                 ],
                 "routingPolicyName": "bos"
-            },
-            "crystal-report-aps": {
-                "name": "crystal-report-aps",
-                "defaultBackendSetName": "crystal-server-aps",
-                "port": 6400,
-                "protocol": "TCP",
-                "hostnameNames": null,
-                "serverName": null,
-                "pathRouteSetName": null,
-                "sslConfiguration": null,
-                "connectionConfiguration": {
-                    "idleTimeout": 300,
-                    "backendTcpProxyProtocolVersion": null,
-                    "backendTcpProxyProtocolOptions": null
-                },
-                "ruleSetNames": [],
-                "routingPolicyName": null
-            }
+            } 
         },
         "hostnames": {
             "riteodoo-test.orb.rite.etcchosted.com": {
@@ -1433,37 +1416,6 @@
                         "TLSv1.1"
                     ]
                 },
-                "sessionPersistenceConfiguration": null,
-                "lbCookieSessionPersistenceConfiguration": null
-            },
-            "crystal-server-aps": {
-                "name": "crystal-server-aps",
-                "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.50.12:6400",
-                        "ipAddress": "10.152.50.12",
-                        "port": 6400,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
-                "backendMaxConnections": null,
-                "healthChecker": {
-                    "protocol": "TCP",
-                    "urlPath": null,
-                    "port": 6400,
-                    "returnCode": 200,
-                    "retries": 3,
-                    "timeoutInMillis": 3000,
-                    "intervalInMillis": 10000,
-                    "responseBodyRegex": ".*",
-                    "isForcePlainText": null
-                },
-                "sslConfiguration": null,
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
             },
