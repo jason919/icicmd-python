@@ -36,4 +36,4 @@ from loadbalancer import Backendset, Listener, Loadbalancer, Cert
 # )
 Cert.update_expired_cert(
     "/Users/jason/Documents/projects/etcc/company/CICD/ocicmd/ocicmd-python/resources/oci/ssl/orb",
-    "orb-uat-lb.json", "LB", "orb-uat-internal")
+    "orb-uat-lb.json", "OrbWild", "riteSSO-uat")
