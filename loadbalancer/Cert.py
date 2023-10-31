@@ -47,16 +47,28 @@ def __fix_certs_in_creation_json(cert_json, client: str):
         cert_json["caCertificate"] = octa_certs["ca-405"]
 
 
+def update_expired_cert_for_compartment(
+    new_cert_folder_path: str, json_file_name: str, cert_name: str
+):
+    with open(
+        f"{os.getcwd()}/resources/files/saved/{json_file_name}", "r"
+    ) as json_file:
+        json_text = json_file.read()
+    lb_names = JsonHelper.get_lb_names_from_compartment_json(json_text)
+    for lb_name in lb_names:
+        update_expired_cert(new_cert_folder_path, json_file_name, cert_name, lb_name)
+
+
 def update_expired_cert(
-        new_cert_folder_path: str,
-        json_file_name: str,
-        cert_name: str,
-        load_balancer_name: str
+    new_cert_folder_path: str,
+    json_file_name: str,
+    cert_name: str,
+    load_balancer_name: str,
 ):
     tmp_cert_name = f"tmptmp-{cert_name}"
 
     with open(
-            f"{os.getcwd()}/resources/files/saved/{json_file_name}", "r"
+        f"{os.getcwd()}/resources/files/saved/{json_file_name}", "r"
     ) as json_file:
         json_text = json_file.read()
     parsed_data = JsonHelper.get_lb_data_from_compartment_json(

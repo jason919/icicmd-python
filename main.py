@@ -2,6 +2,7 @@ import json
 from config import compartments
 from config.ConfigReader import get_compartment_id
 from loadbalancer import Backendset, Listener, Loadbalancer, Cert
+import os
 
 # Loadbalancer.create_single_loadbalancer(
 #     "test.json", "lb_test", get_compartment_id("octa-prod")
@@ -35,5 +36,8 @@ from loadbalancer import Backendset, Listener, Loadbalancer, Cert
 #     )
 # )
 Cert.update_expired_cert(
-    "/Users/jason/Documents/projects/etcc/company/CICD/ocicmd/ocicmd-python/resources/oci/ssl/orb",
-    "orb-uat-lb.json", "OrbWild", "riteSSO-uat")
+    f"{os.getcwd()}/resources/oci/ssl/orb",
+    "orb-training-lb.json",
+    "LB",
+    "orb-training-lb-internal",
+)

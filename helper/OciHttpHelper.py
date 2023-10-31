@@ -78,7 +78,7 @@ def retryRestCall(
     compartment_id: str, load_balancer_ocid: str, post_path: str, post_json, method: str
 ):
     url = f"{getLB_API_ENDPOINT()}/{load_balancer_ocid}/{post_path}?compartmentId={compartment_id}"
-    for i in range(1, 3):
+    for i in range(1, 5):
         response = restCall(url, post_json, method)
         if response.status_code != 204:
             print(
