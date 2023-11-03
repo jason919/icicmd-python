@@ -187,7 +187,7 @@
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "myaccount.405expresslanes.com",
-                    "serverOrderPreference": "DISABLED",
+                    "serverOrderPreference": "ENABLED",
                     "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
                         "TLSv1.2"
@@ -199,37 +199,7 @@
                     "backendTcpProxyProtocolOptions": null
                 },
                 "ruleSetNames": [],
-                "routingPolicyName": null
-            },
-            "Online": {
-                "name": "Online",
-                "defaultBackendSetName": "online",
-                "port": 443,
-                "protocol": "HTTP",
-                "hostnameNames": [
-                    "riteonline-prod.octa.rite.etcchosted.com"
-                ],
-                "serverName": null,
-                "pathRouteSetName": null,
-                "sslConfiguration": {
-                    "verifyDepth": 1,
-                    "verifyPeerCertificate": false,
-                    "trustedCertificateAuthorityIds": [],
-                    "certificateIds": [],
-                    "certificateName": "OCTAWildCard",
-                    "serverOrderPreference": "DISABLED",
-                    "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
-                },
-                "connectionConfiguration": {
-                    "idleTimeout": 60,
-                    "backendTcpProxyProtocolVersion": null,
-                    "backendTcpProxyProtocolOptions": null
-                },
-                "ruleSetNames": [],
-                "routingPolicyName": null
+                "routingPolicyName": "octa_online"
             }
         },
         "hostnames": {
@@ -313,6 +283,50 @@
                     "isSecure": true,
                     "isHttpOnly": true
                 }
+            },
+            "apache-8543": {
+                "name": "apache-8543",
+                "policy": "ROUND_ROBIN",
+                "backends": [
+                    {
+                        "name": "10.152.11.137:8543",
+                        "ipAddress": "10.152.11.137",
+                        "port": 8543,
+                        "weight": 1,
+                        "maxConnections": null,
+                        "drain": false,
+                        "backup": false,
+                        "offline": false
+                    }
+                ],
+                "backendMaxConnections": null,
+                "healthChecker": {
+                    "protocol": "TCP",
+                    "urlPath": null,
+                    "port": 8543,
+                    "returnCode": 200,
+                    "retries": 3,
+                    "timeoutInMillis": 3000,
+                    "intervalInMillis": 10000,
+                    "responseBodyRegex": ".*",
+                    "isForcePlainText": null
+                },
+                "sslConfiguration": {
+                    "verifyDepth": 1,
+                    "verifyPeerCertificate": false,
+                    "trustedCertificateAuthorityIds": [],
+                    "certificateIds": [],
+                    "certificateName": "OCTAEtccHostedLocal",
+                    "serverOrderPreference": null,
+                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
+                    "protocols": [
+                        "TLSv1",
+                        "TLSv1.1",
+                        "TLSv1.2"
+                    ]
+                },
+                "sessionPersistenceConfiguration": null,
+                "lbCookieSessionPersistenceConfiguration": null
             }
         },
         "pathRouteSets": {},
@@ -323,8 +337,59 @@
                 "free-tier-retained": "false"
             }
         },
-        "ruleSets": {},
-        "routingPolicies": {}
+        "ruleSets": {
+            "maintenance": {
+                "name": "maintenance",
+                "items": [
+                    {
+                        "action": "REDIRECT",
+                        "responseCode": 302,
+                        "conditions": [
+                            {
+                                "attributeName": "PATH",
+                                "attributeValue": "/",
+                                "operator": "PREFIX_MATCH"
+                            }
+                        ],
+                        "redirectUri": {
+                            "protocol": "https",
+                            "host": "myaccount.405expresslanes.com",
+                            "port": null,
+                            "path": "/maintenance",
+                            "query": ""
+                        }
+                    }
+                ]
+            }
+        },
+        "routingPolicies": {
+            "octa_online": {
+                "name": "octa_online",
+                "conditionLanguageVersion": "V1",
+                "rules": [
+                    {
+                        "name": "online",
+                        "condition": "all(http.request.url.path sw (i '/.well-known'))",
+                        "actions": [
+                            {
+                                "name": "FORWARD_TO_BACKENDSET",
+                                "backendSetName": "apache-8543"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "octa",
+                        "condition": "all(http.request.url.path not sw (i '/.well-known'))",
+                        "actions": [
+                            {
+                                "name": "FORWARD_TO_BACKENDSET",
+                                "backendSetName": "online"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
     },
     {
         "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaazd5kfclg2j6oqabdrj7wvdohwi65lier6sgzptlenp2fxq276r7q",

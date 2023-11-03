@@ -25,7 +25,7 @@ import os
 #     "ocid1.loadbalancer.oc1.iad.aaaaaaaajgko2vqbqp5kq6ifhysov3lva2kfel6bhymo2qilnn535dq3kpda",
 #     "octa-uat-iva-public",
 # )
-# Loadbalancer.backup_all_loadbalancers()
+Loadbalancer.backup_all_loadbalancers()
 # Backendset.print_all_ip_port()
 # Listener.update_listeners("octa-test-lb.json", "new-octa-test-lb")
 # Backendset.update_backend_sets("octa-test-lb.json", "new-octa-test-lb", "SSO")
@@ -35,9 +35,9 @@ import os
 #         get_compartment_id("octa-prod"), "new-octa-prod-lb-internal"
 #     )
 # )
-Cert.update_expired_cert(
-    f"{os.getcwd()}/resources/oci/ssl/orb",
-    "orb-training-lb.json",
-    "LB",
-    "orb-training-lb-internal",
-)
+# Cert.update_expired_cert(
+#     f"{os.getcwd()}/resources/oci/ssl/orb",
+#     "orb-training-lb.json",
+#     "LB",
+#     "orb-training-lb-internal",
+# )
