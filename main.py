@@ -35,9 +35,9 @@ Loadbalancer.backup_all_loadbalancers()
 #         get_compartment_id("octa-prod"), "new-octa-prod-lb-internal"
 #     )
 # )
-# Cert.update_expired_cert(
-#     f"{os.getcwd()}/resources/oci/ssl/orb",
-#     "orb-training-lb.json",
-#     "LB",
-#     "orb-training-lb-internal",
-# )
+Cert.update_expired_cert(
+    f"{os.getcwd()}/resources/oci/ssl/self",
+    "orb-training-lb.json",
+    "LB",
+    "orb-training-lb-internal",
+)
