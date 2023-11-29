@@ -33,34 +33,24 @@ with open(f"{current_dir}/resources/oci/ssl/octa/405/ca.crt", "r") as octa_pri_f
     octa_certs["ca-405"] = octa_pri_file.read()
 with open(f"{current_dir}/resources/oci/ssl/octa/405/public.pem", "r") as octa_pri_file:
     octa_certs["public-405"] = octa_pri_file.read()
-with open(
-    f"{current_dir}/resources/oci/ssl/octa/405/private.pem", "r"
-) as octa_pri_file:
+with open(f"{current_dir}/resources/oci/ssl/octa/405/private.pem", "r") as octa_pri_file:
     octa_certs["private-405"] = octa_pri_file.read()
 
-with open(
-    f"{current_dir}/resources/oci/ssl/self/dev1-public.pem", "r"
-) as self_dev_pub_file:
+with open(f"{current_dir}/resources/oci/ssl/self/self-public.pem", "r") as self_dev_pub_file:
     self_dev_certs["public"] = self_dev_pub_file.read()
-with open(
-    f"{current_dir}/resources/oci/ssl/self/dev1-private.pem", "r"
-) as self_dev_pri_file:
+with open(f"{current_dir}/resources/oci/ssl/self/self-private.pem", "r") as self_dev_pri_file:
     self_dev_certs["private"] = self_dev_pri_file.read()
 
-with open(
-    f"{current_dir}/resources/oci/ssl/self/orb-prod-public.pem", "r"
-) as self_orb_prod_pub_file:
+with open(f"{current_dir}/resources/oci/ssl/self/orb-prod-public.pem",
+          "r") as self_orb_prod_pub_file:
     self_prod_certs["orb-public"] = self_orb_prod_pub_file.read()
-with open(
-    f"{current_dir}/resources/oci/ssl/self/orb-prod-private.pem", "r"
-) as self_orb_prod_pri_file:
+with open(f"{current_dir}/resources/oci/ssl/self/orb-prod-private.pem",
+          "r") as self_orb_prod_pri_file:
     self_prod_certs["orb-private"] = self_orb_prod_pri_file.read()
 
-with open(
-    f"{current_dir}/resources/oci/ssl/self/octa-prod-public.pem", "r"
-) as self_octa_prod_pub_file:
+with open(f"{current_dir}/resources/oci/ssl/self/octa-prod-public.pem",
+          "r") as self_octa_prod_pub_file:
     self_prod_certs["octa-public"] = self_octa_prod_pub_file.read()
-with open(
-    f"{current_dir}/resources/oci/ssl/self/octa-prod-private.pem", "r"
-) as self_octa_prod_pri_file:
+with open(f"{current_dir}/resources/oci/ssl/self/octa-prod-private.pem",
+          "r") as self_octa_prod_pri_file:
     self_prod_certs["octa-private"] = self_octa_prod_pri_file.read()

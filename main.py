@@ -36,8 +36,8 @@ Loadbalancer.backup_all_loadbalancers()
 #     )
 # )
 Cert.update_expired_cert(
-    f"{os.getcwd()}/resources/oci/ssl/self",
-    "orb-training-lb.json",
+    f"{os.getcwd()}/resources/oci/ssl/new",
+    "orb-dev-lb.json",
     "LB",
-    "orb-training-lb-internal",
+    "orb-dev-lb-internal",
 )

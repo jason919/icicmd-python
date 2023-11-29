@@ -5,15 +5,16 @@ import shutil
 old_file = "etcchosted-test-self-sign.jks"
 
 # Define the name of the new file to replace with
-new_file_path = "C:/tmp/etcchosted.test-new.jks"
+new_file_path = "/Volumes/data4/tmp/etcchosted.test.jks"
+# "C:/tmp/etcchosted.test-new.jks"
 
 # Loop through all the subfolders in the current directory
 for root, dirs, files in os.walk(
-    "C:/drive-d/projects/etcc/company/CICD/ritehorizon-ci-cd-admin/ci-cd-ansible-playbook/inventories"
+    "/Users/jason/Documents/projects/etcc/company/CICD/ritehorizon-ci-cd-admin/ci-cd-ansible-playbook"
 ):
     # print(f"loop {root} with {dirs}")
     # Check if the old file exists in the current subfolder
-    if old_file in files:
+    if old_file in files and "orb-dev" in root:
         # Get the full path of the old file
         old_path = os.path.join(root, old_file)
         # Get the full path of the new file

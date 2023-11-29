@@ -42,10 +42,11 @@ def update_backend_sets_with_cert_name(
 ):
     backend_sets = parsed_data["backendSets"]
     for key, value in backend_sets.items():
-        print(key)
-        value["sslConfiguration"]["certificateName"] = cert_name
-        update(compartment_id, load_balancer_ocid, key, value)
-        time.sleep(20)
+        if len(json.dumps(value["sslConfiguration"])) > 10:
+            print(key)
+            value["sslConfiguration"]["certificateName"] = cert_name
+            update(compartment_id, load_balancer_ocid, key, value)
+            time.sleep(20)
 
 
 def print_all_ip_port():
