@@ -203,10 +203,6 @@
             }
         },
         "hostnames": {
-            "riteonline-prod.octa.rite.etcchosted.com": {
-                "name": "riteonline-prod.octa.rite.etcchosted.com",
-                "hostname": "riteonline-prod.octa.rite.etcchosted.com"
-            },
             "myaccount.405expresslanes.com": {
                 "name": "myaccount.405expresslanes.com",
                 "hostname": "myaccount.405expresslanes.com"
@@ -353,9 +349,9 @@
                         ],
                         "redirectUri": {
                             "protocol": "https",
-                            "host": "myaccount.405expresslanes.com",
+                            "host": "www.405expresslanes.com",
                             "port": null,
-                            "path": "/maintenance",
+                            "path": "/en/maintenance",
                             "query": ""
                         }
                     }
@@ -1004,9 +1000,7 @@
                     "backendTcpProxyProtocolVersion": null,
                     "backendTcpProxyProtocolOptions": null
                 },
-                "ruleSetNames": [
-                    "X_Frame_Options"
-                ],
+                "ruleSetNames": [],
                 "routingPolicyName": "bos"
             },
             "kapsch": {
@@ -1271,8 +1265,8 @@
                 "policy": "ROUND_ROBIN",
                 "backends": [
                     {
-                        "name": "10.152.11.224:9003",
-                        "ipAddress": "10.152.11.224",
+                        "name": "10.152.11.160:9003",
+                        "ipAddress": "10.152.11.160",
                         "port": 9003,
                         "weight": 1,
                         "maxConnections": null,
@@ -1281,8 +1275,8 @@
                         "offline": false
                     },
                     {
-                        "name": "10.152.11.223:9003",
-                        "ipAddress": "10.152.11.223",
+                        "name": "10.152.11.159:9003",
+                        "ipAddress": "10.152.11.159",
                         "port": 9003,
                         "weight": 1,
                         "maxConnections": null,
@@ -1303,7 +1297,20 @@
                     "responseBodyRegex": ".*",
                     "isForcePlainText": null
                 },
-                "sslConfiguration": null,
+                "sslConfiguration": {
+                    "verifyDepth": 1,
+                    "verifyPeerCertificate": false,
+                    "trustedCertificateAuthorityIds": [],
+                    "certificateIds": [],
+                    "certificateName": "InternalSelfCert-Prod-CERT",
+                    "serverOrderPreference": null,
+                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
+                    "protocols": [
+                        "TLSv1",
+                        "TLSv1.1",
+                        "TLSv1.2"
+                    ]
+                },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
             },

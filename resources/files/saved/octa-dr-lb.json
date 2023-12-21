@@ -2213,7 +2213,9 @@
         "subnetIds": [
             "ocid1.subnet.oc1.phx.aaaaaaaa7sn6mko4cl5pla5aodfw45d6krrghnfrkpccacuuf5dxpw3gwv2a"
         ],
-        "networkSecurityGroupIds": [],
+        "networkSecurityGroupIds": [
+            "ocid1.networksecuritygroup.oc1.phx.aaaaaaaapnvbggosytdn5ekgmaxldxbrtdmeehe7p4vcbzxbncszdceive4a"
+        ],
         "listeners": {
             "IVA_PROD": {
                 "name": "IVA_PROD",
@@ -2381,43 +2383,9 @@
                 },
                 "ruleSetNames": [],
                 "routingPolicyName": null
-            },
-            "Online": {
-                "name": "Online",
-                "defaultBackendSetName": "online",
-                "port": 443,
-                "protocol": "HTTP",
-                "hostnameNames": [
-                    "riteonline-prod.octa.rite.etcchosted.com"
-                ],
-                "serverName": null,
-                "pathRouteSetName": null,
-                "sslConfiguration": {
-                    "verifyDepth": 1,
-                    "verifyPeerCertificate": false,
-                    "trustedCertificateAuthorityIds": [],
-                    "certificateIds": [],
-                    "certificateName": "LB-OCTA-CERT",
-                    "serverOrderPreference": "DISABLED",
-                    "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
-                },
-                "connectionConfiguration": {
-                    "idleTimeout": 60,
-                    "backendTcpProxyProtocolVersion": null,
-                    "backendTcpProxyProtocolOptions": null
-                },
-                "ruleSetNames": [],
-                "routingPolicyName": null
             }
         },
         "hostnames": {
-            "riteonline-prod.octa.rite.etcchosted.com": {
-                "name": "riteonline-prod.octa.rite.etcchosted.com",
-                "hostname": "riteonline-prod.octa.rite.etcchosted.com"
-            },
             "myaccount.405expresslanes.com": {
                 "name": "myaccount.405expresslanes.com",
                 "hostname": "myaccount.405expresslanes.com"
