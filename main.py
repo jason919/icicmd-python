@@ -1,7 +1,7 @@
 import json
 from config import compartments
 from config.ConfigReader import get_compartment_id
-from loadbalancer import Backendset, Listener, Loadbalancer, Cert
+from loadbalancer import Backendset, Listener, Loadbalancer, Cert, RuleSet
 import os
 
 # Loadbalancer.create_single_loadbalancer(
@@ -27,7 +27,20 @@ import os
 # )
 # Loadbalancer.backup_all_loadbalancers()
 # Backendset.print_all_ip_port()
-# Listener.update_listeners("octa-test-lb.json", "new-octa-test-lb")
+Listener.add_new_header_listeners(
+    "orb-test-lb.json",
+    "orb-test-f5",
+    {
+        "name": "HSTS",
+        "items": [
+            {
+                "action": "ADD_HTTP_RESPONSE_HEADER",
+                "header": "strict-transport-security",
+                "value": "max-age=31536000",
+            }
+        ],
+    },
+)
 # Backendset.update_backend_sets("octa-test-lb.json", "new-octa-test-lb", "SSO")
 # Backendset.update_backend_sets("octa-training-lb.json", "new-octa-training-lb", "SSO")
 # print(
@@ -35,9 +48,24 @@ import os
 #         get_compartment_id("octa-prod"), "new-octa-prod-lb-internal"
 #     )
 # )
-Cert.update_expired_cert(
-    f"{os.getcwd()}/resources/oci/ssl/new",
-    "octa-uat-lb.json",
-    "internal",
-    "new-octa-uat-lb",
-)
+# Cert.update_expired_cert(
+#     f"{os.getcwd()}/resources/oci/ssl/new",
+#     "octa-uat-lb.json",
+#     "internal",
+#     "new-octa-uat-lb",
+# )
+
+# RuleSet.create(
+#     "ocid1.compartment.oc1..aaaaaaaah2zzpsjuoihn6tg7plynb3jzbhwx67hgktddtk6dgmokkql5snxq",
+#     "ocid1.loadbalancer.oc1.iad.aaaaaaaa74euhl5ft2onc2opyvnttqj7idgv47pwmo3uao2g6eldptruge6a",
+#     {
+#         "name": "HSTS",
+#         "items": [
+#             {
+#                 "action": "ADD_HTTP_RESPONSE_HEADER",
+#                 "header": "strict-transport-security",
+#                 "value": "max-age=31536000",
+#             }
+#         ],
+#     },
+# )
