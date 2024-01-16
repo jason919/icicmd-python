@@ -51,7 +51,9 @@
                     "backendTcpProxyProtocolVersion": null,
                     "backendTcpProxyProtocolOptions": null
                 },
-                "ruleSetNames": [],
+                "ruleSetNames": [
+                    "HSTS"
+                ],
                 "routingPolicyName": null
             },
             "search": {
@@ -81,7 +83,9 @@
                     "backendTcpProxyProtocolVersion": null,
                     "backendTcpProxyProtocolOptions": null
                 },
-                "ruleSetNames": [],
+                "ruleSetNames": [
+                    "HSTS"
+                ],
                 "routingPolicyName": null
             },
             "ritesso": {
@@ -111,7 +115,9 @@
                     "backendTcpProxyProtocolVersion": null,
                     "backendTcpProxyProtocolOptions": null
                 },
-                "ruleSetNames": [],
+                "ruleSetNames": [
+                    "HSTS"
+                ],
                 "routingPolicyName": "sso"
             },
             "ritecrm": {
@@ -141,7 +147,9 @@
                     "backendTcpProxyProtocolVersion": null,
                     "backendTcpProxyProtocolOptions": null
                 },
-                "ruleSetNames": [],
+                "ruleSetNames": [
+                    "HSTS"
+                ],
                 "routingPolicyName": null
             },
             "RiteLedger": {
@@ -171,7 +179,9 @@
                     "backendTcpProxyProtocolVersion": null,
                     "backendTcpProxyProtocolOptions": null
                 },
-                "ruleSetNames": [],
+                "ruleSetNames": [
+                    "HSTS"
+                ],
                 "routingPolicyName": null
             },
             "online-gateway": {
@@ -201,7 +211,9 @@
                     "backendTcpProxyProtocolVersion": null,
                     "backendTcpProxyProtocolOptions": null
                 },
-                "ruleSetNames": [],
+                "ruleSetNames": [
+                    "HSTS"
+                ],
                 "routingPolicyName": null
             },
             "TM": {
@@ -231,7 +243,9 @@
                     "backendTcpProxyProtocolVersion": null,
                     "backendTcpProxyProtocolOptions": null
                 },
-                "ruleSetNames": [],
+                "ruleSetNames": [
+                    "HSTS"
+                ],
                 "routingPolicyName": null
             },
             "ritereports": {
@@ -261,7 +275,9 @@
                     "backendTcpProxyProtocolVersion": null,
                     "backendTcpProxyProtocolOptions": null
                 },
-                "ruleSetNames": [],
+                "ruleSetNames": [
+                    "HSTS"
+                ],
                 "routingPolicyName": null
             },
             "legacy-sso": {
@@ -292,7 +308,8 @@
                     "backendTcpProxyProtocolOptions": null
                 },
                 "ruleSetNames": [
-                    "SSOHomePage"
+                    "SSOHomePage",
+                    "HSTS"
                 ],
                 "routingPolicyName": null
             },
@@ -323,7 +340,9 @@
                     "backendTcpProxyProtocolVersion": null,
                     "backendTcpProxyProtocolOptions": null
                 },
-                "ruleSetNames": [],
+                "ruleSetNames": [
+                    "HSTS"
+                ],
                 "routingPolicyName": null
             },
             "ritemanager": {
@@ -353,7 +372,9 @@
                     "backendTcpProxyProtocolVersion": null,
                     "backendTcpProxyProtocolOptions": null
                 },
-                "ruleSetNames": [],
+                "ruleSetNames": [
+                    "HSTS"
+                ],
                 "routingPolicyName": null
             },
             "Online": {
@@ -383,7 +404,9 @@
                     "backendTcpProxyProtocolVersion": null,
                     "backendTcpProxyProtocolOptions": null
                 },
-                "ruleSetNames": [],
+                "ruleSetNames": [
+                    "HSTS"
+                ],
                 "routingPolicyName": null
             },
             "ritenotification": {
@@ -413,7 +436,9 @@
                     "backendTcpProxyProtocolVersion": null,
                     "backendTcpProxyProtocolOptions": null
                 },
-                "ruleSetNames": [],
+                "ruleSetNames": [
+                    "HSTS"
+                ],
                 "routingPolicyName": null
             }
         },
@@ -1088,6 +1113,16 @@
                         }
                     }
                 ]
+            },
+            "HSTS": {
+                "name": "HSTS",
+                "items": [
+                    {
+                        "action": "ADD_HTTP_RESPONSE_HEADER",
+                        "header": "strict-transport-security",
+                        "value": "max-age=31536000"
+                    }
+                ]
             }
         },
         "routingPolicies": {
@@ -1171,7 +1206,9 @@
                     "backendTcpProxyProtocolVersion": null,
                     "backendTcpProxyProtocolOptions": null
                 },
-                "ruleSetNames": [],
+                "ruleSetNames": [
+                    "HSTS"
+                ],
                 "routingPolicyName": "report_server"
             },
             "ivr": {
@@ -1201,7 +1238,9 @@
                     "backendTcpProxyProtocolVersion": null,
                     "backendTcpProxyProtocolOptions": null
                 },
-                "ruleSetNames": [],
+                "ruleSetNames": [
+                    "HSTS"
+                ],
                 "routingPolicyName": null
             },
             "odoo": {
@@ -1231,7 +1270,9 @@
                     "backendTcpProxyProtocolVersion": null,
                     "backendTcpProxyProtocolOptions": null
                 },
-                "ruleSetNames": [],
+                "ruleSetNames": [
+                    "HSTS"
+                ],
                 "routingPolicyName": null
             },
             "bos": {
@@ -1262,7 +1303,8 @@
                     "backendTcpProxyProtocolOptions": null
                 },
                 "ruleSetNames": [
-                    "X_Frame_Options"
+                    "X_Frame_Options",
+                    "HSTS"
                 ],
                 "routingPolicyName": "bos"
             }
@@ -1572,6 +1614,16 @@
                     {
                         "action": "REMOVE_HTTP_RESPONSE_HEADER",
                         "header": "X-Frame-Options"
+                    }
+                ]
+            },
+            "HSTS": {
+                "name": "HSTS",
+                "items": [
+                    {
+                        "action": "ADD_HTTP_RESPONSE_HEADER",
+                        "header": "strict-transport-security",
+                        "value": "max-age=31536000"
                     }
                 ]
             }

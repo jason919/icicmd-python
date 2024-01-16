@@ -28,8 +28,8 @@ import os
 # Loadbalancer.backup_all_loadbalancers()
 # Backendset.print_all_ip_port()
 Listener.add_new_header_listeners(
-    "orb-test-lb.json",
-    "orb-test-f5",
+    "octa-uat-1b-lb.json",
+    "octa-uat-1b-lb-internal",
     {
         "name": "HSTS",
         "items": [
