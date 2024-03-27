@@ -37,6 +37,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "LB",
@@ -125,7 +126,8 @@
         "definedTags": {},
         "systemTags": {},
         "ruleSets": {},
-        "routingPolicies": {}
+        "routingPolicies": {},
+        "locks": []
     },
     {
         "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaaw4e2b3nwojokzsyxkznlv7bxeisgtyp2ycmxmc4oui3qnfywlpuq",
@@ -165,6 +167,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "LB",
@@ -231,7 +234,8 @@
         "definedTags": {},
         "systemTags": {},
         "ruleSets": {},
-        "routingPolicies": {}
+        "routingPolicies": {},
+        "locks": []
     },
     {
         "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaasbapmtnfeikhoj6vbqyllgj7lsehwmcpfptw5jnzkknzl5ekyxuq",
@@ -271,6 +275,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "orbWild",
@@ -303,6 +308,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "orbWild",
@@ -335,6 +341,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "orbWild",
@@ -367,6 +374,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "orbWild",
@@ -399,6 +407,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "orbWild",
@@ -431,38 +440,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
-                    "trustedCertificateAuthorityIds": [],
-                    "certificateIds": [],
-                    "certificateName": "orbWild",
-                    "serverOrderPreference": "DISABLED",
-                    "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
-                },
-                "connectionConfiguration": {
-                    "idleTimeout": 60,
-                    "backendTcpProxyProtocolVersion": null,
-                    "backendTcpProxyProtocolOptions": null
-                },
-                "ruleSetNames": [
-                    "HSTS"
-                ],
-                "routingPolicyName": null
-            },
-            "TM": {
-                "name": "TM",
-                "defaultBackendSetName": "TM",
-                "port": 443,
-                "protocol": "HTTP",
-                "hostnameNames": [
-                    "ritetm-uat.orb.rite.etcchosted.com"
-                ],
-                "serverName": null,
-                "pathRouteSetName": null,
-                "sslConfiguration": {
-                    "verifyDepth": 1,
-                    "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "orbWild",
@@ -495,6 +473,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "orbWild",
@@ -506,6 +485,39 @@
                 },
                 "connectionConfiguration": {
                     "idleTimeout": 120,
+                    "backendTcpProxyProtocolVersion": null,
+                    "backendTcpProxyProtocolOptions": null
+                },
+                "ruleSetNames": [
+                    "HSTS"
+                ],
+                "routingPolicyName": null
+            },
+            "TM": {
+                "name": "TM",
+                "defaultBackendSetName": "TM",
+                "port": 443,
+                "protocol": "HTTP",
+                "hostnameNames": [
+                    "ritetm-uat.orb.rite.etcchosted.com"
+                ],
+                "serverName": null,
+                "pathRouteSetName": null,
+                "sslConfiguration": {
+                    "verifyDepth": 1,
+                    "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
+                    "trustedCertificateAuthorityIds": [],
+                    "certificateIds": [],
+                    "certificateName": "orbWild",
+                    "serverOrderPreference": "DISABLED",
+                    "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
+                    "protocols": [
+                        "TLSv1.2"
+                    ]
+                },
+                "connectionConfiguration": {
+                    "idleTimeout": 60,
                     "backendTcpProxyProtocolVersion": null,
                     "backendTcpProxyProtocolOptions": null
                 },
@@ -527,6 +539,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "orbWild",
@@ -559,6 +572,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "orbWild",
@@ -588,37 +602,37 @@
                 "name": "ritesso-uat.orb.rite.etcchosted.com",
                 "hostname": "ritesso-uat.orb.rite.etcchosted.com"
             },
-            "riteledger-uat.orb.rite.etcchosted.com": {
-                "name": "riteledger-uat.orb.rite.etcchosted.com",
-                "hostname": "riteledger-uat.orb.rite.etcchosted.com"
-            },
             "ritenotification-uat.orb.rite.etcchosted.com": {
                 "name": "ritenotification-uat.orb.rite.etcchosted.com",
                 "hostname": "ritenotification-uat.orb.rite.etcchosted.com"
             },
-            "riteivr-uat.orb.rite.etcchosted.com": {
-                "name": "riteivr-uat.orb.rite.etcchosted.com",
-                "hostname": "riteivr-uat.orb.rite.etcchosted.com"
+            "riteledger-uat.orb.rite.etcchosted.com": {
+                "name": "riteledger-uat.orb.rite.etcchosted.com",
+                "hostname": "riteledger-uat.orb.rite.etcchosted.com"
             },
             "ritefulfillment-uat.orb.rite.etcchosted.com": {
                 "name": "ritefulfillment-uat.orb.rite.etcchosted.com",
                 "hostname": "ritefulfillment-uat.orb.rite.etcchosted.com"
             },
-            "riteonline-uat.orb.rite.etcchosted.com": {
-                "name": "riteonline-uat.orb.rite.etcchosted.com",
-                "hostname": "riteonline-uat.orb.rite.etcchosted.com"
+            "riteivr-uat.orb.rite.etcchosted.com": {
+                "name": "riteivr-uat.orb.rite.etcchosted.com",
+                "hostname": "riteivr-uat.orb.rite.etcchosted.com"
             },
             "ritemanager-uat.orb.rite.etcchosted.com": {
                 "name": "ritemanager-uat.orb.rite.etcchosted.com",
                 "hostname": "ritemanager-uat.orb.rite.etcchosted.com"
             },
-            "ritereports-uat.orb.rite.etcchosted.com": {
-                "name": "ritereports-uat.orb.rite.etcchosted.com",
-                "hostname": "ritereports-uat.orb.rite.etcchosted.com"
+            "riteonline-uat.orb.rite.etcchosted.com": {
+                "name": "riteonline-uat.orb.rite.etcchosted.com",
+                "hostname": "riteonline-uat.orb.rite.etcchosted.com"
             },
             "ritecrm-uat.orb.rite.etcchosted.com": {
                 "name": "ritecrm-uat.orb.rite.etcchosted.com",
                 "hostname": "ritecrm-uat.orb.rite.etcchosted.com"
+            },
+            "ritereports-uat.orb.rite.etcchosted.com": {
+                "name": "ritereports-uat.orb.rite.etcchosted.com",
+                "hostname": "ritereports-uat.orb.rite.etcchosted.com"
             }
         },
         "cidrBlocks": null,
@@ -666,6 +680,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "internal",
@@ -718,6 +733,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "internal",
@@ -731,58 +747,6 @@
                 },
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
-            },
-            "RiteLedger": {
-                "name": "RiteLedger",
-                "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.11.79:8081",
-                        "ipAddress": "10.152.11.79",
-                        "port": 8081,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
-                "backendMaxConnections": null,
-                "healthChecker": {
-                    "protocol": "TCP",
-                    "urlPath": null,
-                    "port": 8081,
-                    "returnCode": 200,
-                    "retries": 3,
-                    "timeoutInMillis": 3000,
-                    "intervalInMillis": 10000,
-                    "responseBodyRegex": ".*",
-                    "isForcePlainText": null
-                },
-                "sslConfiguration": {
-                    "verifyDepth": 1,
-                    "verifyPeerCertificate": false,
-                    "trustedCertificateAuthorityIds": [],
-                    "certificateIds": [],
-                    "certificateName": "internal",
-                    "serverOrderPreference": null,
-                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
-                },
-                "sessionPersistenceConfiguration": null,
-                "lbCookieSessionPersistenceConfiguration": {
-                    "cookieName": "X-Oracle-BMC-LBS-Route",
-                    "disableFallback": null,
-                    "domain": null,
-                    "path": "/",
-                    "maxAgeInSeconds": null,
-                    "isSecure": true,
-                    "isHttpOnly": true
-                }
             },
             "riteonline": {
                 "name": "riteonline",
@@ -814,6 +778,60 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
+                    "trustedCertificateAuthorityIds": [],
+                    "certificateIds": [],
+                    "certificateName": "internal",
+                    "serverOrderPreference": null,
+                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
+                    "protocols": [
+                        "TLSv1.2",
+                        "TLSv1",
+                        "TLSv1.1"
+                    ]
+                },
+                "sessionPersistenceConfiguration": null,
+                "lbCookieSessionPersistenceConfiguration": {
+                    "cookieName": "X-Oracle-BMC-LBS-Route",
+                    "disableFallback": null,
+                    "domain": null,
+                    "path": "/",
+                    "maxAgeInSeconds": null,
+                    "isSecure": true,
+                    "isHttpOnly": true
+                }
+            },
+            "RiteLedger": {
+                "name": "RiteLedger",
+                "policy": "IP_HASH",
+                "backends": [
+                    {
+                        "name": "10.152.11.79:8081",
+                        "ipAddress": "10.152.11.79",
+                        "port": 8081,
+                        "weight": 1,
+                        "maxConnections": null,
+                        "drain": false,
+                        "backup": false,
+                        "offline": false
+                    }
+                ],
+                "backendMaxConnections": null,
+                "healthChecker": {
+                    "protocol": "TCP",
+                    "urlPath": null,
+                    "port": 8081,
+                    "returnCode": 200,
+                    "retries": 3,
+                    "timeoutInMillis": 3000,
+                    "intervalInMillis": 10000,
+                    "responseBodyRegex": ".*",
+                    "isForcePlainText": null
+                },
+                "sslConfiguration": {
+                    "verifyDepth": 1,
+                    "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "internal",
@@ -866,50 +884,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
-                    "trustedCertificateAuthorityIds": [],
-                    "certificateIds": [],
-                    "certificateName": "internal",
-                    "serverOrderPreference": null,
-                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
-                },
-                "sessionPersistenceConfiguration": null,
-                "lbCookieSessionPersistenceConfiguration": null
-            },
-            "TM": {
-                "name": "TM",
-                "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.11.74:8015",
-                        "ipAddress": "10.152.11.74",
-                        "port": 8015,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
-                "backendMaxConnections": null,
-                "healthChecker": {
-                    "protocol": "TCP",
-                    "urlPath": null,
-                    "port": 8015,
-                    "returnCode": 200,
-                    "retries": 3,
-                    "timeoutInMillis": 3000,
-                    "intervalInMillis": 10000,
-                    "responseBodyRegex": ".*",
-                    "isForcePlainText": null
-                },
-                "sslConfiguration": {
-                    "verifyDepth": 1,
-                    "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "internal",
@@ -954,6 +929,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "internal",
@@ -975,6 +951,51 @@
                     "isSecure": true,
                     "isHttpOnly": true
                 }
+            },
+            "TM": {
+                "name": "TM",
+                "policy": "IP_HASH",
+                "backends": [
+                    {
+                        "name": "10.152.11.74:8015",
+                        "ipAddress": "10.152.11.74",
+                        "port": 8015,
+                        "weight": 1,
+                        "maxConnections": null,
+                        "drain": false,
+                        "backup": false,
+                        "offline": false
+                    }
+                ],
+                "backendMaxConnections": null,
+                "healthChecker": {
+                    "protocol": "TCP",
+                    "urlPath": null,
+                    "port": 8015,
+                    "returnCode": 200,
+                    "retries": 3,
+                    "timeoutInMillis": 3000,
+                    "intervalInMillis": 10000,
+                    "responseBodyRegex": ".*",
+                    "isForcePlainText": null
+                },
+                "sslConfiguration": {
+                    "verifyDepth": 1,
+                    "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
+                    "trustedCertificateAuthorityIds": [],
+                    "certificateIds": [],
+                    "certificateName": "internal",
+                    "serverOrderPreference": null,
+                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
+                    "protocols": [
+                        "TLSv1.2",
+                        "TLSv1",
+                        "TLSv1.1"
+                    ]
+                },
+                "sessionPersistenceConfiguration": null,
+                "lbCookieSessionPersistenceConfiguration": null
             },
             "ritemanager": {
                 "name": "ritemanager",
@@ -1006,6 +1027,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "internal",
@@ -1058,6 +1080,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "internal",
@@ -1110,6 +1133,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "internal",
@@ -1162,6 +1186,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "internal",
@@ -1255,7 +1280,8 @@
                     }
                 ]
             }
-        }
+        },
+        "locks": []
     },
     {
         "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaaitgggw6ktre4alt6eujb6flpc6cpqz7qdgvjbalim53cbp5kzscq",
@@ -1295,6 +1321,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "orbWild",
@@ -1327,6 +1354,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "orbWild",
@@ -1360,6 +1388,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "orbWild",
@@ -1385,13 +1414,13 @@
                 "name": "ritebos-uat.orb.rite.etcchosted.com",
                 "hostname": "ritebos-uat.orb.rite.etcchosted.com"
             },
-            "ritelogs-uat.orb.rite.etcchosted.com": {
-                "name": "ritelogs-uat.orb.rite.etcchosted.com",
-                "hostname": "ritelogs-uat.orb.rite.etcchosted.com"
-            },
             "riteodoo-uat.orb.rite.etcchosted.com": {
                 "name": "riteodoo-uat.orb.rite.etcchosted.com",
                 "hostname": "riteodoo-uat.orb.rite.etcchosted.com"
+            },
+            "ritelogs-uat.orb.rite.etcchosted.com": {
+                "name": "ritelogs-uat.orb.rite.etcchosted.com",
+                "hostname": "ritelogs-uat.orb.rite.etcchosted.com"
             }
         },
         "cidrBlocks": null,
@@ -1414,14 +1443,14 @@
             }
         },
         "backendSets": {
-            "opensearch-dashboard": {
-                "name": "opensearch-dashboard",
+            "images": {
+                "name": "images",
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.114:5601",
-                        "ipAddress": "10.152.11.114",
-                        "port": 5601,
+                        "name": "10.152.11.69:8543",
+                        "ipAddress": "10.152.11.69",
+                        "port": 8543,
                         "weight": 1,
                         "maxConnections": null,
                         "drain": false,
@@ -1433,7 +1462,7 @@
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 5601,
+                    "port": 8543,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -1444,6 +1473,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "internal",
@@ -1488,6 +1518,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "internal",
@@ -1502,14 +1533,14 @@
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
             },
-            "images": {
-                "name": "images",
+            "opensearch-dashboard": {
+                "name": "opensearch-dashboard",
                 "policy": "IP_HASH",
                 "backends": [
                     {
-                        "name": "10.152.11.69:8543",
-                        "ipAddress": "10.152.11.69",
-                        "port": 8543,
+                        "name": "10.152.11.114:5601",
+                        "ipAddress": "10.152.11.114",
+                        "port": 5601,
                         "weight": 1,
                         "maxConnections": null,
                         "drain": false,
@@ -1521,7 +1552,7 @@
                 "healthChecker": {
                     "protocol": "TCP",
                     "urlPath": null,
-                    "port": 8543,
+                    "port": 5601,
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
@@ -1532,6 +1563,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "internal",
@@ -1576,6 +1608,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "internal",
@@ -1721,50 +1754,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
-                    "trustedCertificateAuthorityIds": [],
-                    "certificateIds": [],
-                    "certificateName": "internal",
-                    "serverOrderPreference": null,
-                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
-                },
-                "sessionPersistenceConfiguration": null,
-                "lbCookieSessionPersistenceConfiguration": null
-            },
-            "hostws": {
-                "name": "hostws",
-                "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.11.68:7159",
-                        "ipAddress": "10.152.11.68",
-                        "port": 7159,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
-                "backendMaxConnections": null,
-                "healthChecker": {
-                    "protocol": "TCP",
-                    "urlPath": null,
-                    "port": 7159,
-                    "returnCode": 200,
-                    "retries": 3,
-                    "timeoutInMillis": 3000,
-                    "intervalInMillis": 10000,
-                    "responseBodyRegex": ".*",
-                    "isForcePlainText": null
-                },
-                "sslConfiguration": {
-                    "verifyDepth": 1,
-                    "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "internal",
@@ -1810,6 +1800,51 @@
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
             },
+            "hostws": {
+                "name": "hostws",
+                "policy": "IP_HASH",
+                "backends": [
+                    {
+                        "name": "10.152.11.68:7159",
+                        "ipAddress": "10.152.11.68",
+                        "port": 7159,
+                        "weight": 1,
+                        "maxConnections": null,
+                        "drain": false,
+                        "backup": false,
+                        "offline": false
+                    }
+                ],
+                "backendMaxConnections": null,
+                "healthChecker": {
+                    "protocol": "TCP",
+                    "urlPath": null,
+                    "port": 7159,
+                    "returnCode": 200,
+                    "retries": 3,
+                    "timeoutInMillis": 3000,
+                    "intervalInMillis": 10000,
+                    "responseBodyRegex": ".*",
+                    "isForcePlainText": null
+                },
+                "sslConfiguration": {
+                    "verifyDepth": 1,
+                    "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
+                    "trustedCertificateAuthorityIds": [],
+                    "certificateIds": [],
+                    "certificateName": "internal",
+                    "serverOrderPreference": null,
+                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
+                    "protocols": [
+                        "TLSv1.2",
+                        "TLSv1",
+                        "TLSv1.1"
+                    ]
+                },
+                "sessionPersistenceConfiguration": null,
+                "lbCookieSessionPersistenceConfiguration": null
+            },
             "ritehelp": {
                 "name": "ritehelp",
                 "policy": "IP_HASH",
@@ -1840,6 +1875,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "internal",
@@ -1981,7 +2017,8 @@
                     }
                 ]
             }
-        }
+        },
+        "locks": []
     },
     {
         "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaalqxo4vjpprxoemic3k4nuz7oevi3ya3f3krxosxcycyrlo7e4jda",
@@ -2021,6 +2058,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "OrbWild",
@@ -2085,6 +2123,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "EtccHostedTest",
@@ -2105,7 +2144,8 @@
         "definedTags": {},
         "systemTags": {},
         "ruleSets": {},
-        "routingPolicies": {}
+        "routingPolicies": {},
+        "locks": []
     },
     {
         "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaaci4xmncu5ojiqnluz5nebridrljmwizkvmzdklt5gudlhky34pfa",
@@ -2145,38 +2185,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
-                    "trustedCertificateAuthorityIds": [],
-                    "certificateIds": [],
-                    "certificateName": "LB",
-                    "serverOrderPreference": "DISABLED",
-                    "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2"
-                    ]
-                },
-                "connectionConfiguration": {
-                    "idleTimeout": 60,
-                    "backendTcpProxyProtocolVersion": null,
-                    "backendTcpProxyProtocolOptions": null
-                },
-                "ruleSetNames": [
-                    "HSTS"
-                ],
-                "routingPolicyName": null
-            },
-            "online_gateway": {
-                "name": "online_gateway",
-                "defaultBackendSetName": "online_gateway",
-                "port": 443,
-                "protocol": "HTTP",
-                "hostnameNames": [
-                    "riteonlinegateway-uat.orb.rite.etcchosted.com"
-                ],
-                "serverName": null,
-                "pathRouteSetName": null,
-                "sslConfiguration": {
-                    "verifyDepth": 1,
-                    "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "LB",
@@ -2209,6 +2218,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "LB",
@@ -2220,6 +2230,39 @@
                 },
                 "connectionConfiguration": {
                     "idleTimeout": 120,
+                    "backendTcpProxyProtocolVersion": null,
+                    "backendTcpProxyProtocolOptions": null
+                },
+                "ruleSetNames": [
+                    "HSTS"
+                ],
+                "routingPolicyName": null
+            },
+            "online_gateway": {
+                "name": "online_gateway",
+                "defaultBackendSetName": "online_gateway",
+                "port": 443,
+                "protocol": "HTTP",
+                "hostnameNames": [
+                    "riteonlinegateway-uat.orb.rite.etcchosted.com"
+                ],
+                "serverName": null,
+                "pathRouteSetName": null,
+                "sslConfiguration": {
+                    "verifyDepth": 1,
+                    "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
+                    "trustedCertificateAuthorityIds": [],
+                    "certificateIds": [],
+                    "certificateName": "LB",
+                    "serverOrderPreference": "DISABLED",
+                    "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
+                    "protocols": [
+                        "TLSv1.2"
+                    ]
+                },
+                "connectionConfiguration": {
+                    "idleTimeout": 60,
                     "backendTcpProxyProtocolVersion": null,
                     "backendTcpProxyProtocolOptions": null
                 },
@@ -2241,6 +2284,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "LB",
@@ -2273,6 +2317,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "LB",
@@ -2294,13 +2339,13 @@
             }
         },
         "hostnames": {
-            "riteadapter-uat.orb.rite.etcchosted.com": {
-                "name": "riteadapter-uat.orb.rite.etcchosted.com",
-                "hostname": "riteadapter-uat.orb.rite.etcchosted.com"
-            },
             "ritereportserver-uat.orb.rite.etcchosted.com": {
                 "name": "ritereportserver-uat.orb.rite.etcchosted.com",
                 "hostname": "ritereportserver-uat.orb.rite.etcchosted.com"
+            },
+            "riteadapter-uat.orb.rite.etcchosted.com": {
+                "name": "riteadapter-uat.orb.rite.etcchosted.com",
+                "hostname": "riteadapter-uat.orb.rite.etcchosted.com"
             },
             "ritesearch-uat.orb.rite.etcchosted.com": {
                 "name": "ritesearch-uat.orb.rite.etcchosted.com",
@@ -2360,6 +2405,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "internal",
@@ -2405,50 +2451,6 @@
                 "sessionPersistenceConfiguration": null,
                 "lbCookieSessionPersistenceConfiguration": null
             },
-            "online_gateway": {
-                "name": "online_gateway",
-                "policy": "IP_HASH",
-                "backends": [
-                    {
-                        "name": "10.152.11.90:8095",
-                        "ipAddress": "10.152.11.90",
-                        "port": 8095,
-                        "weight": 1,
-                        "maxConnections": null,
-                        "drain": false,
-                        "backup": false,
-                        "offline": false
-                    }
-                ],
-                "backendMaxConnections": null,
-                "healthChecker": {
-                    "protocol": "TCP",
-                    "urlPath": null,
-                    "port": 8095,
-                    "returnCode": 200,
-                    "retries": 3,
-                    "timeoutInMillis": 3000,
-                    "intervalInMillis": 10000,
-                    "responseBodyRegex": ".*",
-                    "isForcePlainText": null
-                },
-                "sslConfiguration": {
-                    "verifyDepth": 1,
-                    "verifyPeerCertificate": false,
-                    "trustedCertificateAuthorityIds": [],
-                    "certificateIds": [],
-                    "certificateName": "internal",
-                    "serverOrderPreference": null,
-                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
-                    "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
-                    ]
-                },
-                "sessionPersistenceConfiguration": null,
-                "lbCookieSessionPersistenceConfiguration": null
-            },
             "mendix_adapter": {
                 "name": "mendix_adapter",
                 "policy": "IP_HASH",
@@ -2479,6 +2481,52 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
+                    "trustedCertificateAuthorityIds": [],
+                    "certificateIds": [],
+                    "certificateName": "internal",
+                    "serverOrderPreference": null,
+                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
+                    "protocols": [
+                        "TLSv1.2",
+                        "TLSv1",
+                        "TLSv1.1"
+                    ]
+                },
+                "sessionPersistenceConfiguration": null,
+                "lbCookieSessionPersistenceConfiguration": null
+            },
+            "online_gateway": {
+                "name": "online_gateway",
+                "policy": "IP_HASH",
+                "backends": [
+                    {
+                        "name": "10.152.11.90:8095",
+                        "ipAddress": "10.152.11.90",
+                        "port": 8095,
+                        "weight": 1,
+                        "maxConnections": null,
+                        "drain": false,
+                        "backup": false,
+                        "offline": false
+                    }
+                ],
+                "backendMaxConnections": null,
+                "healthChecker": {
+                    "protocol": "TCP",
+                    "urlPath": null,
+                    "port": 8095,
+                    "returnCode": 200,
+                    "retries": 3,
+                    "timeoutInMillis": 3000,
+                    "intervalInMillis": 10000,
+                    "responseBodyRegex": ".*",
+                    "isForcePlainText": null
+                },
+                "sslConfiguration": {
+                    "verifyDepth": 1,
+                    "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "internal",
@@ -2554,6 +2602,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "internal",
@@ -2653,7 +2702,8 @@
                     }
                 ]
             }
-        }
+        },
+        "locks": []
     },
     {
         "id": "ocid1.loadbalancer.oc1.iad.aaaaaaaaum2gn62oatseaecskjdjg73kfhiqqksim2sihfnoutvvusbhadjq",
@@ -2693,6 +2743,7 @@
                 "sslConfiguration": {
                     "verifyDepth": 1,
                     "verifyPeerCertificate": false,
+                    "hasSessionResumption": null,
                     "trustedCertificateAuthorityIds": [],
                     "certificateIds": [],
                     "certificateName": "LB",
@@ -2759,6 +2810,7 @@
         "definedTags": {},
         "systemTags": {},
         "ruleSets": {},
-        "routingPolicies": {}
+        "routingPolicies": {},
+        "locks": []
     }
 ]
