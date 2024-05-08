@@ -1941,7 +1941,12 @@
                 "routingPolicyName": "online"
             }
         },
-        "hostnames": {},
+        "hostnames": {
+            "riverlink.etcchosted.com": {
+                "name": "riverlink.etcchosted.com",
+                "hostname": "riverlink.etcchosted.com"
+            }
+        },
         "cidrBlocks": null,
         "sslCipherSuites": {},
         "certificates": {

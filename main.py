@@ -28,20 +28,20 @@ import os
 # Loadbalancer.backup_all_loadbalancers()
 # Backendset.print_all_ip_port()
 
-# Listener.add_new_header_listeners(
-#     "octa-prod-lb.json",
-#     "new-octa-prod-lb",
-#     {
-#         "name": "HSTS",
-#         "items": [
-#             {
-#                 "action": "ADD_HTTP_RESPONSE_HEADER",
-#                 "header": "strict-transport-security",
-#                 "value": "max-age=31536000",
-#             }
-#         ],
-#     },
-# )
+Listener.add_new_header_listeners(
+    "orb-prod-lb.json",
+    "orb-prod-lb-f5",
+    {
+        "name": "HSTS",
+        "items": [
+            {
+                "action": "ADD_HTTP_RESPONSE_HEADER",
+                "header": "strict-transport-security",
+                "value": "max-age=31536000",
+            }
+        ],
+    },
+)
 
 # Backendset.update_backend_sets("octa-test-lb.json", "new-octa-test-lb", "SSO")
 # Backendset.update_backend_sets("octa-training-lb.json", "new-octa-training-lb", "SSO")
@@ -51,13 +51,13 @@ import os
 #     )
 # )
 
-#for internal, ca = public, for wildcard, ca=ga bundle
-Cert.update_expired_cert(
-    f"{os.getcwd()}/resources/oci/ssl/new",
-    "octa-dev1b-lb.json",
-    "LB-Internal-March",
-    "octa-dev-1B-iva-public",
-)
+# for internal, ca = public, for wildcard, ca=ga bundle
+# Cert.update_expired_cert(
+#     f"{os.getcwd()}/resources/oci/ssl/new",
+#     "octa-dev1b-lb.json",
+#     "LB-Internal-March",
+#     "octa-dev-1B-iva-public",
+# )
 
 # RuleSet.create(
 #     "ocid1.compartment.oc1..aaaaaaaah2zzpsjuoihn6tg7plynb3jzbhwx67hgktddtk6dgmokkql5snxq",

@@ -159,8 +159,8 @@
         ],
         "shapeName": "flexible",
         "shapeDetails": {
-            "minimumBandwidthInMbps": 100,
-            "maximumBandwidthInMbps": 500
+            "minimumBandwidthInMbps": 2000,
+            "maximumBandwidthInMbps": 4000
         },
         "isPrivate": true,
         "isDeleteProtectionEnabled": null,
@@ -488,11 +488,9 @@
                     "certificateIds": [],
                     "certificateName": "internal",
                     "serverOrderPreference": null,
-                    "cipherSuiteName": "oci-wider-compatible-ssl-cipher-suite-v1",
+                    "cipherSuiteName": "oci-default-ssl-cipher-suite-v1",
                     "protocols": [
-                        "TLSv1.2",
-                        "TLSv1",
-                        "TLSv1.1"
+                        "TLSv1.2"
                     ]
                 },
                 "sessionPersistenceConfiguration": null,
@@ -521,7 +519,7 @@
                     "returnCode": 200,
                     "retries": 3,
                     "timeoutInMillis": 3000,
-                    "intervalInMillis": 10000,
+                    "intervalInMillis": 20000,
                     "responseBodyRegex": ".*",
                     "isForcePlainText": null
                 },
@@ -654,7 +652,11 @@
         "pathRouteSets": {},
         "freeformTags": {},
         "definedTags": {},
-        "systemTags": {},
+        "systemTags": {
+            "orcl-cloud": {
+                "free-tier-retained": "false"
+            }
+        },
         "ruleSets": {
             "HSTS": {
                 "name": "HSTS",
@@ -1354,8 +1356,8 @@
         ],
         "shapeName": "flexible",
         "shapeDetails": {
-            "minimumBandwidthInMbps": 100,
-            "maximumBandwidthInMbps": 1000
+            "minimumBandwidthInMbps": 1000,
+            "maximumBandwidthInMbps": 4000
         },
         "isPrivate": true,
         "isDeleteProtectionEnabled": null,

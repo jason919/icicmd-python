@@ -207,9 +207,7 @@
                     "backendTcpProxyProtocolVersion": null,
                     "backendTcpProxyProtocolOptions": null
                 },
-                "ruleSetNames": [
-                    "HSTS"
-                ],
+                "ruleSetNames": [],
                 "routingPolicyName": "octa_online"
             }
         },
